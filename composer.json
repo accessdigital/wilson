@@ -1,0 +1,15 @@
+{
+  "name": "accessdigital/wilson",
+  "type": "library",
+  "description": "A Drupal 9 installation profile.",
+  "homepage": "https://weareaccess.co.uk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Paul Gregory",
+      "email": "paul.gregory@weareaccess.co.uk",
+      "homepage": "https://weareaccess.co.uk",
+      "role": "Developer"
+    }
+  ],
+}
