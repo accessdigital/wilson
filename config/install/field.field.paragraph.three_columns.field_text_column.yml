@@ -1,0 +1,21 @@
+uuid: 97cb9d4d-7deb-4a71-b8b2-08640c646baa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_column
+    - paragraphs.paragraphs_type.three_columns
+  module:
+    - text
+id: paragraph.three_columns.field_text_column
+field_name: field_text_column
+entity_type: paragraph
+bundle: three_columns
+label: 'Text column (1)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

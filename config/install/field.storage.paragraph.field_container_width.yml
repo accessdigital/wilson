@@ -1,0 +1,36 @@
+uuid: 7e89aab0-653f-48ac-8823-739a0cbecb48
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: narrow
+      label: Narrow
+    -
+      value: medium
+      label: Medium
+    -
+      value: normal
+      label: Normal
+    -
+      value: extra_wide
+      label: 'Extra wide'
+    -
+      value: uncontained
+      label: Uncontained
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

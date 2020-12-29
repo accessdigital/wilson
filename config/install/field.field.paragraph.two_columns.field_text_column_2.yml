@@ -1,0 +1,23 @@
+uuid: cc8b173d-7e13-4762-bfb5-0c109e980dc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_column_2
+    - paragraphs.paragraphs_type.two_columns
+  module:
+    - text
+_core:
+  default_config_hash: '-6gGwSe9If97Z2CNek_BAfdQv2KH9d6BXBdpd6EMVKA'
+id: paragraph.two_columns.field_text_column_2
+field_name: field_text_column_2
+entity_type: paragraph
+bundle: two_columns
+label: 'Text column (2)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

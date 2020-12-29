@@ -1,0 +1,29 @@
+uuid: b952a890-d04e-4cdd-99d8-3ae1f8d51577
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: XvVCrgsnTuv8VMihfSUCQerhkEwYtpW3xt9w3lY37hk
+id: paragraph.field_column_order
+field_name: field_column_order
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: text_media
+      label: 'Text on the left'
+    -
+      value: media_text
+      label: 'Text on the right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

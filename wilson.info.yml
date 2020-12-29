@@ -63,6 +63,16 @@ install:
   - datetime_range
   - telephone
   - paragraphs
+  - paragraphs_ee
+  - config_split
+  - admin_toolbar
+  - admin_toolbar_tools
+  - admin_toolbar_links_access_filter
+  - seckit
+  - login_emailusername
+  - field_group
+  - pathauto
+  - admin_theme_overrides
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.

@@ -1,0 +1,37 @@
+uuid: a0fe4302-f4fe-477d-b732-3574e9f37be3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sections
+    - node.type.landing_page
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 6_kMgGIXKkMaKEKNRmc8pl-gHPEt2I-cBrZuXgwN9Ew
+id: node.landing_page.field_sections
+field_name: field_sections
+entity_type: node
+bundle: landing_page
+label: Sections
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      text_and_image:
+        weight: 4
+        enabled: false
+      two_columns:
+        weight: 5
+        enabled: false
+      two_columns_text_media:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

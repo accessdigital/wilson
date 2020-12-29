@@ -1,0 +1,33 @@
+uuid: cb981a7e-6573-4fea-9365-afeb9f21872d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_padding_top
+field_name: field_padding_top
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: none
+      label: None
+    -
+      value: reduced
+      label: Reduced
+    -
+      value: normal
+      label: Normal
+    -
+      value: expanded
+      label: Expanded
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

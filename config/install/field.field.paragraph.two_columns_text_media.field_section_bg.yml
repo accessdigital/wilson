@@ -1,0 +1,29 @@
+uuid: 8648827e-9843-4466-a59d-bb6b3a049ed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_bg
+    - media.type.image
+    - paragraphs.paragraphs_type.two_columns_text_media
+id: paragraph.two_columns_text_media.field_section_bg
+field_name: field_section_bg
+entity_type: paragraph
+bundle: two_columns_text_media
+label: 'Background image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

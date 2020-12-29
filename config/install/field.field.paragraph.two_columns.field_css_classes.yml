@@ -1,0 +1,19 @@
+uuid: ead667b3-cbd7-4b66-9ff1-c108be577373
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_css_classes
+    - paragraphs.paragraphs_type.two_columns
+id: paragraph.two_columns.field_css_classes
+field_name: field_css_classes
+entity_type: paragraph
+bundle: two_columns
+label: 'CSS classes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

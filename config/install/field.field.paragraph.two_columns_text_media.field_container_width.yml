@@ -1,0 +1,23 @@
+uuid: 9353c00a-4a17-452e-9446-f3cd8d0f7eff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_width
+    - paragraphs.paragraphs_type.two_columns_text_media
+  module:
+    - options
+id: paragraph.two_columns_text_media.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+bundle: two_columns_text_media
+label: 'Container width'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,242 @@
+uuid: b346f839-70c6-4a15-9a3a-ede838fb98a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_columns.field_container_position
+    - field.field.paragraph.three_columns.field_container_width
+    - field.field.paragraph.three_columns.field_css_classes
+    - field.field.paragraph.three_columns.field_id_anchor
+    - field.field.paragraph.three_columns.field_padding_bottom
+    - field.field.paragraph.three_columns.field_padding_top
+    - field.field.paragraph.three_columns.field_section_bg
+    - field.field.paragraph.three_columns.field_text_column
+    - field.field.paragraph.three_columns.field_text_column_2
+    - field.field.paragraph.three_columns.field_text_column_3
+    - field.field.paragraph.three_columns.field_vertical_alignment
+    - paragraphs.paragraphs_type.three_columns
+  module:
+    - field_group
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_column_1
+        - group_column_2
+        - group_column_3
+        - group_settings
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_column_1:
+      children:
+        - field_text_column
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Column 1'
+    group_column_2:
+      children:
+        - field_text_column_2
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Column 2'
+    group_column_3:
+      children:
+        - field_text_column_3
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Column 3'
+    group_settings:
+      children:
+        - group_layout
+        - group_padding
+        - group_background
+        - group_classes_id
+      parent_name: group_tabs
+      weight: 23
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Settings
+    group_layout:
+      children:
+        - field_vertical_alignment
+        - field_container_width
+        - field_container_position
+      parent_name: group_settings
+      weight: 20
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Layout
+    group_padding:
+      children:
+        - field_padding_top
+        - field_padding_bottom
+      parent_name: group_settings
+      weight: 21
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Padding
+    group_background:
+      children:
+        - field_section_bg
+      parent_name: group_settings
+      weight: 22
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Background
+    group_classes_id:
+      children:
+        - field_css_classes
+        - field_id_anchor
+      parent_name: group_settings
+      weight: 23
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Classes & ID'
+id: paragraph.three_columns.default
+targetEntityType: paragraph
+bundle: three_columns
+mode: default
+content:
+  field_container_position:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_container_width:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_css_classes:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_id_anchor:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_padding_bottom:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_padding_top:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_bg:
+    weight: 8
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_text_column:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_text_column_2:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_text_column_3:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vertical_alignment:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

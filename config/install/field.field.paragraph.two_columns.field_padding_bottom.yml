@@ -1,0 +1,23 @@
+uuid: 128a7a00-2572-47c9-bd12-4b7a8dd4c060
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_bottom
+    - paragraphs.paragraphs_type.two_columns
+  module:
+    - options
+id: paragraph.two_columns.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+bundle: two_columns
+label: 'Bottom padding'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: 93b347f0-0ddd-41e6-a6e2-49897fd2f73c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: rqkAcyQ3zUUO1n3cxJUcHV6m46EgJZFvAchTzWeT5P4
+name: 'Landing Page'
+type: landing_page
+description: 'A page created from various designed content sections.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

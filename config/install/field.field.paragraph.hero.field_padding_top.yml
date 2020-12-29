@@ -1,0 +1,23 @@
+uuid: fac592e1-6201-4145-881d-183e3f23dc10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+id: paragraph.hero.field_padding_top
+field_name: field_padding_top
+entity_type: paragraph
+bundle: hero
+label: 'Top padding'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

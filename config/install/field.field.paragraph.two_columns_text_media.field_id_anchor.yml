@@ -1,0 +1,19 @@
+uuid: 922ea842-6a4e-46d6-907c-a202b7ca8684
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id_anchor
+    - paragraphs.paragraphs_type.two_columns_text_media
+id: paragraph.two_columns_text_media.field_id_anchor
+field_name: field_id_anchor
+entity_type: paragraph
+bundle: two_columns_text_media
+label: ID/anchor
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

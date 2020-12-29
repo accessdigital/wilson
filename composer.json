@@ -9,5 +9,18 @@
             "email": "paul.gregory@weareaccess.co.uk"
         }
     ],
-    "require": {}
+    "require": {
+        "drupal/paragraphs": "^1.12",
+        "drupal/diff": "^1.0",
+        "drupal/devel": "^4.0",
+        "drupal/shield": "^1.4",
+        "drupal/login_emailusername": "^1.2",
+        "drupal/seckit": "^2.0",
+        "drupal/shield": "^1.4",
+        "drupal/admin_toolbar": "^2.4",
+        "drupal/config_split": "^1.7",
+        "drupal/paragraphs_ee": "^1.7",
+        "drupal/field_group": "^3.1",
+        "drupal/pathauto": "^1.8"
+    }
 }

@@ -1,0 +1,52 @@
+uuid: cd555de0-d858-4ae6-8a1c-a4d02ad30ac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_columns_text_media.field_column_order
+    - field.field.paragraph.two_columns_text_media.field_container_position
+    - field.field.paragraph.two_columns_text_media.field_container_width
+    - field.field.paragraph.two_columns_text_media.field_css_classes
+    - field.field.paragraph.two_columns_text_media.field_id_anchor
+    - field.field.paragraph.two_columns_text_media.field_media_column
+    - field.field.paragraph.two_columns_text_media.field_padding_bottom
+    - field.field.paragraph.two_columns_text_media.field_padding_top
+    - field.field.paragraph.two_columns_text_media.field_section_bg
+    - field.field.paragraph.two_columns_text_media.field_text_column
+    - field.field.paragraph.two_columns_text_media.field_vertical_alignment
+    - paragraphs.paragraphs_type.two_columns_text_media
+  module:
+    - text
+_core:
+  default_config_hash: rkfOYmX2ED8jvzzJhWd2tdYO1C0yk0cz-Pp0mMHZgXs
+id: paragraph.two_columns_text_media.default
+targetEntityType: paragraph
+bundle: two_columns_text_media
+mode: default
+content:
+  field_media_column:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_text_column:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_column_order: true
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg: true
+  field_vertical_alignment: true

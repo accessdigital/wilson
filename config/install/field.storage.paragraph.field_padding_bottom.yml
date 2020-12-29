@@ -1,0 +1,33 @@
+uuid: f8366c5f-dab1-4e0e-b655-5b111da3fd95
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: none
+      label: None
+    -
+      value: reduced
+      label: Reduced
+    -
+      value: normal
+      label: Normal
+    -
+      value: expanded
+      label: Expanded
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

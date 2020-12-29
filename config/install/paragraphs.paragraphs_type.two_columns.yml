@@ -1,0 +1,12 @@
+uuid: f570cf93-4893-42de-8433-eea351c4b6f5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: I5vt0gjYwEZM1Y3Iihc1LdQl7eo8YAvXWn62a36UvNo
+id: two_columns
+label: 'Two columns'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

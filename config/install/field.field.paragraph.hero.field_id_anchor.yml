@@ -1,0 +1,19 @@
+uuid: 53aecdb8-b909-4a22-b038-8544827e2667
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id_anchor
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_id_anchor
+field_name: field_id_anchor
+entity_type: paragraph
+bundle: hero
+label: ID/anchor
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

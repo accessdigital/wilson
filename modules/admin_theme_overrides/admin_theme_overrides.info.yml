@@ -1,0 +1,8 @@
+name: Admin Theme Overrides
+type: module
+description: 'Some style overrides for the Claro Admin Theme.'
+package: Custom
+core_version_requirement: ^8.8 || ^9
+
+libraries:
+  - admin_theme_overrides/styles

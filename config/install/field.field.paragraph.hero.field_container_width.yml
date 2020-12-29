@@ -1,0 +1,23 @@
+uuid: c9f78ae6-e97b-4300-80b3-7ebcf1263702
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_width
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+id: paragraph.hero.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+bundle: hero
+label: 'Container width'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

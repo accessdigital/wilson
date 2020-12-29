@@ -1,0 +1,23 @@
+uuid: cef17395-fab9-496a-bf55-350dde599336
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_position
+    - paragraphs.paragraphs_type.one_column
+  module:
+    - options
+id: paragraph.one_column.field_container_position
+field_name: field_container_position
+entity_type: paragraph
+bundle: one_column
+label: 'Container position'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

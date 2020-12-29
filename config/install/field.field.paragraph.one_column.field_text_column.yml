@@ -1,0 +1,21 @@
+uuid: a65294fc-e3ad-43fa-8176-1018edff0d86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_column
+    - paragraphs.paragraphs_type.one_column
+  module:
+    - text
+id: paragraph.one_column.field_text_column
+field_name: field_text_column
+entity_type: paragraph
+bundle: one_column
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

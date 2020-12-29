@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Override some admin theme elements.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function admin_theme_overrides_page_attachments(array &$page) {
+  if (!\Drupal::currentUser()->hasPermission('view the administration theme')) {
+    return;
+  }
+  $page['#attached']['library'][] = 'admin_theme_overrides/styles';
+}

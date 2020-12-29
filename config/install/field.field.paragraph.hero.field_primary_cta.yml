@@ -1,0 +1,23 @@
+uuid: bd21efde-a4fe-4b54-b485-7a37048e8955
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_primary_cta
+    - paragraphs.paragraphs_type.hero
+  module:
+    - link
+id: paragraph.hero.field_primary_cta
+field_name: field_primary_cta
+entity_type: paragraph
+bundle: hero
+label: 'Primary CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

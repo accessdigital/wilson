@@ -1,0 +1,187 @@
+uuid: c5f1be1a-e6c1-41e6-aed5-60222abe1429
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.one_column.field_container_position
+    - field.field.paragraph.one_column.field_container_width
+    - field.field.paragraph.one_column.field_css_classes
+    - field.field.paragraph.one_column.field_id_anchor
+    - field.field.paragraph.one_column.field_padding_bottom
+    - field.field.paragraph.one_column.field_padding_top
+    - field.field.paragraph.one_column.field_section_bg
+    - field.field.paragraph.one_column.field_text_column
+    - paragraphs.paragraphs_type.one_column
+  module:
+    - field_group
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_text
+        - group_settings
+      parent_name: ''
+      weight: 8
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_text:
+      children:
+        - field_text_column
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Text
+    group_settings:
+      children:
+        - group_layout
+        - group_padding
+        - group_background
+        - group_classes_id
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Settings
+    group_layout:
+      children:
+        - field_container_width
+        - field_horizontal_alignment
+        - field_container_position
+      parent_name: group_settings
+      weight: 20
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Layout
+    group_padding:
+      children:
+        - field_padding_top
+        - field_padding_bottom
+      parent_name: group_settings
+      weight: 21
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Padding
+    group_background:
+      children:
+        - field_section_bg
+      parent_name: group_settings
+      weight: 22
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Background
+    group_classes_id:
+      children:
+        - field_css_classes
+        - field_id_anchor
+      parent_name: group_settings
+      weight: 23
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Classes & ID'
+id: paragraph.one_column.default
+targetEntityType: paragraph
+bundle: one_column
+mode: default
+content:
+  field_container_position:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_container_width:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_css_classes:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_id_anchor:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_padding_bottom:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_padding_top:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_bg:
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_text_column:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

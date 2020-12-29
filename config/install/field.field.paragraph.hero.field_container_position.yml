@@ -1,0 +1,23 @@
+uuid: 81b39a54-50a8-4744-a83b-37bc5f91a464
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_position
+    - paragraphs.paragraphs_type.hero
+  module:
+    - options
+id: paragraph.hero.field_container_position
+field_name: field_container_position
+entity_type: paragraph
+bundle: hero
+label: 'Container position'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string
