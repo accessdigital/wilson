@@ -1,4 +1,3 @@
-uuid: 2677f4d1-a462-4357-b0df-c9cf494073f9
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - link
+_core:
+  default_config_hash: Ha7-dqRoK8RYBqMlOlmZmUa41CmZOIyUWCi3_cb88AU
 id: paragraph.hero.field_secondary_cta
 field_name: field_secondary_cta
 entity_type: paragraph

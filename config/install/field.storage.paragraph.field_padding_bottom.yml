@@ -1,10 +1,11 @@
-uuid: f8366c5f-dab1-4e0e-b655-5b111da3fd95
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: JyTwq8O6RVC_gewuK4WQX4SqFyFO2SoqyQeCQ7vnUDA
 id: paragraph.field_padding_bottom
 field_name: field_padding_bottom
 entity_type: paragraph

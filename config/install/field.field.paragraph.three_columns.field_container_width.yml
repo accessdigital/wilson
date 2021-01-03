@@ -1,4 +1,3 @@
-uuid: 2afb9e6f-a2ab-4bad-989b-92fafdf57f5e
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.three_columns
   module:
     - options
+_core:
+  default_config_hash: psUs_N-3AwjOVNdWB37Znh09r_cwUbAt3LBofAJJ3Bo
 id: paragraph.three_columns.field_container_width
 field_name: field_container_width
 entity_type: paragraph

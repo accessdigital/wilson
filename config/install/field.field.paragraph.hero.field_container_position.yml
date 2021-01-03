@@ -1,4 +1,3 @@
-uuid: 81b39a54-50a8-4744-a83b-37bc5f91a464
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - options
+_core:
+  default_config_hash: FE__NhJwDWZnyH1BZzsquatoMSuT-XrXcmO-fsCYChs
 id: paragraph.hero.field_container_position
 field_name: field_container_position
 entity_type: paragraph

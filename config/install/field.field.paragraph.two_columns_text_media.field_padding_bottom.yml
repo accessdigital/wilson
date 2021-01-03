@@ -1,4 +1,3 @@
-uuid: d6fc00b2-4a45-4166-bd05-655348f03d69
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.two_columns_text_media
   module:
     - options
+_core:
+  default_config_hash: UrvpGseUlaz9GcTG3vZ9l188xme2ItHu3QwaA3z6HTU
 id: paragraph.two_columns_text_media.field_padding_bottom
 field_name: field_padding_bottom
 entity_type: paragraph

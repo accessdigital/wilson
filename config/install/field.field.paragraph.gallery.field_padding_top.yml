@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - options
+_core:
+  default_config_hash: 6Bj_H4sO6mbp6KIMp4b3g7LbSviwLJW3YS1YiKXnMR8
+id: paragraph.gallery.field_padding_top
+field_name: field_padding_top
+entity_type: paragraph
+bundle: gallery
+label: 'Top padding'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

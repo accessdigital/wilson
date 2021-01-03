@@ -1,4 +1,3 @@
-uuid: f91243db-d0c5-4fd0-ae33-8e8dbbae1f19
 langcode: en
 status: true
 dependencies:
@@ -6,6 +5,8 @@ dependencies:
     - field.storage.paragraph.field_section_bg
     - media.type.image
     - paragraphs.paragraphs_type.two_columns
+_core:
+  default_config_hash: xkhaTVEJpfWZJ3zLAfn7EO9k-fLxLvZ5cS770JKfH4Q
 id: paragraph.two_columns.field_section_bg
 field_name: field_section_bg
 entity_type: paragraph

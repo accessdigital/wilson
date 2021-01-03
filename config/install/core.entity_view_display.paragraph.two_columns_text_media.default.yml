@@ -1,4 +1,3 @@
-uuid: cd555de0-d858-4ae6-8a1c-a4d02ad30ac1
 langcode: en
 status: true
 dependencies:
@@ -12,13 +11,14 @@ dependencies:
     - field.field.paragraph.two_columns_text_media.field_padding_bottom
     - field.field.paragraph.two_columns_text_media.field_padding_top
     - field.field.paragraph.two_columns_text_media.field_section_bg
+    - field.field.paragraph.two_columns_text_media.field_section_bg_colour
     - field.field.paragraph.two_columns_text_media.field_text_column
     - field.field.paragraph.two_columns_text_media.field_vertical_alignment
     - paragraphs.paragraphs_type.two_columns_text_media
   module:
     - text
 _core:
-  default_config_hash: rkfOYmX2ED8jvzzJhWd2tdYO1C0yk0cz-Pp0mMHZgXs
+  default_config_hash: hnu5tjUuZ0qjiGGFRdO6QujS4Vdy2Mc5J4Ik-w9XGhg
 id: paragraph.two_columns_text_media.default
 targetEntityType: paragraph
 bundle: two_columns_text_media
@@ -29,7 +29,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: default
+      view_mode: narrow
       link: false
     third_party_settings: {  }
     region: content
@@ -49,4 +49,5 @@ hidden:
   field_padding_bottom: true
   field_padding_top: true
   field_section_bg: true
+  field_section_bg_colour: true
   field_vertical_alignment: true

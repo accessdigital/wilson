@@ -1,10 +1,11 @@
-uuid: 0c886e7b-9498-4c0e-80f3-dd7b8ec83c24
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: IonRd9-HAVXO3w1DQ9yIwlu00aztrR1O-yzwOTW8mFM
 id: paragraph.field_container_position
 field_name: field_container_position
 entity_type: paragraph

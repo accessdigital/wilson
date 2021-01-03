@@ -1,0 +1,49 @@
+uuid: c7ab56e3-e156-4569-a9fa-8f98471debf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_container_height
+    - field.field.paragraph.map.field_container_position
+    - field.field.paragraph.map.field_container_width
+    - field.field.paragraph.map.field_css_classes
+    - field.field.paragraph.map.field_id_anchor
+    - field.field.paragraph.map.field_map_address
+    - field.field.paragraph.map.field_padding_bottom
+    - field.field.paragraph.map.field_padding_top
+    - paragraphs.paragraphs_type.map
+  module:
+    - simple_gmap
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_map_address:
+    weight: 0
+    label: hidden
+    settings:
+      include_map: true
+      apikey: ''
+      iframe_width: 100%
+      iframe_height: 100%
+      iframe_title: ''
+      static_scale: 1
+      link_text: 'View larger map'
+      zoom_level: 14
+      map_type: m
+      langcode: en
+      include_static_map: false
+      include_link: false
+      include_text: false
+    third_party_settings: {  }
+    type: simple_gmap
+    region: content
+hidden:
+  field_container_height: true
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true

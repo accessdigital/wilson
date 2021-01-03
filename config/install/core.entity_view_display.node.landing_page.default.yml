@@ -1,16 +1,18 @@
-uuid: 10a4b34f-b444-4de9-9bc0-098ed549e8f7
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_sections
+    - field.field.node.landing_page.field_teaser_caption
+    - field.field.node.landing_page.field_teaser_image
+    - field.field.node.landing_page.field_teaser_title
     - node.type.landing_page
   module:
     - entity_reference_revisions
     - user
 _core:
-  default_config_hash: Ud6owsvH9PL13tx6FqVWBRnQ_HplQyejbqiItvIf0bU
+  default_config_hash: 7mo35by-xY5K1wiEWlSaO7pVKgdwRA5TPazDeYzX_gg
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -27,4 +29,7 @@ content:
     region: content
 hidden:
   body: true
+  field_teaser_caption: true
+  field_teaser_image: true
+  field_teaser_title: true
   links: true

@@ -1,0 +1,14 @@
+uuid: f6d5abb0-8e45-4ad6-8271-a9fd2d5be47b
+langcode: en
+status: true
+dependencies: {  }
+id: logo
+label: Logo
+description: 'Reusable logo images.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

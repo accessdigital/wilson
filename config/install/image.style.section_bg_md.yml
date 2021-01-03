@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: W5O0RKdHuNrI-rkuAB8NxIOdPS0nD4bWYcp1xbQEaoY
+name: section_bg_md
+label: 'Section background (md)'
+effects:
+  82523495-5ac7-4755-badd-7ef1d3f7153b:
+    uuid: 82523495-5ac7-4755-badd-7ef1d3f7153b
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 1024
+      height: 768
+      crop_type: focal_point

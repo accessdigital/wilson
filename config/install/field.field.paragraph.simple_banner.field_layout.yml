@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout
+    - paragraphs.paragraphs_type.simple_banner
+  module:
+    - options
+id: paragraph.simple_banner.field_layout
+field_name: field_layout
+entity_type: paragraph
+bundle: simple_banner
+label: Layout
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: justified
+default_value_callback: ''
+settings: {  }
+field_type: list_string

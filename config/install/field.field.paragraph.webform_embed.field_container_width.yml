@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_width
+    - paragraphs.paragraphs_type.webform_embed
+  module:
+    - options
+id: paragraph.webform_embed.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+bundle: webform_embed
+label: 'Container width'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -8,6 +8,8 @@ dependencies:
     - media.type.video
   module:
     - image
+_core:
+  default_config_hash: PDQo9eqAz3D8g87S89zPgXsm7Xy-dYMdEgwKBahFdy0
 id: media.video.media_library
 targetEntityType: media
 bundle: video

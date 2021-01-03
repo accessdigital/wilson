@@ -1,4 +1,3 @@
-uuid: fe61d560-063d-4406-83ab-40e287aa50af
 langcode: en
 status: true
 dependencies:
@@ -6,25 +5,44 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_sections
+    - field.field.node.landing_page.field_teaser_caption
+    - field.field.node.landing_page.field_teaser_image
+    - field.field.node.landing_page.field_teaser_title
     - node.type.landing_page
   module:
-    - text
     - user
 _core:
-  default_config_hash: mLnoL92n7u3_ooOa-e7e-CGdoGWB4fHU8cbyCDk-9hA
+  default_config_hash: s8ggSKLkMwh9WZ6fFNaTP_4GBmwEk7HLVJXa9LJIwfM
 id: node.landing_page.teaser
 targetEntityType: node
 bundle: landing_page
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 0
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
+  field_teaser_caption:
+    type: basic_string
+    weight: 2
     region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: grid
+      link: false
+    third_party_settings: {  }
+  field_teaser_title:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
+  body: true
   field_sections: true
   links: true

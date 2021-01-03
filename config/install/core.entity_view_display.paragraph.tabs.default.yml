@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_container_position
+    - field.field.paragraph.tabs.field_container_width
+    - field.field.paragraph.tabs.field_css_classes
+    - field.field.paragraph.tabs.field_headline
+    - field.field.paragraph.tabs.field_id_anchor
+    - field.field.paragraph.tabs.field_items
+    - field.field.paragraph.tabs.field_padding_bottom
+    - field.field.paragraph.tabs.field_padding_top
+    - field.field.paragraph.tabs.field_pre_header
+    - field.field.paragraph.tabs.field_tabs_direction
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  field_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_items:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_pre_header:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_tabs_direction: true

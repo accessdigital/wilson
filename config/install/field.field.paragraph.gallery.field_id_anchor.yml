@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id_anchor
+    - paragraphs.paragraphs_type.gallery
+_core:
+  default_config_hash: 1xBTPPR8FtLfBtOU6wsWSt16A6IgRXS34dyL0HtSNI0
+id: paragraph.gallery.field_id_anchor
+field_name: field_id_anchor
+entity_type: paragraph
+bundle: gallery
+label: ID/anchor
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

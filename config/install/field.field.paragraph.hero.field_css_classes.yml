@@ -1,10 +1,11 @@
-uuid: 058cd334-622b-4bd4-9d0f-37360e9e5a98
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.hero
+_core:
+  default_config_hash: AhiI9GtQCAGSsPGLGsePiwAGsfiVtPUQFR66lcPaFu4
 id: paragraph.hero.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph

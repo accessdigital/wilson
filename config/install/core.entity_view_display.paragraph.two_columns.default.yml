@@ -1,15 +1,18 @@
-uuid: fa8b14c0-9c7b-485e-8ee9-dfbec8e6633b
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.two_columns.field_column_distribution
     - field.field.paragraph.two_columns.field_container_position
     - field.field.paragraph.two_columns.field_container_width
     - field.field.paragraph.two_columns.field_css_classes
+    - field.field.paragraph.two_columns.field_headline
     - field.field.paragraph.two_columns.field_id_anchor
     - field.field.paragraph.two_columns.field_padding_bottom
     - field.field.paragraph.two_columns.field_padding_top
+    - field.field.paragraph.two_columns.field_pre_header
     - field.field.paragraph.two_columns.field_section_bg
+    - field.field.paragraph.two_columns.field_section_bg_colour
     - field.field.paragraph.two_columns.field_text_column
     - field.field.paragraph.two_columns.field_text_column_2
     - field.field.paragraph.two_columns.field_vertical_alignment
@@ -17,27 +20,44 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: ID_5LScv-lJBV-_u1mko5ZynydNRCKjti0-UBcde4m4
+  default_config_hash: UVsAefAjo_XyAcNZGokb7Erm-F8jDQwTft1PjbIbMZg
 id: paragraph.two_columns.default
 targetEntityType: paragraph
 bundle: two_columns
 mode: default
 content:
-  field_text_column:
+  field_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pre_header:
     weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_column:
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_text_column_2:
-    weight: 1
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
 hidden:
+  field_column_distribution: true
   field_container_position: true
   field_container_width: true
   field_css_classes: true
@@ -45,4 +65,5 @@ hidden:
   field_padding_bottom: true
   field_padding_top: true
   field_section_bg: true
+  field_section_bg_colour: true
   field_vertical_alignment: true

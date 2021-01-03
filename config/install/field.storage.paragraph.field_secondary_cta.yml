@@ -1,10 +1,11 @@
-uuid: ba31cbd9-9c5e-4eb8-95af-960391c61a0f
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - paragraphs
+_core:
+  default_config_hash: FRfNcykaX1ZferoKvl-2V53VcXXHZXVYJgGeAaTQkwg
 id: paragraph.field_secondary_cta
 field_name: field_secondary_cta
 entity_type: paragraph

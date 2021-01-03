@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_distribution
+    - paragraphs.paragraphs_type.two_columns
+  module:
+    - options
+id: paragraph.two_columns.field_column_distribution
+field_name: field_column_distribution
+entity_type: paragraph
+bundle: two_columns
+label: 'Column distribution'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: equal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

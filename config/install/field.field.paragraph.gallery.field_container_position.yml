@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_position
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - options
+_core:
+  default_config_hash: JcE1-KSbev62MROBrRgMh5Yy8B9j-Vcqn7eFjRAXAIY
+id: paragraph.gallery.field_container_position
+field_name: field_container_position
+entity_type: paragraph
+bundle: gallery
+label: 'Container position'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

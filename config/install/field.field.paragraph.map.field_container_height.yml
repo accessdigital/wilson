@@ -1,0 +1,23 @@
+uuid: d18d53d1-5974-4682-930c-007dcd55dea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_height
+    - paragraphs.paragraphs_type.map
+  module:
+    - options
+id: paragraph.map.field_container_height
+field_name: field_container_height
+entity_type: paragraph
+bundle: map
+label: 'Map height'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '500'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

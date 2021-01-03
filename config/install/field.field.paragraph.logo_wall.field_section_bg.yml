@@ -1,0 +1,29 @@
+uuid: 1442fdfd-f3c0-4f6c-bd08-5ce363c62cb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_bg
+    - media.type.image
+    - paragraphs.paragraphs_type.logo_wall
+id: paragraph.logo_wall.field_section_bg
+field_name: field_section_bg
+entity_type: paragraph
+bundle: logo_wall
+label: 'Background image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

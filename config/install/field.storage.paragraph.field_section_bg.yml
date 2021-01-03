@@ -1,10 +1,11 @@
-uuid: 44f2dfd9-0220-4b02-9fda-ddd44bf5d41e
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - paragraphs
+_core:
+  default_config_hash: tLQfiNY2wbhrhvJHBnfVo--RyoDSwsj3UcBNQvVvxOo
 id: paragraph.field_section_bg
 field_name: field_section_bg
 entity_type: paragraph

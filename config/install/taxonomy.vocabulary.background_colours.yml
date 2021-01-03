@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Background colours'
+vid: background_colours
+description: 'Manage the colours available for use as a section background.'
+weight: 0

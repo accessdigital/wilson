@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: section_bg_xl
+label: 'Section background (xl)'
+effects:
+  e4191a34-5eec-49f5-808d-c19af5b094d4:
+    uuid: e4191a34-5eec-49f5-808d-c19af5b094d4
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1536
+      height: 1024
+      crop_type: focal_point

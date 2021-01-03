@@ -1,0 +1,19 @@
+uuid: d8f0fcce-200c-4b2e-a63d-68248235ac5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id_anchor
+    - paragraphs.paragraphs_type.logo_wall
+id: paragraph.logo_wall.field_id_anchor
+field_name: field_id_anchor
+entity_type: paragraph
+bundle: logo_wall
+label: ID/anchor
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

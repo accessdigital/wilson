@@ -1,4 +1,3 @@
-uuid: f116e8ee-7d6a-488c-bba3-13fd6d100549
 langcode: en
 status: true
 dependencies:
@@ -7,7 +6,7 @@ dependencies:
   module:
     - ckeditor
 _core:
-  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+  default_config_hash: PHGyFvW6THdtPzPFjClYNa9XAccPf7OmAs7gRXuxh3U
 format: full_html
 editor: ckeditor
 settings:
@@ -23,7 +22,17 @@ settings:
             - Superscript
             - Subscript
             - '-'
-            - RemoveFormat
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+        -
+          name: 'Copy paste'
+          items:
+            - Cut
+            - Copy
+            - Paste
+            - PasteFromWord
         -
           name: Linking
           items:
@@ -34,6 +43,9 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - '-'
+            - Indent
+            - Outdent
         -
           name: Media
           items:
@@ -48,7 +60,10 @@ settings:
         -
           name: Tools
           items:
-            - ShowBlocks
+            - Undo
+            - Redo
+            - RemoveFormat
+            - SpecialChar
             - Source
   plugins:
     stylescombo:

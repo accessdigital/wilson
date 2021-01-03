@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      ctas: ctas
+id: simple_banner
+label: 'Simple banner'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

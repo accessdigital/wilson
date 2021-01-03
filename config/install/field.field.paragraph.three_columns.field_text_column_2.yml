@@ -1,4 +1,3 @@
-uuid: e4ca0a97-8c3c-4c84-bc31-a0fe2e1c0a86
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.three_columns
   module:
     - text
+_core:
+  default_config_hash: taoqSyMpchgqKJWyfBkbx5tbhZEutf3Ab4q220XXX7c
 id: paragraph.three_columns.field_text_column_2
 field_name: field_text_column_2
 entity_type: paragraph

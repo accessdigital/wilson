@@ -1,0 +1,23 @@
+uuid: 3c42be97-b53e-4a86-8918-ae38b79f3363
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_width
+    - paragraphs.paragraphs_type.logo_wall
+  module:
+    - options
+id: paragraph.logo_wall.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+bundle: logo_wall
+label: 'Container width'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

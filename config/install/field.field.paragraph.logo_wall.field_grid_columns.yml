@@ -1,0 +1,23 @@
+uuid: 89576501-7610-48c4-bdeb-b7afc487c332
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid_columns
+    - paragraphs.paragraphs_type.logo_wall
+  module:
+    - options
+id: paragraph.logo_wall.field_grid_columns
+field_name: field_grid_columns
+entity_type: paragraph
+bundle: logo_wall
+label: 'Grid columns'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: '4'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

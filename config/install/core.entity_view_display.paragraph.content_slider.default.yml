@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_slider.field_content_references
+    - field.field.paragraph.content_slider.field_css_classes
+    - field.field.paragraph.content_slider.field_headline
+    - field.field.paragraph.content_slider.field_id_anchor
+    - field.field.paragraph.content_slider.field_padding_bottom
+    - field.field.paragraph.content_slider.field_padding_top
+    - field.field.paragraph.content_slider.field_pre_header
+    - field.field.paragraph.content_slider.field_section_bg
+    - field.field.paragraph.content_slider.field_section_bg_colour
+    - paragraphs.paragraphs_type.content_slider
+id: paragraph.content_slider.default
+targetEntityType: paragraph
+bundle: content_slider
+mode: default
+content:
+  field_content_references:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pre_header:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg: true
+  field_section_bg_colour: true

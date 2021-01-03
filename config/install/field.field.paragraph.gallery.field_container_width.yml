@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_width
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - options
+_core:
+  default_config_hash: W_HLTEguHapEJPZNc5fpsvcmMXvg0CZIOXutAcIaO8Q
+id: paragraph.gallery.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+bundle: gallery
+label: 'Container width'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

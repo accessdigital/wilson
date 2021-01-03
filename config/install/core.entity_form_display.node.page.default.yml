@@ -1,15 +1,38 @@
-uuid: c3335571-6aee-42d5-85d5-0f956821c2c7
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_teaser_caption
+    - field.field.node.page.field_teaser_image
+    - field.field.node.page.field_teaser_title
     - node.type.page
   module:
+    - field_group
+    - media_library
     - path
     - text
+third_party_settings:
+  field_group:
+    group_teaser_settings:
+      children:
+        - field_teaser_title
+        - field_teaser_caption
+        - field_teaser_image
+      parent_name: ''
+      weight: 12
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Define the text and image to represent this page in teaser form (e.g. in content grids and list). If nothing is specified, the Title field will be used.'
+        open: false
+        required_fields: true
+        weight: 0
+      label: 'Teaser settings'
 _core:
-  default_config_hash: AD_lefuYmjsKeH3OQApsyP_nLj6ZnGaALznLQSQ0Z_o
+  default_config_hash: kKXaGaholhmIiysvmpyuWOmU033qi4oOZEw_Gh59T4E
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -17,7 +40,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
+    weight: 6
     region: content
     settings:
       rows: 9
@@ -27,13 +50,36 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_teaser_caption:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_teaser_image:
+    weight: 11
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_teaser_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -41,26 +87,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 3
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 4
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -68,12 +114,17 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 7
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

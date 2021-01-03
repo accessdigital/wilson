@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: X5TiKiUk4-5pR5CboNqxVaBzhNsz1R6TG1oFWv4od80
+name: section_bg_fallback
+label: 'Section background (fallback)'
+effects:
+  b77c3e29-f2d4-4eff-bf1f-e057eedcef4e:
+    uuid: b77c3e29-f2d4-4eff-bf1f-e057eedcef4e
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 640
+      height: 640
+      crop_type: focal_point

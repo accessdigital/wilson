@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery.field_container_position
+    - field.field.paragraph.gallery.field_container_width
+    - field.field.paragraph.gallery.field_css_classes
+    - field.field.paragraph.gallery.field_id_anchor
+    - field.field.paragraph.gallery.field_media
+    - field.field.paragraph.gallery.field_padding_bottom
+    - field.field.paragraph.gallery.field_padding_top
+    - field.field.paragraph.gallery.field_section_bg_colour
+    - paragraphs.paragraphs_type.gallery
+_core:
+  default_config_hash: DhyHOIAMSRfwvz_41YXBO_9vjpx7PzTAFXcYw8AkmFw
+id: paragraph.gallery.default
+targetEntityType: paragraph
+bundle: gallery
+mode: default
+content:
+  field_media:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: gallery
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg_colour: true

@@ -1,4 +1,3 @@
-uuid: ee0bfa90-855e-4d1e-8528-6f496c3261ca
 langcode: en
 status: true
 dependencies:
@@ -10,9 +9,11 @@ dependencies:
     - field.field.paragraph.hero.field_id_anchor
     - field.field.paragraph.hero.field_padding_bottom
     - field.field.paragraph.hero.field_padding_top
+    - field.field.paragraph.hero.field_pre_header
     - field.field.paragraph.hero.field_primary_cta
     - field.field.paragraph.hero.field_secondary_cta
     - field.field.paragraph.hero.field_section_bg
+    - field.field.paragraph.hero.field_section_bg_colour
     - field.field.paragraph.hero.field_text_column
     - paragraphs.paragraphs_type.hero
   module:
@@ -38,6 +39,7 @@ third_party_settings:
       label: Tabs
     group_text:
       children:
+        - field_pre_header
         - field_headline
         - field_text_column
       parent_name: group_tabs
@@ -88,7 +90,7 @@ third_party_settings:
         - field_container_width
         - field_container_position
       parent_name: group_settings
-      weight: 20
+      weight: 10
       format_type: details
       region: content
       format_settings:
@@ -103,7 +105,7 @@ third_party_settings:
         - field_padding_top
         - field_padding_bottom
       parent_name: group_settings
-      weight: 21
+      weight: 11
       format_type: details
       region: content
       format_settings:
@@ -115,9 +117,10 @@ third_party_settings:
       label: Padding
     group_background:
       children:
+        - field_section_bg_colour
         - field_section_bg
       parent_name: group_settings
-      weight: 22
+      weight: 12
       format_type: details
       region: content
       format_settings:
@@ -132,7 +135,7 @@ third_party_settings:
         - field_css_classes
         - field_id_anchor
       parent_name: group_settings
-      weight: 23
+      weight: 13
       format_type: details
       region: content
       format_settings:
@@ -142,6 +145,8 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
+_core:
+  default_config_hash: 80XGEGRJBjA_K5kWA-n0VXRrSWe1m2butF1awCrRD30
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -168,7 +173,7 @@ content:
     type: string_textfield
     region: content
   field_headline:
-    weight: 1
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -195,6 +200,14 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_pre_header:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_primary_cta:
     weight: 3
     settings:
@@ -212,14 +225,20 @@ content:
     type: link_default
     region: content
   field_section_bg:
-    weight: 11
+    weight: 25
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
+  field_section_bg_colour:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_text_column:
-    weight: 2
+    weight: 11
     settings:
       rows: 5
       placeholder: ''

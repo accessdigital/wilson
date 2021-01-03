@@ -1,0 +1,16 @@
+uuid: 147b1e03-9c31-4811-816d-fb9c6fd291e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      embeds: embeds
+id: map
+label: 'Google map'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

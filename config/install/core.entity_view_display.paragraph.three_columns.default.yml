@@ -1,4 +1,3 @@
-uuid: 530d563b-4eac-47b1-b730-015f94e285a4
 langcode: en
 status: true
 dependencies:
@@ -6,10 +5,13 @@ dependencies:
     - field.field.paragraph.three_columns.field_container_position
     - field.field.paragraph.three_columns.field_container_width
     - field.field.paragraph.three_columns.field_css_classes
+    - field.field.paragraph.three_columns.field_headline
     - field.field.paragraph.three_columns.field_id_anchor
     - field.field.paragraph.three_columns.field_padding_bottom
     - field.field.paragraph.three_columns.field_padding_top
+    - field.field.paragraph.three_columns.field_pre_header
     - field.field.paragraph.three_columns.field_section_bg
+    - field.field.paragraph.three_columns.field_section_bg_colour
     - field.field.paragraph.three_columns.field_text_column
     - field.field.paragraph.three_columns.field_text_column_2
     - field.field.paragraph.three_columns.field_text_column_3
@@ -17,27 +19,45 @@ dependencies:
     - paragraphs.paragraphs_type.three_columns
   module:
     - text
+_core:
+  default_config_hash: D0FEEOuQy6j5yKRadiWrrSa14Oq2yWNhZJr57ZqOVto
 id: paragraph.three_columns.default
 targetEntityType: paragraph
 bundle: three_columns
 mode: default
 content:
-  field_text_column:
+  field_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pre_header:
     weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_column:
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_text_column_2:
-    weight: 1
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_text_column_3:
-    weight: 2
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -51,4 +71,5 @@ hidden:
   field_padding_bottom: true
   field_padding_top: true
   field_section_bg: true
+  field_section_bg_colour: true
   field_vertical_alignment: true

@@ -1,10 +1,11 @@
-uuid: 8ac59e0a-dda2-4de8-9669-594efd132d61
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.two_columns_text_media
+_core:
+  default_config_hash: lD8kBf-rLyjTYa99gpF4ULFiM1AadDOOhWqtrSNMnKY
 id: paragraph.two_columns_text_media.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph

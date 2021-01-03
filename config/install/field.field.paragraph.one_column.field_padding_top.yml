@@ -1,4 +1,3 @@
-uuid: a8f54e03-f8ed-4870-bc1f-c52998d666d6
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.one_column
   module:
     - options
+_core:
+  default_config_hash: D4CXS3YWoIiC6zKYbCBRtLy_7sxP8QBh17nSZvDC9Dk
 id: paragraph.one_column.field_padding_top
 field_name: field_padding_top
 entity_type: paragraph

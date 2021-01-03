@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: OC5VUViLMg9V1LuregWl81YwCaeD0LmAeUBaiRocN2Y
+id: media.gallery
+label: Gallery
+targetEntityType: media
+cache: true

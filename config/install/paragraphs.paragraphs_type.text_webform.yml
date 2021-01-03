@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      embeds: embeds
+id: text_webform
+label: 'Text and webform'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

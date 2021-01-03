@@ -1,0 +1,30 @@
+wilson.sm:
+  label: sm
+  mediaQuery: 'all and (min-width: 640px)'
+  weight: 0
+  multipliers:
+    - 1x
+wilson.md:
+  label: md
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 0
+  multipliers:
+    - 1x
+wilson.lg:
+  label: lg
+  mediaQuery: 'all and (min-width: 1024px)'
+  weight: 0
+  multipliers:
+    - 1x
+wilson.xl:
+  label: xl
+  mediaQuery: 'all and (min-width: 1280px)'
+  weight: 0
+  multipliers:
+    - 1x
+wilson.2xl:
+  label: 2xl
+  mediaQuery: 'all and (min-width: 1536px)'
+  weight: 0
+  multipliers:
+    - 1x

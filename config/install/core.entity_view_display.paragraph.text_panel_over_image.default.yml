@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_panel_over_image.field_container_position
+    - field.field.paragraph.text_panel_over_image.field_css_classes
+    - field.field.paragraph.text_panel_over_image.field_headline
+    - field.field.paragraph.text_panel_over_image.field_id_anchor
+    - field.field.paragraph.text_panel_over_image.field_padding_bottom
+    - field.field.paragraph.text_panel_over_image.field_padding_top
+    - field.field.paragraph.text_panel_over_image.field_pre_header
+    - field.field.paragraph.text_panel_over_image.field_section_bg
+    - field.field.paragraph.text_panel_over_image.field_section_bg_colour
+    - field.field.paragraph.text_panel_over_image.field_text_column
+    - paragraphs.paragraphs_type.text_panel_over_image
+  module:
+    - text
+id: paragraph.text_panel_over_image.default
+targetEntityType: paragraph
+bundle: text_panel_over_image
+mode: default
+content:
+  field_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pre_header:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_text_column:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_container_position: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg: true
+  field_section_bg_colour: true

@@ -1,0 +1,29 @@
+uuid: 46d01e1d-6187-4509-911e-fc8f724b4817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media
+    - media.type.logo
+    - paragraphs.paragraphs_type.logo_wall
+id: paragraph.logo_wall.field_media
+field_name: field_media
+entity_type: paragraph
+bundle: logo_wall
+label: Logos
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      logo: logo
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

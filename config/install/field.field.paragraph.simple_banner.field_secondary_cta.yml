@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_secondary_cta
+    - paragraphs.paragraphs_type.simple_banner
+  module:
+    - link
+id: paragraph.simple_banner.field_secondary_cta
+field_name: field_secondary_cta
+entity_type: paragraph
+bundle: simple_banner
+label: 'Secondary CTA'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

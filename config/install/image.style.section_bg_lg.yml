@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: section_bg_lg
+label: 'Section background (lg)'
+effects:
+  11c5fd42-33bb-43ef-b31a-f72bda911c25:
+    uuid: 11c5fd42-33bb-43ef-b31a-f72bda911c25
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 768
+      crop_type: focal_point

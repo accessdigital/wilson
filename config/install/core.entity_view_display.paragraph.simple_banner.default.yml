@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_banner.field_css_classes
+    - field.field.paragraph.simple_banner.field_headline
+    - field.field.paragraph.simple_banner.field_id_anchor
+    - field.field.paragraph.simple_banner.field_layout
+    - field.field.paragraph.simple_banner.field_padding_bottom
+    - field.field.paragraph.simple_banner.field_padding_top
+    - field.field.paragraph.simple_banner.field_pre_header
+    - field.field.paragraph.simple_banner.field_primary_cta
+    - field.field.paragraph.simple_banner.field_secondary_cta
+    - field.field.paragraph.simple_banner.field_section_bg
+    - field.field.paragraph.simple_banner.field_section_bg_colour
+    - field.field.paragraph.simple_banner.field_text_column
+    - paragraphs.paragraphs_type.simple_banner
+  module:
+    - link
+    - text
+id: paragraph.simple_banner.default
+targetEntityType: paragraph
+bundle: simple_banner
+mode: default
+content:
+  field_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pre_header:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_primary_cta:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_secondary_cta:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text_column:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_css_classes: true
+  field_id_anchor: true
+  field_layout: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg: true
+  field_section_bg_colour: true

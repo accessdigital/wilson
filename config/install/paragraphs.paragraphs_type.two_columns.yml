@@ -1,9 +1,14 @@
-uuid: f570cf93-4893-42de-8433-eea351c4b6f5
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      text: text
 _core:
-  default_config_hash: I5vt0gjYwEZM1Y3Iihc1LdQl7eo8YAvXWn62a36UvNo
+  default_config_hash: qOi5yGKHvLyW88EwgG8F3El0i4JFoTKPtV7qjrCtkJo
 id: two_columns
 label: 'Two columns'
 icon_uuid: null

@@ -1,0 +1,86 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.panel.field_column_order
+    - field.field.paragraph.panel.field_css_classes
+    - field.field.paragraph.panel.field_headline
+    - field.field.paragraph.panel.field_id_anchor
+    - field.field.paragraph.panel.field_media_column
+    - field.field.paragraph.panel.field_pre_header
+    - field.field.paragraph.panel.field_primary_cta
+    - field.field.paragraph.panel.field_secondary_cta
+    - field.field.paragraph.panel.field_section_bg
+    - field.field.paragraph.panel.field_section_bg_colour
+    - field.field.paragraph.panel.field_text_column
+    - paragraphs.paragraphs_type.panel
+  module:
+    - link
+    - text
+id: paragraph.panel.default
+targetEntityType: paragraph
+bundle: panel
+mode: default
+content:
+  field_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_column:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_pre_header:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_primary_cta:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_secondary_cta:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text_column:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_column_order: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_section_bg: true
+  field_section_bg_colour: true

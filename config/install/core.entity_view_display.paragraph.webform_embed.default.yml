@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.webform_embed.field_container_position
+    - field.field.paragraph.webform_embed.field_container_width
+    - field.field.paragraph.webform_embed.field_css_classes
+    - field.field.paragraph.webform_embed.field_id_anchor
+    - field.field.paragraph.webform_embed.field_padding_bottom
+    - field.field.paragraph.webform_embed.field_padding_top
+    - field.field.paragraph.webform_embed.field_section_bg
+    - field.field.paragraph.webform_embed.field_section_bg_colour
+    - field.field.paragraph.webform_embed.field_webform
+    - paragraphs.paragraphs_type.webform_embed
+  module:
+    - webform
+id: paragraph.webform_embed.default
+targetEntityType: paragraph
+bundle: webform_embed
+mode: default
+content:
+  field_webform:
+    weight: 0
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden:
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg: true
+  field_section_bg_colour: true

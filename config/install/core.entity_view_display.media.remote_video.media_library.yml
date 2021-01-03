@@ -8,6 +8,8 @@ dependencies:
     - media.type.remote_video
   module:
     - image
+_core:
+  default_config_hash: sLyo3lc_eX4-C1Jv0ivqjuORGfdclLsX09tZf7K3EVM
 id: media.remote_video.media_library
 targetEntityType: media
 bundle: remote_video

@@ -1,10 +1,11 @@
-uuid: 0e8f7604-7755-48d6-a320-d701f8bcde50
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_id_anchor
     - paragraphs.paragraphs_type.one_column
+_core:
+  default_config_hash: _4a8F8TRQJVOv_kjbP4RkVw_213fe0hTWonxJFvNJcY
 id: paragraph.one_column.field_id_anchor
 field_name: field_id_anchor
 entity_type: paragraph

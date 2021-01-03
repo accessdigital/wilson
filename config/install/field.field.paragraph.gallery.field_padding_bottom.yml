@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_bottom
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - options
+_core:
+  default_config_hash: LTLPdrOo74YubpQsI6FmiC49H476ywxUV5yAxEDXI1s
+id: paragraph.gallery.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+bundle: gallery
+label: 'Bottom padding'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

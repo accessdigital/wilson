@@ -1,4 +1,3 @@
-uuid: 4a9167ad-a1a5-4649-b29c-c2a6e9b04245
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.two_columns_text_media
   module:
     - options
+_core:
+  default_config_hash: tnaw0YL4FsMejVbnzh4cSCLcISp0iTx51_lhj1b2qAU
 id: paragraph.two_columns_text_media.field_vertical_alignment
 field_name: field_vertical_alignment
 entity_type: paragraph

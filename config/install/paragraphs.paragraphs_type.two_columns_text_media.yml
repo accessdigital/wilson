@@ -1,9 +1,14 @@
-uuid: f90d5cbe-ba48-4ee2-93a5-ac116b33c628
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      text: text
 _core:
-  default_config_hash: oC0wJAn34Dx8aIbwT26yjgLaOgrePxqPZS5DxUOF744
+  default_config_hash: KThRd32TZjbPJ6ODRBoFNKc0L-sDxv8KZ1Lrw0IuO5Q
 id: two_columns_text_media
 label: 'Text and media'
 icon_uuid: null

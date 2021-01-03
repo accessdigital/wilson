@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: max_1600x1600
+label: 'Max 1600x1600'
+effects:
+  792b1bba-428e-4513-b258-25597fea9477:
+    uuid: 792b1bba-428e-4513-b258-25597fea9477
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: 1600
+      upscale: false

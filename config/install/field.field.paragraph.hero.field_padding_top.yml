@@ -1,4 +1,3 @@
-uuid: fac592e1-6201-4145-881d-183e3f23dc10
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - options
+_core:
+  default_config_hash: 30jgNw6sA_AmAzrumWGndCa1TUN5TOJ3G4TSz5kIU4c
 id: paragraph.hero.field_padding_top
 field_name: field_padding_top
 entity_type: paragraph

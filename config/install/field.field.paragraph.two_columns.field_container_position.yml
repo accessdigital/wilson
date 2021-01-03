@@ -1,4 +1,3 @@
-uuid: 68f480ad-03a4-44d8-92ea-ee312f04e5ba
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.two_columns
   module:
     - options
+_core:
+  default_config_hash: 6mwLGgxmikm5PpdV-7sc-_KbPBtQIDy0vBeVhg0SI04
 id: paragraph.two_columns.field_container_position
 field_name: field_container_position
 entity_type: paragraph

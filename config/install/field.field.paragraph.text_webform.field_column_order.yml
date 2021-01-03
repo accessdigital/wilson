@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_order
+    - paragraphs.paragraphs_type.text_webform
+  module:
+    - options
+id: paragraph.text_webform.field_column_order
+field_name: field_column_order
+entity_type: paragraph
+bundle: text_webform
+label: 'Column order'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: text_media
+default_value_callback: ''
+settings: {  }
+field_type: list_string

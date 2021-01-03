@@ -1,15 +1,18 @@
-uuid: cdafd478-3312-4fed-a6bb-a10d4d3313ab
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.two_columns.field_column_distribution
     - field.field.paragraph.two_columns.field_container_position
     - field.field.paragraph.two_columns.field_container_width
     - field.field.paragraph.two_columns.field_css_classes
+    - field.field.paragraph.two_columns.field_headline
     - field.field.paragraph.two_columns.field_id_anchor
     - field.field.paragraph.two_columns.field_padding_bottom
     - field.field.paragraph.two_columns.field_padding_top
+    - field.field.paragraph.two_columns.field_pre_header
     - field.field.paragraph.two_columns.field_section_bg
+    - field.field.paragraph.two_columns.field_section_bg_colour
     - field.field.paragraph.two_columns.field_text_column
     - field.field.paragraph.two_columns.field_text_column_2
     - field.field.paragraph.two_columns.field_vertical_alignment
@@ -22,6 +25,7 @@ third_party_settings:
   field_group:
     group_tabs:
       children:
+        - group_headline
         - group_text_1
         - group_text_2
         - group_settings
@@ -38,7 +42,7 @@ third_party_settings:
       children:
         - field_text_column
       parent_name: group_tabs
-      weight: 5
+      weight: 21
       format_type: tab
       region: content
       format_settings:
@@ -52,7 +56,7 @@ third_party_settings:
       children:
         - field_text_column_2
       parent_name: group_tabs
-      weight: 6
+      weight: 22
       format_type: tab
       region: content
       format_settings:
@@ -69,7 +73,7 @@ third_party_settings:
         - group_background
         - group_classes_id
       parent_name: group_tabs
-      weight: 7
+      weight: 23
       format_type: tab
       region: content
       format_settings:
@@ -96,6 +100,7 @@ third_party_settings:
       label: Padding
     group_background:
       children:
+        - field_section_bg_colour
         - field_section_bg
       parent_name: group_settings
       weight: 23
@@ -125,6 +130,7 @@ third_party_settings:
       label: 'Classes & ID'
     group_layout:
       children:
+        - field_column_distribution
         - field_vertical_alignment
         - field_container_width
         - field_container_position
@@ -139,27 +145,56 @@ third_party_settings:
         open: false
         required_fields: true
       label: Layout
+    group_headline:
+      children:
+        - field_pre_header
+        - field_headline
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Headline
 _core:
-  default_config_hash: l6jEP4uJ9t71A5h36rVOL5w7yYozbqoF7681vmB7dVY
+  default_config_hash: EJ__gcpRb9SfyjVTPy2s5GbbEl60vpqfSfCmxaxmZmw
 id: paragraph.two_columns.default
 targetEntityType: paragraph
 bundle: two_columns
 mode: default
 content:
+  field_column_distribution:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_container_position:
-    weight: 19
+    weight: 33
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_container_width:
-    weight: 18
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_css_classes:
     weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_headline:
+    weight: 29
     settings:
       size: 60
       placeholder: ''
@@ -175,23 +210,37 @@ content:
     type: string_textfield
     region: content
   field_padding_bottom:
-    weight: 16
+    weight: 32
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_padding_top:
-    weight: 14
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_pre_header:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_section_bg:
     type: media_library_widget
-    weight: 10
+    weight: 26
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_section_bg_colour:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_text_column:
     weight: 1
@@ -210,7 +259,7 @@ content:
     type: text_textarea
     region: content
   field_vertical_alignment:
-    weight: 17
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: options_select

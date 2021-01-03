@@ -1,9 +1,10 @@
-uuid: 8e2aad65-4e25-4586-ba6e-2a9144ba26a1
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: ZBWILCoGejG8n8tc1YccwAOuX_VaIpaumV4iyQ3vMhQ
 id: paragraph.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph

@@ -1,0 +1,41 @@
+uuid: c3515f74-f746-42cb-9a96-9730ca7ac15b
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: logo
+label: 'Logo (250x250)'
+effects:
+  8bf11990-6954-451c-938c-37a7cd702195:
+    uuid: 8bf11990-6954-451c-938c-37a7cd702195
+    id: image_effects_set_canvas
+    weight: -8
+    data:
+      canvas_size: exact
+      exact:
+        width: '250'
+        height: '250'
+        placement: center-center
+        x_offset: 0
+        y_offset: 0
+      relative:
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+      canvas_color: ''
+  44ec4cbf-e3e2-4e31-9379-e78210e6952f:
+    uuid: 44ec4cbf-e3e2-4e31-9379-e78210e6952f
+    id: image_scale
+    weight: -9
+    data:
+      width: 250
+      height: 250
+      upscale: false
+  8c2451bd-6140-49d4-b0ed-552a1db3aac9:
+    uuid: 8c2451bd-6140-49d4-b0ed-552a1db3aac9
+    id: image_convert
+    weight: -10
+    data:
+      extension: png

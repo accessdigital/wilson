@@ -1,9 +1,10 @@
-uuid: e17a2970-979c-4401-9127-26a7523fa288
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: 6HP90a_1kfCn7_tkNJSYlPwIzgEe7VJeVTQmqv-mwAk
 id: paragraph.field_id_anchor
 field_name: field_id_anchor
 entity_type: paragraph

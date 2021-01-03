@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.background_colours.field_colour
+    - field.field.taxonomy_term.background_colours.field_css_classes
+    - taxonomy.vocabulary.background_colours
+  module:
+    - color_field
+id: taxonomy_term.background_colours.default
+targetEntityType: taxonomy_term
+bundle: background_colours
+mode: default
+content:
+  field_colour:
+    weight: 1
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_css_classes:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

@@ -1,4 +1,3 @@
-uuid: f66bb695-b0da-4680-b440-d516cb50b1f2
 langcode: en
 status: true
 dependencies:
@@ -6,7 +5,7 @@ dependencies:
     - media
     - paragraphs
 _core:
-  default_config_hash: LHLj346TNYPAPak8fuFp2fUyqYFMhVbGxwaSpnz68tg
+  default_config_hash: 9TLjXLYKt2RxBOot5DZBPYWccyivpdaLowKHBrclR58
 id: paragraph.field_media_column
 field_name: field_media_column
 entity_type: paragraph

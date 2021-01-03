@@ -1,4 +1,3 @@
-uuid: 01849341-1efa-4042-901a-480fb72c3816
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.two_columns_text_media
   module:
     - options
+_core:
+  default_config_hash: U1xHd2zfA2bL7L0bpmAWdwq6LlSGSGThxkvBJspGp7M
 id: paragraph.two_columns_text_media.field_container_position
 field_name: field_container_position
 entity_type: paragraph

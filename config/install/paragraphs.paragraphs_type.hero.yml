@@ -1,7 +1,14 @@
-uuid: 5aca9133-3eef-42bd-afd6-a1f89cccbd92
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      media: media
+_core:
+  default_config_hash: NUxFQaffAl2E34ffr9tc2MS70euZ2f7338H37kVw8Nc
 id: hero
 label: Hero
 icon_uuid: null

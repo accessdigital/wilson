@@ -1,4 +1,3 @@
-uuid: 1b448fa9-650c-455c-8a34-ccd83d6c4de3
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.three_columns
   module:
     - options
+_core:
+  default_config_hash: UxJB4phvbQBu2rHDdkxjTKp4Lvb6zjGTUsKos_ms4UI
 id: paragraph.three_columns.field_vertical_alignment
 field_name: field_vertical_alignment
 entity_type: paragraph

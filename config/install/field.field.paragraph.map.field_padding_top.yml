@@ -1,0 +1,23 @@
+uuid: ac816609-4255-4b77-a325-17706b0e2213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_top
+    - paragraphs.paragraphs_type.map
+  module:
+    - options
+id: paragraph.map.field_padding_top
+field_name: field_padding_top
+entity_type: paragraph
+bundle: map
+label: 'Top padding'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: none
+default_value_callback: ''
+settings: {  }
+field_type: list_string

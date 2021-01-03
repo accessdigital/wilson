@@ -1,0 +1,23 @@
+uuid: 90fc09ae-0843-4f16-8955-7e898f9f96cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_bottom
+    - paragraphs.paragraphs_type.logo_wall
+  module:
+    - options
+id: paragraph.logo_wall.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+bundle: logo_wall
+label: 'Bottom padding'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

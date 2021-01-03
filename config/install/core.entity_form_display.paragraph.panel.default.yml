@@ -1,0 +1,233 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.panel.field_column_order
+    - field.field.paragraph.panel.field_css_classes
+    - field.field.paragraph.panel.field_headline
+    - field.field.paragraph.panel.field_id_anchor
+    - field.field.paragraph.panel.field_media_column
+    - field.field.paragraph.panel.field_pre_header
+    - field.field.paragraph.panel.field_primary_cta
+    - field.field.paragraph.panel.field_secondary_cta
+    - field.field.paragraph.panel.field_section_bg
+    - field.field.paragraph.panel.field_section_bg_colour
+    - field.field.paragraph.panel.field_text_column
+    - paragraphs.paragraphs_type.panel
+  module:
+    - field_group
+    - link
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_text
+        - group_links
+        - group_media
+        - group_settings
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_text:
+      children:
+        - field_pre_header
+        - field_headline
+        - field_text_column
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Text
+    group_media:
+      children:
+        - field_media_column
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Media
+    group_links:
+      children:
+        - field_primary_cta
+        - field_secondary_cta
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Links
+    group_settings:
+      children:
+        - group_layout
+        - group_background
+        - group_classes_id
+      parent_name: group_tabs
+      weight: 23
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Settings
+    group_layout:
+      children:
+        - field_column_order
+      parent_name: group_settings
+      weight: 28
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Layout
+    group_background:
+      children:
+        - field_section_bg_colour
+        - field_section_bg
+      parent_name: group_settings
+      weight: 29
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Background
+    group_classes_id:
+      children:
+        - field_css_classes
+        - field_id_anchor
+      parent_name: group_settings
+      weight: 30
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Classes & ID'
+id: paragraph.panel.default
+targetEntityType: paragraph
+bundle: panel
+mode: default
+content:
+  field_column_order:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_css_classes:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_headline:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_id_anchor:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_media_column:
+    weight: 5
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_pre_header:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_primary_cta:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_secondary_cta:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_section_bg:
+    weight: 8
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_section_bg_colour:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_column:
+    weight: 29
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

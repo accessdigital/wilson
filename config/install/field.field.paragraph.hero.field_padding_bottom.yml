@@ -1,4 +1,3 @@
-uuid: bf87bc8f-219d-473d-b714-8b65a1fa5427
 langcode: en
 status: true
 dependencies:
@@ -7,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.hero
   module:
     - options
+_core:
+  default_config_hash: Cn72ufVhSlZi2ZPJ1vaaIJhIdXSTihjVFW6yEJZk3Qo
 id: paragraph.hero.field_padding_bottom
 field_name: field_padding_bottom
 entity_type: paragraph
