@@ -24,6 +24,8 @@ A Drupal 9 installation profile. Wilson includes:
   * Text panel over image
   * Webform embed
   * Text + webform embed columns
+  * Logo wall
+  * Google map
 * Paragraph editor enhancements
 * Media bundles and image formats
 * Common installation settings and security considerations
