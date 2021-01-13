@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: thumbnail_200x200
+label: 'Thumbnail (200x200)'
+effects:
+  562872e4-96f4-448e-83b7-6ab849f37578:
+    uuid: 562872e4-96f4-448e-83b7-6ab849f37578
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      crop_type: focal_point

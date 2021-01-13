@@ -17,6 +17,8 @@ dependencies:
     - paragraphs.paragraphs_type.quote
   module:
     - text
+_core:
+  default_config_hash: MKPtlyxrrDYRWtklD722z8oD16pZGh_2tdHRANkad-A
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote
@@ -35,7 +37,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      view_mode: default
+      view_mode: thumbnail
       link: false
     third_party_settings: {  }
     region: content

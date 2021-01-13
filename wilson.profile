@@ -80,6 +80,8 @@ function wilson_preprocess_paragraph(&$variables) {
           '#value' => $css,
         ], $variables['attributes']['id']
       ];
+
+      $variables['has_bg_image'] = true;
     }
   }
 }
