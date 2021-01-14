@@ -36,7 +36,7 @@ function wilson_preprocess_paragraph(&$variables) {
 
       if (!$colourTerm->field_css_classes->isEmpty()) {
         $string = $colourTerm->get('field_css_classes')->getString();
-        $variables['background_colour_classes'] = preg_split('/[\ \n\,]+/', $string);
+        $variables['background_colour_classes'] = $string;
       }
     }
   }
