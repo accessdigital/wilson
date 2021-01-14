@@ -46,7 +46,7 @@ Add a reference to the Wilson GitHub repo to the `respositories` section of your
     },
     {
         "type": "vcs",
-        "url": "https://github.com/accessdigital/wilson-theme"
+        "url": "https://github.com/accessdigital/wilson_theme_starterkit"
     }
 ]
 ```
@@ -60,7 +60,7 @@ composer require accessdigital/wilson
 Require the Wilson Theme Starterkit in to your project:
 
 ```
-composer require accessdigital/wilson-theme
+composer require accessdigital/wilson_theme_starterkit
 ```
 
 Select the Wilson profile when installing Drupal.
