@@ -29,6 +29,8 @@ A Drupal 9 installation profile. Wilson includes:
 * Paragraph editor enhancements
 * Media bundles and image formats
 * Common installation settings and security considerations
+* A starterkit theme which can be customised to the client's needs
+* A module to override minor parts of the Claro admin theme
 
 ## Include with Composer
 
@@ -43,27 +45,19 @@ Add a reference to the Wilson GitHub repo to the `respositories` section of your
     {
         "type": "vcs",
         "url": "https://github.com/accessdigital/wilson"
-    },
-    {
-        "type": "vcs",
-        "url": "https://github.com/accessdigital/wilson_theme_starterkit"
     }
 ]
 ```
 
-Require the Wilson profile in to your project:
+To require the Wilson profile in to your project, run the following Composer command:
 
 ```
 composer require accessdigital/wilson
 ```
 
-Require the Wilson Theme Starterkit in to your project:
+Wilson will then include all of its contrib dependencies and download a starterkit theme.
 
-```
-composer require accessdigital/wilson_theme_starterkit
-```
-
-Select the Wilson profile when installing Drupal.
+During Drupal installation, select the `Wilson` profile.
 
 ## Drupal quick start
 
