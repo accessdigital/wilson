@@ -24,8 +24,8 @@
         }
     ],
     "require": {
-        "drupal/wilson_theme_starterkit": "dev-master",
-        "drupal/wilson_admin_styles": "dev-master",
+        "accessdigital/wilson_theme_starterkit": "dev-master",
+        "accessdigital/wilson_admin_styles": "dev-master",
         "drupal/paragraphs": "^1.12",
         "drupal/diff": "^1.0",
         "drupal/devel": "^4.0",
