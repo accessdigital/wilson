@@ -3,13 +3,13 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_media_image
-    - image.style.thumbnail
+    - image.style.media_library
     - media.type.image
   module:
     - focal_point
     - path
 _core:
-  default_config_hash: Piq2M1vJKeJrMrob17RgoBAee4rOrhabEBd9TyDqZ_o
+  default_config_hash: zigH_pf9fWro9RCqIA2tzr8k6aMH8q4tt6reQp_75-0
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -23,10 +23,10 @@ content:
     third_party_settings: {  }
   field_media_image:
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: media_library
       preview_link: true
       offsets: '50,50'
+      progress_indicator: throbber
     third_party_settings: {  }
     type: image_focal_point
     weight: 1
