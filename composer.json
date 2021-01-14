@@ -9,7 +9,23 @@
             "email": "paul.gregory@weareaccess.co.uk"
         }
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/accessdigital/wilson_theme_starterkit"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/accessdigital/wilson_admin_styles"
+        }
+    ],
     "require": {
+        "drupal/wilson_theme_starterkit": "dev-master",
+        "drupal/wilson_admin_styles": "dev-master",
         "drupal/paragraphs": "^1.12",
         "drupal/diff": "^1.0",
         "drupal/devel": "^4.0",
