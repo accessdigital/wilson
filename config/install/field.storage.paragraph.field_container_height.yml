@@ -12,14 +12,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: '250'
-      label: 'Small (250px)'
+      value: 'small'
+      label: 'Small'
     -
-      value: '500'
-      label: 'Medium (500px)'
+      value: 'medium'
+      label: 'Medium'
     -
-      value: '750'
-      label: 'Large (750px)'
+      value: 'large'
+      label: 'Large'
+    -
+      value: 'full'
+      label: 'Full screen'
   allowed_values_function: ''
 module: options
 locked: false
