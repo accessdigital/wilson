@@ -2,9 +2,9 @@ name: Drupal
 mail: drupal@localhost
 slogan: ''
 page:
-  403: /node/3
-  404: /node/2
-  front: /node/1
+  403: /403
+  404: /404
+  front: /home
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
