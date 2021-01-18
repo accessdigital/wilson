@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Background styles'
+vid: background_styles
+description: 'Manage the colours and styles available for use as a section background.'
+weight: 0

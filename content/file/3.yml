@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d97a2174-b0b0-4865-826a-add4e0eee856
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: building-corner.jpg
+  uri:
+    -
+      value: 'public://building-corner.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 4789092
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1610914054

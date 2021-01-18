@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 5afb23cf-9ff8-4c8d-8578-cb14704f9a26
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: yellow-black-fence.jpg
+  uri:
+    -
+      value: 'public://yellow-black-fence.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 433784
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1610913925

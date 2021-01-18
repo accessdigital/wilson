@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: webform_embed
 label: 'Container width'
 description: ''
-required: false
+required: true
 translatable: true
 default_value:
   -

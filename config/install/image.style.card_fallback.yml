@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: card_fallback
+label: 'Card (fallback)'
+effects:
+  013865ef-89bc-496a-8177-d499cdd92b11:
+    uuid: 013865ef-89bc-496a-8177-d499cdd92b11
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 400
+      crop_type: focal_point

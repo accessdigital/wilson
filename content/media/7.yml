@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
+  bundle: image
+  default_langcode: en
+  depends:
+    9add6e32-e508-4555-8f19-ba6238935823: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Hazard 2'
+  created:
+    -
+      value: 1610917965
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 9add6e32-e508-4555-8f19-ba6238935823
+      alt: 'Yellow and black hazard warning stripes'
+      title: ''
+      width: 2400
+      height: 1600

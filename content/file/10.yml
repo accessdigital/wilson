@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: bb4f961b-c4a1-4a1d-9ab1-8025a39348ca
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: building-triangles.jpg
+  uri:
+    -
+      value: 'public://building-triangles.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 443997
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1610919120

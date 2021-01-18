@@ -7,6 +7,8 @@ dependencies:
     - field.field.paragraph.panel.field_headline
     - field.field.paragraph.panel.field_id_anchor
     - field.field.paragraph.panel.field_media_column
+    - field.field.paragraph.panel.field_padding_bottom
+    - field.field.paragraph.panel.field_padding_top
     - field.field.paragraph.panel.field_pre_header
     - field.field.paragraph.panel.field_primary_cta
     - field.field.paragraph.panel.field_secondary_cta
@@ -84,6 +86,7 @@ third_party_settings:
     group_settings:
       children:
         - group_layout
+        - group_padding
         - group_background
         - group_classes_id
       parent_name: group_tabs
@@ -116,7 +119,7 @@ third_party_settings:
         - field_section_bg_colour
         - field_section_bg
       parent_name: group_settings
-      weight: 29
+      weight: 30
       format_type: details
       region: content
       format_settings:
@@ -131,7 +134,7 @@ third_party_settings:
         - field_css_classes
         - field_id_anchor
       parent_name: group_settings
-      weight: 30
+      weight: 31
       format_type: details
       region: content
       format_settings:
@@ -141,6 +144,23 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
+    group_padding:
+      children:
+        - field_padding_top
+        - field_padding_bottom
+      parent_name: group_settings
+      weight: 29
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Padding
+_core:
+  default_config_hash: wJtJgt4stI0_2J7ek56EiNwW9vmK_h90et7DfFDmrTA
 id: paragraph.panel.default
 targetEntityType: paragraph
 bundle: panel
@@ -183,6 +203,18 @@ content:
     third_party_settings: {  }
     type: media_library_widget
     region: content
+  field_padding_bottom:
+    type: options_select
+    weight: 33
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_padding_top:
+    type: options_select
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_pre_header:
     weight: 27
     settings:

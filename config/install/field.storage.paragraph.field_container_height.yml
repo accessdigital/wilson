@@ -12,17 +12,17 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: 'small'
+      value: 'sm'
       label: 'Small'
     -
-      value: 'medium'
+      value: 'md'
       label: 'Medium'
     -
-      value: 'large'
+      value: 'lg'
       label: 'Large'
     -
       value: 'full'
-      label: 'Full screen'
+      label: 'Full screen height'
   allowed_values_function: ''
 module: options
 locked: false

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: card_lg
+label: 'Card (lg)'
+effects:
+  02e86142-d7c8-4223-898a-9d42fb041e11:
+    uuid: 02e86142-d7c8-4223-898a-9d42fb041e11
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 500
+      crop_type: focal_point

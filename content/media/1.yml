@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
+  bundle: image
+  default_langcode: en
+  depends:
+    8430785e-a256-41ce-b55c-6f672c211775: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Building front'
+  created:
+    -
+      value: 1610903624
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 8430785e-a256-41ce-b55c-6f672c211775
+      alt: 'Black and white image of the front of a brick office building.'
+      title: ''
+      width: 2400
+      height: 1600

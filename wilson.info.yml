@@ -73,9 +73,43 @@ install:
   - simple_gmap
   - twig_field_value
   - twig_tweak
+  - default_content
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
 themes:
   - wilson_theme_starterkit
   - claro
+
+default_content:
+  file:
+    - 8430785e-a256-41ce-b55c-6f672c211775
+    - 5afb23cf-9ff8-4c8d-8578-cb14704f9a26
+    - d97a2174-b0b0-4865-826a-add4e0eee856
+    - 86fc3264-aa19-4860-9618-e4df72f4e20e
+    - 4fca2ed6-65d5-40c3-bec5-c656ebb7a766
+    - a6f09f5e-22a1-481f-ba31-50e1cb703517
+    - 9add6e32-e508-4555-8f19-ba6238935823
+    - b1a71451-74af-46ce-b14a-785395f89ba0
+    - 94633a55-a815-441c-9c5d-c43163607b44
+    - bb4f961b-c4a1-4a1d-9ab1-8025a39348ca
+    - fca32a72-78b0-4b09-87a8-9187a637e60c
+  media:
+    - e735c5a3-d1ff-4fa6-af01-c473e0211f2a
+    - b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5
+    - 13647eec-1cdc-4ce3-a089-441d78fba981
+    - cc59ed8d-cfea-499d-a753-42c4d7d96fe9
+    - 113a8489-3444-4e54-8d62-fe9576470f0b
+    - 042241e5-9e23-4186-ac71-e1c09ec06c84
+    - 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
+    - 600d7945-e9f4-4b5d-a23a-c58fb8f2de31
+    - 2dedb699-67c4-42a4-b08d-ac709679825a
+    - 3170306e-328e-462c-a61a-47d079f7c7a1
+    - 7d6457bb-106c-488c-9144-c30671e71271
+  taxonomy_term:
+    - 4daf55b6-1d15-4103-9ae7-08b38a055849
+    - 988c1be8-e176-4803-992e-bae43a503174
+    - 12db7978-4760-486b-a0e4-6455f523858f
+    - 7f9667b2-a63f-48b9-8885-8581b9790077
+  node:
+    - 0c828ad6-7933-4451-8bae-e0166118fb90

@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 2dedb699-67c4-42a4-b08d-ac709679825a
+  bundle: image
+  default_langcode: en
+  depends:
+    94633a55-a815-441c-9c5d-c43163607b44: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Building angles'
+  created:
+    -
+      value: 1610919036
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 94633a55-a815-441c-9c5d-c43163607b44
+      alt: 'Frontage of a modern commercial building'
+      title: ''
+      width: 2400
+      height: 3600

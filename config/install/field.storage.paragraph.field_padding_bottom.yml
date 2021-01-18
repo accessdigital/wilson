@@ -16,14 +16,17 @@ settings:
       value: none
       label: None
     -
-      value: reduced
-      label: Reduced
+      value: sm
+      label: Small
     -
-      value: normal
-      label: Normal
+      value: md
+      label: Medium
     -
-      value: expanded
-      label: Expanded
+      value: lg
+      label: Large
+    -
+      value: xl
+      label: Extra large
   allowed_values_function: ''
 module: options
 locked: false

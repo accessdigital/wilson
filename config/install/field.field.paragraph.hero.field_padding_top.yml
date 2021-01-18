@@ -18,7 +18,7 @@ required: true
 translatable: true
 default_value:
   -
-    value: normal
+    value: md
 default_value_callback: ''
 settings: {  }
 field_type: list_string

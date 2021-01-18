@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 3170306e-328e-462c-a61a-47d079f7c7a1
+  bundle: image
+  default_langcode: en
+  depends:
+    bb4f961b-c4a1-4a1d-9ab1-8025a39348ca: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Building triangles'
+  created:
+    -
+      value: 1610919120
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: bb4f961b-c4a1-4a1d-9ab1-8025a39348ca
+      alt: 'The frontage of a modern commercial building'
+      title: ''
+      width: 2400
+      height: 1600

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_css_classes
+    - taxonomy.vocabulary.background_styles
+id: taxonomy_term.background_styles.field_css_classes
+field_name: field_css_classes
+entity_type: taxonomy_term
+bundle: background_styles
+label: 'CSS classes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

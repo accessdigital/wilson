@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5
+  bundle: image
+  default_langcode: en
+  depends:
+    5afb23cf-9ff8-4c8d-8578-cb14704f9a26: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Yellow and black fence'
+  created:
+    -
+      value: 1610913925
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 5afb23cf-9ff8-4c8d-8578-cb14704f9a26
+      alt: 'Yellow and black fence'
+      title: ''
+      width: 2400
+      height: 1800

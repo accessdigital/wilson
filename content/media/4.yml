@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: cc59ed8d-cfea-499d-a753-42c4d7d96fe9
+  bundle: image
+  default_langcode: en
+  depends:
+    86fc3264-aa19-4860-9618-e4df72f4e20e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Escalator
+  created:
+    -
+      value: 1610914846
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 86fc3264-aa19-4860-9618-e4df72f4e20e
+      alt: 'Part of a metal escalator.'
+      title: ''
+      width: 2400
+      height: 3600

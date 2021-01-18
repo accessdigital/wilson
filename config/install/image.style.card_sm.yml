@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: card_sm
+label: 'Card (sm)'
+effects:
+  c3b70706-25d2-49df-8191-1a980fe404a1:
+    uuid: c3b70706-25d2-49df-8191-1a980fe404a1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 400
+      crop_type: focal_point

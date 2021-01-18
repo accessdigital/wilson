@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: b1a71451-74af-46ce-b14a-785395f89ba0
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: underground.jpg
+  uri:
+    -
+      value: 'public://underground.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 475997
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1610918584

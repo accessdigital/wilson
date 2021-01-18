@@ -1,0 +1,85 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 64b859bc-e67a-458b-a7ec-6e5e9032673d
+  bundle: landing_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Page not found'
+  created:
+    -
+      value: 1610928415
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /404
+      langcode: en
+      pathauto: 0
+  field_sections:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: bebc2cc6-9f79-4ad3-9658-31bc9d189710
+          bundle: hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1610928520
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_position:
+            -
+              value: left
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: 'Page not found'
+          field_padding_bottom:
+            -
+              value: xl
+          field_padding_top:
+            -
+              value: xl
+          field_pre_header:
+            -
+              value: Sorry...
+          field_primary_cta:
+            -
+              uri: 'internal:/'
+              title: 'Back to home'
+              options: {  }
+          field_text_column:
+            -
+              value: "<p>The page you are looking for doesn't exist.</p>\r\n"
+              format: full_html

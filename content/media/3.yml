@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 13647eec-1cdc-4ce3-a089-441d78fba981
+  bundle: image
+  default_langcode: en
+  depends:
+    d97a2174-b0b0-4865-826a-add4e0eee856: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Building corner'
+  created:
+    -
+      value: 1610914054
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: d97a2174-b0b0-4865-826a-add4e0eee856
+      alt: 'Black and white photo of a brick office building'
+      title: ''
+      width: 4000
+      height: 6000

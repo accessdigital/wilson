@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 042241e5-9e23-4186-ac71-e1c09ec06c84
+  bundle: image
+  default_langcode: en
+  depends:
+    a6f09f5e-22a1-481f-ba31-50e1cb703517: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Cladding
+  created:
+    -
+      value: 1610914993
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: a6f09f5e-22a1-481f-ba31-50e1cb703517
+      alt: 'Black and yellow cladding on a commercial building'
+      title: ''
+      width: 2400
+      height: 1563

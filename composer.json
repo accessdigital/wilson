@@ -51,6 +51,7 @@
         "drupal/block_field": "^1.0@RC",
         "drupal/image_effects": "^3.1",
         "drupal/lightning_scheduler": "^1.2",
-        "drupal/simple_gmap": "^3.0"
+        "drupal/simple_gmap": "^3.0",
+        "drupal/default_content": "^2.0@alpha"
     }
 }

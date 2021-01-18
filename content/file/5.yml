@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 4fca2ed6-65d5-40c3-bec5-c656ebb7a766
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: business-woman.jpg
+  uri:
+    -
+      value: 'public://business-woman.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 1242363
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1610914947

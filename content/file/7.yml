@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 9add6e32-e508-4555-8f19-ba6238935823
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: hazard-2.jpg
+  uri:
+    -
+      value: 'public://hazard-2.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 1186313
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1610917965

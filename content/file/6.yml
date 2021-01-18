@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a6f09f5e-22a1-481f-ba31-50e1cb703517
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: cladding.jpg
+  uri:
+    -
+      value: 'public://cladding.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 223590
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1610914993

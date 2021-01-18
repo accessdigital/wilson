@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 600d7945-e9f4-4b5d-a23a-c58fb8f2de31
+  bundle: image
+  default_langcode: en
+  depends:
+    b1a71451-74af-46ce-b14a-785395f89ba0: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Underground
+  created:
+    -
+      value: 1610918584
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: b1a71451-74af-46ce-b14a-785395f89ba0
+      alt: 'An underground roadway'
+      title: ''
+      width: 2400
+      height: 1602

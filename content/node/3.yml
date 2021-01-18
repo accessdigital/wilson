@@ -1,0 +1,85 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d88e4afe-137b-4829-8b9d-d43a62b8fbb1
+  bundle: landing_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Access denied'
+  created:
+    -
+      value: 1610929120
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /403
+      langcode: en
+      pathauto: 0
+  field_sections:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 84bd5ce3-3cbb-4dd2-b3d7-3b0a3dfdb7e9
+          bundle: hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1610929151
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: 'Access denied'
+          field_padding_bottom:
+            -
+              value: xl
+          field_padding_top:
+            -
+              value: xl
+          field_pre_header:
+            -
+              value: Sorry...
+          field_primary_cta:
+            -
+              uri: 'internal:/'
+              title: 'Back to home'
+              options: {  }
+          field_text_column:
+            -
+              value: "<p>The page you requested requires a login.</p>\r\n"
+              format: full_html

@@ -4,12 +4,12 @@ dependencies:
   config:
     - field.storage.paragraph.field_section_bg_colour
     - paragraphs.paragraphs_type.two_columns
-    - taxonomy.vocabulary.background_colours
+    - taxonomy.vocabulary.background_styles
 id: paragraph.two_columns.field_section_bg_colour
 field_name: field_section_bg_colour
 entity_type: paragraph
 bundle: two_columns
-label: 'Background colour'
+label: 'Background style'
 description: ''
 required: false
 translatable: true
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      background_colours: background_colours
+      background_styles: background_styles
     sort:
       field: name
       direction: asc

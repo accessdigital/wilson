@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 86fc3264-aa19-4860-9618-e4df72f4e20e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: escalator.jpg
+  uri:
+    -
+      value: 'public://escalator.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 703117
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1610914846

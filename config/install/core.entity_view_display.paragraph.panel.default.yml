@@ -34,8 +34,8 @@ content:
     weight: 5
     label: hidden
     settings:
-      link: true
-      view_mode: default
+      link: false
+      view_mode: grid
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
