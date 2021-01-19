@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_position
+    - paragraphs.paragraphs_type.content_grid
+  module:
+    - options
+id: paragraph.content_grid.field_container_position
+field_name: field_container_position
+entity_type: paragraph
+bundle: content_grid
+label: 'Container position'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.content_grid.field_container_position
+    - field.field.paragraph.content_grid.field_container_width
     - field.field.paragraph.content_grid.field_content_references
     - field.field.paragraph.content_grid.field_css_classes
     - field.field.paragraph.content_grid.field_grid_columns
@@ -13,6 +15,8 @@ dependencies:
     - field.field.paragraph.content_grid.field_section_bg
     - field.field.paragraph.content_grid.field_section_bg_colour
     - paragraphs.paragraphs_type.content_grid
+_core:
+  default_config_hash: f0fssgtM8JT6qIRPS6iRrn0ekQsZuE9G-wfEYv0EJZY
 id: paragraph.content_grid.default
 targetEntityType: paragraph
 bundle: content_grid
@@ -44,6 +48,8 @@ content:
     type: string
     region: content
 hidden:
+  field_container_position: true
+  field_container_width: true
   field_css_classes: true
   field_grid_columns: true
   field_id_anchor: true

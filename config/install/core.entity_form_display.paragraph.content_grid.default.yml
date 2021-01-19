@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.content_grid.field_container_position
+    - field.field.paragraph.content_grid.field_container_width
     - field.field.paragraph.content_grid.field_content_references
     - field.field.paragraph.content_grid.field_css_classes
     - field.field.paragraph.content_grid.field_grid_columns
@@ -66,6 +68,8 @@ third_party_settings:
     group_layout:
       children:
         - field_grid_columns
+        - field_container_width
+        - field_container_position
       parent_name: group_settings
       weight: 3
       format_type: details
@@ -137,11 +141,25 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Headline
+_core:
+  default_config_hash: b2Z-TKxiwDyGfs0V8ns_ID1DJPS9DwyfY8_dJ1y44VY
 id: paragraph.content_grid.default
 targetEntityType: paragraph
 bundle: content_grid
 mode: default
 content:
+  field_container_position:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_container_width:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_content_references:
     weight: 1
     settings:
