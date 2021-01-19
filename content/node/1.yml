@@ -214,7 +214,7 @@ default:
               value: extra_wide
           field_headline:
             -
-              value: 'Split panel'
+              value: 'Text left, image right'
           field_media_column:
             -
               entity: 3170306e-328e-462c-a61a-47d079f7c7a1
@@ -224,6 +224,9 @@ default:
           field_padding_top:
             -
               value: none
+          field_pre_header:
+            -
+              value: 'Text and image split screen'
           field_primary_cta:
             -
               uri: 'internal:/'
@@ -265,7 +268,7 @@ default:
               value: extra_wide
           field_headline:
             -
-              value: 'Split panel flipped'
+              value: 'Image left, text right'
           field_media_column:
             -
               entity: b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5
@@ -275,6 +278,9 @@ default:
           field_padding_top:
             -
               value: none
+          field_pre_header:
+            -
+              value: 'Text and image split screen'
           field_primary_cta:
             -
               uri: 'internal:/'
@@ -391,9 +397,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_headline:
             -
               value: 'Editorial possibilities'
@@ -466,6 +469,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_column_distribution:
             -
               value: equal
@@ -474,7 +480,7 @@ default:
               value: left
           field_container_width:
             -
-              value: normal
+              value: medium
           field_padding_bottom:
             -
               value: sm
@@ -982,7 +988,7 @@ default:
               options: {  }
           field_secondary_cta:
             -
-              uri: 'internal:/node/1/edit'
+              uri: 'internal:/node/3/edit'
               title: 'Customise the home page'
               options: {  }
           field_section_bg:
