@@ -10,7 +10,6 @@ _meta:
     3170306e-328e-462c-a61a-47d079f7c7a1: media
     988c1be8-e176-4803-992e-bae43a503174: taxonomy_term
     b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5: media
-    0c828ad6-7933-4451-8bae-e0166118fb90: node
     113a8489-3444-4e54-8d62-fe9576470f0b: media
     042241e5-9e23-4186-ac71-e1c09ec06c84: media
     80d83855-dc4d-4c8c-aac2-ac93c9ba2668: media
@@ -119,6 +118,12 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
           field_headline:
             -
               value: 'Landing page possibilities'
@@ -274,7 +279,7 @@ default:
               entity: b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5
           field_padding_bottom:
             -
-              value: none
+              value: md
           field_padding_top:
             -
               value: none
@@ -296,40 +301,6 @@ default:
           field_vertical_alignment:
             -
               value: middle
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: a1dcca73-5121-42b7-8348-48df38ed6283
-          bundle: content_grid
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1610928035
-          behavior_settings:
-            -
-              value: {  }
-          field_content_references:
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-          field_grid_columns:
-            -
-              value: '3'
-          field_padding_bottom:
-            -
-              value: lg
-          field_padding_top:
-            -
-              value: lg
     -
       entity:
         _meta:
@@ -397,6 +368,15 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
           field_headline:
             -
               value: 'Editorial possibilities'
@@ -408,7 +388,7 @@ default:
               value: md
           field_padding_top:
             -
-              value: lg
+              value: md
           field_pre_header:
             -
               value: 'Demo content'
@@ -469,9 +449,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_column_distribution:
             -
               value: equal
@@ -594,6 +571,12 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
           field_headline:
             -
               value: 'Photo layout possibilities'
@@ -832,6 +815,12 @@ default:
               uri: 'internal:/'
               title: 'Testing 3'
               options: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
           field_grid_columns:
             -
               value: '3'
@@ -841,9 +830,6 @@ default:
           field_padding_top:
             -
               value: md
-          field_pre_header:
-            -
-              value: 'Button grid'
     -
       entity:
         _meta:
@@ -900,6 +886,12 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
           field_layout:
             -
               value: justified
@@ -966,6 +958,12 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
           field_headline:
             -
               value: 'There''s much more'
