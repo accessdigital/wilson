@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.simple_banner.field_container_position
+    - field.field.paragraph.simple_banner.field_container_width
     - field.field.paragraph.simple_banner.field_css_classes
     - field.field.paragraph.simple_banner.field_headline
     - field.field.paragraph.simple_banner.field_id_anchor
@@ -18,6 +20,8 @@ dependencies:
   module:
     - link
     - text
+_core:
+  default_config_hash: zTzhdSK7cGe7f0NVAQ2ji2HDLR5OY4dmh2mjg3h_Z_c
 id: paragraph.simple_banner.default
 targetEntityType: paragraph
 bundle: simple_banner
@@ -71,6 +75,8 @@ content:
     type: text_default
     region: content
 hidden:
+  field_container_position: true
+  field_container_width: true
   field_css_classes: true
   field_id_anchor: true
   field_layout: true

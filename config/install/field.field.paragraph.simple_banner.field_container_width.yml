@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_width
+    - paragraphs.paragraphs_type.simple_banner
+  module:
+    - options
+id: paragraph.simple_banner.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+bundle: simple_banner
+label: 'Container width'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: medium
+default_value_callback: ''
+settings: {  }
+field_type: list_string

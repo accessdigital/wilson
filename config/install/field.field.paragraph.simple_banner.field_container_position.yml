@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_position
+    - paragraphs.paragraphs_type.simple_banner
+  module:
+    - options
+id: paragraph.simple_banner.field_container_position
+field_name: field_container_position
+entity_type: paragraph
+bundle: simple_banner
+label: 'Container position'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string
