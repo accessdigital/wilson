@@ -8,7 +8,7 @@ third_party_settings:
     paragraphs_categories:
       embeds: embeds
 id: webform_embed
-label: 'Webform embed'
+label: 'Webform'
 icon_uuid: null
 icon_default: null
 description: ''

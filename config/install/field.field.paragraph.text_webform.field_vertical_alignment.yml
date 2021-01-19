@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_alignment
+    - paragraphs.paragraphs_type.text_webform
+  module:
+    - options
+id: paragraph.text_webform.field_vertical_alignment
+field_name: field_vertical_alignment
+entity_type: paragraph
+bundle: text_webform
+label: 'Vertical alignment'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

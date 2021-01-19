@@ -11,7 +11,7 @@ third_party_settings:
 _core:
   default_config_hash: zba5L-9sTCgJoY43ffCf1S-Mz23sNLowkuDKZKqMRtk
 id: text_webform
-label: 'Text and webform columns'
+label: 'Webform & text'
 icon_uuid: null
 icon_default: null
 description: ''

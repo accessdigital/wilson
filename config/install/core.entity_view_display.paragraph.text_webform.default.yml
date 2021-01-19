@@ -4,31 +4,79 @@ dependencies:
   config:
     - field.field.paragraph.text_webform.field_column_order
     - field.field.paragraph.text_webform.field_css_classes
+    - field.field.paragraph.text_webform.field_headline
     - field.field.paragraph.text_webform.field_id_anchor
     - field.field.paragraph.text_webform.field_padding_bottom
     - field.field.paragraph.text_webform.field_padding_top
+    - field.field.paragraph.text_webform.field_pre_header
+    - field.field.paragraph.text_webform.field_primary_cta
+    - field.field.paragraph.text_webform.field_secondary_cta
     - field.field.paragraph.text_webform.field_section_bg
     - field.field.paragraph.text_webform.field_section_bg_colour
     - field.field.paragraph.text_webform.field_text_column
+    - field.field.paragraph.text_webform.field_vertical_alignment
     - field.field.paragraph.text_webform.field_webform
     - paragraphs.paragraphs_type.text_webform
   module:
+    - link
     - text
     - webform
+_core:
+  default_config_hash: K-3oc_ZEBa3MNAbvInNFHUZe8yI55TyjH4IkZFcXMNo
 id: paragraph.text_webform.default
 targetEntityType: paragraph
 bundle: text_webform
 mode: default
 content:
-  field_text_column:
+  field_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pre_header:
     weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_primary_cta:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_secondary_cta:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text_column:
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_webform:
-    weight: 1
+    weight: 3
     label: hidden
     settings:
       source_entity: true
@@ -43,3 +91,4 @@ hidden:
   field_padding_top: true
   field_section_bg: true
   field_section_bg_colour: true
+  field_vertical_alignment: true

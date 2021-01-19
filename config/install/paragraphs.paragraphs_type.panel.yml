@@ -8,7 +8,7 @@ third_party_settings:
     paragraphs_categories:
       ctas: ctas
 id: panel
-label: 'Text and media panel'
+label: 'Text & image split'
 icon_uuid: null
 icon_default: null
 description: ''

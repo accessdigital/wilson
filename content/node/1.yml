@@ -368,9 +368,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_container_position:
             -
               value: center
@@ -848,19 +845,36 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_column_order:
             -
               value: text_media
+          field_headline:
+            -
+              value: '0161 872 3455'
           field_padding_bottom:
             -
               value: md
           field_padding_top:
             -
               value: none
+          field_pre_header:
+            -
+              value: 'Call us today'
+          field_primary_cta:
+            -
+              uri: 'internal:/'
+              title: 'Call to action'
+              options: {  }
           field_text_column:
             -
-              value: "<h3 class=\"uppercase font-bold text-lg mt-0 mb-2\">Call us today</h3>\r\n\r\n<h2 class=\"font-extralight text-5xl my-0\">0161 872 3455</h2>\r\n\r\n<p>Nullam eget tempor nunc. Quisque id ornare urna. In vitae libero sit amet lectus aliquam scelerisque sit amet in diam. Mauris iaculis tellus sed euismod tempus. Phasellus et gravida velit. Cras sit amet congue justo. Nam purus risus, bibendum ac risus vitae, rhoncus ornare odio.</p>\r\n"
+              value: "<p>Nullam eget tempor nunc. Quisque id ornare urna. In vitae libero sit amet lectus aliquam scelerisque sit amet in diam. Mauris iaculis tellus sed euismod tempus. Phasellus et gravida velit. Cras sit amet congue justo. Nam purus risus, bibendum ac risus vitae, rhoncus ornare odio.</p>\r\n"
               format: full_html
+          field_vertical_alignment:
+            -
+              value: middle
           field_webform:
             -
               target_id: contact
