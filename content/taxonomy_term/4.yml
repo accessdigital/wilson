@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: 'bg-blend-screen bg-grey-600 text-black'
+      value: 'bg-blend-screen bg-grey-500 text-black'

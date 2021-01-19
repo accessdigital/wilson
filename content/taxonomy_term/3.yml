@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: 'bg-blend-multiply bg-grey-400 text-white'
+      value: 'bg-blend-multiply bg-grey-500 text-white'
