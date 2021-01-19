@@ -1,4 +1,3 @@
-uuid: a4e6b266-be86-4895-9abc-610c873eacc8
 langcode: en
 status: true
 dependencies:
@@ -7,12 +6,10 @@ dependencies:
     - field.field.paragraph.logo_wall.field_container_width
     - field.field.paragraph.logo_wall.field_css_classes
     - field.field.paragraph.logo_wall.field_grid_columns
-    - field.field.paragraph.logo_wall.field_headline
     - field.field.paragraph.logo_wall.field_id_anchor
     - field.field.paragraph.logo_wall.field_media
     - field.field.paragraph.logo_wall.field_padding_bottom
     - field.field.paragraph.logo_wall.field_padding_top
-    - field.field.paragraph.logo_wall.field_pre_header
     - field.field.paragraph.logo_wall.field_section_bg
     - field.field.paragraph.logo_wall.field_section_bg_colour
     - paragraphs.paragraphs_type.logo_wall
@@ -35,21 +32,6 @@ third_party_settings:
         classes: ''
         direction: horizontal
       label: Tabs
-    group_headline:
-      children:
-        - field_pre_header
-        - field_headline
-      parent_name: group_tabs
-      weight: 20
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: Headline
     group_logos:
       children:
         - field_media
@@ -142,6 +124,8 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
+_core:
+  default_config_hash: gFla5yIeuLWjFxroUHSrQxUSxXJaMSE019YdfEl8syE
 id: paragraph.logo_wall.default
 targetEntityType: paragraph
 bundle: logo_wall
@@ -173,14 +157,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_headline:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_id_anchor:
     weight: 12
     settings:
@@ -207,14 +183,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_pre_header:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_section_bg:
     weight: 10

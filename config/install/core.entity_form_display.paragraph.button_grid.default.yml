@@ -7,11 +7,9 @@ dependencies:
     - field.field.paragraph.button_grid.field_container_width
     - field.field.paragraph.button_grid.field_css_classes
     - field.field.paragraph.button_grid.field_grid_columns
-    - field.field.paragraph.button_grid.field_headline
     - field.field.paragraph.button_grid.field_id_anchor
     - field.field.paragraph.button_grid.field_padding_bottom
     - field.field.paragraph.button_grid.field_padding_top
-    - field.field.paragraph.button_grid.field_pre_header
     - field.field.paragraph.button_grid.field_section_bg
     - field.field.paragraph.button_grid.field_section_bg_colour
     - paragraphs.paragraphs_type.button_grid
@@ -35,21 +33,6 @@ third_party_settings:
         classes: ''
         direction: horizontal
       label: Tabs
-    group_headline:
-      children:
-        - field_pre_header
-        - field_headline
-      parent_name: group_tabs
-      weight: 20
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: Headline
     group_buttons:
       children:
         - field_buttons
@@ -183,14 +166,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_headline:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_id_anchor:
     weight: 10
     settings:
@@ -210,14 +185,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_pre_header:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_section_bg:
     weight: 8

@@ -5,28 +5,20 @@ dependencies:
     - field.field.paragraph.accordion.field_container_position
     - field.field.paragraph.accordion.field_container_width
     - field.field.paragraph.accordion.field_css_classes
-    - field.field.paragraph.accordion.field_headline
     - field.field.paragraph.accordion.field_id_anchor
     - field.field.paragraph.accordion.field_items
     - field.field.paragraph.accordion.field_padding_bottom
     - field.field.paragraph.accordion.field_padding_top
-    - field.field.paragraph.accordion.field_pre_header
     - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: XeggKnuSjypviJvncDJTzlhoU0HRELih5J1EFuaU0SI
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
-  field_headline:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_items:
     weight: 2
     label: hidden
@@ -35,14 +27,6 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
-    region: content
-  field_pre_header:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
 hidden:
   field_container_position: true

@@ -7,11 +7,9 @@ dependencies:
     - field.field.paragraph.button_grid.field_container_width
     - field.field.paragraph.button_grid.field_css_classes
     - field.field.paragraph.button_grid.field_grid_columns
-    - field.field.paragraph.button_grid.field_headline
     - field.field.paragraph.button_grid.field_id_anchor
     - field.field.paragraph.button_grid.field_padding_bottom
     - field.field.paragraph.button_grid.field_padding_top
-    - field.field.paragraph.button_grid.field_pre_header
     - field.field.paragraph.button_grid.field_section_bg
     - field.field.paragraph.button_grid.field_section_bg_colour
     - paragraphs.paragraphs_type.button_grid
@@ -36,22 +34,6 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-  field_headline:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_pre_header:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
 hidden:
   field_container_position: true
   field_container_width: true
