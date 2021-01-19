@@ -11,6 +11,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: '1'
+      label: 'One column'
+    -
       value: '2'
       label: 'Two columns'
     -
