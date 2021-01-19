@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.panel.field_column_order
+    - field.field.paragraph.panel.field_container_width
     - field.field.paragraph.panel.field_css_classes
     - field.field.paragraph.panel.field_headline
     - field.field.paragraph.panel.field_id_anchor
@@ -15,6 +16,7 @@ dependencies:
     - field.field.paragraph.panel.field_section_bg
     - field.field.paragraph.panel.field_section_bg_colour
     - field.field.paragraph.panel.field_text_column
+    - field.field.paragraph.panel.field_vertical_alignment
     - paragraphs.paragraphs_type.panel
   module:
     - field_group
@@ -62,12 +64,12 @@ third_party_settings:
       format_type: tab
       region: content
       format_settings:
-        id: ''
-        classes: ''
         description: ''
         formatter: closed
         required_fields: true
-      label: Media
+        id: ''
+        classes: ''
+      label: Image
     group_links:
       children:
         - field_primary_cta
@@ -103,6 +105,8 @@ third_party_settings:
     group_layout:
       children:
         - field_column_order
+        - field_vertical_alignment
+        - field_container_width
       parent_name: group_settings
       weight: 28
       format_type: details
@@ -160,7 +164,7 @@ third_party_settings:
         required_fields: true
       label: Padding
 _core:
-  default_config_hash: wJtJgt4stI0_2J7ek56EiNwW9vmK_h90et7DfFDmrTA
+  default_config_hash: xwcnKZtTCOlFKno_efsO3vKy8_-S9LlZVtUHx4HFH44
 id: paragraph.panel.default
 targetEntityType: paragraph
 bundle: panel
@@ -168,6 +172,12 @@ mode: default
 content:
   field_column_order:
     weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_container_width:
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -205,7 +215,7 @@ content:
     region: content
   field_padding_bottom:
     type: options_select
-    weight: 33
+    weight: 34
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -240,14 +250,14 @@ content:
     type: link_default
     region: content
   field_section_bg:
-    weight: 8
+    weight: 37
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
   field_section_bg_colour:
-    weight: 7
+    weight: 36
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -259,6 +269,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_vertical_alignment:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
 hidden:
   created: true

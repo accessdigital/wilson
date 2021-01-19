@@ -7,8 +7,10 @@ third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       ctas: ctas
+_core:
+  default_config_hash: sab8233XfRXroGtu543DdgU3xMF2QaCwTYR0Ta0OY3U
 id: content_grid
-label: 'Content grid'
+label: 'Content signpost grid'
 icon_uuid: null
 icon_default: null
 description: ''

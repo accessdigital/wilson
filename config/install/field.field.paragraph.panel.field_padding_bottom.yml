@@ -6,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.panel
   module:
     - options
+_core:
+  default_config_hash: uDfj9C7UNvMX5756ZbXdDYRduoZbQHzQlbzXlZl9t-A
 id: paragraph.panel.field_padding_bottom
 field_name: field_padding_bottom
 entity_type: paragraph
@@ -16,7 +18,7 @@ required: true
 translatable: true
 default_value:
   -
-    value: md
+    value: none
 default_value_callback: ''
 settings: {  }
 field_type: list_string

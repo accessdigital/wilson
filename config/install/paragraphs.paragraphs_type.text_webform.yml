@@ -6,9 +6,12 @@ dependencies:
 third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
+      text: text
       embeds: embeds
+_core:
+  default_config_hash: zba5L-9sTCgJoY43ffCf1S-Mz23sNLowkuDKZKqMRtk
 id: text_webform
-label: 'Text and webform'
+label: 'Text and webform columns'
 icon_uuid: null
 icon_default: null
 description: ''

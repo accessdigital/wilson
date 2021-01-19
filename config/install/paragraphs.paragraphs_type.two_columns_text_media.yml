@@ -7,10 +7,11 @@ third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       text: text
+      media: media
 _core:
-  default_config_hash: KThRd32TZjbPJ6ODRBoFNKc0L-sDxv8KZ1Lrw0IuO5Q
+  default_config_hash: '-AAn07PZQhhaYQ-4PeUQWq6IN_oYw3AGnVyACj_kJbs'
 id: two_columns_text_media
-label: 'Text and media'
+label: 'Text and media columns'
 icon_uuid: null
 icon_default: null
 description: ''

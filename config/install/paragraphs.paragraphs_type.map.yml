@@ -1,4 +1,3 @@
-uuid: 147b1e03-9c31-4811-816d-fb9c6fd291e6
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,10 @@ third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       embeds: embeds
+_core:
+  default_config_hash: CTv0nnOWdEXLj8PKXjKl2OKRkPDf96BqyXQO_di_hok
 id: map
-label: 'Google map'
+label: Map
 icon_uuid: null
 icon_default: null
 description: ''

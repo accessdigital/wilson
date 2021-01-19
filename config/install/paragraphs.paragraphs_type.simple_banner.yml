@@ -7,8 +7,10 @@ third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       ctas: ctas
+_core:
+  default_config_hash: ZgQFtag1zqjqJnRZuARxJSvAqmqvodtbbqH3Dwzpxjk
 id: simple_banner
-label: 'Simple banner'
+label: Banner
 icon_uuid: null
 icon_default: null
 description: ''

@@ -4,14 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_media_column
     - media.type.image
-    - media.type.remote_video
-    - media.type.video
     - paragraphs.paragraphs_type.panel
+_core:
+  default_config_hash: tKvcw6Q2GXvri-F7t_kahwvi7JW7FUbXffEYic-859A
 id: paragraph.panel.field_media_column
 field_name: field_media_column
 entity_type: paragraph
 bundle: panel
-label: Image/video
+label: Image
 description: ''
 required: false
 translatable: true
@@ -22,8 +22,6 @@ settings:
   handler_settings:
     target_bundles:
       image: image
-      remote_video: remote_video
-      video: video
     sort:
       field: _none
       direction: ASC

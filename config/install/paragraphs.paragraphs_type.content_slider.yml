@@ -7,8 +7,10 @@ third_party_settings:
   paragraphs_ee:
     paragraphs_categories:
       ctas: ctas
+_core:
+  default_config_hash: h8ZQDTE4mgbmtqmt9SiL1mxSGcrlZDh3-gUQRvf7EA8
 id: content_slider
-label: 'Content slider'
+label: 'Content signpost slider'
 icon_uuid: null
 icon_default: null
 description: ''
