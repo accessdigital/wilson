@@ -279,7 +279,7 @@ default:
               entity: b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5
           field_padding_bottom:
             -
-              value: md
+              value: none
           field_padding_top:
             -
               value: none
@@ -301,6 +301,478 @@ default:
           field_vertical_alignment:
             -
               value: middle
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 2d495074-2fff-4321-8e4a-0b8f40f1d256
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611154369
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_headline:
+            -
+              value: Accordion
+          field_layout:
+            -
+              value: justified
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_pre_header:
+            -
+              value: 'Adaptive panels'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 05cb4fdf-f5f9-4939-8356-56c0664e3ffe
+          bundle: accordion
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611103755
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_items:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 879e6e5c-046d-4acc-bb5d-b6b8970d3344
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611103757
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+                  field_text_column:
+                    -
+                      value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et leo a felis lacinia semper ut eu ipsum. Integer feugiat mi ac tellus volutpat, quis tincidunt velit fringilla. Proin euismod egestas velit, vestibulum ornare sapien fringilla ut. Aliquam cursus elementum est et porta. Praesent vitae libero ornare, semper lorem et, facilisis dui. Nullam sollicitudin auctor magna a scelerisque. Morbi in libero finibus, convallis urna eget, pulvinar dolor.</p>\r\n\r\n<p>Sed at dui quis libero ornare iaculis vel ac risus. Curabitur gravida rhoncus est, sit amet sagittis sapien lacinia a. Proin at convallis nulla, sed rhoncus odio. Fusce semper mollis sapien sed semper. Nunc ultrices diam et felis scelerisque fringilla. In mollis aliquet sapien, ac fringilla ipsum pretium sed. Curabitur felis quam, posuere sit amet semper sit amet, lobortis facilisis nisl. Quisque vitae rhoncus tortor, quis convallis enim. Donec nec urna laoreet, mattis leo a, facilisis nisl.</p>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c34cc313-f1a5-492e-ba18-8403edeb6b5f
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611103786
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Praesent vitae libero ornare'
+                  field_text_column:
+                    -
+                      value: "<p>Fusce ut magna in dui volutpat rhoncus. Cras egestas sagittis pharetra. Ut in sem eu ipsum efficitur bibendum. In id convallis libero. Aenean vitae lectus eget lectus elementum aliquet. Morbi blandit placerat ante commodo pretium. Vestibulum viverra egestas tortor eget congue. Donec luctus laoreet vulputate.</p>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"e735c5a3-d1ff-4fa6-af01-c473e0211f2a\"></drupal-media>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 9743f219-ad13-43d7-84fa-5497731cb2b8
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611103823
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Maecenas sit amet mi vitae dolor euismod aliquet'
+                  field_text_column:
+                    -
+                      value: "<p>Fusce ut magna in dui volutpat rhoncus. Cras egestas sagittis pharetra. Ut in sem eu ipsum efficitur bibendum. In id convallis libero. Aenean vitae lectus eget lectus elementum aliquet. Morbi blandit placerat ante commodo pretium. Vestibulum viverra egestas tortor eget congue. Donec luctus laoreet vulputate.</p>\r\n\r\n<p>Maecenas sit amet mi vitae dolor euismod aliquet. Nullam tempor ipsum turpis, non feugiat ante blandit ut. Curabitur iaculis quam a eros posuere pulvinar. Phasellus quis laoreet velit. Phasellus tristique purus in arcu fringilla, id dapibus quam posuere. Duis a posuere quam. Cras vestibulum libero ac commodo venenatis. Integer accumsan, magna non maximus mattis, nunc nulla convallis nulla, laoreet consectetur dolor metus id felis. Nunc posuere lorem sed risus tempor, id placerat justo fermentum. Nunc venenatis dolor quam, ac sollicitudin neque rhoncus at. Suspendisse potenti.</p>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d88fec96-d83e-4d6c-9b04-8ed61fd5140a
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611103841
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Suspendisse finibus tellus non tortor tincidunt'
+                  field_text_column:
+                    -
+                      value: "<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci. Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue. Nam accumsan ullamcorper tellus. In nec velit vehicula, condimentum libero in, eleifend risus. Nunc tristique elementum mi. Nulla facilisi. Fusce quis tellus ac lacus molestie auctor.</p>\r\n\r\n<p>Fusce ut magna in dui volutpat rhoncus. Cras egestas sagittis pharetra. Ut in sem eu ipsum efficitur bibendum. In id convallis libero. Aenean vitae lectus eget lectus elementum aliquet. Morbi blandit placerat ante commodo pretium. Vestibulum viverra egestas tortor eget congue. Donec luctus laoreet vulputate.</p>\r\n"
+                      format: full_html
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: none
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: d78b3492-8da9-44a7-8470-f764bc5aa66e
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611154392
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_headline:
+            -
+              value: 'Horizontal tabs'
+          field_layout:
+            -
+              value: justified
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_pre_header:
+            -
+              value: 'Adaptive panels'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 4f913c27-f28e-48a1-abfa-a18b11cb7ee2
+          bundle: tabs
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611104449
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_items:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 5acb289d-a4c7-4b6d-8094-3a672b7ddf68
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611104451
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Tab 1'
+                  field_text_column:
+                    -
+                      value: "<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci.</p>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"3170306e-328e-462c-a61a-47d079f7c7a1\"></drupal-media>\r\n\r\n<p>Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue. Nam accumsan ullamcorper tellus. In nec velit vehicula, condimentum libero in, eleifend risus. Nunc tristique elementum mi. Nulla facilisi. Fusce quis tellus ac lacus molestie auctor.</p>\r\n\r\n<p>Fusce ut magna in dui volutpat rhoncus. Cras egestas sagittis pharetra. Ut in sem eu ipsum efficitur bibendum. In id convallis libero. Aenean vitae lectus eget lectus elementum aliquet. Morbi blandit placerat ante commodo pretium. Vestibulum viverra egestas tortor eget congue. Donec luctus laoreet vulputate.</p>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: eac15132-c393-416f-b328-14010a2cb39d
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611104467
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Tab 2'
+                  field_text_column:
+                    -
+                      value: "<p>Proin at convallis nulla, sed rhoncus odio. Fusce semper mollis sapien sed semper. Nunc ultrices diam et felis scelerisque fringilla. In mollis aliquet sapien, ac fringilla ipsum pretium sed. Curabitur felis quam, posuere sit amet semper sit amet, lobortis facilisis nisl. Quisque vitae rhoncus tortor, quis convallis enim. Donec nec urna laoreet, mattis leo a, facilisis nisl.</p>\r\n\r\n<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci. Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue.</p>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3042e9d5-94ea-415e-a823-1d76fe9b631e
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611151408
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Tab 3'
+                  field_text_column:
+                    -
+                      value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus purus, mollis at elit a, aliquet cursus nisl. Integer efficitur ante id diam imperdiet, ac dignissim ex pharetra. Mauris quis tristique quam. Vivamus rhoncus neque urna, vitae blandit purus lacinia quis. Donec at ullamcorper dolor. Nullam quis accumsan nulla. Sed auctor diam neque, nec elementum sem accumsan ut.</p>\r\n"
+                      format: full_html
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: none
+          field_tabs_direction:
+            -
+              value: horizontal
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 31e06050-b92e-400f-8dea-32a56df32373
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611154428
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: 'Vertical tabs'
+          field_layout:
+            -
+              value: justified
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_pre_header:
+            -
+              value: 'Adaptive panels'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 4e660c8e-1381-471d-bb58-8b1034280bc5
+          bundle: tabs
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611104449
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_items:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2a4b4ec1-f0fb-4b6b-b2fb-431842167b10
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611104451
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Tab 1'
+                  field_text_column:
+                    -
+                      value: "<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci.</p>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"3170306e-328e-462c-a61a-47d079f7c7a1\"></drupal-media>\r\n\r\n<p>Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue. Nam accumsan ullamcorper tellus. In nec velit vehicula, condimentum libero in, eleifend risus. Nunc tristique elementum mi. Nulla facilisi. Fusce quis tellus ac lacus molestie auctor.</p>\r\n\r\n<p>Fusce ut magna in dui volutpat rhoncus. Cras egestas sagittis pharetra. Ut in sem eu ipsum efficitur bibendum. In id convallis libero. Aenean vitae lectus eget lectus elementum aliquet. Morbi blandit placerat ante commodo pretium. Vestibulum viverra egestas tortor eget congue. Donec luctus laoreet vulputate.</p>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 57119e12-d5be-47d3-b374-776f309c9cf1
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611104467
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Tab 2'
+                  field_text_column:
+                    -
+                      value: "<p>Proin at convallis nulla, sed rhoncus odio. Fusce semper mollis sapien sed semper. Nunc ultrices diam et felis scelerisque fringilla. In mollis aliquet sapien, ac fringilla ipsum pretium sed. Curabitur felis quam, posuere sit amet semper sit amet, lobortis facilisis nisl. Quisque vitae rhoncus tortor, quis convallis enim. Donec nec urna laoreet, mattis leo a, facilisis nisl.</p>\r\n\r\n<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci. Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue.</p>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 7d089153-e5e4-4904-aea2-a84addd7dfb0
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611151408
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_headline:
+                    -
+                      value: 'Tab 3'
+                  field_text_column:
+                    -
+                      value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus purus, mollis at elit a, aliquet cursus nisl. Integer efficitur ante id diam imperdiet, ac dignissim ex pharetra. Mauris quis tristique quam. Vivamus rhoncus neque urna, vitae blandit purus lacinia quis. Donec at ullamcorper dolor. Nullam quis accumsan nulla. Sed auctor diam neque, nec elementum sem accumsan ut.</p>\r\n"
+                      format: full_html
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: none
+          field_tabs_direction:
+            -
+              value: vertical
     -
       entity:
         _meta:
@@ -845,9 +1317,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_column_order:
             -
               value: text_media
