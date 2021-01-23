@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.max_1100x1100
-    - image.style.max_1300x1300
-    - image.style.max_1600x1600
+    - image.style.max_1100x800
+    - image.style.max_1300x900
+    - image.style.max_1600x900
     - image.style.max_650x650
     - image.style.max_800x800
   profile:
@@ -16,17 +16,17 @@ image_style_mappings:
     breakpoint_id: wilson.xl
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: max_1600x1600
+    image_mapping: max_1600x900
   -
     breakpoint_id: wilson.lg
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: max_1300x1300
+    image_mapping: max_1300x900
   -
     breakpoint_id: wilson.md
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: max_1100x1100
+    image_mapping: max_1100x800
   -
     breakpoint_id: wilson.sm
     multiplier: 1x

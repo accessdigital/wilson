@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.max_1100x1100
+    - image.style.max_1100x800
     - image.style.max_650x650
     - image.style.max_800x800
   profile:
@@ -14,7 +14,7 @@ image_style_mappings:
     breakpoint_id: wilson.md
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: max_1100x1100
+    image_mapping: max_1100x800
   -
     breakpoint_id: wilson.sm
     multiplier: 1x

@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
-name: max_1100x1100
-label: 'Max 1100x1100'
+name: max_1100x800
+label: 'Max 1100x800'
 effects:
   b335a265-e007-44cb-8411-49b679596285:
     uuid: b335a265-e007-44cb-8411-49b679596285
@@ -10,5 +10,5 @@ effects:
     weight: 1
     data:
       width: 1100
-      height: 1100
+      height: 800
       upscale: false

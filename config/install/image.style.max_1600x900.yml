@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
-name: max_1600x1600
-label: 'Max 1600x1600'
+name: max_1600x900
+label: 'Max 1600x900'
 effects:
   792b1bba-428e-4513-b258-25597fea9477:
     uuid: 792b1bba-428e-4513-b258-25597fea9477
@@ -10,5 +10,5 @@ effects:
     weight: 1
     data:
       width: 1600
-      height: 1600
+      height: 900
       upscale: false
