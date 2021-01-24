@@ -74,6 +74,11 @@ install:
   - twig_field_value
   - twig_tweak
   - default_content
+  - password_policy
+  - password_policy_characters
+  - password_policy_character_types
+  - password_policy_length
+  - password_policy_username
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.

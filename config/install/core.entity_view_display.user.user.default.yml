@@ -1,0 +1,31 @@
+uuid: f1e0c56a-d7ed-4166-9e96-04c93cc3309b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_password_expiration
+  module:
+    - datetime
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_last_password_reset:
+    type: datetime_default
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
+  member_for:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_password_expiration: true
