@@ -12,6 +12,7 @@ _meta:
     b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5: media
     113a8489-3444-4e54-8d62-fe9576470f0b: media
     042241e5-9e23-4186-ac71-e1c09ec06c84: media
+    600d7945-e9f4-4b5d-a23a-c58fb8f2de31: media
     80d83855-dc4d-4c8c-aac2-ac93c9ba2668: media
 default:
   revision_uid:
@@ -358,9 +359,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_container_position:
             -
               value: center
@@ -386,6 +384,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_headline:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
@@ -411,6 +412,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_headline:
                     -
                       value: 'Praesent vitae libero ornare'
@@ -436,6 +440,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_headline:
                     -
                       value: 'Maecenas sit amet mi vitae dolor euismod aliquet'
@@ -461,6 +468,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_headline:
                     -
                       value: 'Suspendisse finibus tellus non tortor tincidunt'
@@ -531,9 +541,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_container_position:
             -
               value: center
@@ -1184,7 +1191,7 @@ default:
               value: normal
           field_padding_bottom:
             -
-              value: md
+              value: sm
           field_padding_top:
             -
               value: none
@@ -1204,8 +1211,8 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 27c43462-5983-4764-8fa8-3b326e75951c
-          bundle: panel
+          uuid: cc2923b8-82eb-4044-ab4a-cb1cebb24c94
+          bundle: gallery
           default_langcode: en
         default:
           status:
@@ -1213,20 +1220,23 @@ default:
               value: true
           created:
             -
-              value: 1610917805
+              value: 1611421805
           behavior_settings:
             -
               value: {  }
-          field_column_order:
+          field_container_position:
             -
-              value: text_media
+              value: center
           field_container_width:
             -
-              value: extra_wide
-          field_headline:
+              value: normal
+          field_media:
             -
-              value: 'Courtesy of Unsplash'
-          field_media_column:
+              entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
+            -
+              entity: 3170306e-328e-462c-a61a-47d079f7c7a1
+            -
+              entity: 600d7945-e9f4-4b5d-a23a-c58fb8f2de31
             -
               entity: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
           field_padding_bottom:
@@ -1235,24 +1245,6 @@ default:
           field_padding_top:
             -
               value: none
-          field_pre_header:
-            -
-              value: Images
-          field_primary_cta:
-            -
-              uri: 'https://unsplash.com/'
-              title: 'Find out more'
-              options: {  }
-          field_section_bg_colour:
-            -
-              entity: 988c1be8-e176-4803-992e-bae43a503174
-          field_text_column:
-            -
-              value: "<p>Photos for everyone. Over 2 million free high-resolution images brought to you by the world's most generous community of photographers.</p>\r\n"
-              format: full_html
-          field_vertical_alignment:
-            -
-              value: middle
     -
       entity:
         _meta:
@@ -1271,6 +1263,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_buttons:
             -
               uri: 'internal:/'
@@ -1423,6 +1418,60 @@ default:
           field_padding_top:
             -
               value: none
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 27c43462-5983-4764-8fa8-3b326e75951c
+          bundle: panel
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1610917805
+          behavior_settings:
+            -
+              value: {  }
+          field_column_order:
+            -
+              value: text_media
+          field_container_width:
+            -
+              value: full
+          field_headline:
+            -
+              value: 'Courtesy of Unsplash'
+          field_media_column:
+            -
+              entity: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: none
+          field_pre_header:
+            -
+              value: Images
+          field_primary_cta:
+            -
+              uri: 'https://unsplash.com/'
+              title: 'Find out more'
+              options: {  }
+          field_section_bg_colour:
+            -
+              entity: 988c1be8-e176-4803-992e-bae43a503174
+          field_text_column:
+            -
+              value: "<p>Photos for everyone. Over 2 million free high-resolution images brought to you by the world's most generous community of photographers.</p>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: middle
     -
       entity:
         _meta:

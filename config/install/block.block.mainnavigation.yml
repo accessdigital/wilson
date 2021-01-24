@@ -1,0 +1,29 @@
+uuid: 04830dda-3787-440b-9578-f1f303775010
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - wilson_theme_starterkit
+id: mainnavigation
+theme: wilson_theme_starterkit
+region: header_navigation
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand: true
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

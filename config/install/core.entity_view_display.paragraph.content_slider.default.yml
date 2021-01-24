@@ -1,3 +1,4 @@
+uuid: 551d80b7-1e67-48b2-b5c2-d8be4272a035
 langcode: en
 status: true
 dependencies:
@@ -11,14 +12,19 @@ dependencies:
     - field.field.paragraph.content_slider.field_pre_header
     - field.field.paragraph.content_slider.field_section_bg
     - field.field.paragraph.content_slider.field_section_bg_colour
+    - field.field.paragraph.content_slider.field_text_column
     - paragraphs.paragraphs_type.content_slider
+  module:
+    - text
+_core:
+  default_config_hash: qJ923NmJWHo9FmCyq6lI5pGwA-VRn6xqOrWKiLg6Qbw
 id: paragraph.content_slider.default
 targetEntityType: paragraph
 bundle: content_slider
 mode: default
 content:
   field_content_references:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: teaser
@@ -41,6 +47,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_text_column:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
 hidden:
   field_css_classes: true

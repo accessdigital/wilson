@@ -10,7 +10,7 @@ default:
       value: true
   name:
     -
-      value: 'Primary brand colour'
+      value: 'Primary colour'
   weight:
     -
       value: 0
@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: 'bg-brand text-brand-contrast'
+      value: 'bg-primary text-primary-contrast'

@@ -10,7 +10,7 @@ default:
       value: true
   name:
     -
-      value: 'Secondary brand colour'
+      value: 'Secondary colour'
   weight:
     -
       value: 2
@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: 'bg-brand-secondary text-brand-secondary-contrast'
+      value: 'bg-secondary text-secondary-contrast'

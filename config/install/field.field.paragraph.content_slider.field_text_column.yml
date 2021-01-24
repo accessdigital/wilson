@@ -1,0 +1,21 @@
+uuid: 5d619690-1ae5-4fd9-b0f4-461c382ab0c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_column
+    - paragraphs.paragraphs_type.content_slider
+  module:
+    - text
+id: paragraph.content_slider.field_text_column
+field_name: field_text_column
+entity_type: paragraph
+bundle: content_slider
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

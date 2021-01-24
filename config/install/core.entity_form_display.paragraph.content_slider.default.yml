@@ -1,3 +1,4 @@
+uuid: 10d71e37-576d-4e46-abf1-28a86e8cedb9
 langcode: en
 status: true
 dependencies:
@@ -11,10 +12,12 @@ dependencies:
     - field.field.paragraph.content_slider.field_pre_header
     - field.field.paragraph.content_slider.field_section_bg
     - field.field.paragraph.content_slider.field_section_bg_colour
+    - field.field.paragraph.content_slider.field_text_column
     - paragraphs.paragraphs_type.content_slider
   module:
     - field_group
     - media_library
+    - text
 third_party_settings:
   field_group:
     group_tabs:
@@ -35,6 +38,7 @@ third_party_settings:
       children:
         - field_pre_header
         - field_headline
+        - field_text_column
       parent_name: group_tabs
       weight: 20
       format_type: tab
@@ -45,7 +49,7 @@ third_party_settings:
         description: ''
         formatter: closed
         required_fields: true
-      label: Headline
+      label: Intro slide
     group_content:
       children:
         - field_content_references
@@ -121,6 +125,8 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
+_core:
+  default_config_hash: l_wgGOi-zCO5hv4MlyylLpEiw7H2xqcmiUJPj1GGC1Q
 id: paragraph.content_slider.default
 targetEntityType: paragraph
 bundle: content_slider
@@ -145,7 +151,7 @@ content:
     type: string_textfield
     region: content
   field_headline:
-    weight: 3
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -161,7 +167,7 @@ content:
     type: string_textfield
     region: content
   field_padding_bottom:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -173,7 +179,7 @@ content:
     type: options_select
     region: content
   field_pre_header:
-    weight: 2
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -192,6 +198,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_text_column:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
 hidden:
   created: true
