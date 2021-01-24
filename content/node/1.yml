@@ -565,7 +565,7 @@ default:
                       value: {  }
                   field_headline:
                     -
-                      value: 'Tab 1'
+                      value: 'Horizontal tab 1'
                   field_text_column:
                     -
                       value: "<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci.</p>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"3170306e-328e-462c-a61a-47d079f7c7a1\"></drupal-media>\r\n\r\n<p>Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue. Nam accumsan ullamcorper tellus. In nec velit vehicula, condimentum libero in, eleifend risus. Nunc tristique elementum mi. Nulla facilisi. Fusce quis tellus ac lacus molestie auctor.</p>\r\n\r\n<p>Fusce ut magna in dui volutpat rhoncus. Cras egestas sagittis pharetra. Ut in sem eu ipsum efficitur bibendum. In id convallis libero. Aenean vitae lectus eget lectus elementum aliquet. Morbi blandit placerat ante commodo pretium. Vestibulum viverra egestas tortor eget congue. Donec luctus laoreet vulputate.</p>\r\n"
@@ -590,7 +590,7 @@ default:
                       value: {  }
                   field_headline:
                     -
-                      value: 'Tab 2'
+                      value: 'Horizontal tab 2'
                   field_text_column:
                     -
                       value: "<p>Proin at convallis nulla, sed rhoncus odio. Fusce semper mollis sapien sed semper. Nunc ultrices diam et felis scelerisque fringilla. In mollis aliquet sapien, ac fringilla ipsum pretium sed. Curabitur felis quam, posuere sit amet semper sit amet, lobortis facilisis nisl. Quisque vitae rhoncus tortor, quis convallis enim. Donec nec urna laoreet, mattis leo a, facilisis nisl.</p>\r\n\r\n<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci. Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue.</p>\r\n"
@@ -615,7 +615,7 @@ default:
                       value: {  }
                   field_headline:
                     -
-                      value: 'Tab 3'
+                      value: 'Horizontal tab 3'
                   field_text_column:
                     -
                       value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus purus, mollis at elit a, aliquet cursus nisl. Integer efficitur ante id diam imperdiet, ac dignissim ex pharetra. Mauris quis tristique quam. Vivamus rhoncus neque urna, vitae blandit purus lacinia quis. Donec at ullamcorper dolor. Nullam quis accumsan nulla. Sed auctor diam neque, nec elementum sem accumsan ut.</p>\r\n"
@@ -713,7 +713,7 @@ default:
                       value: {  }
                   field_headline:
                     -
-                      value: 'Tab 1'
+                      value: 'Vertical tab 1'
                   field_text_column:
                     -
                       value: "<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci.</p>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"3170306e-328e-462c-a61a-47d079f7c7a1\"></drupal-media>\r\n\r\n<p>Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue. Nam accumsan ullamcorper tellus. In nec velit vehicula, condimentum libero in, eleifend risus. Nunc tristique elementum mi. Nulla facilisi. Fusce quis tellus ac lacus molestie auctor.</p>\r\n\r\n<p>Fusce ut magna in dui volutpat rhoncus. Cras egestas sagittis pharetra. Ut in sem eu ipsum efficitur bibendum. In id convallis libero. Aenean vitae lectus eget lectus elementum aliquet. Morbi blandit placerat ante commodo pretium. Vestibulum viverra egestas tortor eget congue. Donec luctus laoreet vulputate.</p>\r\n"
@@ -738,7 +738,7 @@ default:
                       value: {  }
                   field_headline:
                     -
-                      value: 'Tab 2'
+                      value: 'Vertical tab 2'
                   field_text_column:
                     -
                       value: "<p>Proin at convallis nulla, sed rhoncus odio. Fusce semper mollis sapien sed semper. Nunc ultrices diam et felis scelerisque fringilla. In mollis aliquet sapien, ac fringilla ipsum pretium sed. Curabitur felis quam, posuere sit amet semper sit amet, lobortis facilisis nisl. Quisque vitae rhoncus tortor, quis convallis enim. Donec nec urna laoreet, mattis leo a, facilisis nisl.</p>\r\n\r\n<p>Suspendisse finibus tellus non tortor tincidunt, malesuada condimentum magna sollicitudin. Nam ipsum dui, condimentum a iaculis ut, tempor at lacus. Cras quis sem sit amet nisl porttitor tempor luctus in orci. Fusce molestie mauris id congue sagittis. Vestibulum ullamcorper augue efficitur vestibulum rutrum. Duis dictum massa id dignissim tempus. Donec pharetra sapien nibh, ut maximus ligula vulputate quis. Nullam eu lectus cursus, pulvinar turpis vitae, porttitor quam. Praesent feugiat sapien non enim pretium lacinia. Donec massa tortor, facilisis et euismod eget, lacinia ornare augue.</p>\r\n"
@@ -763,7 +763,7 @@ default:
                       value: {  }
                   field_headline:
                     -
-                      value: 'Tab 3'
+                      value: 'Vertical tab 3'
                   field_text_column:
                     -
                       value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus purus, mollis at elit a, aliquet cursus nisl. Integer efficitur ante id diam imperdiet, ac dignissim ex pharetra. Mauris quis tristique quam. Vivamus rhoncus neque urna, vitae blandit purus lacinia quis. Donec at ullamcorper dolor. Nullam quis accumsan nulla. Sed auctor diam neque, nec elementum sem accumsan ut.</p>\r\n"
