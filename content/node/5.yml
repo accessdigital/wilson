@@ -1,0 +1,652 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: e70ec879-6196-4b42-a9f2-0c152260881b
+  bundle: landing_page
+  default_langcode: en
+  depends:
+    e735c5a3-d1ff-4fa6-af01-c473e0211f2a: media
+    12db7978-4760-486b-a0e4-6455f523858f: taxonomy_term
+    113a8489-3444-4e54-8d62-fe9576470f0b: media
+    042241e5-9e23-4186-ac71-e1c09ec06c84: media
+    988c1be8-e176-4803-992e-bae43a503174: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  revision_log:
+    -
+      value: 'Copy of the revision from <em class="placeholder">Mon, 25/01/2021 - 01:19</em>.'
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Demo editorial'
+  created:
+    -
+      value: 1611533114
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /demo-editorial
+      langcode: en
+      pathauto: 0
+  field_sections:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: f0131d50-34c7-44c7-aaf6-cb1380b929af
+          bundle: hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611533266
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: 'Lorem ipsum dolor sit amet'
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: xl
+          field_pre_header:
+            -
+              value: Editorial
+          field_section_bg:
+            -
+              entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
+          field_section_bg_colour:
+            -
+              entity: 12db7978-4760-486b-a0e4-6455f523858f
+          field_text_column:
+            -
+              value: "<p>Mauris quis tristique quam. Vivamus rhoncus neque urna, vitae blandit purus lacinia quis...</p>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: f4d51b2f-299d-498a-8c9a-2eebf8957169
+          bundle: two_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611535528
+          behavior_settings:
+            -
+              value: {  }
+          field_column_distribution:
+            -
+              value: preference_left
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_text_column:
+            -
+              value: "<p>Nulla posuere magna quis accumsan pulvinar. Nulla facilisi. Nunc ultrices scelerisque est. Sed vel nibh nisl. Quisque lacinia mollis nunc. Fusce porta auctor tellus, eu luctus dolor eleifend sed. Duis condimentum, nunc sed fringilla facilisis, lacus quam euismod magna, eget condimentum massa lacus vel ex. Nam rhoncus velit justo, ac maximus augue mollis vel.</p>\r\n\r\n<h4>Nulla vestibulum tincidunt</h4>\r\n\r\n<p>Duis mollis nisl sem, ornare facilisis lacus porttitor a. Morbi feugiat nulla nibh, a euismod nulla consequat in. Duis non suscipit ipsum, vitae blandit neque. Quisque nec lectus a ligula elementum efficitur. Nulla vestibulum tincidunt bibendum. Suspendisse potenti. Phasellus luctus eros vel blandit fermentum. Vivamus sed purus risus. Ut elementum dolor sapien, a sagittis est tempor sit amet.</p>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<blockquote>\r\n<p class=\"text-align-center\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit donec lacus purus.\"</p>\r\n</blockquote>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: middle
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: df689edd-e0dc-4141-8a10-4b173094638e
+          bundle: one_column
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611534480
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<drupal-media data-caption=\"© Lorem ipsum dolor sit amet.\" data-entity-type=\"media\" data-entity-uuid=\"e735c5a3-d1ff-4fa6-af01-c473e0211f2a\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 545e8ed2-e311-4b8f-95b5-4cd2b047dc98
+          bundle: one_column
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611534500
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: md
+          field_text_column:
+            -
+              value: "<h4>Sed porttitor hendrerit efficitur</h4>\r\n\r\n<p>Vestibulum ac orci nec nisi aliquet placerat. Curabitur vel viverra risus, nec ornare lorem. Nullam eu mi eget ipsum lobortis ultricies a eu magna. Suspendisse potenti. Donec tincidunt lorem ante, nec aliquam libero posuere vitae. Nulla laoreet id felis at efficitur. Aliquam id orci id libero mollis blandit. In a odio nunc. Mauris aliquam mauris lorem, in placerat mauris eleifend a. Maecenas lacinia dapibus ipsum non ultricies. Vivamus feugiat, diam at finibus aliquet, felis urna pulvinar orci, a gravida mi sapien eu augue. Sed efficitur sapien vel risus posuere accumsan.</p>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 91bfa34d-1ad6-45da-901e-aa7f039aae25
+          bundle: two_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611534613
+          behavior_settings:
+            -
+              value: {  }
+          field_column_distribution:
+            -
+              value: equal
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"13647eec-1cdc-4ce3-a089-441d78fba981\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"cc59ed8d-cfea-499d-a753-42c4d7d96fe9\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: top
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 0241409f-8bf7-4962-804b-d43d057ca0db
+          bundle: one_column
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611534930
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: sm
+          field_text_column:
+            -
+              value: "<p>Nulla posuere magna quis accumsan pulvinar. Nulla facilisi. Nunc ultrices scelerisque est. Sed vel nibh nisl. Quisque lacinia mollis nunc. Fusce porta auctor tellus, eu luctus dolor eleifend sed. Duis condimentum, nunc sed fringilla facilisis, lacus quam euismod magna, eget condimentum massa lacus vel ex. Nam rhoncus velit justo, ac maximus augue mollis vel. Phasellus scelerisque eros nulla. Curabitur nibh est, fermentum sit amet mauris ac, ornare iaculis est. Suspendisse gravida tempor eros, ultricies porta enim bibendum vitae.</p>\r\n\r\n<p>Suspendisse dolor dolor, egestas sed gravida vitae, placerat a velit. Phasellus vel odio sagittis, volutpat lacus non, ornare tellus. Aenean ac consequat nisi, et malesuada massa. Aliquam volutpat sapien ut lacinia accumsan. Sed at fermentum justo, et imperdiet mauris. Duis mollis nisl sem, ornare facilisis lacus porttitor a. Morbi feugiat nulla nibh, a euismod nulla consequat in. Duis non suscipit ipsum, vitae blandit neque. Quisque nec lectus a ligula elementum efficitur. Nulla vestibulum tincidunt bibendum. Suspendisse potenti. Phasellus luctus eros vel blandit fermentum. Vivamus sed purus risus. Ut elementum dolor sapien, a sagittis est tempor sit amet.</p>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 36870ce3-9bdf-4bf3-be02-64e17c747c34
+          bundle: one_column
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611535768
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"3170306e-328e-462c-a61a-47d079f7c7a1\"></drupal-media>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 71ae98be-e0f6-4975-875e-e98b8de1453c
+          bundle: one_column
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611535433
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: sm
+          field_text_column:
+            -
+              value: "<p>Sed porttitor hendrerit efficitur. Vestibulum ac orci nec nisi aliquet placerat. Curabitur vel viverra risus, nec ornare lorem. Nullam eu mi eget ipsum lobortis ultricies a eu magna. Suspendisse potenti. Donec tincidunt lorem ante, nec aliquam libero posuere vitae. Nulla laoreet id felis at efficitur. Aliquam id orci id libero mollis blandit. In a odio nunc. Mauris aliquam mauris lorem, in placerat mauris eleifend a. Maecenas lacinia dapibus ipsum non ultricies. Vivamus feugiat, diam at finibus aliquet, felis urna pulvinar orci, a gravida mi sapien eu augue. Sed efficitur sapien vel risus posuere accumsan.</p>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ce4d5be9-628c-4cb2-97b5-5ba4f31c365c
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611536084
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_layout:
+            -
+              value: left
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_pre_header:
+            -
+              value: 'Speak to a consultant'
+          field_primary_cta:
+            -
+              uri: 'internal:#'
+              title: 'Contact us by email'
+              options: {  }
+          field_secondary_cta:
+            -
+              uri: 'internal:#'
+              title: 'Live chat'
+              options: {  }
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 5e82da70-63fc-481b-bfe0-4401d6260c34
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611537114
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: 'Features & benefits'
+          field_layout:
+            -
+              value: justified
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: md
+          field_pre_header:
+            -
+              value: 'Still not convinced?'
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 5ed1f6f6-1291-4d89-9d9e-d65e9a7636f9
+          bundle: tabs
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611537011
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_items:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c7341032-23b1-4404-afcc-00793c159490
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611537023
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_headline:
+                    -
+                      value: '1. Nulla posuere magna accumsan'
+                  field_text_column:
+                    -
+                      value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus purus, mollis at elit a, aliquet cursus nisl. Integer efficitur ante id diam imperdiet, ac dignissim ex pharetra. Mauris quis tristique quam. Vivamus rhoncus neque urna, vitae blandit purus lacinia quis. Donec at ullamcorper dolor. Nullam quis accumsan nulla. Sed auctor diam neque, nec elementum sem accumsan ut.</p>\r\n\r\n<p>Nulla posuere magna quis accumsan pulvinar. Nulla facilisi. Nunc ultrices scelerisque est. Sed vel nibh nisl. Quisque lacinia mollis nunc. Fusce porta auctor tellus, eu luctus dolor eleifend sed. Duis condimentum, nunc sed fringilla facilisis, lacus quam euismod magna, eget condimentum massa lacus vel ex. Nam rhoncus velit justo, ac maximus augue mollis vel. Phasellus scelerisque eros nulla. Curabitur nibh est, fermentum sit amet mauris ac, ornare iaculis est. Suspendisse gravida tempor eros, ultricies porta enim bibendum vitae.</p>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 7f617427-daea-4148-b9f0-3b9afc901ade
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611537056
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_headline:
+                    -
+                      value: '2. Morbi feugiat nulla nibh euismod'
+                  field_text_column:
+                    -
+                      value: "<p>Suspendisse dolor dolor, egestas sed gravida vitae, placerat a velit. Phasellus vel odio sagittis, volutpat lacus non, ornare tellus. Aenean ac consequat nisi, et malesuada massa. Aliquam volutpat sapien ut lacinia accumsan. Sed at fermentum justo, et imperdiet mauris. Duis mollis nisl sem, ornare facilisis lacus porttitor a. Morbi feugiat nulla nibh, a euismod nulla consequat in. Duis non suscipit ipsum, vitae blandit neque.</p>\r\n\r\n<p>Quisque nec lectus a ligula elementum efficitur. Nulla vestibulum tincidunt bibendum. Suspendisse potenti. Phasellus luctus eros vel blandit fermentum. Vivamus sed purus risus. Ut elementum dolor sapien, a sagittis est tempor sit amet.</p>\r\n"
+                      format: full_html
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3a9c1d24-eff8-4c9d-adb4-abed1d579f29
+                  bundle: item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1611537079
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_headline:
+                    -
+                      value: '3. Donec tincidunt lorem ante'
+                  field_text_column:
+                    -
+                      value: "<p>Maecenas malesuada nulla vitae congue laoreet. Fusce vel nisi lacinia, mattis justo eu, commodo ex. Sed ut elit iaculis, vulputate enim quis, blandit augue. Proin aliquam ac nibh et vestibulum. Aliquam volutpat rutrum ultrices. Morbi vel tristique arcu, ac sodales tellus.</p>\r\n\r\n<p>Sed porttitor hendrerit efficitur. Vestibulum ac orci nec nisi aliquet placerat. Curabitur vel viverra risus, nec ornare lorem. Nullam eu mi eget ipsum lobortis ultricies a eu magna. Suspendisse potenti. Donec tincidunt lorem ante, nec aliquam libero posuere vitae. Nulla laoreet id felis at efficitur. Aliquam id orci id libero mollis blandit. In a odio nunc. Mauris aliquam mauris lorem, in placerat mauris eleifend a. Maecenas lacinia dapibus ipsum non ultricies. Vivamus feugiat, diam at finibus aliquet, felis urna pulvinar orci, a gravida mi sapien eu augue. Sed efficitur sapien vel risus posuere accumsan.</p>\r\n"
+                      format: full_html
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_tabs_direction:
+            -
+              value: vertical
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: d6302de2-69fa-48a2-90ef-5f9eca20ba07
+          bundle: quote
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611534075
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_author:
+            -
+              value: 'Jane Smith'
+          field_author_image:
+            -
+              entity: 113a8489-3444-4e54-8d62-fe9576470f0b
+          field_author_title:
+            -
+              value: 'Marketing Director'
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_padding_bottom:
+            -
+              value: lg
+          field_padding_top:
+            -
+              value: lg
+          field_section_bg:
+            -
+              entity: 042241e5-9e23-4186-ac71-e1c09ec06c84
+          field_section_bg_colour:
+            -
+              entity: 12db7978-4760-486b-a0e4-6455f523858f
+          field_text_column:
+            -
+              value: "<p>\"Phasellus scelerisque, mauris id tincidunt imperdiet, mauris magna aliquam est, ut porta neque dolor et justo. Mauris ullamcorper risus magna, sit amet mattis ante dapibus id. Aenean auctor orci dolor.\"</p>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 3d0b1254-10a6-4451-9aaf-e385377eb8c4
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611537532
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_layout:
+            -
+              value: center
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: sm
+          field_primary_cta:
+            -
+              uri: 'internal:#'
+              title: 'Read more testimonials'
+              options: {  }
+          field_section_bg_colour:
+            -
+              entity: 988c1be8-e176-4803-992e-bae43a503174
