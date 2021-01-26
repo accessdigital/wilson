@@ -13,19 +13,9 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/accessdigital/wilson_theme_starterkit"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/accessdigital/wilson_admin_styles"
         }
     ],
     "require": {
-        "accessdigital/wilson_theme_starterkit": "dev-master",
-        "accessdigital/wilson_admin_styles": "dev-master",
         "drupal/admin_toolbar": "^2.4",
         "drupal/block_field": "^1.0@RC",
         "drupal/color_field": "^2.4",

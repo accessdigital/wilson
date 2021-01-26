@@ -34,7 +34,7 @@ A Drupal 9 installation profile. Wilson includes:
 
 ## Include with Composer
 
-Add a reference to the Wilson GitHub repo to the `respositories` section of your Drupal 9 composer file:
+Add references to the Wilson GitHub repos to the `respositories` section of your Drupal 9 composer file:
 
 ```
 "repositories": [
@@ -45,17 +45,31 @@ Add a reference to the Wilson GitHub repo to the `respositories` section of your
     {
         "type": "vcs",
         "url": "https://github.com/accessdigital/wilson"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/accessdigital/wilson_theme_starterkit"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/accessdigital/wilson_admin_styles"
     }
 ]
 ```
 
-To require the Wilson profile in to your project, run the following Composer command:
+Some of the contrib packaged required by Wilson are dev or release candidates. Your project composer.json file will need to allow for this in its `minimum-stability` setting:
 
 ```
-composer require accessdigital/wilson
+"minimum-stability": "dev",
 ```
 
-Wilson will then include all of its contrib dependencies and download a starterkit theme.
+Require the Wilson profile, its theme and admin overrides packages:
+
+```
+composer require accessdigital/wilson accessdigital/wilson_theme_starterkit accessdigital/wilson_admin_styles
+```
+
+The Wilson profile will then include all of its contrib dependencies.
 
 During Drupal installation, select the `Wilson` profile.
 
