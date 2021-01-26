@@ -1,0 +1,83 @@
+const plugin = require('tailwindcss/plugin');
+const colors = require('tailwindcss/colors')
+
+module.exports = {
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'primary': {
+        light: '#FFE21A',
+        DEFAULT: '#fac800',
+        dark: '#E1AF00',
+        contrast: '#252525',
+      },
+      'secondary': {
+        light: '#3e3e3e',
+        DEFAULT: '#252525',
+        dark: '#151515',
+        contrast: '#eeeeee',
+      },
+      'tertiary': {
+        light: '#325bff',
+        DEFAULT: '#0032FA',
+        dark: '#0029cb',
+        contrast: '#eeeeee',
+      },
+      'black': '#000000',
+      'white': '#ffffff',
+      'green': colors.green,
+      'red': colors.red,
+      'grey': colors.trueGray,
+    },
+    fontFamily: {
+      sans: ['Montserrat', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
+    extend: {
+      spacing: {
+        '152': '38rem',
+      },
+      boxShadow: {
+        'halo': '0 0 0 6px rgba(0, 0, 0, 0.15)',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      margin: ['last', 'children'],
+      padding: ['last', 'children'],
+      width: ['children'],
+      display: ['children'],
+      borderRadius: ['children'],
+      scale: ['group-hover']
+    },
+  },
+  plugins: [
+    require('tailwindcss-children'),
+    plugin(function({ addUtilities }) {
+      const blendMode = {
+        '.bg-blend-normal': {
+          backgroundBlendMode: 'normal',
+        },
+        '.bg-blend-multiply': {
+          backgroundBlendMode: 'multiply',
+        },
+        '.bg-blend-screen': {
+          backgroundBlendMode: 'screen',
+        },
+        '.bg-blend-overlay': {
+          backgroundBlendMode: 'overlay',
+        },
+      }
+      addUtilities(blendMode, {
+        variants: ['responsive', 'hover'],
+      });
+    })
+  ],
+  corePlugins: {
+    container: false,
+  },
+}

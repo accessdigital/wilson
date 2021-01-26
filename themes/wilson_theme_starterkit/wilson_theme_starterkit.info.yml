@@ -1,0 +1,30 @@
+name: Wilson Theme Starterkit
+type: theme
+description: A theme for the Wilson installation profile. This is a starterkit and should be renamed for project use. See the attached Readme.
+core_version_requirement: ^8.9.1 || ^9
+base theme: stable
+hidden: false
+dependencies:
+  - drupal:twig_tweak
+  - drupal:twig_field_value
+
+libraries:
+  - 'wilson_theme_starterkit/global'
+
+ckeditor_stylesheets:
+  - css/styles.css
+
+regions:
+  header_links: Header Links
+  header_navigation: Header Navigation
+  breadcrumb: Breadcrumb
+  tabs: Tabs
+  content_above: Content Above
+  content: Content
+  content_below: Content Below
+  footer_col_one: Footer Column One
+  footer_col_two: Footer Column Two
+  footer_col_three: Footer Column Three
+  footer_col_four: Footer Column Four
+  off_canvas: Off Canvas
+  hidden: Hidden

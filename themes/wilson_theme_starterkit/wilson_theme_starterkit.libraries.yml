@@ -1,0 +1,57 @@
+global:
+  css:
+    theme:
+      css/styles.min.css: { minified: true }
+  js:
+    js/global.min.js: { minified: true }
+    js/utilities/mediaQueryCheck.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+
+admin:
+  css:
+    theme:
+      css/components/admin.min.css: { minified: true}
+
+adaptivePanels:
+  css:
+    theme:
+      css/components/adaptivePanels.min.css: { minified: true }
+  js:
+    js/components/adaptivePanels.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - wilson_theme_starterkit/global
+
+gallery:
+  css:
+    theme:
+      https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css: { type: external, minified: true }
+  js:
+    https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.min.js: { type: external, minified: true }
+    js/components/gallery.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - wilson_theme_starterkit/global
+
+slider:
+  css:
+    theme:
+      https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css: { type: external, minified: true }
+      css/components/slider.min.css: { minified: true }
+  js:
+    https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.min.js: { type: external, minified: true }
+    js/components/slider.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - wilson_theme_starterkit/global
+
+mainMenu:
+  css:
+    theme:
+      css/components/mainMenu.min.css: { minified: true }
+  js:
+    js/components/mainMenu.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - wilson_theme_starterkit/global
