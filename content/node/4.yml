@@ -16,7 +16,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'WYSIWYG content styles'
+      value: 'Demo WYSIWYG styles'
   created:
     -
       value: 1611503953
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /wysiwyg-content-styles
+      alias: /demo-wysiwyg-content
       langcode: en
       pathauto: 0
   field_sections:

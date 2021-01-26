@@ -1,0 +1,496 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d4d15e9e-4b3a-40c4-9775-ff7361d14622
+  bundle: landing_page
+  default_langcode: en
+  depends:
+    988c1be8-e176-4803-992e-bae43a503174: taxonomy_term
+    e735c5a3-d1ff-4fa6-af01-c473e0211f2a: media
+    3170306e-328e-462c-a61a-47d079f7c7a1: media
+    600d7945-e9f4-4b5d-a23a-c58fb8f2de31: media
+    042241e5-9e23-4186-ac71-e1c09ec06c84: media
+    80d83855-dc4d-4c8c-aac2-ac93c9ba2668: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Demo photo page'
+  created:
+    -
+      value: 1611613375
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /demo-photo-page
+      langcode: en
+      pathauto: 1
+  field_sections:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: feaa2e04-9667-498f-92f6-10b85663c2d1
+          bundle: hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611613387
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: 'Photo page layout'
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_pre_header:
+            -
+              value: 'Demo content'
+          field_text_column:
+            -
+              value: "<p>Mauris quis tristique quam. Vivamus rhoncus neque urna, vitae blandit purus lacinia quis...</p>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: cdc61ebd-60da-48ee-a036-faa911dcbf2e
+          bundle: three_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611613462
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"2dedb699-67c4-42a4-b08d-ac709679825a\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"13647eec-1cdc-4ce3-a089-441d78fba981\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_text_column_3:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"cc59ed8d-cfea-499d-a753-42c4d7d96fe9\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: top
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 5d6eb816-ef0b-4ee5-a684-04cb664ea285
+          bundle: two_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611613512
+          behavior_settings:
+            -
+              value: {  }
+          field_column_distribution:
+            -
+              value: equal
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"3170306e-328e-462c-a61a-47d079f7c7a1\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"600d7945-e9f4-4b5d-a23a-c58fb8f2de31\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: top
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 2fc5f1df-5f8d-4316-8aa5-95b1056f66f3
+          bundle: two_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611613568
+          behavior_settings:
+            -
+              value: {  }
+          field_column_distribution:
+            -
+              value: preference_right
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<drupal-media data-caption=\"© Lorem ipsum dolor sit amet\" data-entity-type=\"media\" data-entity-uuid=\"7d6457bb-106c-488c-9144-c30671e71271\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"042241e5-9e23-4186-ac71-e1c09ec06c84\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: top
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ac9ae1a6-3102-47bc-a0dd-f24dede5a483
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611613925
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_headline:
+            -
+              value: 'Photo gallery'
+          field_layout:
+            -
+              value: justified
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: md
+          field_pre_header:
+            -
+              value: Slideshow
+          field_secondary_cta:
+            -
+              uri: 'internal:#'
+              title: 'Lorem ipsum dolor'
+              options: {  }
+          field_section_bg_colour:
+            -
+              entity: 988c1be8-e176-4803-992e-bae43a503174
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 5a30aede-dbef-41f9-97e3-1cfa41ccaf79
+          bundle: gallery
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611613699
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_media:
+            -
+              entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
+            -
+              entity: 3170306e-328e-462c-a61a-47d079f7c7a1
+            -
+              entity: 600d7945-e9f4-4b5d-a23a-c58fb8f2de31
+            -
+              entity: 042241e5-9e23-4186-ac71-e1c09ec06c84
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: none
+          field_section_bg_colour:
+            -
+              entity: 988c1be8-e176-4803-992e-bae43a503174
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 097d27a5-13f4-494a-bb0a-035f1533fa82
+          bundle: three_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611614213
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: md
+          field_text_column:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"13647eec-1cdc-4ce3-a089-441d78fba981\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"cc59ed8d-cfea-499d-a753-42c4d7d96fe9\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_text_column_3:
+            -
+              value: "<blockquote>\r\n<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\"</p>\r\n</blockquote>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: top
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 0e959c69-9809-4946-89b6-95619bf0b0be
+          bundle: two_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611614290
+          behavior_settings:
+            -
+              value: {  }
+          field_column_distribution:
+            -
+              value: preference_right
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<blockquote>\r\n<p>\"Nullam dapibus, nisl non porta commodo, mi lorem tristique leo&nbsp;vitae viverra ante libero ornare velit.\"</p>\r\n</blockquote>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"e735c5a3-d1ff-4fa6-af01-c473e0211f2a\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: middle
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 6d020e01-2fdb-4fc5-83d0-4fdb9972bd3e
+          bundle: two_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611614456
+          behavior_settings:
+            -
+              value: {  }
+          field_column_distribution:
+            -
+              value: preference_right
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"7d6457bb-106c-488c-9144-c30671e71271\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<h3>Lorem ipsum dolor sit amet</h3>\r\n\r\n<p>Nullam dapibus, nisl non porta commodo, mi lorem tristique leo, vitae viverra ante libero ornare velit. Cras pulvinar efficitur mauris, ac aliquam magna lacinia ut. Fusce vel malesuada metus. Etiam tristique tempus nisl, non iaculis sapien euismod sollicitudin.</p>\r\n\r\n<p>Sed molestie, metus non mollis sagittis, est erat placerat tortor, consectetur eleifend urna tellus a purus. Sed nunc tortor, tempor vitae quam in, pellentesque maximus urna. Morbi feugiat vel nibh sed rutrum. Mauris tristique mauris nisi, nec pretium velit sodales id. Quisque eget blandit neque, in pretium dolor.</p>\r\n\r\n<p><a class=\"btn btn--secondary\" href=\"#\">Mauris tristique mauris</a></p>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: bottom
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: a1d34d70-90c8-4983-a18e-2ecbad607f51
+          bundle: panel
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611614833
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_column_order:
+            -
+              value: text_media
+          field_container_width:
+            -
+              value: full
+          field_headline:
+            -
+              value: 'Courtesy of Unsplash'
+          field_media_column:
+            -
+              entity: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: none
+          field_pre_header:
+            -
+              value: 'Stock images'
+          field_primary_cta:
+            -
+              uri: 'https://unsplash.com/'
+              title: 'Find out more'
+              options: {  }
+          field_section_bg_colour:
+            -
+              entity: 988c1be8-e176-4803-992e-bae43a503174
+          field_text_column:
+            -
+              value: "<p>Photos for everyone. Over 2 million free high-resolution images brought to you by the world's most generous community of photographers.</p>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: middle

@@ -25,7 +25,7 @@ default:
       target_id: 1
   title:
     -
-      value: 'Demo editorial'
+      value: 'Demo editorial page'
   created:
     -
       value: 1611533114
@@ -40,7 +40,7 @@ default:
       value: true
   path:
     -
-      alias: /demo-editorial
+      alias: /demo-editorial-page
       langcode: en
       pathauto: 0
   field_sections:
@@ -70,7 +70,7 @@ default:
               value: normal
           field_headline:
             -
-              value: 'Lorem ipsum dolor sit amet'
+              value: 'Editorial page layout'
           field_padding_bottom:
             -
               value: md
@@ -79,7 +79,7 @@ default:
               value: xl
           field_pre_header:
             -
-              value: Editorial
+              value: 'Demo content'
           field_section_bg:
             -
               entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
