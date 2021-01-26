@@ -1,0 +1,39 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "ignoreFiles": [
+    "node_modules/**/*.css",
+    "css/**/*.css"
+  ],
+  "rules": {
+    "indentation": 2,
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "include",
+        "mixin",
+        "extend",
+        "if",
+        "else",
+        "return",
+        "each",
+        "content",
+        "function",
+        "warn",
+        "error",
+        "apply",
+        "tailwind",
+        "screen",
+        "layer"
+      ]
+    }],
+    "font-family-no-missing-generic-family-keyword": [ true, {
+        "ignoreFontFamilies": ["fontello"]
+      }
+    ],
+    "no-descending-specificity": null
+  }
+}

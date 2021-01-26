@@ -1,0 +1,9 @@
+{% set classes = [
+  'btn',
+  'btn--secondary',
+  item.content['#url'].isExternal ? 'is-external',
+] %}
+
+{% for item in items %}
+  <a href="{{ item.content['#url'] }}" {{ create_attribute({'class': classes}) }}{% if item.content['#url'].isExternal %} target="_blank"{% endif %}>{{ item.content['#title'] }}</a>
+{% endfor %}

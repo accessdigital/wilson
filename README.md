@@ -45,14 +45,6 @@ Add references to the Wilson GitHub repos to the `respositories` section of your
     {
         "type": "vcs",
         "url": "https://github.com/accessdigital/wilson"
-    },
-    {
-        "type": "vcs",
-        "url": "https://github.com/accessdigital/wilson_theme_starterkit"
-    },
-    {
-        "type": "vcs",
-        "url": "https://github.com/accessdigital/wilson_admin_styles"
     }
 ]
 ```
@@ -63,10 +55,10 @@ Some of the contrib packaged required by Wilson are dev or release candidates. Y
 "minimum-stability": "dev",
 ```
 
-Require the Wilson profile, its theme and admin overrides packages:
+To include Wilson, its theme and admin overrides packages in your project, run:
 
 ```
-composer require accessdigital/wilson accessdigital/wilson_theme_starterkit accessdigital/wilson_admin_styles
+composer require accessdigital/wilson
 ```
 
 The Wilson profile will then include all of its contrib dependencies.

@@ -1,0 +1,87 @@
+// Iniatial styles for layout and containers.
+@layer base {
+
+  // Container layout.
+  .container {
+    @screen lg {
+      @apply max-w-screen-lg;
+      @apply mx-auto;
+    }
+
+    @screen xl {
+      @apply max-w-screen-xl;
+    }
+  }
+
+  .container-wide {
+    @screen lg {
+      @apply max-w-screen-lg;
+      @apply mx-auto;
+    }
+
+    @screen xl {
+      @apply max-w-screen-xl;
+    }
+
+    @screen 2xl {
+      @apply max-w-screen-2xl;
+    }
+  }
+
+  // Override alignment classes provided by Drupal.
+  .align-left {
+    @apply text-left;
+    @apply float-left;
+    @apply mr-5;
+
+    max-width: calc(50% - 1.25rem);
+  }
+
+  .align-center {
+    @apply text-center;
+  }
+
+  .align-right {
+    @apply text-right;
+    @apply float-right;
+    @apply ml-5;
+
+    max-width: calc(50% - 1.25rem);
+  }
+
+  .align-left,
+  .align-right,
+  .align-center {
+    img,
+    picture {
+      @apply inline-block;
+      @apply w-auto;
+    }
+  }
+
+  .align-left,
+  .align-center,
+  .align-right,
+  .media-image {
+    @apply mt-0;
+    @apply mb-6;
+
+    &:last-child {
+      @apply mb-0;
+    }
+
+    figure & {
+      @apply my-0;
+    }
+  }
+
+  .align-center,
+  .media-image {
+    @apply clear-both;
+  }
+
+  // Apply a small amount of padding to the CKeditor.
+  .cke_editable {
+    @apply p-2;
+  }
+}

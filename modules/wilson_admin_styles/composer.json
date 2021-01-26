@@ -1,0 +1,12 @@
+{
+    "name": "accessdigital/wilson_admin_styles",
+    "description": "A Drupal 9 module to provide minor overrides to the Claro admin theme to improve the user experience of sites built with the Wilson install profile.",
+    "type": "drupal-custom-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Paul Gregory",
+            "email": "paul.gregory@weareaccess.co.uk"
+        }
+    ]
+}

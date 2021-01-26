@@ -1,0 +1,74 @@
+<header aria-label="{{ 'Header'|t }}" class="header sticky top-0 lg:relative lg:top-auto z-10">
+  {% if page.header_links %}
+    <div class="bg-primary py-3 lg:py-4">
+      {{ page.header_links }}
+    </div>
+  {% endif %}
+</header>
+
+{% if page.header_navigation %}
+  <div class="navigation bg-secondary text-secondary-contrast lg:sticky lg:top-0 z-10">
+    {{ page.header_navigation }}
+  </div>
+{% endif %}
+
+{% if page.breadcrumb %}
+  <div class="breadcrumb">
+    {{ page.breadcrumb }}
+  </div>
+{% endif %}
+
+{% if page.tabs %}
+  <div class="tabs">
+    {{ page.tabs }}
+  </div>
+{% endif %}
+
+{% if page.content_above %}
+  <div class="content-above">
+    {{ page.content_above }}
+  </div>
+{% endif %}
+
+<main role="main">
+  <a name="main-content" tabindex="-1"></a>
+
+  <div class="main-content">
+    {{ page.content }}
+  </div>
+
+</main>
+
+{% if page.content_below %}
+  <div class="content-below">
+    {{ page.content_below }}
+  </div>
+{% endif %}
+
+{% if page.footer_col_one or page.footer_col_two or page.footer_col_three or page.footer_col_four %}
+  <footer class="bg-grey-200" role="contentinfo">
+    <div class="container mx-auto px-5 py-16 md:flex md:flex-no-wrap">
+
+      {% if page.footer_col_one %}
+        {{ page.footer_col_one }}
+      {% endif %}
+
+      {% if page.footer_col_two %}
+        {{ page.footer_col_two }}
+      {% endif %}
+
+      {% if page.footer_col_three %}
+        {{ page.footer_col_three }}
+      {% endif %}
+
+      {% if page.footer_col_four %}
+        {{ page.footer_col_four }}
+      {% endif %}
+
+    </div>
+  </footer>
+{% endif %}
+
+{% if page.off_canvas %}
+  {{ page.off_canvas }}
+{% endif %}

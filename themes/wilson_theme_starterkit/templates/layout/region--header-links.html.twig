@@ -1,0 +1,7 @@
+{% if content %}
+  <div class="container mx-auto px-5 flex justify-between items-center">
+    {{ content }}
+
+    <button class="menu-open btn btn--secondary text-sm ml-4 lg:hidden" aria-expanded="false" aria-label="{{ 'Open the menu'|t }}">{{ 'Menu'|t }}</button>
+  </div>
+{% endif %}

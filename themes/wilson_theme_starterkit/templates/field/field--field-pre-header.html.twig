@@ -1,0 +1,14 @@
+{% set classes = [
+  'inline-block',
+  'uppercase',
+  'font-semibold',
+  'text-base',
+  'tracking-wider',
+  'lg:text-lg',
+  'mt-0',
+  'mb-2',
+] %}
+
+{% for item in items %}
+  <span{{ create_attribute({'class': classes}) }}>{{ item.content['#context'].value|check_markup('full_html') }}</span>
+{% endfor %}

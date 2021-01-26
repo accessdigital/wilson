@@ -1,0 +1,63 @@
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0, 'Main Menu'|t, '') }}
+
+{% macro menu_links(items, attributes, menu_level, trigger_item_title, parent, parent_link) %}
+  {% import _self as menus %}
+  {% if items %}
+
+    {% if menu_level == 0 %}
+      {% set block = 'menu' %}
+    {% else %}
+      {% set block = 'submenu' %}
+    {% endif %}
+
+    {% set classes = [ block, 'menu-level-' ~ menu_level ] %}
+
+    <ul{{ attributes.addClass(classes) }} aria-expanded="false">
+
+    {% if menu_level > 0 %}
+
+      <li class="back-link">
+        <a aria-label="{{ 'Back to @parent'|t({ '@parent' : parent }) }}" href="#">
+          {{ 'Back to @parent'|t({ '@parent' : parent }) }}
+        </a>
+      </li>
+
+      {% if parent_link %}
+        <li class="parent-link">
+          {{ parent_link }}
+        </li>
+      {% endif %}
+
+    {% endif %}
+
+    {% for item in items %}
+
+      {% set li_classes = [] %}
+
+      {% if item.below %}
+        {% set li_classes = li_classes|merge(['has-submenu']) %}
+      {% endif %}
+
+      <li{{ item.attributes.addClass(li_classes) }}>
+
+        {{ link(item.title, item.url) }}
+
+        {% if item.below %}
+          <div class="submenu-wrapper">
+            {{ menus.menu_links(item.below, create_attribute(), menu_level + 1, item.title, trigger_item_title, link(item.title, item.url)) }}
+          </div>
+        {% endif %}
+
+      </li>
+
+    {% endfor %}
+
+    </ul>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,13 @@
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" aria-label="{{ 'Home'|t }}" rel="home" class="inline-block w-28 lg:w-36 border-2 text-current hover:text-current">
+      <img class="inline-block w-full" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+    </a>
+  {% endif %}
+
+  {% if site_name %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+  {% endif %}
+
+  {{ site_slogan }}
+{% endblock %}

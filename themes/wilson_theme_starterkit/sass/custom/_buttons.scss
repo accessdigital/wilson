@@ -1,0 +1,51 @@
+.btn {
+  @apply inline-block;
+  @apply py-2;
+  @apply px-6;
+  @apply border;
+  @apply border-2;
+  @apply border-primary;
+  @apply bg-primary;
+  @apply text-primary-contrast;
+  @apply font-medium;
+  @apply text-lg;
+  @apply text-center;
+  @apply rounded-3xl;
+  @apply cursor-pointer;
+  @apply transition-shadow;
+
+  &:hover,
+  &:focus,
+  a:hover &,
+  a:focus & {
+    @apply shadow-halo;
+    @apply text-primary-contrast;
+    @apply border-solid;
+  }
+
+  &--secondary {
+    @apply border-current;
+    @apply text-current;
+    @apply bg-transparent;
+
+    &:hover,
+    &:focus,
+    a:hover &,
+    a:focus & {
+      @apply text-current;
+    }
+  }
+
+  &--tertiary {
+    @apply border-transparent;
+    @apply bg-transparent;
+    @apply text-current;
+
+    &:hover,
+    &:focus,
+    a:hover &,
+    a:focus & {
+      @apply text-current;
+    }
+  }
+}
