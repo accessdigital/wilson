@@ -42,6 +42,8 @@
         "drupal/shield": "^1.4",
         "drupal/simple_gmap": "^3.0",
         "drupal/simple_sitemap": "^3.8",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.0",
         "drupal/username_enumeration_prevention": "^1.1",
         "drupal/viewsreference": "2.x-dev",
         "drupal/webform": "^6.0"
