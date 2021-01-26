@@ -70,7 +70,7 @@ During Drupal installation, select the `Wilson` profile.
 Boot up a local version of Drupal + Wilson for testing and evaluating:
 
 ```
-php ./docroot/core/scripts/drupal quick-start wilson
+php ./web/core/scripts/drupal quick-start wilson
 ```
 
 This requires PHP 7.3+ on the host machine.
