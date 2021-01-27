@@ -1,3 +1,4 @@
+uuid: 84c389f9-54c7-4ab6-b41b-29519faad2ce
 langcode: en
 status: true
 dependencies:
@@ -6,12 +7,14 @@ dependencies:
     - taxonomy.vocabulary.background_styles
   module:
     - color_field
+_core:
+  default_config_hash: cEktAOA_p0Mo0GZBO3WmoCCy4IjdzTwJAlpkPLJAf6g
 id: taxonomy_term.background_styles.field_colour
 field_name: field_colour
 entity_type: taxonomy_term
 bundle: background_styles
 label: 'Colour hex code'
-description: ''
+description: 'When used, this will inject inline background colour CSS, e.g. <code>background-color: #A1B2C3</code>.<br />It''s preferable to use CSS classes where possible. '
 required: false
 translatable: false
 default_value: {  }

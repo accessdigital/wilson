@@ -1,3 +1,4 @@
+uuid: 536e8810-06e6-42a4-91fe-6574637b8675
 langcode: en
 status: true
 dependencies:
@@ -7,24 +8,26 @@ dependencies:
     - taxonomy.vocabulary.background_styles
   module:
     - color_field
+_core:
+  default_config_hash: fUyafYfz3rXipKm1vCW7sqdHX7We9sAKn8Xr-ORWb7o
 id: taxonomy_term.background_styles.default
 targetEntityType: taxonomy_term
 bundle: background_styles
 mode: default
 content:
   field_colour:
-    weight: 1
+    weight: 2
     settings:
-      placeholder_color: ''
+      placeholder_color: '#A1B2C3'
       placeholder_opacity: ''
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
   field_css_classes:
-    weight: 3
+    weight: 1
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'bg-black text-white'
     third_party_settings: {  }
     type: string_textfield
     region: content

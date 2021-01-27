@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: taxonomy_term
-  uuid: 12db7978-4760-486b-a0e4-6455f523858f
+  uuid: 258ee352-b48b-43ab-9d09-1204c663477e
   bundle: background_styles
   default_langcode: en
 default:
@@ -10,7 +10,7 @@ default:
       value: true
   name:
     -
-      value: 'Darken background image'
+      value: 'Tertiary colour'
   weight:
     -
       value: 3
@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: 'bg-blend-multiply bg-grey-500 text-white'
+      value: 'bg-tertiary text-tertiary-contrast'

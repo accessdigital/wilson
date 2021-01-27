@@ -1,15 +1,18 @@
+uuid: 1c5356e8-f84b-4063-99f0-8b9bf38dd3f7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_css_classes
     - taxonomy.vocabulary.background_styles
+_core:
+  default_config_hash: r-1fKPyZ0jf-uzjYO97AzzzEV_fFtHo5_4dcH__u2fg
 id: taxonomy_term.background_styles.field_css_classes
 field_name: field_css_classes
 entity_type: taxonomy_term
 bundle: background_styles
 label: 'CSS classes'
-description: ''
+description: "CSS classes to add to the affected section. Separate each class with a space. Tailwind classes and custom classes provided by the theme are acceptable.<br />\r\nHint: When setting the background colour, you should also set a text colour that has good contrast.<br /><br />\r\n<a href=\"https://nerdcave.com/tailwind-cheat-sheet\" target=\"_blank\">Tailwind CSS cheatsheet</a>"
 required: false
 translatable: false
 default_value: {  }

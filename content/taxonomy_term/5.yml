@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: taxonomy_term
-  uuid: 12db7978-4760-486b-a0e4-6455f523858f
+  uuid: 7f9667b2-a63f-48b9-8885-8581b9790077
   bundle: background_styles
   default_langcode: en
 default:
@@ -10,10 +10,10 @@ default:
       value: true
   name:
     -
-      value: 'Darken background image'
+      value: 'Lighten background image'
   weight:
     -
-      value: 4
+      value: 5
   parent:
     -
       target_id: 0
@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: 'bg-blend-multiply bg-grey-500 text-white'
+      value: 'bg-blend-screen bg-grey-500 text-black'
