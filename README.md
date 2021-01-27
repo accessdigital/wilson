@@ -32,45 +32,54 @@ A Drupal 9 installation profile. Wilson includes:
 * A starterkit theme which can be customised to the client's needs
 * A module to override minor parts of the Claro admin theme
 
-## Include with Composer
+## Install with Composer
 
-Add references to the Wilson GitHub repos to the `respositories` section of your Drupal 9 composer file:
-
-```
-"repositories": [
-    {
-        "type": "composer",
-        "url": "https://packages.drupal.org/8"
-    },
-    {
-        "type": "vcs",
-        "url": "https://github.com/accessdigital/wilson"
-    }
-]
-```
-
-Some of the contrib packaged required by Wilson are dev or release candidates. Your project composer.json file will need to allow for this in its `minimum-stability` setting:
+Step 1: Create a project with the Drupal recommended composer profile.
 
 ```
-"minimum-stability": "dev",
+composer create-project drupal/recommended-project my-project
 ```
 
-To include Wilson, its theme and admin overrides packages in your project, run:
+Step 2: Inform Composer of our Wilson GitHub repo.
+
+```
+cd my-project
+composer config repositories.wilson vcs https://github.com/accessdigital/wilson
+```
+
+Step 3: Change the Composer minimum stability requirement to account for the dev contrib modules we need.
+
+```
+composer config minimum-stability dev
+```
+
+Step 4: Composer require the Wilson profile (includes the starterkit theme and contrib dependencies).
 
 ```
 composer require accessdigital/wilson
 ```
 
-The Wilson profile will then include all of its contrib dependencies.
+Step 5: Run the Drupal installer and select the `Wilson` profile.
 
-During Drupal installation, select the `Wilson` profile.
+## Theme
 
-## Drupal quick start
+The theme ships as a starterkit and must be cloned and renamed for use in a project. See the README file in the `wilson_theme_starterkit` for more information.
 
-Boot up a local version of Drupal + Wilson for testing and evaluating:
+However, for demo purposes, you can use the starterkit theme as-is. You must first compile the theme.
 
 ```
+cd web/profiles/custom/wilson/themes/wilson_theme_starterkit
+npm install && gulp build
+drush cr
+```
+
+## Drupal quick start (optional)
+
+Following the installation and compiling the theme, you can boot up a local version of Drupal + Wilson for testing and evaluating using the in-built Drupal quick start command:
+
+```
+cd /path/to/my-project
 php ./web/core/scripts/drupal quick-start wilson
 ```
 
-This requires PHP 7.3+ on the host machine.
+This requires PHP 7.3+ to be available on the command line of your machine.
