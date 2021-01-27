@@ -7,7 +7,7 @@ _meta:
   depends:
     e735c5a3-d1ff-4fa6-af01-c473e0211f2a: media
     12db7978-4760-486b-a0e4-6455f523858f: taxonomy_term
-    988c1be8-e176-4803-992e-bae43a503174: taxonomy_term
+    258ee352-b48b-43ab-9d09-1204c663477e: taxonomy_term
 default:
   revision_uid:
     -
@@ -251,6 +251,9 @@ default:
           field_container_width:
             -
               value: normal
+          field_css_classes:
+            -
+              value: 'max-w-screen-2xl mx-auto'
           field_headline:
             -
               value: 'Paragraph types'
@@ -274,9 +277,6 @@ default:
           field_section_bg_colour:
             -
               entity: 258ee352-b48b-43ab-9d09-1204c663477e
-          field_css_classes:
-            -
-              value: 'max-w-screen-2xl mx-auto'
     -
       entity:
         _meta:
@@ -295,6 +295,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_buttons:
             -
               uri: 'internal:/admin/structure/paragraphs_type/accordion/fields'
@@ -370,6 +373,9 @@ default:
           field_container_width:
             -
               value: normal
+          field_css_classes:
+            -
+              value: 'max-w-screen-2xl mx-auto'
           field_grid_columns:
             -
               value: '3'
@@ -382,9 +388,6 @@ default:
           field_section_bg_colour:
             -
               entity: 258ee352-b48b-43ab-9d09-1204c663477e
-          field_css_classes:
-            -
-              value: 'max-w-screen-2xl mx-auto'
     -
       entity:
         _meta:
