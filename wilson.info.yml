@@ -47,7 +47,7 @@ install:
   - admin_toolbar_tools
   - admin_toolbar_links_access_filter
   - seckit
-  - login_emailusername
+  - mail_login
   - field_group
   - pathauto
   - webform
