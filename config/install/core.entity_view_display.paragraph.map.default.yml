@@ -11,9 +11,13 @@ dependencies:
     - field.field.paragraph.map.field_map_address
     - field.field.paragraph.map.field_padding_bottom
     - field.field.paragraph.map.field_padding_top
+    - field.field.paragraph.map.field_section_bg
+    - field.field.paragraph.map.field_section_bg_colour
     - paragraphs.paragraphs_type.map
   module:
     - simple_gmap
+_core:
+  default_config_hash: SbrMKWZSfwApxMvfLi7NMSQSPnIvkAVqhzPLjdcCsdY
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map
@@ -47,3 +51,5 @@ hidden:
   field_id_anchor: true
   field_padding_bottom: true
   field_padding_top: true
+  field_section_bg: true
+  field_section_bg_colour: true

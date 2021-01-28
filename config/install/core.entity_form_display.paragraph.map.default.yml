@@ -11,9 +11,12 @@ dependencies:
     - field.field.paragraph.map.field_map_address
     - field.field.paragraph.map.field_padding_bottom
     - field.field.paragraph.map.field_padding_top
+    - field.field.paragraph.map.field_section_bg
+    - field.field.paragraph.map.field_section_bg_colour
     - paragraphs.paragraphs_type.map
   module:
     - field_group
+    - media_library
 third_party_settings:
   field_group:
     group_tabs:
@@ -47,6 +50,7 @@ third_party_settings:
       children:
         - group_layout
         - group_padding
+        - group_background
         - group_classes_id
       parent_name: group_tabs
       weight: 21
@@ -95,7 +99,7 @@ third_party_settings:
         - field_css_classes
         - field_id_anchor
       parent_name: group_settings
-      weight: 24
+      weight: 25
       format_type: details
       region: content
       format_settings:
@@ -105,6 +109,23 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
+    group_background:
+      children:
+        - field_section_bg_colour
+        - field_section_bg
+      parent_name: group_settings
+      weight: 24
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Background
+_core:
+  default_config_hash: 4nk07VVYY81MfmomZndR4qLcXnRQTYkiJbyYiOFhL34
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map
@@ -160,6 +181,19 @@ content:
     region: content
   field_padding_top:
     weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_section_bg:
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_section_bg_colour:
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
