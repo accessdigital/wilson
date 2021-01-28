@@ -1,3 +1,4 @@
+uuid: ead1f44f-9a8f-468d-a2a5-352ad59050ec
 langcode: en
 status: true
 dependencies:
@@ -5,11 +6,9 @@ dependencies:
     - field.field.paragraph.three_columns.field_container_position
     - field.field.paragraph.three_columns.field_container_width
     - field.field.paragraph.three_columns.field_css_classes
-    - field.field.paragraph.three_columns.field_headline
     - field.field.paragraph.three_columns.field_id_anchor
     - field.field.paragraph.three_columns.field_padding_bottom
     - field.field.paragraph.three_columns.field_padding_top
-    - field.field.paragraph.three_columns.field_pre_header
     - field.field.paragraph.three_columns.field_section_bg
     - field.field.paragraph.three_columns.field_section_bg_colour
     - field.field.paragraph.three_columns.field_text_column
@@ -20,28 +19,12 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: D0FEEOuQy6j5yKRadiWrrSa14Oq2yWNhZJr57ZqOVto
+  default_config_hash: 9wlYmF6taBwJy12WErwmRh_zg1CJRTAnvWdBZCn3tgk
 id: paragraph.three_columns.default
 targetEntityType: paragraph
 bundle: three_columns
 mode: default
 content:
-  field_headline:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_pre_header:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_text_column:
     weight: 2
     label: hidden

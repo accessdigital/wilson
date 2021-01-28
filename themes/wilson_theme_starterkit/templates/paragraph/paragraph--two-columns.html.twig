@@ -60,18 +60,6 @@
 {% endif %}
 
 {% block content %}
-  {% if content.field_pre_header|render or content.field_headline|render %}
-    <div class="mb-6">
-      {% if content.field_pre_header|render %}
-        {{ content.field_pre_header }}
-      {% endif %}
-
-      {% if content.field_headline|render %}
-        <h2 class="my-0">{{ paragraph.field_headline.0.value|check_markup('full_html') }}</h2>
-      {% endif %}
-    </div>
-  {% endif %}
-
   <div{{ create_attribute({'class': content_classes}) }}>
     {% if content.field_text_column|render %}
       <div class="px-5 pb-6 w-full {{ col_1_class }}">

@@ -1,3 +1,4 @@
+uuid: 270b9e89-0d7c-4cbe-a049-3902c1f17b00
 langcode: en
 status: true
 dependencies:
@@ -7,11 +8,9 @@ dependencies:
     - field.field.paragraph.content_grid.field_content_references
     - field.field.paragraph.content_grid.field_css_classes
     - field.field.paragraph.content_grid.field_grid_columns
-    - field.field.paragraph.content_grid.field_headline
     - field.field.paragraph.content_grid.field_id_anchor
     - field.field.paragraph.content_grid.field_padding_bottom
     - field.field.paragraph.content_grid.field_padding_top
-    - field.field.paragraph.content_grid.field_pre_header
     - field.field.paragraph.content_grid.field_section_bg
     - field.field.paragraph.content_grid.field_section_bg_colour
     - paragraphs.paragraphs_type.content_grid
@@ -126,23 +125,8 @@ third_party_settings:
         open: false
         required_fields: true
       label: Padding
-    group_headline:
-      children:
-        - field_pre_header
-        - field_headline
-      parent_name: group_tabs
-      weight: 5
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: Headline
 _core:
-  default_config_hash: b2Z-TKxiwDyGfs0V8ns_ID1DJPS9DwyfY8_dJ1y44VY
+  default_config_hash: iYW7njtYvzCm7L0b27EgOdfWSKkgL7O8XZBH5_kAtA8
 id: paragraph.content_grid.default
 targetEntityType: paragraph
 bundle: content_grid
@@ -184,14 +168,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_headline:
-    weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_id_anchor:
     weight: 6
     settings:
@@ -211,14 +187,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_pre_header:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_section_bg:
     weight: 9

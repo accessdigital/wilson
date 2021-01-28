@@ -1,3 +1,4 @@
+uuid: 0419e227-1d3d-4cd7-a1a5-d01902b07d1e
 langcode: en
 status: true
 dependencies:
@@ -6,11 +7,9 @@ dependencies:
     - field.field.paragraph.two_columns.field_container_position
     - field.field.paragraph.two_columns.field_container_width
     - field.field.paragraph.two_columns.field_css_classes
-    - field.field.paragraph.two_columns.field_headline
     - field.field.paragraph.two_columns.field_id_anchor
     - field.field.paragraph.two_columns.field_padding_bottom
     - field.field.paragraph.two_columns.field_padding_top
-    - field.field.paragraph.two_columns.field_pre_header
     - field.field.paragraph.two_columns.field_section_bg
     - field.field.paragraph.two_columns.field_section_bg_colour
     - field.field.paragraph.two_columns.field_text_column
@@ -20,28 +19,12 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: UVsAefAjo_XyAcNZGokb7Erm-F8jDQwTft1PjbIbMZg
+  default_config_hash: V51pz9y9Y4-GQ6KSvmjI4ZWGEttE3R9TUKjvIOmyZ-M
 id: paragraph.two_columns.default
 targetEntityType: paragraph
 bundle: two_columns
 mode: default
 content:
-  field_headline:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_pre_header:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_text_column:
     weight: 2
     label: hidden

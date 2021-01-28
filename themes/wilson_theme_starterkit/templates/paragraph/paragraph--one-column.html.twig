@@ -41,17 +41,5 @@
 {% extends "paragraph.html.twig" %}
 
 {% block content %}
-  {% if content.field_pre_header|render or content.field_headline|render %}
-    <div class="mb-4">
-      {% if content.field_pre_header|render %}
-        {{ content.field_pre_header }}
-      {% endif %}
-
-      {% if content.field_headline|render %}
-        <h2 class="my-0">{{ paragraph.field_headline.0.value|check_markup('full_html') }}</h2>
-      {% endif %}
-    </div>
-  {% endif %}
-
   {{ content.field_text_column|field_value }}
 {% endblock %}

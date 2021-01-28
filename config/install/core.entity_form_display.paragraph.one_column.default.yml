@@ -1,3 +1,4 @@
+uuid: 310831c0-d584-473b-a601-f0a542b46565
 langcode: en
 status: true
 dependencies:
@@ -5,11 +6,9 @@ dependencies:
     - field.field.paragraph.one_column.field_container_position
     - field.field.paragraph.one_column.field_container_width
     - field.field.paragraph.one_column.field_css_classes
-    - field.field.paragraph.one_column.field_headline
     - field.field.paragraph.one_column.field_id_anchor
     - field.field.paragraph.one_column.field_padding_bottom
     - field.field.paragraph.one_column.field_padding_top
-    - field.field.paragraph.one_column.field_pre_header
     - field.field.paragraph.one_column.field_section_bg
     - field.field.paragraph.one_column.field_section_bg_colour
     - field.field.paragraph.one_column.field_text_column
@@ -111,21 +110,6 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
-    group_headline:
-      children:
-        - field_pre_header
-        - field_headline
-      parent_name: group_tabs
-      weight: 11
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: Headline
     group_column_1:
       children:
         - field_text_column
@@ -141,7 +125,7 @@ third_party_settings:
         required_fields: true
       label: 'Column 1'
 _core:
-  default_config_hash: i-mh-Bfzl_wZ7kenQF75_TdPATDBJTOwc-P_e8ZOTX4
+  default_config_hash: d4K7LukXL7AAOrKIvVxzCgaqpImsaIz2F_OeLT8UASg
 id: paragraph.one_column.default
 targetEntityType: paragraph
 bundle: one_column
@@ -167,14 +151,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_headline:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_id_anchor:
     weight: 7
     settings:
@@ -194,14 +170,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_pre_header:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_section_bg:
     weight: 26

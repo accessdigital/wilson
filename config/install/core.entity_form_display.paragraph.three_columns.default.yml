@@ -1,3 +1,4 @@
+uuid: f5933199-3530-4adc-a2dd-3aaf2a480eff
 langcode: en
 status: true
 dependencies:
@@ -5,11 +6,9 @@ dependencies:
     - field.field.paragraph.three_columns.field_container_position
     - field.field.paragraph.three_columns.field_container_width
     - field.field.paragraph.three_columns.field_css_classes
-    - field.field.paragraph.three_columns.field_headline
     - field.field.paragraph.three_columns.field_id_anchor
     - field.field.paragraph.three_columns.field_padding_bottom
     - field.field.paragraph.three_columns.field_padding_top
-    - field.field.paragraph.three_columns.field_pre_header
     - field.field.paragraph.three_columns.field_section_bg
     - field.field.paragraph.three_columns.field_section_bg_colour
     - field.field.paragraph.three_columns.field_text_column
@@ -159,23 +158,8 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
-    group_headline:
-      children:
-        - field_pre_header
-        - field_headline
-      parent_name: group_tabs
-      weight: 9
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: Headline
 _core:
-  default_config_hash: qmiM9x6hxL3lLH18d9d8ehXompKW3qMwHNXANh5Fp1M
+  default_config_hash: Ky4q8zOGABjE4Vr5AsuiNmQQui1Kp5KsvafqYHpZoDE
 id: paragraph.three_columns.default
 targetEntityType: paragraph
 bundle: three_columns
@@ -201,14 +185,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_headline:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_id_anchor:
     weight: 10
     settings:
@@ -228,14 +204,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_pre_header:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_section_bg:
     weight: 25

@@ -1,3 +1,4 @@
+uuid: a3e88213-08b8-4fa4-aa09-7ffc5dab352d
 langcode: en
 status: true
 dependencies:
@@ -7,16 +8,14 @@ dependencies:
     - field.field.paragraph.content_grid.field_content_references
     - field.field.paragraph.content_grid.field_css_classes
     - field.field.paragraph.content_grid.field_grid_columns
-    - field.field.paragraph.content_grid.field_headline
     - field.field.paragraph.content_grid.field_id_anchor
     - field.field.paragraph.content_grid.field_padding_bottom
     - field.field.paragraph.content_grid.field_padding_top
-    - field.field.paragraph.content_grid.field_pre_header
     - field.field.paragraph.content_grid.field_section_bg
     - field.field.paragraph.content_grid.field_section_bg_colour
     - paragraphs.paragraphs_type.content_grid
 _core:
-  default_config_hash: f0fssgtM8JT6qIRPS6iRrn0ekQsZuE9G-wfEYv0EJZY
+  default_config_hash: Qcq-gmq-cqkI_yOgBVQomwqGNyhz2bMsY-0syIPXZZw
 id: paragraph.content_grid.default
 targetEntityType: paragraph
 bundle: content_grid
@@ -30,22 +29,6 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
-    region: content
-  field_headline:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_pre_header:
-    weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
 hidden:
   field_container_position: true
