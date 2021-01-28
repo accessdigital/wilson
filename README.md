@@ -1,36 +1,6 @@
 # Wilson
 
-A Drupal 9 installation profile. Wilson includes:
-
-* Commonly required modules
-* Content types:
-  * Landing page
-  * Basic page
-* Starter paragraph bundles:-
-  * Hero
-  * One column text
-  * Two columns text
-  * Three columns text
-  * Text + media columns
-  * Quote text
-  * Content slider
-  * Content grid
-  * Button grid
-  * Tabs
-  * Accordion
-  * Image/video gallery
-  * Simple banner
-  * Text + media panel
-  * Text panel over image
-  * Webform embed
-  * Text + webform embed columns
-  * Logo wall
-  * Google map
-* Paragraph editor enhancements
-* Media bundles and image formats
-* Common installation settings and security considerations
-* A starterkit theme which can be customised to the client's needs
-* A module to override minor parts of the Claro admin theme
+Wilson is the Access in-house installation profile and theme starterkit for Drupal 9. A development kickstarter with a focus on Paragraph-based landing pages.
 
 ## Install with Composer
 
