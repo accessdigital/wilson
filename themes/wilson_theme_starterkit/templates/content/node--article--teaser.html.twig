@@ -74,16 +74,20 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <a href="{{ url }}" class="block flex flex-col w-full group border-b-0">
-    {% if content.field_teaser_image|render %}
-      <div class="mb-5 overflow-hidden">
+  <a href="{{ url }}" class="block flex flex-col w-full group border-b-0 bg-primary text-primary-contrast rounded-xl overflow-hidden">
+    {% if content.field_teaser_image|render or content.field_image|render %}
+      <div class="overflow-hidden">
         <div class="transform group-hover:scale-110 transition-transform duration-300">
-          {{ content.field_teaser_image|field_value }}
+          {% if content.field_teaser_image|render %}
+            {{ content.field_teaser_image|field_value }}
+          {% else %}
+            {{ content.field_image|field_value }}
+          {% endif %}
         </div>
       </div>
     {% endif %}
 
-    <div class="pb-8">
+    <div class="pt-5 px-5 pb-8">
       {% set title = node.label %}
       {% if content.field_teaser_title|render %}
         {% set title = node.field_teaser_title.0.value|check_markup('full_html') %}
@@ -93,11 +97,14 @@
 
       {% if content.field_teaser_caption|render %}
         <p>{{ content.field_teaser_caption|field_value }}</p>
+      {% else %}
+        {{ content.body|field_value }}
       {% endif %}
     </div>
 
-    <div class="mt-auto">
-      <span class="btn btn--secondary">{{ 'Find out more' }}</span>
+    <div class="mt-auto -mx-2 -mb-2 pb-5 px-5 flex flex-row justify-between items-center">
+      <span class="btn btn--secondary mx-2 mb-2">{{ 'Find out more' }}</span>
+      <time class="font-semibold text-sm mx-2 mb-2">{{ node.created.value|date('j M Y') }}</time>
     </div>
   </a>
 </div>

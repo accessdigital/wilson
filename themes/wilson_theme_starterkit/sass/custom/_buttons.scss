@@ -49,3 +49,30 @@
     }
   }
 }
+
+.tag {
+  @apply inline-block;
+  @apply py-1;
+  @apply px-4;
+  @apply border;
+  @apply border-2;
+  @apply border-primary;
+  @apply bg-primary;
+  @apply text-primary-contrast;
+  @apply font-medium;
+  @apply text-sm;
+  @apply text-center;
+  @apply rounded-lg;
+
+  &--secondary {
+    @apply border-current;
+    @apply text-current;
+    @apply bg-transparent;
+  }
+
+  &--tertiary {
+    @apply border-tertiary;
+    @apply bg-transparent;
+    @apply text-tertiary;
+  }
+}

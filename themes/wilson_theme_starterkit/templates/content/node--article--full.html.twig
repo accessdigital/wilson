@@ -70,34 +70,44 @@
  *   in different view modes.
  */
 #}
-<div{{ attributes.addClass(['block', 'flex', 'w-full']) }}>
+<article{{ attributes }}>
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <a href="{{ url }}" class="block flex flex-col w-full group border-b-0">
-    {% if content.field_teaser_image|render %}
-      <div class="mb-5 overflow-hidden">
-        <div class="transform group-hover:scale-110 transition-transform duration-300">
-          {{ content.field_teaser_image|field_value }}
+  <div class="container mx-auto px-5">
+    <div class="pt-12 pb-8 md:pt-16 md:pt-12 lg:w-8/12">
+      {% if content.field_pre_header|render %}
+        {{ content.field_pre_header }}
+      {% endif %}
+
+      {% if label|render %}
+        <h1 class="my-0">{{ node.title.0.value|check_markup('full_html') }}</h1>
+      {% endif %}
+
+      <ul class="list-none p-0 mt-6 -mx-2 -mb-2 flex flex-row flex-wrap">
+        {% if content.field_categories|render %}
+          {% for key, item in content.field_categories if key|first != '#' %}
+            <li class="px-2 pb-2">
+              <span class="tag tag--primary">{{ item }}</span>
+            </li>
+          {% endfor %}
+        {% endif %}
+
+        <li class="px-2 pb-2">
+          <time class="tag tag--tertiary">{{ node.created.value|format_date('long') }}</time>
+        </li>
+      </ul>
+
+      {% if content.field_image|render %}
+        <div class="mt-8">
+          {{ content.field_image|field_value }}
         </div>
-      </div>
-    {% endif %}
-
-    <div class="pb-8">
-      {% set title = node.label %}
-      {% if content.field_teaser_title|render %}
-        {% set title = node.field_teaser_title.0.value|check_markup('full_html') %}
-      {% endif %}
-
-      <h3 class="font-medium text-2xl mb-3">{{ title }}</h3>
-
-      {% if content.field_teaser_caption|render %}
-        <p>{{ content.field_teaser_caption|field_value }}</p>
       {% endif %}
     </div>
 
-    <div class="mt-auto">
-      <span class="btn btn--secondary">{{ 'Find out more' }}</span>
+    <div class="pb-12 md:pb-16 md:w-8/12 lg:w-6/12">
+      {{ content.body|field_value }}
     </div>
-  </a>
-</div>
+
+  </div>
+</article>

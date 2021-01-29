@@ -15,6 +15,10 @@ use Drupal\Core\Render\Markup;
 function wilson_theme_starterkit_preprocess_node(&$variables) {
   // Pass the site's base theme to all twig files.
   $variables['base_path'] = base_path();
+
+  // Provide the publishing date in 'time ago' format.
+  $date = $variables['node']->getCreatedTime();
+  $variables['created_ago'] = \Drupal::service('date.formatter')->formatInterval(date('U') - $date);
 }
 
 /**

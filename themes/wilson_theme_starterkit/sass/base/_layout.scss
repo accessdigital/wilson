@@ -13,6 +13,17 @@
     }
   }
 
+  .container-narrow {
+    @screen lg {
+      @apply max-w-screen-md;
+      @apply mx-auto;
+    }
+
+    @screen xl {
+      @apply max-w-screen-lg;
+    }
+  }
+
   .container-wide {
     @screen lg {
       @apply max-w-screen-lg;

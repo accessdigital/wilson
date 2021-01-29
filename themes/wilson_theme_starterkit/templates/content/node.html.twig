@@ -80,6 +80,10 @@
   {% endif %}
   {{ title_suffix }}
 
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+
   {% if display_submitted %}
     <footer>
       {{ author_picture }}
@@ -89,9 +93,5 @@
       </div>
     </footer>
   {% endif %}
-
-  <div{{ content_attributes }}>
-    {{ content }}
-  </div>
 
 </article>
