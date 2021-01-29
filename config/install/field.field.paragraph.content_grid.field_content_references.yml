@@ -1,11 +1,15 @@
+uuid: cd5b0d61-bccf-4bb1-9028-913f4910cb61
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_content_references
+    - node.type.article
     - node.type.landing_page
     - node.type.page
     - paragraphs.paragraphs_type.content_grid
+_core:
+  default_config_hash: gVXQy7f90II8uE--cTS6D4waE7rhBqvMlCBzpRA2EM8
 id: paragraph.content_grid.field_content_references
 field_name: field_content_references
 entity_type: paragraph
@@ -20,6 +24,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      article: article
       page: page
       landing_page: landing_page
     sort:

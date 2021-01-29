@@ -1,11 +1,15 @@
+uuid: ac2ca6a0-96b8-4f33-b820-ab7b74b8d46c
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_content_references
+    - node.type.article
     - node.type.landing_page
     - node.type.page
     - paragraphs.paragraphs_type.content_slider
+_core:
+  default_config_hash: v89Ikv5LXXD2u5R8445N5hmHiKZPBADdTlssCHXYeKU
 id: paragraph.content_slider.field_content_references
 field_name: field_content_references
 entity_type: paragraph
@@ -20,6 +24,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      article: article
       page: page
       landing_page: landing_page
     sort:

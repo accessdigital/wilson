@@ -1,3 +1,4 @@
+uuid: 431744ba-a96f-4026-9201-adba1462729b
 langcode: en
 status: true
 dependencies:
@@ -11,7 +12,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: Upzxp-udVPXwimrRnI3zing6ZqAoYNs5M2NzrOYleyY
+  default_config_hash: wLfnAYqocbY5YnjD9utdGWyPZSF_580fbb8JT8hSi6Y
 id: node.page.teaser
 targetEntityType: node
 bundle: page
@@ -30,7 +31,7 @@ content:
     region: content
     label: hidden
     settings:
-      view_mode: grid
+      view_mode: card
       link: false
     third_party_settings: {  }
   field_teaser_title:

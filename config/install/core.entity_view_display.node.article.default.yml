@@ -1,0 +1,58 @@
+uuid: 6c8d699c-9c36-4f4b-a020-0ba5c783ddec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_categories
+    - field.field.node.article.field_image
+    - field.field.node.article.field_pre_header
+    - field.field.node.article.field_teaser_caption
+    - field.field.node.article.field_teaser_image
+    - field.field.node.article.field_teaser_title
+    - node.type.article
+  module:
+    - text
+    - user
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_categories:
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_pre_header:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_teaser_caption: true
+  field_teaser_image: true
+  field_teaser_title: true
+  links: true

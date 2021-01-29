@@ -1,3 +1,4 @@
+uuid: 5a93f739-bb23-4066-b0d5-4ee9fe1fc057
 langcode: en
 status: true
 dependencies:
@@ -22,9 +23,9 @@ third_party_settings:
         - field_teaser_title
         - field_teaser_caption
         - field_teaser_image
-      parent_name: ''
-      weight: 8
-      format_type: details_sidebar
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
       region: content
       format_settings:
         description: 'Define the text and image to represent this page in teaser form (e.g. in content grids and list). If nothing is specified, the Title field will be used.'
@@ -33,9 +34,37 @@ third_party_settings:
         id: ''
         classes: ''
         open: false
+        formatter: closed
       label: 'Teaser settings'
+    group_tabs:
+      children:
+        - group_page_sections
+        - group_teaser_settings
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_page_sections:
+      children:
+        - field_sections
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Page sections'
 _core:
-  default_config_hash: SKLJ9UpkuWsLEFCbM3E3_3LncF5iKuYhLxgYkm_hBUM
+  default_config_hash: DX2Wyg0t3AJt1QoI4HQxTDCGtx7i2PA4jiYsY3_HlmE
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -43,13 +72,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_sections:
     type: paragraphs
-    weight: 7
+    weight: 2
     settings:
       title: Section
       title_plural: Sections
@@ -95,35 +124,28 @@ content:
     weight: 9
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'Defaults to the page title'
     third_party_settings: {  }
     type: string_textfield
     region: content
   path:
     type: path
-    weight: 5
+    weight: 7
     region: content
     settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 3
-    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -136,7 +158,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -144,5 +166,11 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
+  promote: true

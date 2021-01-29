@@ -79,8 +79,17 @@
   vertical-align: middle;
 }
 
-/* Widen media thumbnails that appear in a details sidebar. */
-.field-group-details-sidebar .media-library-widget-modal .media-library-item--grid,
-.field-group-details-sidebar .media-library-selection .media-library-item--grid {
-  width: 100% !important;
+/* Change the colour of horizontal tabs. */
+.horizontal-tabs .horizontal-tabs-list,
+.horizontal-tabs .horizontal-tab-button {
+  background-color: #f3f4f9 !important;
+}
+
+.horizontal-tabs,
+.horizontal-tabs .horizontal-tabs-list {
+  border-color: #dedfe4 !important;
+}
+
+.horizontal-tab-button.selected {
+  background-color: #ffffff !important;
 }

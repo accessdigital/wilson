@@ -1,0 +1,19 @@
+uuid: e63e9468-b524-4131-9b65-01bdebdb4c41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_caption
+    - node.type.article
+id: node.article.field_teaser_caption
+field_name: field_teaser_caption
+entity_type: node
+bundle: article
+label: 'Teaser caption'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
