@@ -72,4 +72,14 @@
       }
     }
   }
+
+  &.bg-tertiary {
+    .section__inner {
+      &::after {
+        @apply bg-gradient-to-r;
+        @apply from-transparent;
+        @apply to-tertiary;
+      }
+    }
+  }
 }
