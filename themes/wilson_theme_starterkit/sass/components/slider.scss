@@ -27,10 +27,10 @@
     &::after {
       @apply absolute;
       @apply top-0;
-      @apply bottom-0;
       @apply bg-gradient-to-r;
       @apply from-transparent;
       @apply to-white;
+      @apply h-full;
 
       content: "";
       width: calc(20vw - 1.25rem);
