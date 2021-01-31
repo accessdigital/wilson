@@ -66,26 +66,6 @@
       @screen lg {
         @apply text-lg;
       }
-
-      &.menu-item-active,
-      &.is-active {
-        @screen lg {
-          position: relative;
-        }
-
-        &::before {
-          @screen lg {
-            @apply bg-current;
-            @apply absolute;
-            @apply w-full;
-            @apply bottom-0;
-            @apply left-0;
-
-            content: "";
-            height: 2px;
-          }
-        }
-      }
     }
 
     & > li {
@@ -216,6 +196,19 @@
         @apply px-0;
       }
 
+      a {
+        &::after {
+          @screen lg {
+            @apply text-xl;
+            @apply ml-10;
+            @apply absolute;
+            @apply bottom-1;
+
+            content: "→";
+          }
+        }
+      }
+
       a,
       span {
         @screen lg {
@@ -226,17 +219,6 @@
 
         &::before {
           @apply hidden;
-        }
-
-        &::after {
-          @screen lg {
-            @apply text-xl;
-            @apply ml-10;
-            @apply absolute;
-            @apply bottom-1;
-
-            content: "→";
-          }
         }
       }
     }
@@ -341,40 +323,72 @@
       @apply static;
     }
 
-    & > li.has-submenu > .submenu-wrapper {
-      @apply z-10;
+    & > li.has-submenu {
+      & > a,
+      & > span {
+        &::after {
+          @screen lg {
+            @apply inline-block;
+            @apply static;
+            @apply ml-4;
+            @apply text-base;
+            @apply transform;
 
-      @screen lg {
-        @apply bg-secondary-light;
-        @apply py-8;
-        @apply box-content;
-        @apply overflow-y-auto;
-        @apply shadow-xl;
+            content: "↓";
+          }
+        }
 
-        top: 60px;
-        max-height: calc(100vh - 60px - 100px);
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* IE 10+ */
+        &.menu-item-active {
+          &::after {
+            @screen lg {
+              @apply rotate-180;
+            }
+          }
+        }
 
-        &::-webkit-scrollbar {
-          width: 0;
-          background: transparent; /* Chrome/Safari/Webkit */
+        &.menu-item-active,
+        &.is-active {
+          @screen lg {
+            @apply text-primary;
+          }
         }
       }
 
-      @screen xl {
-        top: 60px;
-        max-height: calc(100vh - 60px - 100px);
-      }
+      & > .submenu-wrapper {
+        @apply z-10;
 
-      & > .submenu {
         @screen lg {
-          @apply mx-auto;
-          @apply max-w-screen-lg;
+          @apply bg-secondary-light;
+          @apply py-8;
+          @apply box-content;
+          @apply overflow-y-auto;
+          @apply shadow-xl;
+
+          top: 60px;
+          max-height: calc(100vh - 60px - 100px);
+          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none;  /* IE 10+ */
+
+          &::-webkit-scrollbar {
+            width: 0;
+            background: transparent; /* Chrome/Safari/Webkit */
+          }
         }
 
         @screen xl {
-          @apply max-w-screen-xl;
+          top: 60px;
+          max-height: calc(100vh - 60px - 100px);
+        }
+
+        & > .submenu {
+          @screen lg {
+            @apply mx-auto;
+            @apply max-w-screen-lg;
+          }
+
+          @screen xl {
+            @apply max-w-screen-xl;
+          }
         }
       }
     }

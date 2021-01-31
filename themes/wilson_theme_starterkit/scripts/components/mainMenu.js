@@ -117,6 +117,16 @@
             }
           });
         }
+
+        // Clear any active menus when clicking outside of the navigation.
+        document.addEventListener('mouseup', function(e) {
+          if (!nav.contains(e.target)) {
+            const activeItems = context.querySelectorAll('.menu-item-active');
+            Array.prototype.forEach.call(activeItems, function (activeItem) {
+              activeItem.classList.remove('menu-item-active');
+            });
+          }
+        });
       }
 
     }
