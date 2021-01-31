@@ -8,8 +8,8 @@
         const body = context.querySelector('body');
         const nav = context.querySelector('.navigation nav');
         const topLevelMenu = context.querySelector('.navigation .menu');
-        const topLevelSubmenuLinks = context.querySelectorAll('.navigation .menu > li.has-submenu > a');
-        const submenuLinks = context.querySelectorAll('.navigation li.has-submenu > a');
+        const topLevelSubmenuLinks = context.querySelectorAll('.navigation .menu > li.has-submenu > a, .navigation .menu > li.has-submenu > span');
+        const submenuLinks = context.querySelectorAll('.navigation li.has-submenu > a, .navigation li.has-submenu > span');
         const backLinks = context.querySelectorAll('.back-link a');
 
         // Setup event listeners for back links.
