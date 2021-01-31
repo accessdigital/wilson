@@ -20,7 +20,7 @@
  */
 #}
 
-<div class="container mx-auto my-4 px-5" data-drupal-messages>
+<div data-drupal-messages>
 {% for type, messages in message_list %}
 
   {% if type == 'error' %}
@@ -29,7 +29,7 @@
     {% set type_classes = 'border-green-600 bg-green-400' %}
   {% endif %}
 
-  <div class="p-8 border-l-8 text-white {{ type_classes }}" role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
+  <div class="p-5 border-l-8 text-white {{ type_classes }}" role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
 
     {% if type == 'error' %}
       <div role="alert">
