@@ -9,9 +9,8 @@ global:
     - core/drupal
 
 admin:
-  css:
-    theme:
-      css/components/admin.min.css: { minified: true}
+  js:
+    js/utilities/tasksInToolbar.min.js: { minified: true }
 
 adaptivePanels:
   css:
