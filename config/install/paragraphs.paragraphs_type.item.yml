@@ -6,6 +6,8 @@ dependencies:
 third_party_settings:
   paragraphs_ee:
     paragraphs_categories: {  }
+_core:
+  default_config_hash: TLzXQViRm-c0gfUeEJHOJSTYUVb3kDTkespNaY_klvg
 id: item
 label: Item
 icon_uuid: null

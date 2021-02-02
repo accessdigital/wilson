@@ -1,7 +1,34 @@
+/* Provide more editing space. */
 @media screen and (min-width: 61rem) {
   .layout-region--node-main .layout-region__content,
   .layout-region--node-footer .layout-region__content {
     max-width: none !important;
+  }
+
+  .layout-region--node-main,
+  .layout-region--node-footer {
+    float: none !important;
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+
+  .layout-region--node-secondary {
+    float: none !important;
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .layout-region--node-main,
+  .layout-region--node-footer {
+    float: left !important;
+    width: calc(100% - 22.5rem) !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .layout-region--node-secondary {
+    float: right !important;
+    width: 22.5rem !important;
   }
 }
 
@@ -41,6 +68,36 @@
   display: none;
 }
 
+/* Enlarge paragraph icons in editing view. */
+.js .paragraph-type-icon {
+  height: 39px !important;
+  width: 70px !important;
+  border: 1px solid #ccc;
+  margin-right: 5px !important;
+  padding-right: 0 !important;
+  border-right: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+@media screen and (min-width: 992px) {
+  .js .paragraph-type-icon {
+    height: 45px !important;
+    width: 80px !important;
+  }
+}
+
+.js .paragraph-top {
+  -ms-grid-columns: 150px auto 1fr auto !important;
+  grid-template-columns: 150px auto 1fr auto !important;
+}
+
+@media screen and (min-width: 992px) {
+  .js .paragraph-top {
+    -ms-grid-columns: 200px auto 1fr auto !important;
+    grid-template-columns: 200px auto 1fr auto !important;
+  }
+}
+
 /* Paragraph Editor Enhancements. */
 .js .paragraphs-add-dialog--categorized button.paragraphs-button--add-more,
 .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized button.paragraphs-button--add-more {
@@ -77,6 +134,12 @@
 .js .paragraphs-add-dialog--categorized .search-description input,
 .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description input {
   vertical-align: middle;
+}
+
+.js .paragraphs-add-dialog--categorized .paragraphs-button--icon,
+.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-button--icon {
+  border: 1px solid #ccc;
+  height: 119px !important;
 }
 
 /* Change the colour of horizontal tabs. */
