@@ -6,7 +6,7 @@ dependencies:
   module:
     - ckeditor
 _core:
-  default_config_hash: PHGyFvW6THdtPzPFjClYNa9XAccPf7OmAs7gRXuxh3U
+  default_config_hash: Hm41bT8_dPBYfdMjqL9rsyHTDfOy2HLSNxEV3eyL14s
 format: full_html
 editor: ckeditor
 settings:
@@ -57,6 +57,7 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
@@ -67,7 +68,7 @@ settings:
             - Source
   plugins:
     stylescombo:
-      styles: ''
+      styles: "a.btn.btn--primary|Button primary\r\na.btn.btn--secondary|Button secondary\r\na.btn.btn--tertiary|Button tertiary"
     language:
       language_list: un
 image_upload:

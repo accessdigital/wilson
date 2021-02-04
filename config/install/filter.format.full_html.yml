@@ -5,7 +5,7 @@ dependencies:
     - editor
     - media
 _core:
-  default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
+  default_config_hash: DnU0weH_9zresiSRJm6gqpw5bx4vtkeKahto4ZgKqKc
 name: 'Full HTML'
 format: full_html
 weight: 2
