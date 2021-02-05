@@ -50,9 +50,11 @@ module.exports = {
       margin: ['last', 'children'],
       padding: ['last', 'children'],
       width: ['children'],
+      height: ['children'],
+      position: ['children'],
       display: ['children'],
       borderRadius: ['children'],
-      scale: ['group-hover']
+      scale: ['group-hover'],
     },
   },
   plugins: [
