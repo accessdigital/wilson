@@ -244,6 +244,22 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_breadcrumb().
+ */
+function wilson_theme_starterkit_preprocess_breadcrumb(&$variables) {
+  $request = \Drupal::request();
+  if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
+    $title = \Drupal::service('title_resolver')->getTitle($request, $route);
+  }
+  
+  if ($title) {
+    $variables['breadcrumb'][] = [
+      'text' => $title,
+    ];
+  }
+}
+
+/**
  * Helper function to add styles for a responsive background image to the
  * document head.
  */

@@ -53,6 +53,7 @@ module.exports = {
       height: ['children'],
       position: ['children'],
       display: ['children'],
+      borderStyle: ['hover', 'focus'],
       borderRadius: ['children'],
       scale: ['group-hover'],
     },
