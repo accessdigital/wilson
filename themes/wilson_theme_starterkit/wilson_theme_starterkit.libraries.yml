@@ -54,3 +54,7 @@ mainMenu:
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
+
+backgroundVideos:
+  js:
+    js/components/backgroundVideos.min.js: { minified: true }

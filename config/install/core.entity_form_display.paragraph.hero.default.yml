@@ -146,7 +146,7 @@ third_party_settings:
         required_fields: true
       label: 'Classes & ID'
 _core:
-  default_config_hash: 80XGEGRJBjA_K5kWA-n0VXRrSWe1m2butF1awCrRD30
+  default_config_hash: yGCPn0UtP68ZVh_G2p_qInaLkdt4gO8oaHtNzRbVrUI
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero

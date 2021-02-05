@@ -20,7 +20,7 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: TT5-g8YoC8Yn8pusRt-ADysXU0Y6lvtXvuP_hPHtclw
+  default_config_hash: mr32U5r8iwl5hVbelEcx1AfXaCHVYHrcZDAMq_jaI_E
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -66,6 +66,15 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_section_bg:
+    type: entity_reference_entity_view
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
   field_text_column:
     weight: 2
     label: hidden
@@ -80,5 +89,4 @@ hidden:
   field_id_anchor: true
   field_padding_bottom: true
   field_padding_top: true
-  field_section_bg: true
   field_section_bg_colour: true

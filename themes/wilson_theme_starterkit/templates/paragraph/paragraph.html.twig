@@ -65,6 +65,10 @@
   'clearfix',
 ] %}
 
+{% if has_video or has_remote_video %}
+  {{ attach_library('wilson_theme_starterkit/backgroundVideos') }}
+{% endif %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(paragraph_classes).setAttribute('style', background_colour_style) }}>
     {% if has_video %}

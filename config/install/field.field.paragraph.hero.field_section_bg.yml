@@ -4,15 +4,17 @@ dependencies:
   config:
     - field.storage.paragraph.field_section_bg
     - media.type.image
+    - media.type.remote_video
+    - media.type.video
     - paragraphs.paragraphs_type.hero
 _core:
-  default_config_hash: q9pvOcz5sMQ16OLOdHg6uv7fPEdQruJ0bKeIFWCsvng
+  default_config_hash: nr4RRTcN5Bjj38jEV7BjTwhDlWDwPH3ORapafNlIFxc
 id: paragraph.hero.field_section_bg
 field_name: field_section_bg
 entity_type: paragraph
 bundle: hero
-label: 'Background image'
-description: ''
+label: 'Background image or video'
+description: "<ul>\r\n<li>Background images will be applied as wallpaper across the whole of the section. The image will be cropped and scaled as appropriate for the device size.</li>\r\n<li>Background videos will be applied as an animated wallpaper across the whole of the section. To help with visibility of text overlays, the video will be darkened automatically. For best results upload a short .mp4 clip as YouTube and Vimeo videos may not stretch to fill the space correctly. All videos will be muted, autoplay and loop automatically.</li>\r\n</ul>"
 required: false
 translatable: true
 default_value: {  }
@@ -22,9 +24,11 @@ settings:
   handler_settings:
     target_bundles:
       image: image
+      remote_video: remote_video
+      video: video
     sort:
       field: _none
       direction: ASC
     auto_create: true
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference
