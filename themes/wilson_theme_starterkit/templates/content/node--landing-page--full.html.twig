@@ -71,19 +71,25 @@
  */
 #}
 <article{{ attributes }}>
+
   {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
   {{ title_suffix }}
 
-  <div class="container mx-auto px-5">
-    <div class="py-8 md:py-12 lg:w-8/12">
-      {% if label|render %}
-        <h1 class="my-0">{{ node.title.0.value|check_markup('full_html') }}</h1>
-      {% endif %}
-    </div>
+  {{ content }}
 
-    <div class="pb-12 md:pb-16 md:w-8/12">
-      {{ content.body|field_value }}
-    </div>
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
 
-  </div>
 </article>
