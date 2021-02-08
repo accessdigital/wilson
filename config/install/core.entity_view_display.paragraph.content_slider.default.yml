@@ -1,8 +1,8 @@
-uuid: 551d80b7-1e67-48b2-b5c2-d8be4272a035
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.content_slider.field_container_height
     - field.field.paragraph.content_slider.field_content_references
     - field.field.paragraph.content_slider.field_css_classes
     - field.field.paragraph.content_slider.field_headline
@@ -17,7 +17,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: qJ923NmJWHo9FmCyq6lI5pGwA-VRn6xqOrWKiLg6Qbw
+  default_config_hash: EyhridwxTWEzWiTfXeqaOadLJry87AGqgVoVvcSEfGE
 id: paragraph.content_slider.default
 targetEntityType: paragraph
 bundle: content_slider
@@ -56,6 +56,7 @@ content:
     type: text_default
     region: content
 hidden:
+  field_container_height: true
   field_css_classes: true
   field_id_anchor: true
   field_padding_bottom: true

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.button_grid.field_buttons
+    - field.field.paragraph.button_grid.field_container_height
     - field.field.paragraph.button_grid.field_container_position
     - field.field.paragraph.button_grid.field_container_width
     - field.field.paragraph.button_grid.field_css_classes
@@ -21,7 +22,6 @@ third_party_settings:
   field_group:
     group_tabs:
       children:
-        - group_headline
         - group_buttons
         - group_settings
       parent_name: ''
@@ -67,6 +67,7 @@ third_party_settings:
     group_layout:
       children:
         - field_grid_columns
+        - field_container_height
         - field_container_width
         - field_container_position
       parent_name: group_settings
@@ -126,7 +127,7 @@ third_party_settings:
         required_fields: true
       label: 'Classes & ID'
 _core:
-  default_config_hash: JFY50F6yO4EJriRx9vea0cCWGHQAy8Ezi-Plq-37grQ
+  default_config_hash: I-kB0XDCElxH8RKiLIU4UG3iXVXZZoMF4QouBZSf8vo
 id: paragraph.button_grid.default
 targetEntityType: paragraph
 bundle: button_grid
@@ -140,14 +141,20 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  field_container_height:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_container_position:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_container_width:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select

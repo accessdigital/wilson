@@ -41,12 +41,21 @@
 {% extends "paragraph.html.twig" %}
 
 {% set content_classes = [
-  settings_container_height,
   paragraph.field_container_width.0.value == 'full' ? '-mx-5' : 'rounded-lg shadow-lg overflow-hidden border border-grey-300',
+  'relative',
+  'children:absolute',
+  'children:inset-0',
+  'h-full',
+  'min-h-1/4-screen',
 ] %}
 
-{% block content %}
-  <div{{ create_attribute({'class': content_classes}) }}>
-    {{ content.field_map_address|field_value }}
+{% block paragraph_inner %}
+  {% set inner_container_classes = inner_container_classes|merge(['self-stretch']) %}
+  <div{{ create_attribute({'class': inner_container_classes}) }}>
+    {% block content %}
+      <div{{ create_attribute({'class': content_classes}) }}>
+        {{ content.field_map_address|field_value }}
+      </div>
+    {% endblock %}
   </div>
 {% endblock %}

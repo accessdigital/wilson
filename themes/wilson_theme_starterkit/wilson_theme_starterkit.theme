@@ -191,10 +191,11 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
   if ($paragraph->hasField('field_container_height')) {
     $value = $paragraph->get('field_container_height')->getString();
     $map = [
-      'sm' => 'h-60',
-      'md' => 'h-96',
-      'lg' => 'h-152',
-      'full' => 'h-screen',
+      'auto' => '',
+      'sm' => 'min-h-1/4-screen flex items-center',
+      'md' => 'min-h-1/2-screen flex items-center',
+      'lg' => 'min-h-3/4-screen flex items-center',
+      'full' => 'min-h-screen flex items-center',
     ];
 
     $variables['settings_container_height'] = $map[$value];

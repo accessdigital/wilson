@@ -1,4 +1,3 @@
-uuid: 5aae34a1-e55c-4b66-8e1e-819006012552
 langcode: en
 status: true
 dependencies:
@@ -125,7 +124,7 @@ third_party_settings:
         required_fields: true
       label: Background
 _core:
-  default_config_hash: 4nk07VVYY81MfmomZndR4qLcXnRQTYkiJbyYiOFhL34
+  default_config_hash: zwq9kgZW0lbX1OasdRrPs6_VNkCyEN5yFVcv_NaXPzQ
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.button_grid.field_buttons
+    - field.field.paragraph.button_grid.field_container_height
     - field.field.paragraph.button_grid.field_container_position
     - field.field.paragraph.button_grid.field_container_width
     - field.field.paragraph.button_grid.field_css_classes
@@ -16,7 +17,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: '-7_u3oCnNHMfSoi5us8JOA17yIYk02STxFntH8L6IEc'
+  default_config_hash: '-LuuiBnnYXTI6t5eYHF995VklfJ2C8Td52GmhIP3kRE'
 id: paragraph.button_grid.default
 targetEntityType: paragraph
 bundle: button_grid
@@ -24,7 +25,7 @@ mode: default
 content:
   field_buttons:
     type: link
-    weight: 2
+    weight: 0
     region: content
     label: hidden
     settings:
@@ -35,6 +36,7 @@ content:
       target: ''
     third_party_settings: {  }
 hidden:
+  field_container_height: true
   field_container_position: true
   field_container_width: true
   field_css_classes: true

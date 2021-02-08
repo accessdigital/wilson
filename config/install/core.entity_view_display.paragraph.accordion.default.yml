@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.accordion.field_container_height
     - field.field.paragraph.accordion.field_container_position
     - field.field.paragraph.accordion.field_container_width
     - field.field.paragraph.accordion.field_css_classes
@@ -13,14 +14,14 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: XeggKnuSjypviJvncDJTzlhoU0HRELih5J1EFuaU0SI
+  default_config_hash: 1WxwTCcPWrOMzIoO5aMABDkmd15YeHSOnP-Nc15WHGg
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
   field_items:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
       view_mode: accordion
@@ -29,6 +30,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
 hidden:
+  field_container_height: true
   field_container_position: true
   field_container_width: true
   field_css_classes: true

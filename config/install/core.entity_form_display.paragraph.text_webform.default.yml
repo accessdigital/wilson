@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_webform.field_column_order
+    - field.field.paragraph.text_webform.field_container_height
     - field.field.paragraph.text_webform.field_css_classes
     - field.field.paragraph.text_webform.field_headline
     - field.field.paragraph.text_webform.field_id_anchor
@@ -91,6 +92,7 @@ third_party_settings:
       children:
         - field_column_order
         - field_vertical_alignment
+        - field_container_height
       parent_name: group_settings
       weight: 28
       format_type: details
@@ -163,7 +165,7 @@ third_party_settings:
         required_fields: true
       label: Links
 _core:
-  default_config_hash: JtGPCdVRMptqBpVpXDutpVX6O4fkHASNjnYEJheVy8s
+  default_config_hash: lApS7Ebhtln3gszxIbiWF44lne1TRY8ub3LCpLsEyDE
 id: paragraph.text_webform.default
 targetEntityType: paragraph
 bundle: text_webform
@@ -171,6 +173,12 @@ mode: default
 content:
   field_column_order:
     weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_container_height:
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select

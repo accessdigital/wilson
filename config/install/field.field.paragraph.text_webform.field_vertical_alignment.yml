@@ -6,11 +6,13 @@ dependencies:
     - paragraphs.paragraphs_type.text_webform
   module:
     - options
+_core:
+  default_config_hash: Z5wnNXgfxmOb60DqDV_Qs6J7NTw90ohznu_IbhEOOM8
 id: paragraph.text_webform.field_vertical_alignment
 field_name: field_vertical_alignment
 entity_type: paragraph
 bundle: text_webform
-label: 'Vertical alignment'
+label: 'Column vertical alignment'
 description: ''
 required: true
 translatable: true

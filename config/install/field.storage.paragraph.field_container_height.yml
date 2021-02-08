@@ -1,10 +1,11 @@
-uuid: 54c282f9-a730-4dbb-9600-d5ec66a1421d
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
+_core:
+  default_config_hash: wIkMEjL1uhHJl_zLkdR0M6w27VhhrL1XsxYguduNgR8
 id: paragraph.field_container_height
 field_name: field_container_height
 entity_type: paragraph
@@ -12,16 +13,19 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: 'sm'
-      label: 'Small'
+      value: auto
+      label: Auto
     -
-      value: 'md'
-      label: 'Medium'
+      value: sm
+      label: Small
     -
-      value: 'lg'
-      label: 'Large'
+      value: md
+      label: Medium
     -
-      value: 'full'
+      value: lg
+      label: Large
+    -
+      value: full
       label: 'Full screen height'
   allowed_values_function: ''
 module: options

@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.quote.field_author
     - field.field.paragraph.quote.field_author_image
     - field.field.paragraph.quote.field_author_title
+    - field.field.paragraph.quote.field_container_height
     - field.field.paragraph.quote.field_container_position
     - field.field.paragraph.quote.field_container_width
     - field.field.paragraph.quote.field_css_classes
@@ -18,7 +19,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: MKPtlyxrrDYRWtklD722z8oD16pZGh_2tdHRANkad-A
+  default_config_hash: eHzE_y0vEm1Dmjd5RZcuL14IC5vDzpv95bl9-fQ9o6w
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote
@@ -57,6 +58,7 @@ content:
     type: text_default
     region: content
 hidden:
+  field_container_height: true
   field_container_position: true
   field_container_width: true
   field_css_classes: true

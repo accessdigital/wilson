@@ -50,11 +50,14 @@
 {% set container_classes = [
   'section__container',
   settings_container_position,
+  settings_container_height,
 ] %}
 
 {# Inner container classes #}
 {% set inner_container_classes = [
+  'w-full',
   'section__inner',
+  settings_container_height ? 'flex flex-col self-stretch',
   settings_padding_top,
   settings_padding_bottom,
   settings_inner_position,
@@ -65,6 +68,7 @@
   'flex',
   'flex-wrap',
   settings_column_order,
+  settings_container_height ? 'min-h-full',
   'overflow-hidden',
   paragraph.field_container_width.0.value == 'full' ? '-mx-5' : '-mx-5 lg:mx-0',
   has_bg_image ? 'section-bg bg-center bg-no-repeat bg-cover',

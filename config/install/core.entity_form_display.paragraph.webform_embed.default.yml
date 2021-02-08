@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.webform_embed.field_container_height
     - field.field.paragraph.webform_embed.field_container_position
     - field.field.paragraph.webform_embed.field_container_width
     - field.field.paragraph.webform_embed.field_css_classes
@@ -64,6 +65,7 @@ third_party_settings:
       label: Settings
     group_layout:
       children:
+        - field_container_height
         - field_container_width
         - field_container_position
       parent_name: group_settings
@@ -122,19 +124,27 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
+_core:
+  default_config_hash: 0Ffb6FNuYvjGm2tLfqXqxxRbLzf-w4uqy7rDrjvaPR4
 id: paragraph.webform_embed.default
 targetEntityType: paragraph
 bundle: webform_embed
 mode: default
 content:
+  field_container_height:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_container_position:
-    weight: 3
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_container_width:
-    weight: 2
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -156,7 +166,7 @@ content:
     type: string_textfield
     region: content
   field_padding_bottom:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select

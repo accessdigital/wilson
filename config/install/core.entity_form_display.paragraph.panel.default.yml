@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.panel.field_column_order
+    - field.field.paragraph.panel.field_container_height
     - field.field.paragraph.panel.field_container_width
     - field.field.paragraph.panel.field_css_classes
     - field.field.paragraph.panel.field_headline
@@ -106,6 +107,7 @@ third_party_settings:
       children:
         - field_column_order
         - field_vertical_alignment
+        - field_container_height
         - field_container_width
       parent_name: group_settings
       weight: 28
@@ -164,20 +166,26 @@ third_party_settings:
         required_fields: true
       label: Padding
 _core:
-  default_config_hash: xwcnKZtTCOlFKno_efsO3vKy8_-S9LlZVtUHx4HFH44
+  default_config_hash: S7LtVDObWWDqvrp_kqHwqy1XD5jsuWbDu-NF8FBilSU
 id: paragraph.panel.default
 targetEntityType: paragraph
 bundle: panel
 mode: default
 content:
   field_column_order:
-    weight: 6
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_container_height:
+    weight: 37
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_container_width:
-    weight: 8
+    weight: 38
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -215,7 +223,7 @@ content:
     region: content
   field_padding_bottom:
     type: options_select
-    weight: 34
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -271,7 +279,7 @@ content:
     type: text_textarea
     region: content
   field_vertical_alignment:
-    weight: 7
+    weight: 36
     settings: {  }
     third_party_settings: {  }
     type: options_select

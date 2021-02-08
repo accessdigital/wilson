@@ -53,12 +53,15 @@
 {% set container_classes = [
   'section__container',
   settings_container_position,
+  settings_container_height,
   has_video or has_remote_video ? 'relative z-10',
 ] %}
 
 {# Inner container classes #}
 {% set inner_container_classes = [
+  'w-full',
   'section__inner',
+  settings_container_height ? 'flex flex-col',
   settings_padding_top,
   settings_padding_bottom,
   settings_inner_position,

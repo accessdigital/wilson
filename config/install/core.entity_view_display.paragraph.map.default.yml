@@ -1,4 +1,3 @@
-uuid: c7ab56e3-e156-4569-a9fa-8f98471debf8
 langcode: en
 status: true
 dependencies:
@@ -17,7 +16,7 @@ dependencies:
   module:
     - simple_gmap
 _core:
-  default_config_hash: SbrMKWZSfwApxMvfLi7NMSQSPnIvkAVqhzPLjdcCsdY
+  default_config_hash: CvH8nx2qjPH2bED_Y7t_SKgYpGhEt1sHPN3bM0Kmprg
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map

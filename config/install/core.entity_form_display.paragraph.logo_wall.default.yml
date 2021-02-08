@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.logo_wall.field_container_height
     - field.field.paragraph.logo_wall.field_container_position
     - field.field.paragraph.logo_wall.field_container_width
     - field.field.paragraph.logo_wall.field_css_classes
@@ -20,7 +21,6 @@ third_party_settings:
   field_group:
     group_tabs:
       children:
-        - group_headline
         - group_logos
         - group_settings
       parent_name: ''
@@ -66,6 +66,7 @@ third_party_settings:
     group_layout:
       children:
         - field_grid_columns
+        - field_container_height
         - field_container_width
         - field_container_position
       parent_name: group_settings
@@ -125,20 +126,26 @@ third_party_settings:
         required_fields: true
       label: 'Classes & ID'
 _core:
-  default_config_hash: gFla5yIeuLWjFxroUHSrQxUSxXJaMSE019YdfEl8syE
+  default_config_hash: UCy-3AlO64AT43w7W1dJGoraAsbIYFITIoXZJoDNtI8
 id: paragraph.logo_wall.default
 targetEntityType: paragraph
 bundle: logo_wall
 mode: default
 content:
+  field_container_height:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_container_position:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_container_width:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select

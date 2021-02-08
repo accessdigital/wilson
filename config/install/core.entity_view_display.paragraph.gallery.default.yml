@@ -12,7 +12,7 @@ dependencies:
     - field.field.paragraph.gallery.field_section_bg_colour
     - paragraphs.paragraphs_type.gallery
 _core:
-  default_config_hash: DhyHOIAMSRfwvz_41YXBO_9vjpx7PzTAFXcYw8AkmFw
+  default_config_hash: CYukXtzSfcUKNbPvuxGed58DZ693463nxwnss_JMOKI
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery

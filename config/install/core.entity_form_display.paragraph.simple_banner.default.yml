@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.simple_banner.field_container_height
     - field.field.paragraph.simple_banner.field_container_position
     - field.field.paragraph.simple_banner.field_container_width
     - field.field.paragraph.simple_banner.field_css_classes
@@ -89,6 +90,7 @@ third_party_settings:
     group_layout:
       children:
         - field_layout
+        - field_container_height
         - field_container_width
         - field_container_position
       parent_name: group_settings
@@ -148,20 +150,26 @@ third_party_settings:
         required_fields: true
       label: 'Classes & ID'
 _core:
-  default_config_hash: NA4Dpo7TethyrIJjRX04klZ2MmoIjLowkC40vggQXMM
+  default_config_hash: zljn6Y5Dn07S3NWkm9Pfr7tDXxxe6fHZVhBmadopL58
 id: paragraph.simple_banner.default
 targetEntityType: paragraph
 bundle: simple_banner
 mode: default
 content:
+  field_container_height:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_container_position:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_container_width:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -197,7 +205,7 @@ content:
     type: options_select
     region: content
   field_padding_bottom:
-    weight: 30
+    weight: 31
     settings: {  }
     third_party_settings: {  }
     type: options_select

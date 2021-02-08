@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_webform.field_column_order
+    - field.field.paragraph.text_webform.field_container_height
     - field.field.paragraph.text_webform.field_css_classes
     - field.field.paragraph.text_webform.field_headline
     - field.field.paragraph.text_webform.field_id_anchor
@@ -22,7 +23,7 @@ dependencies:
     - text
     - webform
 _core:
-  default_config_hash: K-3oc_ZEBa3MNAbvInNFHUZe8yI55TyjH4IkZFcXMNo
+  default_config_hash: iFrXQxsUIl4KI384qwDV-JMl_ytvlYMQdbU8R6_R1iQ
 id: paragraph.text_webform.default
 targetEntityType: paragraph
 bundle: text_webform
@@ -85,6 +86,7 @@ content:
     region: content
 hidden:
   field_column_order: true
+  field_container_height: true
   field_css_classes: true
   field_id_anchor: true
   field_padding_bottom: true

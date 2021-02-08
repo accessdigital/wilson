@@ -1,9 +1,9 @@
-uuid: 0419e227-1d3d-4cd7-a1a5-d01902b07d1e
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.two_columns.field_column_distribution
+    - field.field.paragraph.two_columns.field_container_height
     - field.field.paragraph.two_columns.field_container_position
     - field.field.paragraph.two_columns.field_container_width
     - field.field.paragraph.two_columns.field_css_classes
@@ -19,21 +19,21 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: V51pz9y9Y4-GQ6KSvmjI4ZWGEttE3R9TUKjvIOmyZ-M
+  default_config_hash: JhfKvkip9AMOkEnE8FTUjRyB5Mr2GhsFnsVmOtHlpQA
 id: paragraph.two_columns.default
 targetEntityType: paragraph
 bundle: two_columns
 mode: default
 content:
   field_text_column:
-    weight: 2
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_text_column_2:
-    weight: 3
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -41,6 +41,7 @@ content:
     region: content
 hidden:
   field_column_distribution: true
+  field_container_height: true
   field_container_position: true
   field_container_width: true
   field_css_classes: true

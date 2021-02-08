@@ -120,7 +120,7 @@ third_party_settings:
         required_fields: true
       label: 'Classes & ID'
 _core:
-  default_config_hash: gm6zwFeq2U0Kh5Vdqurf_6jkmgmBhGM2Hym5vrpB3B0
+  default_config_hash: 0jku6aebpay-6LjCkVtc9Y_xCiAU7T0gmvU0yJfQ-Ck
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery

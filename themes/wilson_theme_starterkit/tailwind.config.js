@@ -43,6 +43,11 @@ module.exports = {
       boxShadow: {
         'halo': '0 0 0 6px rgba(0, 0, 0, 0.15)',
       },
+      minHeight: {
+        '1/4-screen': '25vh',
+        '1/2-screen': '50vh',
+        '3/4-screen': '75vh',
+      }
     },
   },
   variants: {
@@ -52,10 +57,12 @@ module.exports = {
       width: ['children'],
       height: ['children'],
       position: ['children'],
+      inset: ['children'],
       display: ['children'],
       borderStyle: ['hover', 'focus'],
       borderRadius: ['children'],
       scale: ['group-hover'],
+      flexGrow: ['children'],
     },
   },
   plugins: [

@@ -1,9 +1,9 @@
-uuid: 9db7fb23-58c8-4a3e-aa0f-ee3d2c639572
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.two_columns.field_column_distribution
+    - field.field.paragraph.two_columns.field_container_height
     - field.field.paragraph.two_columns.field_container_position
     - field.field.paragraph.two_columns.field_container_width
     - field.field.paragraph.two_columns.field_css_classes
@@ -24,7 +24,6 @@ third_party_settings:
   field_group:
     group_tabs:
       children:
-        - group_headline
         - group_text_1
         - group_text_2
         - group_settings
@@ -131,6 +130,7 @@ third_party_settings:
       children:
         - field_column_distribution
         - field_vertical_alignment
+        - field_container_height
         - field_container_width
         - field_container_position
       parent_name: group_settings
@@ -145,7 +145,7 @@ third_party_settings:
         required_fields: true
       label: Layout
 _core:
-  default_config_hash: ASZDKU4FWu7Jy3Rtq2EICjyPtpXyT9BzlyZM7ZR0KjM
+  default_config_hash: 9zHHdy5YnoOK1b5BbNLSc4ErN8q32hYnjgRXJIBuHNU
 id: paragraph.two_columns.default
 targetEntityType: paragraph
 bundle: two_columns
@@ -157,14 +157,20 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_container_height:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_container_position:
-    weight: 33
+    weight: 34
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_container_width:
-    weight: 32
+    weight: 33
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -199,7 +205,7 @@ content:
     region: content
   field_section_bg:
     type: media_library_widget
-    weight: 26
+    weight: 27
     settings:
       media_types: {  }
     third_party_settings: {  }

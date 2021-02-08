@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_container_height
     - field.field.paragraph.hero.field_container_position
     - field.field.paragraph.hero.field_container_width
     - field.field.paragraph.hero.field_css_classes
@@ -20,7 +21,7 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: mr32U5r8iwl5hVbelEcx1AfXaCHVYHrcZDAMq_jaI_E
+  default_config_hash: 9N6G03544CSjtuv-Vxks72nCPk8xxQcAcd_ZdEl5g6c
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -83,6 +84,7 @@ content:
     type: text_default
     region: content
 hidden:
+  field_container_height: true
   field_container_position: true
   field_container_width: true
   field_css_classes: true

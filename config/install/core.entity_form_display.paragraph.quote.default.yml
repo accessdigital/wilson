@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.quote.field_author
     - field.field.paragraph.quote.field_author_image
     - field.field.paragraph.quote.field_author_title
+    - field.field.paragraph.quote.field_container_height
     - field.field.paragraph.quote.field_container_position
     - field.field.paragraph.quote.field_container_width
     - field.field.paragraph.quote.field_css_classes
@@ -68,6 +69,7 @@ third_party_settings:
       label: Settings
     group_layout:
       children:
+        - field_container_height
         - field_container_width
         - field_container_position
       parent_name: group_settings
@@ -142,6 +144,8 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Author
+_core:
+  default_config_hash: Jd8Kt-namo9dn9WTuR9tpSkeTCQySrxV5YrnkNUv_no
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote
@@ -170,14 +174,20 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_container_height:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_container_position:
-    weight: 9
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_container_width:
-    weight: 8
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -199,13 +209,13 @@ content:
     type: string_textfield
     region: content
   field_padding_bottom:
-    weight: 10
+    weight: 29
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_padding_top:
-    weight: 8
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: options_select

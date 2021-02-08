@@ -7,12 +7,12 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: UxJB4phvbQBu2rHDdkxjTKp4Lvb6zjGTUsKos_ms4UI
+  default_config_hash: IgCE6IFDRiPBuSJ0EKC4YQzPwdfDLSwcCsC2DnpKAJ4
 id: paragraph.three_columns.field_vertical_alignment
 field_name: field_vertical_alignment
 entity_type: paragraph
 bundle: three_columns
-label: 'Vertical alignment'
+label: 'Column vertical alignment'
 description: ''
 required: true
 translatable: true

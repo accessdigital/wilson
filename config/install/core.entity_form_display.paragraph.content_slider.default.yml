@@ -1,8 +1,8 @@
-uuid: 10d71e37-576d-4e46-abf1-28a86e8cedb9
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.content_slider.field_container_height
     - field.field.paragraph.content_slider.field_content_references
     - field.field.paragraph.content_slider.field_css_classes
     - field.field.paragraph.content_slider.field_headline
@@ -49,7 +49,7 @@ third_party_settings:
         description: ''
         formatter: closed
         required_fields: true
-      label: Intro slide
+      label: 'Intro slide'
     group_content:
       children:
         - field_content_references
@@ -66,6 +66,7 @@ third_party_settings:
       label: Content
     group_settings:
       children:
+        - group_layout
         - group_padding
         - group_background
         - group_classes_id
@@ -85,7 +86,7 @@ third_party_settings:
         - field_padding_top
         - field_padding_bottom
       parent_name: group_settings
-      weight: 20
+      weight: 25
       format_type: details
       region: content
       format_settings:
@@ -100,7 +101,7 @@ third_party_settings:
         - field_section_bg_colour
         - field_section_bg
       parent_name: group_settings
-      weight: 21
+      weight: 26
       format_type: details
       region: content
       format_settings:
@@ -115,7 +116,7 @@ third_party_settings:
         - field_css_classes
         - field_id_anchor
       parent_name: group_settings
-      weight: 22
+      weight: 27
       format_type: details
       region: content
       format_settings:
@@ -125,13 +126,33 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Classes & ID'
+    group_layout:
+      children:
+        - field_container_height
+      parent_name: group_settings
+      weight: 24
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Layout
 _core:
-  default_config_hash: l_wgGOi-zCO5hv4MlyylLpEiw7H2xqcmiUJPj1GGC1Q
+  default_config_hash: xj1LTC7eWTZJpE-wJkVRLWrWwvmQm3tC0UDVTeXcobQ
 id: paragraph.content_slider.default
 targetEntityType: paragraph
 bundle: content_slider
 mode: default
 content:
+  field_container_height:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_content_references:
     weight: 1
     settings:
@@ -167,7 +188,7 @@ content:
     type: string_textfield
     region: content
   field_padding_bottom:
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -187,14 +208,14 @@ content:
     type: string_textfield
     region: content
   field_section_bg:
-    weight: 7
+    weight: 24
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
   field_section_bg_colour:
-    weight: 6
+    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: options_select
