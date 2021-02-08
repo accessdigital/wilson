@@ -57,6 +57,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_height:
+            -
+              value: full
           field_container_position:
             -
               value: center
