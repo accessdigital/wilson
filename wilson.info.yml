@@ -5,7 +5,10 @@ core_version_requirement: '^8.8 || ^9'
 
 # Modules to install to support the profile.
 install:
-  - wilson_admin_styles
+  - admin_login_path
+  - admin_toolbar
+  - admin_toolbar_tools
+  - admin_toolbar_links_access_filter
   - block_content
   - breakpoint
   - big_pipe
@@ -43,9 +46,6 @@ install:
   - paragraphs
   - paragraphs_ee
   - config_split
-  - admin_toolbar
-  - admin_toolbar_tools
-  - admin_toolbar_links_access_filter
   - seckit
   - mail_login
   - field_group
@@ -79,6 +79,7 @@ install:
   - password_policy_character_types
   - password_policy_length
   - password_policy_username
+  - wilson_admin_styles
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
