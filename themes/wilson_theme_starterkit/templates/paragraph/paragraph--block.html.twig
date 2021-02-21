@@ -41,16 +41,12 @@
 {% extends "paragraph.html.twig" %}
 
 {#
-If the container width is 'Full' remove the left/right gutter to allow
-embed to touch the sides of the browser.
+  If the container width is 'Full' remove the left/right gutter to allow
+  embed to touch the sides of the browser. The block must provide it's own
+  gutter as required.
 #}
 {% set content_classes = [
-  paragraph.field_container_width.0.value == 'full' ? '-mx-5' : 'rounded-lg shadow-lg overflow-hidden border border-grey-300',
-  'relative',
-  'children:absolute',
-  'children:inset-0',
-  'h-full',
-  'min-h-1/4-screen',
+  paragraph.field_container_width.0.value == 'full' ? '-mx-5' : '',
 ] %}
 
 {% block paragraph_inner %}
@@ -58,7 +54,7 @@ embed to touch the sides of the browser.
   <div{{ create_attribute({'class': inner_container_classes}) }}>
     {% block content %}
       <div{{ create_attribute({'class': content_classes}) }}>
-        {{ content.field_map_address|field_value }}
+        {{ content.field_block|field_value }}
       </div>
     {% endblock %}
   </div>
