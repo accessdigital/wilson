@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
     - field.field.node.page.field_teaser_caption
     - field.field.node.page.field_teaser_image
     - field.field.node.page.field_teaser_title
@@ -11,7 +12,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: wLfnAYqocbY5YnjD9utdGWyPZSF_580fbb8JT8hSi6Y
+  default_config_hash: W6dGoz7tyBBZqkZZF0J8gP4chvYzHJtmzIIjT4vLER0
 id: node.page.teaser
 targetEntityType: node
 bundle: page
@@ -43,4 +44,5 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_meta_tags: true
   links: true

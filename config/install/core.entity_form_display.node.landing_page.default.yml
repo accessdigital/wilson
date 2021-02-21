@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_sections
     - field.field.node.landing_page.field_teaser_caption
     - field.field.node.landing_page.field_teaser_image
@@ -11,6 +12,7 @@ dependencies:
   module:
     - field_group
     - media_library
+    - metatag
     - paragraphs
     - paragraphs_ee
     - paragraphs_features
@@ -63,7 +65,7 @@ third_party_settings:
         required_fields: true
       label: 'Page sections'
 _core:
-  default_config_hash: DX2Wyg0t3AJt1QoI4HQxTDCGtx7i2PA4jiYsY3_HlmE
+  default_config_hash: 61ieLQeEBVu6CIMTjoRbOiknPWcgNh4ECHAZ4QwiQts
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -75,6 +77,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_meta_tags:
+    weight: 26
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_sections:
     type: paragraphs
     weight: 2

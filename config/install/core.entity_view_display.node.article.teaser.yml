@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.field_categories
     - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
     - field.field.node.article.field_pre_header
     - field.field.node.article.field_teaser_caption
     - field.field.node.article.field_teaser_image
@@ -14,6 +15,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: 9Hjx5gtxf8G1O7yhPsCwbSUyb2aI7yTnlvsiVxIdn6Q
 id: node.article.teaser
 targetEntityType: node
 bundle: article
@@ -77,4 +80,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  field_meta_tags: true
   links: true

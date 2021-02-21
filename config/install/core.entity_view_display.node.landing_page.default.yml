@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_sections
     - field.field.node.landing_page.field_teaser_caption
     - field.field.node.landing_page.field_teaser_image
@@ -12,7 +13,7 @@ dependencies:
     - entity_reference_revisions
     - user
 _core:
-  default_config_hash: 7mo35by-xY5K1wiEWlSaO7pVKgdwRA5TPazDeYzX_gg
+  default_config_hash: lBv4o4uY_h_FffPjwGiwkWIi65ufCTVe9nvrQkMnjFc
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -29,6 +30,7 @@ content:
     region: content
 hidden:
   body: true
+  field_meta_tags: true
   field_teaser_caption: true
   field_teaser_image: true
   field_teaser_title: true
