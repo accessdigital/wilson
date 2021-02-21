@@ -47,6 +47,7 @@
         "drupal/twig_tweak": "^3.0",
         "drupal/username_enumeration_prevention": "^1.1",
         "drupal/viewsreference": "2.x-dev",
-        "drupal/webform": "^6.0"
+        "drupal/webform": "^6.0",
+        "drupal/webp": "^1.0@beta"
     }
 }

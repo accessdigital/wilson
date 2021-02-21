@@ -79,6 +79,7 @@ install:
   - views_ui
   - webform
   - webform_ui
+  - webp
   - wilson_admin_styles
 
 # List any themes that should be installed as part of the profile installation.
