@@ -9,76 +9,76 @@ install:
   - admin_toolbar
   - admin_toolbar_tools
   - admin_toolbar_links_access_filter
-  - block_content
-  - breakpoint
   - big_pipe
-  - config
-  - contextual
-  - help
-  - image
-  - options
-  - path
-  - taxonomy
-  - dblog
-  - diff
-  - search
-  - shortcut
-  - toolbar
-  - field_ui
-  - file
-  - rdf
-  - views
-  - views_ui
-  - editor
+  - block_content
+  - block_field
+  - breakpoint
   - ckeditor
-  - media
-  - media_library
-  - menu_ui
-  - menu_link_content
-  - inline_form_errors
-  - dynamic_page_cache
-  - page_cache
-  - responsive_image
-  - syslog
+  - color_field
+  - config
+  - config_split
+  - contextual
+  - crop
   - datetime
   - datetime_range
-  - telephone
-  - paragraphs
-  - paragraphs_ee
-  - config_split
-  - seckit
-  - mail_login
+  - dblog
+  - default_content
+  - diff
+  - dynamic_page_cache
+  - editor
+  - editor_advanced_link
   - field_group
-  - pathauto
-  - webform
-  - webform_ui
-  - color_field
-  - rabbit_hole
-  - rh_taxonomy
-  - crop
+  - field_ui
+  - file
   - focal_point
+  - help
+  - image
+  - image_effects
+  - inline_form_errors
+  - options
+  - mail_login
+  - media
+  - media_library
+  - menu_block
+  - menu_link_attributes
+  - menu_link_content
+  - menu_ui
   - metatag
   - metatag_views
-  - redirect
-  - editor_advanced_link
-  - shield
-  - simple_sitemap
-  - simple_sitemap_views
-  - username_enumeration_prevention
-  - menu_link_attributes
-  - menu_block
-  - viewsreference
-  - block_field
-  - image_effects
-  - simple_gmap
-  - twig_field_value
-  - twig_tweak
-  - default_content
+  - page_cache
+  - paragraphs
+  - paragraphs_ee
   - password_policy
   - password_policy_characters
   - password_policy_character_types
   - password_policy_length
   - password_policy_username
+  - path
+  - pathauto
+  - rabbit_hole
+  - redirect
+  - responsive_image
+  - rh_taxonomy
+  - rdf
+  - search
+  - seckit
+  - shield
+  - shortcut
+  - simple_gmap
+  - simple_sitemap
+  - simple_sitemap_views
+  - syslog
+  - taxonomy
+  - telephone
+  - toolbar
+  - twig_field_value
+  - twig_tweak
+  - username_enumeration_prevention
+  - views
+  - viewsreference
+  - views_ui
+  - webform
+  - webform_ui
   - wilson_admin_styles
 
 # List any themes that should be installed as part of the profile installation.
