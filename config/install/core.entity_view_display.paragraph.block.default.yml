@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block.field_block
+    - field.field.paragraph.block.field_container_height
+    - field.field.paragraph.block.field_container_position
+    - field.field.paragraph.block.field_container_width
+    - field.field.paragraph.block.field_css_classes
+    - field.field.paragraph.block.field_id_anchor
+    - field.field.paragraph.block.field_padding_bottom
+    - field.field.paragraph.block.field_padding_top
+    - field.field.paragraph.block.field_section_bg
+    - field.field.paragraph.block.field_section_bg_colour
+    - paragraphs.paragraphs_type.block
+  module:
+    - block_field
+id: paragraph.block.default
+targetEntityType: paragraph
+bundle: block
+mode: default
+content:
+  field_block:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+hidden:
+  field_container_height: true
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg: true
+  field_section_bg_colour: true
