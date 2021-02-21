@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.views.field_container_height
+    - field.field.paragraph.views.field_container_position
+    - field.field.paragraph.views.field_container_width
+    - field.field.paragraph.views.field_css_classes
+    - field.field.paragraph.views.field_id_anchor
+    - field.field.paragraph.views.field_padding_bottom
+    - field.field.paragraph.views.field_padding_top
+    - field.field.paragraph.views.field_section_bg
+    - field.field.paragraph.views.field_section_bg_colour
+    - field.field.paragraph.views.field_view
+    - paragraphs.paragraphs_type.views
+  module:
+    - viewsreference
+id: paragraph.views.default
+targetEntityType: paragraph
+bundle: views
+mode: default
+content:
+  field_view:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        default: default
+        block: block
+        embed: embed
+        page: 0
+        feed: 0
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden:
+  field_container_height: true
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg: true
+  field_section_bg_colour: true

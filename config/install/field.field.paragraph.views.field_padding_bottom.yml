@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_padding_bottom
+    - paragraphs.paragraphs_type.views
+  module:
+    - options
+id: paragraph.views.field_padding_bottom
+field_name: field_padding_bottom
+entity_type: paragraph
+bundle: views
+label: 'Bottom padding'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: md
+default_value_callback: ''
+settings: {  }
+field_type: list_string
