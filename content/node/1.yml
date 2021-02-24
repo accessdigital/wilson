@@ -323,6 +323,14 @@ default:
               title: 'Content signpost slider'
               options: {  }
             -
+              uri: 'internal:/admin/structure/paragraphs_type/block/fields'
+              title: 'Drupal block'
+              options: {  }
+            -
+              uri: 'internal:/admin/structure/paragraphs_type/views/fields'
+              title: 'Drupal view'
+              options: {  }
+            -
               uri: 'internal:/admin/structure/paragraphs_type/gallery/fields'
               title: Gallery
               options: {  }
