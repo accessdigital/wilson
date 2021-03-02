@@ -186,10 +186,10 @@ default:
               value: justified
           field_padding_bottom:
             -
-              value: none
+              value: md
           field_padding_top:
             -
-              value: md
+              value: none
           field_pre_header:
             -
               value: 'Demo content'
