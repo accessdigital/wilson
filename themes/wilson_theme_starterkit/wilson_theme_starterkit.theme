@@ -8,6 +8,7 @@
 use Drupal\block\Entity\Block;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\Core\Render\Markup;
+use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_preprocess().
@@ -252,7 +253,7 @@ function wilson_theme_starterkit_preprocess_breadcrumb(&$variables) {
   if ($route = $request->attributes->get(\Symfony\Cmf\Component\Routing\RouteObjectInterface::ROUTE_OBJECT)) {
     $title = \Drupal::service('title_resolver')->getTitle($request, $route);
   }
-  
+
   if ($title) {
     $variables['breadcrumb'][] = [
       'text' => $title,
