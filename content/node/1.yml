@@ -116,6 +116,62 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: 'Component examples'
+          field_layout:
+            -
+              value: justified
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_pre_header:
+            -
+              value: 'Demo content'
+          field_primary_cta:
+            -
+              uri: 'internal:/demo-components-page'
+              title: 'View demo page'
+              options: {  }
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 629a5ffc-34ab-4660-a347-4849b7783df3
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611014614
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_container_height:
+            -
+              value: auto
           field_container_position:
             -
               value: center
@@ -130,7 +186,7 @@ default:
               value: justified
           field_padding_bottom:
             -
-              value: md
+              value: none
           field_padding_top:
             -
               value: md
@@ -160,6 +216,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_height:
+            -
+              value: auto
           field_container_position:
             -
               value: center
@@ -204,6 +263,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_height:
+            -
+              value: auto
           field_container_position:
             -
               value: center
@@ -248,6 +310,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_height:
+            -
+              value: auto
           field_container_position:
             -
               value: center
@@ -298,9 +363,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_buttons:
             -
               uri: 'internal:/admin/structure/paragraphs_type/accordion/fields'
@@ -378,6 +440,9 @@ default:
               uri: 'internal:/admin/structure/paragraphs_type/text_webform/fields'
               title: 'Webform & text'
               options: {  }
+          field_container_height:
+            -
+              value: auto
           field_container_position:
             -
               value: center
@@ -417,6 +482,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_height:
+            -
+              value: auto
           field_container_position:
             -
               value: center
@@ -470,6 +538,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_container_height:
+            -
+              value: auto
           field_container_position:
             -
               value: center
