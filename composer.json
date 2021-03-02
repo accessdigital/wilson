@@ -28,6 +28,7 @@
         "drupal/field_group": "^3.1",
         "drupal/focal_point": "^1.5",
         "drupal/image_effects": "^3.1",
+        "drupal/imagemagick": "^3.1",
         "drupal/lightning_scheduler": "^1.2",
         "drupal/mail_login": "^2.2",
         "drupal/menu_block": "^1.6",

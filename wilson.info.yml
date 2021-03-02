@@ -34,6 +34,7 @@ install:
   - help
   - image
   - image_effects
+  - imagemagick
   - inline_form_errors
   - options
   - mail_login
