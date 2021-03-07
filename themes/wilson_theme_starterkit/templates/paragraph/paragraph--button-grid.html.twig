@@ -41,40 +41,25 @@
 {% extends "paragraph.html.twig" %}
 
 {% set content_classes = [
-  'flex',
-  'flex-wrap',
   'justify-start',
-  '-mx-5',
-  '-mb-8',
-  'last:-mb-8',
   'p-0',
   'list-none',
-  'children:px-5',
-  'children:pb-8',
+  'grid',
+  'gap-10',
+  settings_columns
 ] %}
-
-{% if paragraph.field_grid_columns.0.value == '1' %}
-  {% set column_classes = ['px-5', 'pb-8', 'w-full'] %}
-{% elseif paragraph.field_grid_columns.0.value == '2' %}
-  {% set column_classes = ['px-5', 'pb-8', 'w-full', 'sm:w-6/12'] %}
-{% elseif paragraph.field_grid_columns.0.value == '3' %}
-  {% set column_classes = ['px-5', 'pb-8', 'w-full', 'sm:w-6/12', 'md:w-4/12'] %}
-{% elseif paragraph.field_grid_columns.0.value == '4' %}
-  {% set column_classes = ['px-5', 'pb-8', 'w-full', 'sm:w-6/12', 'md:w-4/12', 'lg:w-3/12'] %}
-{% endif %}
 
 {% block content %}
   <nav>
     <ul{{ create_attribute({'class': content_classes}) }}>
       {% for key, item in content.field_buttons if key|first != '#' %}
-        {% set link_classes = [
-          'btn',
-          'btn--primary',
-          'w-full',
-          item['#url'].isExternal ? 'is-external',
-        ] %}
-
-        <li{{ create_attribute({'class': column_classes}) }}>
+        <li>
+          {% set link_classes = [
+            'btn',
+            'btn--primary',
+            'w-full',
+            item['#url'].isExternal ? 'is-external',
+          ] %}
           <a href="{{ item['#url'] }}" {{ create_attribute({'class': link_classes}) }}{% if item['#url'].isExternal %} target="_blank"{% endif %}>{{ item['#title'] }}</a>
         </li>
       {% endfor %}

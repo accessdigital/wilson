@@ -173,19 +173,19 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
   if ($paragraph->hasField('field_grid_columns')) {
     $value = $paragraph->get('field_grid_columns')->getString();
     $responsive = [
-      '1' => 'w-full',
-      '2' => 'w-full sm:w-6/12',
-      '3' => 'w-full sm:w-6/12 lg:w-4/12',
-      '4' => 'w-full sm:w-6/12 lg:w-4/12 xl:w-3/12',
+      '1' => 'grid-cols-1',
+      '2' => 'grid-cols-1 sm:grid-cols-2',
+      '3' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+      '4' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4',
     ];
     $nonResponsive = [
-      '2' => 'w-6/12',
-      '3' => 'w-4/12',
-      '4' => 'w-3/12',
+      '2' => 'grid-cols-2',
+      '3' => 'grid-cols-3',
+      '4' => 'grid-cols-4',
     ];
 
-    $variables['settings_column_width'] = $responsive[$value];
-    $variables['settings_column_width_non_responsive'] = $nonResponsive[$value];
+    $variables['settings_columns'] = $responsive[$value];
+    $variables['settings_columns_responsive'] = $nonResponsive[$value];
   }
 
   // Convert field_container_height value to a tailwind class.

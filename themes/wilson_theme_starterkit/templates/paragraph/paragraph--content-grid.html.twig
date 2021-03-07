@@ -41,26 +41,15 @@
 {% extends "paragraph.html.twig" %}
 
 {% set content_classes = [
-  'flex',
-  'flex-wrap',
-  'justify-start',
-  '-mx-5',
-  '-mb-10',
-] %}
-
-{% set column_classes = [
-  settings_column_width,
-  'px-5',
-  'pb-10',
-  'flex',
+  'grid',
+  'gap-10',
+  settings_columns,
 ] %}
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
     {% for key, item in content.field_content_references if key|first != '#' %}
-      <div{{ create_attribute({'class': column_classes}) }}>
-        {{ item }}
-      </div>
+      {{ item }}
     {% endfor %}
   </div>
 {% endblock %}

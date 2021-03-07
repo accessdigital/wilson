@@ -1,18 +1,9 @@
 {% set content_classes = [
-  'flex',
-  'flex-wrap',
-  'justify-start',
-  '-mx-5',
-  '-mb-10',
-] %}
-
-{% set column_classes = [
-  'w-full',
-  'sm:w-6/12',
-  'lg:w-4/12',
-  'px-5',
-  'pb-10',
-  'flex',
+  'grid',
+  'gap-10',
+  'grid-cols-1',
+  'sm:grid-cols-2',
+  'lg:grid-cols-3',
 ] %}
 
 <div class="container mx-auto">
@@ -22,9 +13,7 @@
 
   <div{{ create_attribute({'class': content_classes}) }}>
     {% for row in rows %}
-      <div{{ create_attribute({'class': column_classes}) }}>
-        {{ row.content }}
-      </div>
+      {{ row.content }}
     {% endfor %}
   </div>
 </div>
