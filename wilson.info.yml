@@ -3,6 +3,13 @@ type: profile
 description: 'A Drupal 9 installation profile, created by Access.'
 core_version_requirement: '^8.8 || ^9'
 
+# Declare your installation profile as a distribution
+# This will make the installer auto-select this installation profile.
+# The distribution_name property is used in the installer and other places as
+# a label for the software being installed.
+distribution:
+  name: Wilson
+
 # Modules to install to support the profile.
 install:
   - admin_login_path
