@@ -10,7 +10,7 @@ third_party_settings:
     parent: 'main:'
 _core:
   default_config_hash: rqkAcyQ3zUUO1n3cxJUcHV6m46EgJZFvAchTzWeT5P4
-name: 'Landing Page'
+name: 'Landing page'
 type: landing_page
 description: 'A page created from various designed content sections.'
 help: ''
