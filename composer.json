@@ -49,6 +49,15 @@
         "drupal/username_enumeration_prevention": "^1.1",
         "drupal/viewsreference": "2.x-dev",
         "drupal/webform": "^6.0",
-        "drupal/webp": "^1.0@beta"
+        "drupal/webp": "^1.0@beta",
+        "drupal/available_updates": "^1.3"
+    },
+    "extra": {
+        "enable-patching": true,
+        "patches": {
+            "drupal/available_updates": {
+                "Updated available_updates": "https://aws.weareaccess.co.uk/0001-available-updates-update.patch"
+            }
+        }
     }
 }
