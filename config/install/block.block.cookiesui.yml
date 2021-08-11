@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - cookies
+  theme:
+    - wilson_theme_starterkit
+id: cookiesui
+theme: wilson_theme_starterkit
+region: off_canvas
+weight: 0
+provider: null
+plugin: cookies_ui_block
+settings:
+  id: cookies_ui_block
+  label: 'Cookies UI'
+  provider: cookies
+  label_display: '0'
+visibility: {  }

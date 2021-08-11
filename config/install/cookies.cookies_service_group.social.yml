@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vog2tbqqQHjVkue0anA0RwlzvOTPNTvP7_JjJxRMVAQ
+id: social
+label: 'Social Plugins'
+weight: 20
+title: 'Social Plugins'
+details: 'Comments managers facilitate the filing of comments and fight against spam.'

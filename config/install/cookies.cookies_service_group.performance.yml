@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Jv3uIJviBj7D282Qu1ZpEQwuOEb3lCcDvx-XVHeOJpw
+id: performance
+label: Performance
+weight: 30
+title: 'Performance cookies'
+details: 'We''d like to set analytics and performance cookies to help us improve our website by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone.'

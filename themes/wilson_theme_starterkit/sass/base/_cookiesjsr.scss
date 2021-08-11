@@ -1,0 +1,38 @@
+body #cookiesjsr {
+  --banner-bg-color: var(--color-secondary);
+  --layer-tab-active-bg-color: var(--color-secondary);
+  --layer-tab-font-color: var(--color-black);
+  --layer-header-font-color: var(--color-black);
+  --layer-footer-font-color: var(--color-black);
+
+  .cookiesjsr-btn {
+    @extend .btn;
+    @extend .btn--secondary;
+
+    @apply normal-case;
+
+    font-size: inherit;
+
+    &:hover {
+      transform: scale(1);
+    }
+
+    &.important {
+      @apply border-primary;
+      @apply bg-primary;
+      @apply text-primary-contrast;
+
+      &:hover {
+        @apply text-primary-contrast;
+      }
+    }
+  }
+
+  .cookiesjsr-layer--title {
+    @apply font-bold;
+  }
+
+  .cookiesjsr-service-group--tab {
+    @apply font-medium;
+  }
+}

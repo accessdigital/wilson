@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MWjA0PCPcQbODMR7UjJxq4hK8JzyYy4zZeQmmQVjC3M
+id: default
+label: Default
+weight: 1
+title: 'Necessary cookies'
+details: 'Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.'

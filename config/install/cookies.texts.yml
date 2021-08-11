@@ -1,0 +1,26 @@
+langcode: en
+default_langcode: en
+bannerText: 'We use cookies to help personalise and improve content and services, monitor site usage, and provide a safer experience.'
+privacyPolicy: 'Privacy policy'
+privacyUri: /
+imprint: ''
+imprintUri: ''
+cookieDocs: 'Cookie policy'
+cookieDocsUri: /
+denyAll: 'Reject all'
+settings: Customise
+acceptAll: 'Accept all'
+allowAll: 'Accept all'
+cookieSettings: 'Personalise cookie settings'
+close: Close
+officialWebsite: 'View official website'
+requiredCookies: 'Required cookies'
+readMore: 'Read more'
+allowed: allowed
+denied: denied
+alwaysActive: 'Always active'
+settingsAllServices: 'Settings for all services'
+saveSettings: 'Save and close'
+credit: ''
+_core:
+  default_config_hash: C8aQz-3d6YpwuU4QQc1iaWHb3RDkc_C9qcEsgR7HR74

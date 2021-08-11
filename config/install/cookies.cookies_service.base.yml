@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: XM4JB6AQPEeejASzikI0SZ5bJNvp4j6qJ9Ri1kK7vyw
+id: base
+label: 'Required cookies'
+group: default
+info:
+  value: "<table>\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th width=\"15%\">Cookie name</th>\r\n\t\t\t<th width=\"15%\">Default expiration time</th>\r\n\t\t\t<th>Description</th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td><code dir=\"ltr\" translate=\"no\">SSESS&lt;ID&gt;</code></td>\r\n\t\t\t<td>1 month</td>\r\n\t\t\t<td>If you are logged in to this website, a session cookie is required to identify and connect your browser to your user account in the server backend of this website.</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td><code dir=\"ltr\" translate=\"no\">cookiesjsr</code></td>\r\n\t\t\t<td>1 year</td>\r\n\t\t\t<td>When you visited this website for the first time, you were asked for your permission to use several services (including those from third parties) that require data to be saved in your browser (cookies, local storage). Your decisions about each service (allow, deny) are stored in this cookie and are reused each time you visit this website.</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n"
+  format: full_html
+url: ''
+consent: false
