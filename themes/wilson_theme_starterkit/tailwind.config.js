@@ -2,7 +2,17 @@ const plugin = require('tailwindcss/plugin');
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    content: [
+      './templates/**/*.html.twig',
+      './scripts/**/*.js',
+      './*.theme',
+    ],
+    options: {
+      safelist: [/^p-/, /^m-/, /^w-/, /^h-/, /^bg-/, /^text-/, /^border-/],
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
