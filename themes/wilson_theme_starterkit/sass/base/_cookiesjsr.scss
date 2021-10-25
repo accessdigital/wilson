@@ -1,9 +1,14 @@
+// See https://github.com/jfeltkamp/cookiesjsr#styling for full list
+// of CSS variables.
 body #cookiesjsr {
   --banner-bg-color: var(--color-secondary);
-  --layer-tab-active-bg-color: var(--color-secondary);
+  --layer-tab-active-bg-color: var(--color-grey-200);
+  --layer-tab-active-font-color: var(--color-black);
   --layer-tab-font-color: var(--color-black);
+  --layer-font-light: var(--color-black);
   --layer-header-font-color: var(--color-black);
   --layer-footer-font-color: var(--color-black);
+  --link-list-separator-color: var(--color-black);
 
   .cookiesjsr-btn {
     @extend .btn;
