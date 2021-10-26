@@ -9,6 +9,7 @@ module.exports = {
       './scripts/**/*.js',
       './*.theme',
     ],
+    layers: ['components', 'utilities'],
     options: {
       safelist: [/^p-/, /^m-/, /^w-/, /^h-/, /^bg-/, /^text-/, /^border-/],
     },
