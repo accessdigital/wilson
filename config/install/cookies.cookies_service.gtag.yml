@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - cookies_gtag
+_core:
+  default_config_hash: IyQS406QuLa6fAnbDgux4OI6Y6fsu_-J_bZDtoXExEI
+id: gtag
+label: 'Google Tag Manager'
+group: performance
+info:
+  format: full_html
+  value: ''
+url: 'https://policies.google.com/privacy'
+consent: true

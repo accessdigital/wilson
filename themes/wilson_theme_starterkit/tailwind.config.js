@@ -77,6 +77,7 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-children'),
+    require('tailwind-css-variables')({}, {}),
     plugin(function({ addUtilities }) {
       const blendMode = {
         '.bg-blend-normal': {

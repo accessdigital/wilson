@@ -8,7 +8,7 @@
 
 const gulp = require('gulp'),
       path = require('path'),
-      sass = require('gulp-sass'),
+      sass = require('gulp-sass')(require('sass')),
       sassGlob = require('gulp-sass-glob'),
       cssnano = require('gulp-cssnano'),
       rename = require('gulp-rename'),

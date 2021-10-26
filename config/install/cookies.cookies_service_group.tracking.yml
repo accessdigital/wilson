@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _gYDe3qoEc6L5uYR6zhu5V-3ARLlyis9gl1diq7Tnf4
+id: tracking
+label: Tracking
+weight: 10
+title: 'Tracking cookies'
+details: 'Marketing cookies come from external advertising companies ("third-party cookies") and are used to collect information about the websites visited by the user. The purpose of this is to create and display target group-oriented content and advertising for the user.'
