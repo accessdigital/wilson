@@ -12,18 +12,16 @@ theme uses the Tailwind 2.0 CSS framework.
 
 ## Usage of this theme
 
-The `node_modules`, `css` and `js` folders are Git ignored in this theme and must be built using `blt`, or by the `npm` & `gulp` commands as below.
+The `node_modules`, `css` and `js` folders are Git ignored in this theme and must be built using `npm` & `gulp` commands as below.
 
-The quickest way to get started with the theme it to run
+Run the following steps:
 
-`ddev exec blt source:build:frontend`
+- Run `npm install` in the wilson_theme_starterkit directory.
+- Run `gulp build` in the wilson_theme_starterkit directory to get the up-to-date CSS file.
 
-from the host machine.
+To ensure that these are run with a managed version of Node, it's best to run these inside the project virtual machine.
 
-This will load the node dependencies and run gulp to build the theme. If you want to run these steps independently,
-you can use `ddev exec blt source:build:frontend-reqs` or `ddev exec blt source:build:frontend-assets` commands respectively.
-
-There are more gulp tasks available by running the following whilst inside the theme folder on the ddev instance:
+There are more gulp tasks available by running the following whilst inside the theme folder:
 - `gulp lint`
 - `gulp lint:css`
 - `gulp build`
@@ -31,6 +29,8 @@ There are more gulp tasks available by running the following whilst inside the t
 - `gulp build:styles`
 - `gulp build:scripts`
 - `gulp watch`
+
+When building the theme for production (via CI for instance) use the `gulp build:dist` command to ensure the Tailwind CSS is purged of un-used classes. See below for more information.
 
 ## Tailwind purging (on `gulp build:dist` only)
 
