@@ -13,7 +13,6 @@ body #cookiesjsr {
   .cookiesjsr-btn {
     @extend .btn;
     @extend .btn--secondary;
-
     @apply normal-case;
 
     font-size: inherit;

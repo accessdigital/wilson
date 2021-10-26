@@ -1,9 +1,6 @@
 {
-  "plugins": [
-    "stylelint-scss"
-  ],
   "extends": [
-    "stylelint-config-standard"
+    "stylelint-config-standard-scss"
   ],
   "ignoreFiles": [
     "node_modules/**/*.css",
@@ -11,7 +8,7 @@
   ],
   "rules": {
     "indentation": 2,
-    "at-rule-no-unknown": [ true, {
+    "scss/at-rule-no-unknown": [ true, {
       "ignoreAtRules": [
         "include",
         "mixin",
@@ -25,15 +22,20 @@
         "warn",
         "error",
         "apply",
-        "tailwind",
         "screen",
-        "layer"
+        "layer",
+        "tailwind"
       ]
     }],
     "font-family-no-missing-generic-family-keyword": [ true, {
         "ignoreFontFamilies": ["fontello"]
       }
     ],
-    "no-descending-specificity": null
+    "custom-property-no-missing-var-function": null,
+    "no-descending-specificity": null,
+    "selector-class-pattern": null,
+    "no-invalid-position-at-import-rule": null,
+    "selector-no-vendor-prefix": null,
+    "scss/at-extend-no-missing-placeholder": null
   }
 }

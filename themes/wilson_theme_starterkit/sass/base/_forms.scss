@@ -1,15 +1,15 @@
 // Initial styles for form elements.
 @layer base {
-  [type='text'],
-  [type='email'],
-  [type='url'],
-  [type='password'],
-  [type='number'],
-  [type='date'],
-  [type='month'],
-  [type='search'],
-  [type='tel'],
-  [type='time'],
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
   [multiple],
   textarea,
   select {
@@ -23,16 +23,16 @@
     @apply text-base;
   }
 
-  [type='text']:focus,
-  [type='email']:focus,
-  [type='url']:focus,
-  [type='password']:focus,
-  [type='number']:focus,
-  [type='date']:focus,
-  [type='month']:focus,
-  [type='search']:focus,
-  [type='tel']:focus,
-  [type='time']:focus,
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="month"]:focus,
+  [type="search"]:focus,
+  [type="tel"]:focus,
+  [type="time"]:focus,
   [multiple]:focus,
   textarea:focus,
   select:focus {
@@ -77,8 +77,8 @@
     color-adjust: unset;
   }
 
-  [type='checkbox'],
-  [type='radio'] {
+  [type="checkbox"],
+  [type="radio"] {
     @apply appearance-none;
     @apply p-0;
     @apply inline-block;
@@ -96,21 +96,21 @@
     user-select: none;
   }
 
-  [type='checkbox'] {
+  [type="checkbox"] {
     @apply rounded-none;
   }
 
-  [type='radio'] {
+  [type="radio"] {
     border-radius: 100%;
   }
 
-  [type='checkbox']:focus,
-  [type='radio']:focus {
+  [type="checkbox"]:focus,
+  [type="radio"]:focus {
     @apply outline-none;
   }
 
-  [type='checkbox']:checked,
-  [type='radio']:checked {
+  [type="checkbox"]:checked,
+  [type="radio"]:checked {
     @apply border-transparent;
     @apply bg-current;
     @apply bg-center;
@@ -119,23 +119,23 @@
     background-size: 100% 100%;
   }
 
-  [type='checkbox']:checked {
+  [type="checkbox"]:checked {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
   }
 
-  [type='radio']:checked {
+  [type="radio"]:checked {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
   }
 
-  [type='checkbox']:checked:hover,
-  [type='checkbox']:checked:focus,
-  [type='radio']:checked:hover,
-  [type='radio']:checked:focus {
+  [type="checkbox"]:checked:hover,
+  [type="checkbox"]:checked:focus,
+  [type="radio"]:checked:hover,
+  [type="radio"]:checked:focus {
     @apply border-transparent;
     @apply bg-current;
   }
 
-  [type='checkbox']:indeterminate {
+  [type="checkbox"]:indeterminate {
     @apply border-transparent;
     @apply bg-current;
     @apply bg-center;
@@ -145,13 +145,13 @@
     background-size: 100% 100%;
   }
 
-  [type='checkbox']:indeterminate:hover,
-  [type='checkbox']:indeterminate:focus {
+  [type="checkbox"]:indeterminate:hover,
+  [type="checkbox"]:indeterminate:focus {
     @apply border-transparent;
     @apply bg-current;
   }
 
-  [type='file'] {
+  [type="file"] {
     @apply border-0;
     @apply rounded-none;
     @apply p-0;
@@ -162,7 +162,7 @@
     line-height: inherit;
   }
 
-  [type='file']:focus {
+  [type="file"]:focus {
     outline: 1px auto -webkit-focus-ring-color;
   }
 
