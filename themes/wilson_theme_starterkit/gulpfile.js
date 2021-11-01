@@ -2,6 +2,7 @@
 //   `gulp lint`
 //   `gulp lint:css`
 //   `gulp build`
+//   `gulp build:dist`
 //   `gulp build:styles`
 //   `gulp build:scripts`
 //   `gulp watch`
@@ -52,15 +53,27 @@ const options = {
   },
 };
 
+// Sass output style config (before minification).
 const sassOptions = {
   outputStyle: 'expanded'
 };
 
+// Autoprefixer config.
 const prefixerOptions = {
   browsers: ['last 2 versions']
 };
 
-// Create the tasks.
+// Manipulate the NODE_ENV indicator.
+task('set-prod-node-env', async function() {
+  return process.env.NODE_ENV = 'production';
+});
+
+task('set-dev-node-env', async function() {
+  return process.env.NODE_ENV = 'development';
+});
+
+// Run all linting tasks.
+// @todo: Add linting for JavaScript.
 task('lint', function(callback) {
   runSequence(
     'lint:css',
@@ -68,6 +81,7 @@ task('lint', function(callback) {
   );
 });
 
+// Lint styles.
 task('lint:css', function stylelint() {
   return src(options.sass.files)
     .pipe(gulpStylelint({
@@ -78,6 +92,7 @@ task('lint:css', function stylelint() {
     }));
 });
 
+// Build the theme assets for local development (i.e. full Tailwind classes).
 task('build', function(callback) {
   runSequence(
     'lint:css',
@@ -87,6 +102,18 @@ task('build', function(callback) {
   );
 });
 
+// Build the theme assets for distribution (i.e. Tailwind purge enabled).
+task('build:dist', async function (callback) {
+  runSequence(
+    'set-prod-node-env',
+    'lint:css',
+    'build:styles',
+    'build:scripts',
+    callback
+  );
+});
+
+// Build Sass in to minified CSS.
 task('build:styles', function styles() {
   return src(options.sass.files)
     .pipe(sassGlob())
@@ -103,6 +130,7 @@ task('build:styles', function styles() {
     .pipe(livereload());
 });
 
+// Minify and transpile JavaScript.
 task('build:scripts', function scripts() {
   return src(options.js.files)
     .pipe(rename({ suffix: '.min' }))
@@ -112,8 +140,17 @@ task('build:scripts', function scripts() {
     .pipe(livereload());
 });
 
+// Enable a watch task that automatically rebuilds Sass and JavaScript.
 task('watch', function develop() {
   livereload.listen();
   watch(options.sass.files, series('build:styles'));
   watch(options.js.files, series('build:scripts'));
+});
+
+// Declare the 'default' task which is used if 'gulp' command is used on its own.
+task('default', async function (callback) {
+  runSequence(
+    'build:dist',
+    callback
+  );
 });
