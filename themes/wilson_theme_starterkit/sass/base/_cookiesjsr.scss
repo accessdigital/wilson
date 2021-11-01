@@ -1,5 +1,7 @@
 // See https://github.com/jfeltkamp/cookiesjsr#styling for full list
 // of CSS variables.
+@import "../modules/buttons";
+
 body #cookiesjsr {
   --banner-bg-color: var(--color-secondary);
   --layer-tab-active-bg-color: var(--color-grey-200);
