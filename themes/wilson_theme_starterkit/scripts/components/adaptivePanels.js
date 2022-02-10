@@ -12,7 +12,6 @@
    * @prop {Drupal~behaviorAttach} attach
    *   Converts panels into collapsible accordions and tabs.
    */
-
   Drupal.behaviors.adaptiveAccordion = {
     attach(context) {
       // Process all accordions on the page.
