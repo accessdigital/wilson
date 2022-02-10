@@ -2,10 +2,7 @@
  * @file
  * Slider.
  */
-(Drupal => {
-
-  'use strict';
-
+((Drupal) => {
   /**
    * Attaches the slider behaviour.
    *
@@ -14,7 +11,6 @@
    * @prop {Drupal~behaviorAttach} attach
    *   Set up carousel functionality using Glide slider.
    */
-
   Drupal.behaviors.slider = {
     attach() {
       const sliderCarousels = document.querySelectorAll('.carousel--slider');
@@ -27,23 +23,23 @@
         // the maximum height of all images before rendering the carousel.
         // To avoid carousel height jumping, optionally, force the images
         // to load before building the gallery. Uncomment to use.
-        carouselImages.forEach(image => {
+        carouselImages.forEach((image) => {
           image.removeAttribute('loading');
         });
 
-        let glide = new Glide(carousel, {
+        const glide = new window.Glide(carousel, {
           type: 'slider',
           perView: 3,
           gap: 40,
           bound: true,
           breakpoints: {
             1024: {
-              perView: 2
+              perView: 2,
             },
             640: {
-              perView: 1
+              perView: 1,
             },
-          }
+          },
         });
 
         // Remove the lazy load attribute from the next image in the gallery.
@@ -59,7 +55,6 @@
 
         glide.mount();
       });
-    }
+    },
   };
-
 })(Drupal);

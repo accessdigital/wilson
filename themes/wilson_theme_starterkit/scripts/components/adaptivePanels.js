@@ -3,10 +3,7 @@
  * Adaptive panels.
  */
 
-(Drupal => {
-
-  'use strict';
-
+((Drupal) => {
   /**
    * Attaches the adaptive panels behaviour.
    *
@@ -21,12 +18,12 @@
       // Process all accordions on the page.
       const elements = context.querySelectorAll('.panels');
 
-      Array.prototype.forEach.call(elements, el => {
+      Array.prototype.forEach.call(elements, (el) => {
         let activeIndex = null;
         const accordion = el;
         const headings = accordion.querySelectorAll('.panels__title');
         const panels = accordion.querySelectorAll('.panels__panel');
-        let tabs = [];
+        const tabs = [];
 
         // Setup a container that may be used to display tabs.
         const tabsContainer = document.createElement('ul');
@@ -34,9 +31,25 @@
         tabsContainer.setAttribute('aria-hidden', 'true');
         tabsContainer.setAttribute('role', 'tablist');
 
+        const revealPanel = (index) => {
+          headings[index].classList.add('is-active');
+          tabs[index].classList.add('is-active');
+          panels[index].classList.add('is-active');
+          activeIndex = index;
+          panels[index].setAttribute('aria-expanded', 'true');
+        };
+
+        const hidePanel = (index) => {
+          if (index !== null) {
+            headings[index].classList.remove('is-active');
+            tabs[index].classList.remove('is-active');
+            panels[index].classList.remove('is-active');
+            panels[index].setAttribute('aria-expanded', 'false');
+          }
+        };
+
         // Cycle through the headings to create tabs and handle click events.
         Array.prototype.forEach.call(headings, (heading, i) => {
-
           // Create a tab item.
           const tabText = document.createTextNode(heading.querySelector('button').innerText);
           const tabLink = document.createElement('button');
@@ -69,7 +82,6 @@
               revealPanel(i);
             }
           });
-
         });
 
         // It the accordion has the modifier class 'accordion--adaptive',
@@ -80,41 +92,23 @@
           accordion.prepend(tabsContainer);
 
           // Update ARIA tags for panels.
-          panels.forEach(panel => {
+          panels.forEach((panel) => {
             panel.setAttribute('role', 'tabpanel');
           });
 
           // Trigger callbacks when entering and exiting the tabs view.
-          mediaQueryCheck(window.mediaQuery.md, () => {
+          window.mediaQueryCheck(window.mediaQuery.md, () => {
             // Reveal the first tab if there is no activeIndex set.
             if (activeIndex === null) {
               revealPanel(0);
             }
           }, () => {
-            panels.forEach(function(panel) {
+            panels.forEach((panel) => {
               panel.setAttribute('role', 'region');
             });
           });
         }
-
-        function revealPanel(index) {
-          headings[index].classList.add('is-active');
-          tabs[index].classList.add('is-active');
-          panels[index].classList.add('is-active');
-          activeIndex = index;
-          panels[index].setAttribute('aria-expanded', 'true');
-        }
-
-        function hidePanel(index) {
-          if (index !== null) {
-            headings[index].classList.remove('is-active');
-            tabs[index].classList.remove('is-active');
-            panels[index].classList.remove('is-active');
-            panels[index].setAttribute('aria-expanded', 'false');
-          }
-        }
       });
-    }
+    },
   };
-
 })(Drupal);

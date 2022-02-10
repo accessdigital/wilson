@@ -1,6 +1,5 @@
 // See https://github.com/jfeltkamp/cookiesjsr#styling for full list
 // of CSS variables.
-@import "../modules/buttons";
 
 body #cookiesjsr {
   --banner-bg-color: var(--color-secondary);
@@ -13,8 +12,8 @@ body #cookiesjsr {
   --link-list-separator-color: var(--color-black);
 
   .cookiesjsr-btn {
-    @extend .btn;
-    @extend .btn--secondary;
+    @apply btn;
+    @apply btn--secondary;
     @apply normal-case;
 
     font-size: inherit;

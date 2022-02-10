@@ -5,10 +5,7 @@
  * Moves the local task tabs from the page to the admin toolbar.
  */
 
-(Drupal => {
-
-  'use strict';
-
+((Drupal) => {
   /**
    * Attaches the local tasks behaviour.
    *
@@ -21,9 +18,9 @@
     attach(context) {
       const editTabs = document.querySelectorAll('.local-tasks-block > ul');
 
-      editTabs.forEach(editTab => {
+      editTabs.forEach((editTab) => {
         const taskItems = editTab.querySelectorAll('li');
-        taskItems.forEach(taskItem => {
+        taskItems.forEach((taskItem) => {
           taskItem.classList.add('menu-item');
         });
 
@@ -58,7 +55,6 @@
         toolbarTab.appendChild(toolbarToolsDiv);
         toolbar.prepend(toolbarTab);
       });
-    }
+    },
   };
-
 })(Drupal);
