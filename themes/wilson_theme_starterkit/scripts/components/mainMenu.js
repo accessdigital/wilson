@@ -1,7 +1,22 @@
-(function (Drupal) {
+/**
+ * @file
+ * Main menu.
+ */
+(Drupal => {
+
+  'use strict';
+
+  /**
+   * Attaches the main menu behaviour.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Set up main menu dropdown and slide out functionality.
+   */
 
   Drupal.behaviors.mainMenu = {
-    attach: function (context, settings) {
+    attach(context) {
 
       // Only progress if there is a menu element to work with.
       if (!!context.querySelector('.navigation nav .menu')) {
@@ -13,11 +28,11 @@
         const backLinks = context.querySelectorAll('.back-link a');
 
         // Setup event listeners for back links.
-        Array.prototype.forEach.call(backLinks, function (backLink) {
+        Array.prototype.forEach.call(backLinks, backLink => {
           const parentWrapper = backLink.closest('.submenu-wrapper');
           const parentMenu = backLink.parentElement;
 
-          backLink.addEventListener('click', function (event) {
+          backLink.addEventListener('click', event => {
             event.preventDefault();
             event.stopPropagation();
 
@@ -26,7 +41,7 @@
           });
         });
 
-        Array.prototype.forEach.call(submenuLinks, function (link) {
+        Array.prototype.forEach.call(submenuLinks, link => {
           const siblingEl = link.nextElementSibling;
           const parentEl = link.closest('ul');
 
@@ -34,13 +49,13 @@
            * Create event listener to set the submenu as active when the
            * corresponding link is clicked.
            */
-          link.addEventListener('click', function (event) {
+          link.addEventListener('click', event => {
             event.preventDefault();
 
             if (!link.classList.contains('menu-item-active')) {
               const activeLinks = parentEl.querySelectorAll('.menu-item-active');
 
-              Array.prototype.forEach.call(activeLinks, function (activeLink) {
+              Array.prototype.forEach.call(activeLinks, activeLink => {
                 activeLink.classList.remove('menu-item-active');
               });
             }
@@ -54,7 +69,7 @@
         });
 
         // Add event listener to top level items with submenus.
-        Array.prototype.forEach.call(topLevelSubmenuLinks, function (link) {
+        Array.prototype.forEach.call(topLevelSubmenuLinks, link => {
           // Check for top submenus in the top level menu.
           const topLevelMenuWrapper = link.nextElementSibling;
           const submenus = topLevelMenuWrapper.querySelectorAll('.submenu-wrapper > .menu-level-2');
@@ -63,12 +78,12 @@
             topLevelMenuWrapper.firstElementChild.classList.add('no-submenus');
           }
 
-          link.addEventListener("click", function () {
+          link.addEventListener('click', () => {
             const activeSubmenus = topLevelMenuWrapper.querySelectorAll('.menu-item-active');
 
             // Set the child submenus to inactive.
             if (activeSubmenus.length > 1) {
-              Array.prototype.forEach.call(activeSubmenus, function (activeSubmenu) {
+              Array.prototype.forEach.call(activeSubmenus, activeSubmenu => {
                 activeSubmenu.classList.remove('menu-item-active');
               });
             }
@@ -83,11 +98,11 @@
 
         menuHeader.classList.add('mobile-header');
         menuClose.classList.add('menu-close', 'btn', 'btn--secondary');
-        menuClose.innerHTML = 'Close';
+        menuClose.innerHTML = Drupal.t('Close');
         menuHeader.prepend(menuClose);
         nav.prepend(menuHeader);
 
-        menuClose.addEventListener('click', function () {
+        menuClose.addEventListener('click', () => {
           body.classList.remove('mobile-menu-is-active');
           nav.classList.remove('menu-item-active');
           topLevelMenu.classList.remove('menu-item-active');
@@ -98,7 +113,7 @@
         const menuOpen = document.querySelector('.menu-open');
 
         if (!!menuOpen) {
-          menuOpen.addEventListener('click', function () {
+          menuOpen.addEventListener('click', () => {
             const activeMenus = document.querySelectorAll('.menu-item-active');
             const firstLink = topLevelMenu.querySelector('.menu-level-0 > li > a');
 
@@ -119,16 +134,15 @@
         }
 
         // Clear any active menus when clicking outside of the navigation.
-        document.addEventListener('mouseup', function(e) {
+        document.addEventListener('mouseup', e => {
           if (!nav.contains(e.target)) {
             const activeItems = context.querySelectorAll('.menu-item-active');
-            Array.prototype.forEach.call(activeItems, function (activeItem) {
+            Array.prototype.forEach.call(activeItems, activeItem => {
               activeItem.classList.remove('menu-item-active');
             });
           }
         });
       }
-
     }
   };
 

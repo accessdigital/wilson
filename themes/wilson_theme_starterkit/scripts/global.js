@@ -2,13 +2,24 @@
  * @file
  * Global JS.
  *
- * JS that should be included everywhere, for example, menu functionality.
+ * JS that should be included everywhere and can't be attached to a specific
+ * component.
  */
 
-(function (Drupal) {
+(Drupal => {
 
-  Drupal.behaviors.myBehaviour = {
-    attach: function (context, settings) {
+  'use strict';
+
+  /**
+   * Attaches the global JS behaviour.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   **TBC: Specific description of this attach function goes here.**
+   */
+  Drupal.behaviors.globalJS = {
+    attach(context, settings) {
       // Your code here...
     }
   };

@@ -1,7 +1,22 @@
-(function (Drupal) {
+/**
+ * @file
+ * Gallery.
+ */
+(Drupal => {
+
+  'use strict';
+
+  /**
+   * Attaches the gallery behaviour.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Set up gallery using Glide slider.
+   */
 
   Drupal.behaviors.gallery = {
-    attach: function (context, settings) {
+    attach() {
       const galleryCarousels = document.querySelectorAll('.carousel--gallery');
 
       galleryCarousels.forEach((galleryCarousel) => {
@@ -37,7 +52,6 @@
 
         glide.mount();
       });
-
     }
   };
 
