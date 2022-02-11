@@ -1,15 +1,31 @@
-(function (Drupal) {
+/**
+ * @file
+ * Adaptive panels.
+ */
+
+(Drupal => {
+
+  'use strict';
+
+  /**
+   * Attaches the adaptive panels behaviour.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Converts panels into collapsible accordions and tabs.
+   */
 
   Drupal.behaviors.adaptiveAccordion = {
-    attach: function (context, settings) {
-      // Process all accordions on the page
-      const elements = context.querySelectorAll(".panels");
+    attach(context) {
+      // Process all accordions on the page.
+      const elements = context.querySelectorAll('.panels');
 
-      Array.prototype.forEach.call(elements, function (el) {
+      Array.prototype.forEach.call(elements, el => {
         let activeIndex = null;
         const accordion = el;
-        const headings = accordion.querySelectorAll(".panels__title");
-        const panels = accordion.querySelectorAll(".panels__panel");
+        const headings = accordion.querySelectorAll('.panels__title');
+        const panels = accordion.querySelectorAll('.panels__panel');
         let tabs = [];
 
         // Setup a container that may be used to display tabs.
@@ -19,20 +35,20 @@
         tabsContainer.setAttribute('role', 'tablist');
 
         // Cycle through the headings to create tabs and handle click events.
-        Array.prototype.forEach.call(headings, function (heading, i) {
+        Array.prototype.forEach.call(headings, (heading, i) => {
 
-          // Create a tab item
-          const tabText = document.createTextNode(heading.querySelector("button").innerText);
+          // Create a tab item.
+          const tabText = document.createTextNode(heading.querySelector('button').innerText);
           const tabLink = document.createElement('button');
           const tabItem = document.createElement('li');
-          tabLink.setAttribute("role", "tab");
+          tabLink.setAttribute('role', 'tab');
           tabLink.appendChild(tabText);
           tabs.push(tabLink);
           tabItem.appendChild(tabLink);
           tabsContainer.appendChild(tabItem);
 
-          // Handle clicks on the tab item
-          tabLink.addEventListener('click', function (event) {
+          // Handle clicks on the tab item.
+          tabLink.addEventListener('click', (event) => {
             event.preventDefault();
 
             if (i !== activeIndex) {
@@ -41,8 +57,8 @@
             }
           });
 
-          // Handle clicks on the accordion headings
-          heading.addEventListener('click', function (event) {
+          // Handle clicks on the accordion headings.
+          heading.addEventListener('click', (event) => {
             event.preventDefault();
 
             if (i === activeIndex) {
@@ -64,17 +80,17 @@
           accordion.prepend(tabsContainer);
 
           // Update ARIA tags for panels.
-          panels.forEach(function(panel) {
+          panels.forEach(panel => {
             panel.setAttribute('role', 'tabpanel');
           });
 
           // Trigger callbacks when entering and exiting the tabs view.
-          mediaQueryCheck(window.mediaQuery.md, function() {
+          mediaQueryCheck(window.mediaQuery.md, () => {
             // Reveal the first tab if there is no activeIndex set.
             if (activeIndex === null) {
               revealPanel(0);
             }
-          }, function() {
+          }, () => {
             panels.forEach(function(panel) {
               panel.setAttribute('role', 'region');
             });
@@ -85,7 +101,6 @@
           headings[index].classList.add('is-active');
           tabs[index].classList.add('is-active');
           panels[index].classList.add('is-active');
-          //panels[index].style.maxHeight = panels[index].scrollHeight + "px";
           activeIndex = index;
           panels[index].setAttribute('aria-expanded', 'true');
         }
@@ -95,12 +110,10 @@
             headings[index].classList.remove('is-active');
             tabs[index].classList.remove('is-active');
             panels[index].classList.remove('is-active');
-            //panels[index].style.maxHeight = null;
             panels[index].setAttribute('aria-expanded', 'false');
           }
         }
       });
-
     }
   };
 

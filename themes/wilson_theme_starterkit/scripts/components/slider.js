@@ -1,7 +1,22 @@
-(function (Drupal) {
+/**
+ * @file
+ * Slider.
+ */
+(Drupal => {
+
+  'use strict';
+
+  /**
+   * Attaches the slider behaviour.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Set up carousel functionality using Glide slider.
+   */
 
   Drupal.behaviors.slider = {
-    attach: function (context, settings) {
+    attach() {
       const sliderCarousels = document.querySelectorAll('.carousel--slider');
 
       sliderCarousels.forEach((sliderCarousel) => {
@@ -12,7 +27,7 @@
         // the maximum height of all images before rendering the carousel.
         // To avoid carousel height jumping, optionally, force the images
         // to load before building the gallery. Uncomment to use.
-        carouselImages.forEach(function(image) {
+        carouselImages.forEach(image => {
           image.removeAttribute('loading');
         });
 
@@ -44,7 +59,6 @@
 
         glide.mount();
       });
-
     }
   };
 

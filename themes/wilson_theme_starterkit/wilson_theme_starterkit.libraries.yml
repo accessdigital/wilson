@@ -22,28 +22,33 @@ adaptivePanels:
     - core/drupal
     - wilson_theme_starterkit/global
 
-gallery:
+glide:
   css:
     theme:
       https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css: { type: external, minified: true }
   js:
     https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.min.js: { type: external, minified: true }
+  dependencies:
+    - core/drupal
+
+gallery:
+  js:
     js/components/gallery.min.js: { minified: true }
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
+    - wilson_theme_starterkit/glide
 
 slider:
   css:
     theme:
-      https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css: { type: external, minified: true }
       css/components/slider.min.css: { minified: true }
   js:
-    https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.min.js: { type: external, minified: true }
     js/components/slider.min.js: { minified: true }
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
+    - wilson_theme_starterkit/glide
 
 mainMenu:
   css:

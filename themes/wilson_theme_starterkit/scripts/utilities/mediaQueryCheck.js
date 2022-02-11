@@ -1,5 +1,6 @@
 /**
- * mediaQueryCheck()
+ * @file
+ * Media query check.
  *
  * A utility that calls a callback function when the window satisfies a given media query.
  *
@@ -18,7 +19,7 @@ window.mediaQuery = {
   xl: '(min-width: 1280px)'
 };
 
-window.mediaQueryCheck = function(mq, enterCallback, exitCallback = function() {}, createListener = true) {
+window.mediaQueryCheck = (mq, enterCallback, exitCallback = () => {}, createListener = true) => {
   if (window.matchMedia(mq).matches) {
     enterCallback();
   }
@@ -27,7 +28,7 @@ window.mediaQueryCheck = function(mq, enterCallback, exitCallback = function() {
   }
 
   if (createListener) {
-    window.matchMedia(mq).addListener(function () {
+    window.matchMedia(mq).addListener(() => {
       mediaQueryCheck(mq, enterCallback, exitCallback, false);
     });
   }

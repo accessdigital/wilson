@@ -1,18 +1,29 @@
 /**
  * @file
- * tasksInToolbar
+ * Tasks in toolbar.
  *
  * Moves the local task tabs from the page to the admin toolbar.
  */
-(function (Drupal) {
 
+(Drupal => {
+
+  'use strict';
+
+  /**
+   * Attaches the local tasks behaviour.
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach} attach
+   *   Moves local task tabs to a 'Page actions' link in admin toolbar.
+   */
   Drupal.behaviors.tasksInToolbar = {
-    attach: function (context, settings) {
+    attach(context) {
       const editTabs = document.querySelectorAll('.local-tasks-block > ul');
 
-      editTabs.forEach((editTab) => {
+      editTabs.forEach(editTab => {
         const taskItems = editTab.querySelectorAll('li');
-        taskItems.forEach((taskItem) => {
+        taskItems.forEach(taskItem => {
           taskItem.classList.add('menu-item');
         });
 
@@ -41,7 +52,7 @@
         toolbarLink.setAttribute('id', 'toolbar-item-tasks');
         toolbarLink.setAttribute('data-toolbar-tray', 'toolbar-item-tasks-tray');
         toolbarLink.setAttribute('role', 'button');
-        toolbarLink.innerHTML = 'Page Actions';
+        toolbarLink.innerHTML = Drupal.t('Page Actions');
 
         toolbarTab.appendChild(toolbarLink);
         toolbarTab.appendChild(toolbarToolsDiv);
