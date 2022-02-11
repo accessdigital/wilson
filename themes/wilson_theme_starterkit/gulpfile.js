@@ -1,26 +1,26 @@
 // Available tasks:
-//   `gulp lint`
-//   `gulp lint:css`
+//   `gulp lint:styles`
+//   `gulp lint:scripts`
 //   `gulp build`
 //   `gulp build:dist`
 //   `gulp build:styles`
 //   `gulp build:scripts`
 //   `gulp watch`
 
-const gulp = require('gulp'),
-      path = require('path'),
-      sass = require('gulp-sass')(require('sass')),
-      sassGlob = require('gulp-sass-glob'),
-      cssnano = require('gulp-cssnano'),
-      rename = require('gulp-rename'),
-      postcss = require('gulp-postcss'),
-      terser = require('gulp-terser'),
-      gulpStylelint = require('gulp-stylelint'),
-      runSequence = require('gulp4-run-sequence'),
-      babel = require('gulp-babel');
-      livereload = require('gulp-livereload');
+const path = require('path'),
+  sass = require('gulp-sass')(require('sass')),
+  sassGlob = require('gulp-sass-glob'),
+  cssnano = require('gulp-cssnano'),
+  rename = require('gulp-rename'),
+  postcss = require('gulp-postcss'),
+  terser = require('gulp-terser'),
+  gulpStylelint = require('gulp-stylelint'),
+  runSequence = require('gulp4-run-sequence'),
+  babel = require('gulp-babel'),
+  livereload = require('gulp-livereload'),
+  eslint = require('gulp-eslint-new');
 
-const { series, parallel, watch, task, src, dest } = require('gulp');
+const { series, watch, task, src, dest } = require('gulp');
 
 const paths = {
   styles: {
@@ -39,13 +39,11 @@ const options = {
     file: path.join(paths.styles.destination, '/styles.css'),
     destination: path.join(paths.styles.destination)
   },
-
   sass: {
     files: path.join(paths.styles.source, '**/*.scss'),
     file: path.join(paths.styles.source, 'styles.scss'),
     destination: path.join(paths.styles.destination)
   },
-
   js: {
     files: path.join(paths.scripts.source, '**/*.js'),
     file: path.join(paths.scripts.source, 'scripts.js'),
@@ -53,36 +51,17 @@ const options = {
   },
 };
 
-// Sass output style config (before minification).
-const sassOptions = {
-  outputStyle: 'expanded'
-};
-
-// Autoprefixer config.
-const prefixerOptions = {
-  browsers: ['last 2 versions']
-};
-
 // Manipulate the NODE_ENV indicator.
-task('set-prod-node-env', async function() {
+task('set-prod-node-env', async () => {
   return process.env.NODE_ENV = 'production';
 });
 
-task('set-dev-node-env', async function() {
+task('set-dev-node-env', async () => {
   return process.env.NODE_ENV = 'development';
 });
 
-// Run all linting tasks.
-// @todo: Add linting for JavaScript.
-task('lint', function(callback) {
-  runSequence(
-    'lint:css',
-    callback
-  );
-});
-
 // Lint styles.
-task('lint:css', function stylelint() {
+task('lint:styles', stylelint = () => {
   return src(options.sass.files)
     .pipe(gulpStylelint({
       failAfterError: true,
@@ -92,10 +71,19 @@ task('lint:css', function stylelint() {
     }));
 });
 
+// Lint scripts.
+task('lint:scripts', stylelint = () => {
+  return src(options.js.files)
+    .pipe(eslint({}))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
 // Build the theme assets for local development (i.e. full Tailwind classes).
-task('build', function(callback) {
+task('build', callback => {
   runSequence(
-    'lint:css',
+    'lint:styles',
+    'lint:scripts',
     'build:styles',
     'build:scripts',
     callback
@@ -103,10 +91,11 @@ task('build', function(callback) {
 });
 
 // Build the theme assets for distribution (i.e. Tailwind purge enabled).
-task('build:dist', async function (callback) {
+task('build:dist', async callback => {
   runSequence(
     'set-prod-node-env',
-    'lint:css',
+    'lint:styles',
+    'lint:scripts',
     'build:styles',
     'build:scripts',
     callback
@@ -114,7 +103,7 @@ task('build:dist', async function (callback) {
 });
 
 // Build Sass in to minified CSS.
-task('build:styles', function styles() {
+task('build:styles', styles = () => {
   return src(options.sass.files)
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
@@ -131,7 +120,7 @@ task('build:styles', function styles() {
 });
 
 // Minify and transpile JavaScript.
-task('build:scripts', function scripts() {
+task('build:scripts', scripts = () => {
   return src(options.js.files)
     .pipe(rename({ suffix: '.min' }))
     .pipe(babel({ presets: ['@babel/env'] }))
@@ -141,14 +130,14 @@ task('build:scripts', function scripts() {
 });
 
 // Enable a watch task that automatically rebuilds Sass and JavaScript.
-task('watch', function develop() {
+task('watch', develop = () => {
   livereload.listen();
   watch(options.sass.files, series('build:styles'));
   watch(options.js.files, series('build:scripts'));
 });
 
 // Declare the 'default' task which is used if 'gulp' command is used on its own.
-task('default', async function (callback) {
+task('default', async callback => {
   runSequence(
     'build:dist',
     callback

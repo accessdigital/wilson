@@ -6,10 +6,7 @@
  * component.
  */
 
-(Drupal => {
-
-  'use strict';
-
+((Drupal) => {
   /**
    * Attaches the global JS behaviour.
    *
@@ -19,9 +16,8 @@
    *   **TBC: Specific description of this attach function goes here.**
    */
   Drupal.behaviors.globalJS = {
-    attach(context, settings) {
+    attach() {
       // Your code here...
-    }
+    },
   };
-
 })(Drupal);

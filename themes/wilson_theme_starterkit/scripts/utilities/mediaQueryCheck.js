@@ -16,20 +16,19 @@
 window.mediaQuery = {
   md: '(min-width: 768px)',
   lg: '(min-width: 1024px)',
-  xl: '(min-width: 1280px)'
+  xl: '(min-width: 1280px)',
 };
 
 window.mediaQueryCheck = (mq, enterCallback, exitCallback = () => {}, createListener = true) => {
   if (window.matchMedia(mq).matches) {
     enterCallback();
-  }
-  else {
+  } else {
     exitCallback();
   }
 
   if (createListener) {
     window.matchMedia(mq).addListener(() => {
-      mediaQueryCheck(mq, enterCallback, exitCallback, false);
+      window.mediaQueryCheck(mq, enterCallback, exitCallback, false);
     });
   }
-}
+};
