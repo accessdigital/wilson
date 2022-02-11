@@ -21,10 +21,11 @@
         let activeIndex = null;
         const accordion = el;
         const headings = accordion.querySelectorAll('.panels__title');
+        const buttons = accordion.querySelectorAll('.panels__button');
         const panels = accordion.querySelectorAll('.panels__panel');
         const tabs = [];
 
-        // Setup a container that may be used to display tabs.
+        // Set up a container that may be used to display tabs.
         const tabsContainer = document.createElement('ul');
         tabsContainer.classList.add('panels__tabs');
         tabsContainer.setAttribute('aria-hidden', 'true');
@@ -35,7 +36,7 @@
           tabs[index].classList.add('is-active');
           panels[index].classList.add('is-active');
           activeIndex = index;
-          panels[index].setAttribute('aria-expanded', 'true');
+          buttons[index].setAttribute('aria-expanded', 'true');
         };
 
         const hidePanel = (index) => {
@@ -43,14 +44,14 @@
             headings[index].classList.remove('is-active');
             tabs[index].classList.remove('is-active');
             panels[index].classList.remove('is-active');
-            panels[index].setAttribute('aria-expanded', 'false');
+            buttons[index].setAttribute('aria-expanded', 'false');
           }
         };
 
         // Cycle through the headings to create tabs and handle click events.
         Array.prototype.forEach.call(headings, (heading, i) => {
           // Create a tab item.
-          const tabText = document.createTextNode(heading.querySelector('button').innerText);
+          const tabText = document.createTextNode(buttons[i].innerText);
           const tabLink = document.createElement('button');
           const tabItem = document.createElement('li');
           tabLink.setAttribute('role', 'tab');
