@@ -16,8 +16,8 @@ const path = require('path'),
   terser = require('gulp-terser'),
   gulpStylelint = require('gulp-stylelint'),
   runSequence = require('gulp4-run-sequence'),
-  babel = require('gulp-babel');
-livereload = require('gulp-livereload'),
+  babel = require('gulp-babel'),
+  livereload = require('gulp-livereload'),
   eslint = require('gulp-eslint-new');
 
 const { series, watch, task, src, dest } = require('gulp');
