@@ -22,24 +22,27 @@
         const submenuLinks = context.querySelectorAll('.navigation li.has-submenu > a, .navigation li.has-submenu > span');
         const backLinks = context.querySelectorAll('.back-link a');
 
-        // Remove active state from link.
+        // Remove active state from active menu links.
         const removeActiveLink = (activeLinks) => {
           Array.prototype.forEach.call(activeLinks, (activeLink) => {
             activeLink.classList.remove('menu-item-active');
+            if (activeLink.hasAttribute('aria-expanded') && activeLink.getAttribute('aria-expanded') === 'true') {
+              activeLink.setAttribute('aria-expanded', 'false');
+            }
           });
         };
 
         // Setup event listeners for back links.
         Array.prototype.forEach.call(backLinks, (backLink) => {
           const parentWrapper = backLink.closest('.submenu-wrapper');
-          const parentMenu = backLink.parentElement;
+          const parentMenuLink = parentWrapper.previousElementSibling;
 
           backLink.addEventListener('click', (event) => {
             event.preventDefault();
             event.stopPropagation();
 
             parentWrapper.classList.remove('menu-item-active');
-            parentMenu.setAttribute('aria-expanded', 'false');
+            parentMenuLink.setAttribute('aria-expanded', 'false');
           });
         });
 
@@ -54,16 +57,21 @@
           link.addEventListener('click', (event) => {
             event.preventDefault();
 
-            // Remove active state from previously selected links.
+            const activeMenuItems = parentEl.querySelectorAll('.menu-item-active');
             if (!link.classList.contains('menu-item-active')) {
-              removeActiveLink(parentEl.querySelectorAll('.menu-item-active'));
+              // Remove active state from previously selected links.
+              if (activeMenuItems) {
+                removeActiveLink(activeMenuItems);
+              }
+              // Set the clicked link's submenu to active.
+              link.classList.add('menu-item-active');
+              link.setAttribute('aria-expanded', 'true');
+              siblingEl.classList.add('menu-item-active');
+            } else {
+              link.classList.remove('menu-item-active');
+              link.setAttribute('aria-expanded', 'false');
+              siblingEl.classList.remove('menu-item-active');
             }
-
-            // Set the clicked link's submenu to active.
-            link.classList.toggle('menu-item-active');
-            siblingEl.classList.toggle('menu-item-active');
-            siblingEl.setAttribute('aria-expanded', 'true');
-            parentEl.setAttribute('aria-expanded', 'false');
           });
         });
 
@@ -92,6 +100,7 @@
         // Setup mobile header.
         const menuHeader = document.createElement('div');
         const menuClose = document.createElement('button');
+        const menuOpen = document.querySelector('.menu-open');
 
         menuHeader.classList.add('mobile-header');
         menuClose.classList.add('menu-close', 'btn', 'btn--secondary');
@@ -100,32 +109,32 @@
         nav.prepend(menuHeader);
 
         menuClose.addEventListener('click', () => {
+          const activeMenuItems = document.querySelectorAll('.menu-item-active');
           body.classList.remove('mobile-menu-is-active');
           nav.classList.remove('menu-item-active');
           topLevelMenu.classList.remove('menu-item-active');
-          topLevelMenu.setAttribute('aria-expanded', 'false');
+          menuOpen.setAttribute('aria-expanded', 'false');
+
+          if (activeMenuItems) {
+            removeActiveLink(activeMenuItems);
+          }
         });
 
         // Create event listener for menu toggle icon.
-        const menuOpen = document.querySelector('.menu-open');
-
         if (menuOpen) {
           menuOpen.addEventListener('click', () => {
-            const activeMenus = document.querySelectorAll('.menu-item-active');
+            const activeMenuItems = document.querySelectorAll('.menu-item-active');
             const firstLink = topLevelMenu.querySelector('.menu-level-0 > li > a');
 
             body.classList.add('mobile-menu-is-active');
             nav.classList.add('menu-item-active');
             topLevelMenu.classList.add('menu-item-active');
-            topLevelMenu.setAttribute('aria-expanded', 'true');
+            menuOpen.setAttribute('aria-expanded', 'true');
             firstLink.focus();
 
             // Remove active class on any submenus when the menu is toggled.
-            if (activeMenus.length > 0) {
-              activeMenus.forEach((activeMenu) => {
-                activeMenu.classList.remove('menu-item-active');
-                activeMenu.setAttribute('aria-expanded', 'false');
-              });
+            if (activeMenuItems) {
+              removeActiveLink(activeMenuItems);
             }
           });
         }
@@ -133,10 +142,10 @@
         // Clear any active menus when clicking outside of the navigation.
         document.addEventListener('mouseup', (e) => {
           if (!nav.contains(e.target)) {
-            const activeItems = context.querySelectorAll('.menu-item-active');
-            Array.prototype.forEach.call(activeItems, (activeItem) => {
-              activeItem.classList.remove('menu-item-active');
-            });
+            const activeMenuItems = context.querySelectorAll('.menu-item-active');
+            if (activeMenuItems) {
+              removeActiveLink(activeMenuItems);
+            }
           }
         });
       }
