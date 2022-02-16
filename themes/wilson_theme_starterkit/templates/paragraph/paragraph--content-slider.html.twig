@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to display a paragraph.
+ * Default theme implementation to display a content slider paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -78,8 +78,12 @@
       </div>
 
       <div class="glide__arrows flex flex-row mt-8" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left px-4 border-2 inline-block text-lg rounded-l-3xl focus:outline-none hover:shadow-halo" data-glide-dir="<">←</button>
-        <button class="glide__arrow glide__arrow--right px-4 border-2 inline-block border-l-0 text-lg rounded-r-3xl focus:outline-none hover:shadow-halo" data-glide-dir=">">→</button>
+        <button class="glide__arrow glide__arrow--left px-4 border-2 inline-block text-lg rounded-l-3xl hover:shadow-halo" data-glide-dir="<" type="button">
+          &#8592;<span class="visually-hidden">{{ 'Previous'|t }}</span>
+        </button>
+        <button class="glide__arrow glide__arrow--right px-4 border-2 inline-block border-l-0 text-lg rounded-r-3xl hover:shadow-halo" data-glide-dir=">" type="button">
+          &#8594;<span class="visually-hidden">{{ 'Next'|t }}</span>
+        </button>
       </div>
     </div>
   </div>

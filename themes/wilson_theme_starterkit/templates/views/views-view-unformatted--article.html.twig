@@ -1,4 +1,21 @@
-{% set content_classes = [
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted article rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+ {% set content_classes = [
   'grid',
   'gap-10',
   'grid-cols-1',
