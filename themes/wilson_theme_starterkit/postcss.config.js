@@ -6,7 +6,7 @@ const postcssConfig = {
   ],
 };
 
-// Enable cssnano and purge on production build.
+// Enable cssnano on production build.
 if (process.env.NODE_ENV === 'production') {
   postcssConfig.plugins.push(
     require('cssnano')({
