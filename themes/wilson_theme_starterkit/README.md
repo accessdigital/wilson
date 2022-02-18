@@ -12,29 +12,84 @@ theme uses the Tailwind 2.0 CSS framework.
 
 ## Usage of this theme
 
-The `node_modules`, `css` and `js` folders are Git ignored in this theme and must be built using `npm` & `gulp` commands as below.
+The `node_modules` and `dist` (consisting of `css` and `js`) folders are Git ignored in this theme and must be built using `npm` commands as below.
 
 Run the following steps:
 
 - Run `npm install` in the wilson_theme_starterkit directory.
-- Run `gulp build` in the wilson_theme_starterkit directory to get the up-to-date CSS file.
+- Run `npm run build` in the wilson_theme_starterkit directory to get the up-to-date CSS file.
 
 To ensure that these are run with a managed version of Node, it's best to run these inside the project virtual machine.
 
-There are more gulp tasks available by running the following whilst inside the theme folder:
-- `gulp lint`
-- `gulp lint:css`
-- `gulp build`
-- `gulp build:dist`
-- `gulp build:styles`
-- `gulp build:scripts`
-- `gulp watch`
+The following commands are available:
 
-When building the theme for production (via CI for instance) use the `gulp build:dist` command to ensure the Tailwind CSS is purged of un-used classes. See below for more information.
+### Compile theme
+```bash
+npm run build
+```
 
-## Tailwind purging (on `gulp build:dist` only)
+This command will run the following scripts:
+- `build:styles` (lints and compiles CSS)
+- `build:scripts` (lints and compiles JS)
 
-To dramatically reduce the size of the compiled theme CSS, Tailwind Purge is enabled on this theme when built via `gulp build:dist`. Use `gulp build` locally to compile CSS with all Tailwind classes.
+### Compile theme (production-ready)
+
+In addition to the default build script, a production version is also available:
+
+```bash
+npm run build:dist
+```
+
+This runs the same `build:styles` and `build:scripts` scripts in `npm run build`, but also sets the `NODE_ENV=production` and `BABEL_ENV=production` variables. These get used to minify CSS and JS as well as [purging Tailwind](#tailwind-purging) of unused classes. Ideally `npm run build:dist` should be run via CI to ensure released code is always optimised for production.
+
+### Compile CSS
+```bash
+npm run build:styles
+```
+
+This command will run the following scripts:
+- `stylelint`
+  - checks code in SCSS files against a set of rules defined in`.stylelintrc` 
+- `sass`
+  - compiles SCSS files from `src/sass` into CSS files in `dist`
+  - any SCSS files prefixed with an `_` will get compiled into a main `styles.css`
+  - any SCSS files without a prefix (e.g. component files) will compiled into seperate css files so they can be included as Drupal libraries
+- `postcss` - defined in `postcss.config.js`
+  - ensures Tailwind CSS is included in compiled CSS 
+  - adds vendor prefixes to compiled CSS
+  - minifies CSS (if in production mode)
+
+### Compile JS
+```bash
+npm run build:scripts
+```
+
+This command will run the following scripts:
+- `eslint`
+  - checks code in JS files against a set of rules defined in `eslintrc.json`
+- `babel`
+  - compiles ECMAScript 6 code from JS files in `source/js` into ECMAScript 5 compatible JS files in `dist/js`
+
+### Watch for changes:
+
+#### CSS
+```bash
+npm run watch:styles
+```
+
+#### JS
+```bash
+npm run watch:scripts
+```
+
+#### All
+```bash
+npm run dev
+```
+
+## Tailwind purging
+
+To dramatically reduce the size of the compiled theme CSS, Tailwind Purge is enabled on this theme when built via `npm run build:dist`. Use `npm run build` locally to compile CSS with all Tailwind classes.
 
 Only Tailwind classes that are used in the template files or SASS will be included in the purged CSS. To use Tailwind classes in config (e.g. in Webform fields), you must add the class to the `purge:options:safelist` in `tailwind.config.js`.
 

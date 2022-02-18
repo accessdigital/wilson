@@ -1,23 +1,23 @@
 global:
   css:
     theme:
-      css/styles.min.css: { minified: true }
+      dist/css/styles.css: { minified: true }
   js:
-    js/global.min.js: { minified: true }
-    js/utilities/mediaQueryCheck.min.js: { minified: true }
+    dist/js/global.js: { minified: true }
+    dist/js/utilities/mediaQueryCheck.js: { minified: true }
   dependencies:
     - core/drupal
 
 admin:
   js:
-    js/utilities/tasksInToolbar.min.js: { minified: true }
+    dist/js/utilities/tasksInToolbar.js: { minified: true }
 
 adaptivePanels:
   css:
     theme:
-      css/components/adaptivePanels.min.css: { minified: true }
+      dist/css/components/adaptivePanels.css: { minified: true }
   js:
-    js/components/adaptivePanels.min.js: { minified: true }
+    dist/js/components/adaptivePanels.js: { minified: true }
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
@@ -33,7 +33,7 @@ glide:
 
 gallery:
   js:
-    js/components/gallery.min.js: { minified: true }
+    dist/js/components/gallery.js: { minified: true }
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
@@ -42,9 +42,9 @@ gallery:
 slider:
   css:
     theme:
-      css/components/slider.min.css: { minified: true }
+      dist/css/components/slider.css: { minified: true }
   js:
-    js/components/slider.min.js: { minified: true }
+    dist/js/components/slider.js: { minified: true }
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
@@ -53,13 +53,13 @@ slider:
 mainMenu:
   css:
     theme:
-      css/components/mainMenu.min.css: { minified: true }
+      dist/css/components/mainMenu.css: { minified: true }
   js:
-    js/components/mainMenu.min.js: { minified: true }
+    dist/js/components/mainMenu.js: { minified: true }
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
 
 backgroundVideos:
   js:
-    js/components/backgroundVideos.min.js: { minified: true }
+    dist/js/components/backgroundVideos.js: { minified: true }
