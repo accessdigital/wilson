@@ -13,22 +13,22 @@
    */
   Drupal.behaviors.slider = {
     attach() {
-      const sliderCarousels = document.querySelectorAll('.carousel--slider');
+      const sliderCarousels = document.querySelectorAll(".carousel--slider");
 
       sliderCarousels.forEach((sliderCarousel) => {
-        const carousel = sliderCarousel.querySelector('.glide');
-        const carouselImages = carousel.querySelectorAll('img');
+        const carousel = sliderCarousel.querySelector(".glide");
+        const carouselImages = carousel.querySelectorAll("img");
 
         // Images with lazy load means that JS can't automatically calculate
         // the maximum height of all images before rendering the carousel.
         // To avoid carousel height jumping, optionally, force the images
         // to load before building the gallery. Uncomment to use.
         carouselImages.forEach((image) => {
-          image.removeAttribute('loading');
+          image.removeAttribute("loading");
         });
 
         const glide = new window.Glide(carousel, {
-          type: 'slider',
+          type: "slider",
           perView: 3,
           gap: 40,
           bound: true,
