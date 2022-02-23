@@ -40,7 +40,7 @@ In addition to the default build script, a production version is also available:
 npm run build:dist
 ```
 
-This runs the same `build:styles` and `build:scripts` scripts in `npm run build`, but also sets the `NODE_ENV=production` and `BABEL_ENV=production` variables. These get used to minify CSS and JS as well as [purging Tailwind](#tailwind-purging) of unused classes. Ideally `npm run build:dist` should be run via CI to ensure released code is always optimised for production.
+This runs the same `build:styles` and `build:scripts` scripts in `npm run build`, but also sets the `NODE_ENV=production` and `BABEL_ENV=production` variables. These get used to minify and format CSS and JS, as well as [purging Tailwind](#tailwind-purging) of unused classes. Ideally `npm run build:dist` should be run via CI to ensure released code is always optimised for production.
 
 ### Compile CSS
 ```bash
@@ -57,7 +57,7 @@ This command will run the following scripts:
 - `postcss` - defined in `postcss.config.js`
   - ensures Tailwind CSS is included in compiled CSS 
   - adds vendor prefixes to compiled CSS
-  - minifies CSS (if in production mode)
+  - minifies and formats CSS (if in production mode)
 
 ### Compile JS
 ```bash
@@ -69,6 +69,11 @@ This command will run the following scripts:
   - checks code in JS files against a set of rules defined in `eslintrc.json`
 - `babel`
   - compiles ECMAScript 6 code from JS files in `source/js` into ECMAScript 5 compatible JS files in `dist/js`
+  - minifies JS (if in production mode)
+
+If this command is run in production mode and has `NODE_ENV=production` set (e.g. as part of `npm run build:dist`), the additional script will also be run:
+- `prettier`
+  - formats code in JS files to ensure it conforms to a consistent style
 
 ### Watch for changes:
 
