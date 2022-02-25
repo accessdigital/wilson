@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Packages required for the Wilson Theme Starterkit.",
   "config": {
-    "stylesSrc": "./src/sass",
+    "stylesSrc": "./src/scss",
     "stylesDist": "./dist/css",
     "scriptsSrc": "./src/js",
     "scriptsDist": "./dist/js"

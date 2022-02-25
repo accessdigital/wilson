@@ -17,7 +17,7 @@ The `node_modules` and `dist` (consisting of `css` and `js`) folders are Git ign
 Run the following steps:
 
 - Run `npm install` in the wilson_theme_starterkit directory.
-- Run `npm run build` in the wilson_theme_starterkit directory to get the up-to-date CSS file.
+- Run `npm run build` in the wilson_theme_starterkit directory to get the up-to-date CSS and JS files.
 
 To ensure that these are run with a managed version of Node, it's best to run these inside the project virtual machine.
 
@@ -53,7 +53,7 @@ This command will run the following scripts:
 - `sass`
   - compiles SCSS files from `src/sass` into CSS files in `dist`
   - any SCSS files prefixed with an `_` will get compiled into a main `styles.css`
-  - any SCSS files without a prefix (e.g. component files) will compiled into seperate css files so they can be included as Drupal libraries
+  - any SCSS files without a prefix (e.g. component files) will get compiled into separate CSS files so that they can be included as Drupal libraries
 - `postcss` - defined in `postcss.config.js`
   - ensures Tailwind CSS is included in compiled CSS 
   - adds vendor prefixes to compiled CSS
