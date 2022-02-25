@@ -53,7 +53,7 @@ This command will run the following scripts:
 - `sass`
   - compiles SCSS files from `src/sass` into CSS files in `dist`
   - any SCSS files prefixed with an `_` will get compiled into a main `styles.css`
-  - any SCSS files without a prefix (e.g. component files) will compiled into seperate css files so they can be included as Drupal libraries
+  - any SCSS files without a prefix (e.g. component files) will get compiled into separate CSS files so that they can be included as Drupal libraries
 - `postcss` - defined in `postcss.config.js`
   - ensures Tailwind CSS is included in compiled CSS 
   - adds vendor prefixes to compiled CSS
