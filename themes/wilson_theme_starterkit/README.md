@@ -17,7 +17,7 @@ The `node_modules` and `dist` (consisting of `css` and `js`) folders are Git ign
 Run the following steps:
 
 - Run `npm install` in the wilson_theme_starterkit directory.
-- Run `npm run build` in the wilson_theme_starterkit directory to get the up-to-date CSS file.
+- Run `npm run build` in the wilson_theme_starterkit directory to get the up-to-date CSS and JS files.
 
 To ensure that these are run with a managed version of Node, it's best to run these inside the project virtual machine.
 
