@@ -4,20 +4,20 @@ global:
       dist/css/styles.css: { minified: true }
   js:
     dist/js/global.js: { minified: true }
-    dist/js/utilities/mediaQueryCheck.js: { minified: true }
+    dist/js/utilities/media-query-check.js: { minified: true }
   dependencies:
     - core/drupal
 
 admin:
   js:
-    dist/js/utilities/tasksInToolbar.js: { minified: true }
+    dist/js/utilities/tasks-in-toolbar.js: { minified: true }
 
-adaptivePanels:
+adaptive_panels:
   css:
     theme:
-      dist/css/components/adaptivePanels.css: { minified: true }
+      dist/css/components/adaptive-panels.css: { minified: true }
   js:
-    dist/js/components/adaptivePanels.js: { minified: true }
+    dist/js/components/adaptive-panels.js: { minified: true }
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
@@ -50,16 +50,16 @@ slider:
     - wilson_theme_starterkit/global
     - wilson_theme_starterkit/glide
 
-mainMenu:
+main_menu:
   css:
     theme:
-      dist/css/components/mainMenu.css: { minified: true }
+      dist/css/components/main-menu.css: { minified: true }
   js:
-    dist/js/components/mainMenu.js: { minified: true }
+    dist/js/components/main-menu.js: { minified: true }
   dependencies:
     - core/drupal
     - wilson_theme_starterkit/global
 
-backgroundVideos:
+background_videos:
   js:
-    dist/js/components/backgroundVideos.js: { minified: true }
+    dist/js/components/background-videos.js: { minified: true }

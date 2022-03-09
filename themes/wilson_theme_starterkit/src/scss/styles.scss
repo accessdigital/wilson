@@ -1,3 +1,5 @@
+@use "base/_font-face";
+
 // Import Tailwind base/resets.
 @use "base/_tailwind-base";
 
@@ -7,13 +9,13 @@
 @use "base/_admin";
 @use "base/_cookiesjsr";
 @use "base/_elements";
-@use "base/_font-face";
 @use "base/_forms";
 @use "base/_layout";
 
 // Import style partials (modules). These are imported before Tailwind
 // components and utilities to allow this CSS to be overridden with a
 // Tailwind class if needed.
+
 @use "modules/_buttons";
 
 // Import Tailwind components & utilities.
