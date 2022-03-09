@@ -75,7 +75,7 @@ If this command is run in production mode and has `NODE_ENV=production` set (e.g
 - `prettier`
   - formats code in JS files to ensure it conforms to a consistent style
 
-### Watch for changes:
+### Watch for changes
 
 #### CSS
 ```bash
@@ -91,6 +91,14 @@ npm run watch:scripts
 ```bash
 npm run dev
 ```
+
+### Automated testing
+
+The theme has an integration with [Cypress](https://www.cypress.io/), which allows front end tests to be written. Tests should be added as JS files within `./cypress/integration` and will be picked up by the Cypress Test Runner. More information on writing testing can be found [here](https://docs.cypress.io/guides/getting-started/writing-your-first-test).
+```bash
+npm run test:local
+```
+This runs Cypress tests (headlessly) to completion, using a base URL of `https://wilson-test.ddev.site`. Note - this base URL will need to be updated to the relevant project url once this theme has been installed.
 
 ## Tailwind purging
 

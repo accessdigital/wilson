@@ -12,7 +12,7 @@ admin:
   js:
     dist/js/utilities/tasks-in-toolbar.js: { minified: true }
 
-adaptive_panels:
+adaptive-panels:
   css:
     theme:
       dist/css/components/adaptive-panels.css: { minified: true }
@@ -50,7 +50,7 @@ slider:
     - wilson_theme_starterkit/global
     - wilson_theme_starterkit/glide
 
-main_menu:
+main-menu:
   css:
     theme:
       dist/css/components/main-menu.css: { minified: true }
@@ -60,6 +60,6 @@ main_menu:
     - core/drupal
     - wilson_theme_starterkit/global
 
-background_videos:
+background-videos:
   js:
     dist/js/components/background-videos.js: { minified: true }

@@ -6,8 +6,7 @@
     "stylesSrc": "./src/scss",
     "stylesDist": "./dist/css",
     "scriptsSrc": "./src/js",
-    "scriptsDist": "./dist/js",
-    "testsScr": "./cypress"
+    "scriptsDist": "./dist/js"
   },
   "scripts": {
     "stylelint": "stylelint $npm_package_config_stylesSrc/**/**/*.scss --config .stylelintrc",
@@ -16,7 +15,7 @@
     "prettier": "prettier --write \"**/*.js\"",
     "eslint": "eslint . --ext .js",
     "babel": "babel $npm_package_config_scriptsSrc --out-dir $npm_package_config_scriptsDist",
-    "test:local": "cypress open --config baseUrl=https://wilson-test.ddev.site",
+    "test:local": "cypress run --config baseUrl=https://wilson-test.ddev.site,video=false",
     "build:styles": "npm run stylelint && npm run sass && npm run postcss",
     "build:scripts": "if-env NODE_ENV=production && npm run prettier && npm run eslint && npm run babel || npm run eslint && npm run babel",
     "build": "npm run build:styles && npm run build:scripts",
