@@ -75,7 +75,7 @@ If this command is run in production mode and has `NODE_ENV=production` set (e.g
 - `prettier`
   - formats code in JS files to ensure it conforms to a consistent style
 
-### Watch for changes:
+### Watch for changes
 
 #### CSS
 ```bash
