@@ -14,11 +14,11 @@
    */
   Drupal.behaviors.gallery = {
     attach() {
-      const galleryCarousels = document.querySelectorAll('.carousel--gallery');
+      const galleryCarousels = document.querySelectorAll(".carousel--gallery");
 
       galleryCarousels.forEach((galleryCarousel) => {
-        const carousel = galleryCarousel.querySelector('.glide');
-        const carouselImages = carousel.querySelectorAll('img');
+        const carousel = galleryCarousel.querySelector(".glide");
+        const carouselImages = carousel.querySelectorAll("img");
 
         // Images with lazy load means that JS can't automatically calculate
         // the maximum height of all images before rendering the carousel.
@@ -29,21 +29,24 @@
         // });
 
         const glide = new window.Glide(carousel, {
-          type: 'slider',
+          type: "slider",
           perView: 1,
           classes: {
-            activeNav: 'bg-current',
+            activeNav: "bg-current",
           },
         });
 
         // Remove the lazy load attribute from the next image in the gallery.
         // If the next image is a different aspect ratio, the carousel size
         // may jump.
-        glide.on('move.after', () => {
+        glide.on("move.after", () => {
           const nextIndex = glide.index + 1;
 
-          if (!!carouselImages[nextIndex] && carouselImages[nextIndex].hasAttribute('loading')) {
-            carouselImages[nextIndex].removeAttribute('loading');
+          if (
+            !!carouselImages[nextIndex] &&
+            carouselImages[nextIndex].hasAttribute("loading")
+          ) {
+            carouselImages[nextIndex].removeAttribute("loading");
           }
         });
 
