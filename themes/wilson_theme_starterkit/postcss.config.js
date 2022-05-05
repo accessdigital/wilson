@@ -1,16 +1,17 @@
+const postcssImport = require("postcss-import");
+const tailwindcss = require("tailwindcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+
 const postcssConfig = {
-  plugins: [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-  ],
+  plugins: [postcssImport, tailwindcss, autoprefixer],
 };
 
 // Enable cssnano on production build.
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   postcssConfig.plugins.push(
-    require('cssnano')({
-      preset: ['default']
+    cssnano({
+      preset: ["default"],
     })
   );
 }
