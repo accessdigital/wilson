@@ -35,7 +35,7 @@ fi
 # Clone the starterkit.
 STARTER_KIT="$SCRIPT_DIR/themes/wilson_theme_starterkit"
 
-printf "\n${YELLOW}## Creating $MACHINE_NAME from the Wilson starerkit${NC}\n"
+printf "\n${YELLOW}## Creating $MACHINE_NAME from the Wilson starterkit${NC}\n"
 cp -R "$STARTER_KIT" "$TARGET_DIR"
 
 # Rename and replace Wilson references in theme.
