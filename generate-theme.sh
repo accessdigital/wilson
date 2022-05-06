@@ -51,7 +51,7 @@ LC_ALL=C find "$TARGET_DIR" -type f -name '*.*' -exec sed -i '' s/wilson_theme_s
 cd "$TARGET_DIR"
 
 # Install theme dependencies and NPM build.
-printf "\n${YELLOW}## Installating NPM dependencies${NC}\n"
+printf "\n${YELLOW}## Installing NPM dependencies${NC}\n"
 printf "* Node version on this environment: "
 node -v
 printf "* NPM version on this environment: "
