@@ -48,7 +48,7 @@ ddev launch
 
 See the README file in the `wilson_theme_starterkit` for more information about the theme and the NPM commands available.
 
-Step 8: Set the new custom theme as the default frontend theme at Manage > Appearance in the Drupal UI.
+**Step 8:** Set the new custom theme as the default frontend theme at Manage > Appearance in the Drupal UI.
 
 ## Drupal quick start (optional)
 
