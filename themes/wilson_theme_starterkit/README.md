@@ -99,3 +99,37 @@ To dramatically reduce the size of the compiled theme CSS, Tailwind Purge is ena
 Only Tailwind classes that are used in the template files or SASS will be included in the purged CSS. To use Tailwind classes in config (e.g. in Webform fields), you must add the class to the `purge:options:safelist` in `tailwind.config.js`.
 
 You can also tell Tailwind to scan more paths when assessing what to purge (e.g. a directory containing a React app). Add the relative path of the `purge:content` section in `tailwind.config.js`.
+
+## npm JS and CSS libraries
+
+As the `node_modules` folder will be excluded from the build artefact, you cannot directly link to npm package assets in Drupal libraries. You must therefore declare the JS and CSS files you need copying from `node_modules` to the theme's `dist` folder.
+
+In package.json, declare the `node_modules` path for each CSS or JS file, separated by spaces:
+
+```bash
+"config": {
+  "copyLibraryFiles": {
+    "css": "./node_modules/@glidejs/glide/dist/css/glide.core.min.css ./node_modules/aos/dist/aos.css",
+    "js": "./node_modules/@glidejs/glide/dist/glide.min.js ./node_modules/aos/dist/aos.js"
+  }
+}
+```
+
+After running `npm run build`, the listed files will be available at `dist/css/libraries` and `dist/js/libraries`, respectively. From here, you can now declare the library for use with Drupal in `wilson_theme_starterkit.libraries.yml`:
+
+```bash
+glide:
+  css:
+    theme:
+      dist/css/libraries/glide.core.min.css: { minified: true }
+  js:
+    dist/js/libraries/glide.min.js: { minified: true }
+  dependencies:
+    - core/drupal
+```
+
+To attach the library to a Drupal Twig template, use:
+
+```bash
+{{ attach_library('wilson_theme_starterkit/glide') }}
+```
