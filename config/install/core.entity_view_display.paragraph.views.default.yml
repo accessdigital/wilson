@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.views.field_aos
     - field.field.paragraph.views.field_container_height
     - field.field.paragraph.views.field_container_position
     - field.field.paragraph.views.field_container_width
@@ -15,13 +16,15 @@ dependencies:
     - paragraphs.paragraphs_type.views
   module:
     - viewsreference
+_core:
+  default_config_hash: jQDJ4Eh7Tsw_s5srDT0_nqR7gXcusdwy-kTJbRrc83s
 id: paragraph.views.default
 targetEntityType: paragraph
 bundle: views
 mode: default
 content:
   field_view:
-    weight: 0
+    type: viewsreference_formatter
     label: hidden
     settings:
       plugin_types:
@@ -31,9 +34,10 @@ content:
         page: 0
         feed: 0
     third_party_settings: {  }
-    type: viewsreference_formatter
+    weight: 0
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

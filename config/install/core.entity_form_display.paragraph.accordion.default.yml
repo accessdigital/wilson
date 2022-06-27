@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.accordion.field_aos
     - field.field.paragraph.accordion.field_container_height
     - field.field.paragraph.accordion.field_container_position
     - field.field.paragraph.accordion.field_container_width
@@ -22,134 +23,143 @@ third_party_settings:
       children:
         - group_content
         - group_settings
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Tabs
     group_settings:
       children:
         - group_layout
         - group_padding
         - group_classes_id
+      label: Settings
+      region: content
       parent_name: group_tabs
       weight: 22
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Settings
     group_layout:
       children:
         - field_container_height
         - field_container_width
         - field_container_position
+        - field_aos
+      label: Layout
+      region: content
       parent_name: group_settings
       weight: 20
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Layout
     group_padding:
       children:
         - field_padding_top
         - field_padding_bottom
+      label: Padding
+      region: content
       parent_name: group_settings
       weight: 21
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Padding
     group_classes_id:
       children:
         - field_css_classes
         - field_id_anchor
+      label: 'Classes & ID'
+      region: content
       parent_name: group_settings
       weight: 22
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Classes & ID'
     group_content:
       children:
         - field_items
+      label: 'Accordion items'
+      region: content
       parent_name: group_tabs
       weight: 21
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Accordion items'
 _core:
-  default_config_hash: '-qHsB-xN5ktLhO1b86nr7dnwTrcd5qKLqcb80v8_yds'
+  default_config_hash: W26zlNSt2VHu_rmKrclPXPzx9Z9Fu0ZFv6-lUCjURgQ
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
+  field_aos:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_container_height:
+    type: options_select
     weight: 23
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_container_position:
+    type: options_select
     weight: 25
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_container_width:
+    type: options_select
     weight: 24
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_css_classes:
+    type: string_textfield
     weight: 8
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_id_anchor:
+    type: string_textfield
     weight: 9
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_items:
+    type: paragraphs
     weight: 3
+    region: content
     settings:
       title: Item
       title_plural: Items
@@ -166,29 +176,27 @@ content:
         duplicate: duplicate
     third_party_settings:
       paragraphs_features:
-        delete_confirmation: true
-        show_drag_and_drop: true
         add_in_between: false
+        delete_confirmation: true
         split_text: false
+        show_drag_and_drop: true
       paragraphs_ee:
         paragraphs_ee:
           dialog_off_canvas: false
           dialog_style: tiles
           easy_access_count: 2
-    type: paragraphs
-    region: content
   field_padding_bottom:
+    type: options_select
     weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_padding_top:
+    type: options_select
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
 hidden:
   created: true
   status: true

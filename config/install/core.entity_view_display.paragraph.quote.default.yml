@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.quote.field_aos
     - field.field.paragraph.quote.field_author
     - field.field.paragraph.quote.field_author_image
     - field.field.paragraph.quote.field_author_title
@@ -19,45 +20,46 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: eHzE_y0vEm1Dmjd5RZcuL14IC5vDzpv95bl9-fQ9o6w
+  default_config_hash: fArw5ofZTilxTGIHDPFwOip4Of6u_EJie25C3CqVfVY
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote
 mode: default
 content:
   field_author:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_author_image:
     type: entity_reference_entity_view
-    weight: 3
     label: hidden
     settings:
       view_mode: thumbnail
       link: false
     third_party_settings: {  }
+    weight: 3
     region: content
   field_author_title:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_text_column:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

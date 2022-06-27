@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.accordion.field_aos
     - field.field.paragraph.accordion.field_container_height
     - field.field.paragraph.accordion.field_container_position
     - field.field.paragraph.accordion.field_container_width
@@ -14,22 +15,23 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: 1WxwTCcPWrOMzIoO5aMABDkmd15YeHSOnP-Nc15WHGg
+  default_config_hash: dttoOPVkYlYr5ldrqE22sW1ZOHKWpFAF6d2AF3LNeSo
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
   field_items:
-    weight: 0
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: accordion
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 0
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

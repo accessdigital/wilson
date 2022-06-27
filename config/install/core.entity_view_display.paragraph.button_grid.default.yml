@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.button_grid.field_aos
     - field.field.paragraph.button_grid.field_buttons
     - field.field.paragraph.button_grid.field_container_height
     - field.field.paragraph.button_grid.field_container_position
@@ -17,7 +18,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: '-LuuiBnnYXTI6t5eYHF995VklfJ2C8Td52GmhIP3kRE'
+  default_config_hash: CxCRl-m-I2L84A0qTsdKagCOuDasRTlxI2Qer2vUQQI
 id: paragraph.button_grid.default
 targetEntityType: paragraph
 bundle: button_grid
@@ -25,8 +26,6 @@ mode: default
 content:
   field_buttons:
     type: link
-    weight: 0
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -35,7 +34,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

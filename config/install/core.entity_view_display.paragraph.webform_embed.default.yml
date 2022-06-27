@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.webform_embed.field_aos
     - field.field.paragraph.webform_embed.field_container_height
     - field.field.paragraph.webform_embed.field_container_position
     - field.field.paragraph.webform_embed.field_container_width
@@ -16,21 +17,22 @@ dependencies:
   module:
     - webform
 _core:
-  default_config_hash: E7pdT9h-TPepy2mW5fjId5ztOt8HiV1C-HfNyHZU8gw
+  default_config_hash: F0JHb7pRtHbAXMsLW2sQJ9p7X2a-_rOQZE-U_svCXuQ
 id: paragraph.webform_embed.default
 targetEntityType: paragraph
 bundle: webform_embed
 mode: default
 content:
   field_webform:
-    weight: 0
+    type: webform_entity_reference_entity_view
     label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
-    type: webform_entity_reference_entity_view
+    weight: 0
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

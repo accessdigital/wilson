@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.content_grid.field_aos
     - field.field.paragraph.content_grid.field_container_height
     - field.field.paragraph.content_grid.field_container_position
     - field.field.paragraph.content_grid.field_container_width
@@ -23,190 +24,197 @@ third_party_settings:
       children:
         - group_content
         - group_settings
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Tabs
     group_content:
       children:
         - field_content_references
+      label: Content
+      region: content
       parent_name: group_tabs
       weight: 6
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Content
     group_settings:
       children:
         - group_layout
         - group_padding
         - group_background
         - group_classes_id
+      label: Settings
+      region: content
       parent_name: group_tabs
       weight: 7
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Settings
     group_layout:
       children:
         - field_grid_columns
         - field_container_height
         - field_container_width
         - field_container_position
+        - field_aos
+      label: Layout
+      region: content
       parent_name: group_settings
       weight: 3
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Layout
     group_background:
       children:
         - field_section_bg_colour
         - field_section_bg
+      label: Background
+      region: content
       parent_name: group_settings
       weight: 5
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Background
     group_classes_id:
       children:
         - field_css_classes
         - field_id_anchor
+      label: 'Classes & ID'
+      region: content
       parent_name: group_settings
       weight: 6
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Classes & ID'
     group_padding:
       children:
         - field_padding_top
         - field_padding_bottom
+      label: Padding
+      region: content
       parent_name: group_settings
       weight: 4
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Padding
 _core:
-  default_config_hash: bwsHFtZRCHhfeyPd3bJ4LUi5VS0443JqUNJfQiHTG9E
+  default_config_hash: VaxRqZZ_Hd7U_nuDGcwGLsOkfJeA8QsXseTMaSkqtzk
 id: paragraph.content_grid.default
 targetEntityType: paragraph
 bundle: content_grid
 mode: default
 content:
+  field_aos:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_container_height:
+    type: options_select
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_container_position:
+    type: options_select
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_container_width:
+    type: options_select
     weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_content_references:
+    type: entity_reference_autocomplete
     weight: 1
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_css_classes:
+    type: string_textfield
     weight: 5
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_grid_columns:
+    type: options_select
     weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_id_anchor:
+    type: string_textfield
     weight: 6
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_padding_bottom:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_padding_top:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_section_bg:
+    type: media_library_widget
     weight: 12
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    type: media_library_widget
-    region: content
   field_section_bg_colour:
+    type: options_select
     weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
 hidden:
   created: true
   status: true

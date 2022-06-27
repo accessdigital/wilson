@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.panel.field_aos
     - field.field.paragraph.panel.field_column_order
     - field.field.paragraph.panel.field_container_height
     - field.field.paragraph.panel.field_container_width
@@ -23,39 +24,39 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: o4jBAOx9vw7oI76jel7CoLRiZ7QUnlnwYHcYubUlmYw
+  default_config_hash: PVILCZb8WezYGAYFb4RPN-7zv-Nh1S5sWCQNssUMb-4
 id: paragraph.panel.default
 targetEntityType: paragraph
 bundle: panel
 mode: default
 content:
   field_headline:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_media_column:
-    weight: 5
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      link: false
       view_mode: grid
+      link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 5
     region: content
   field_pre_header:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_primary_cta:
-    weight: 3
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -64,10 +65,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 3
     region: content
   field_secondary_cta:
-    weight: 4
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -76,16 +77,17 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 4
     region: content
   field_text_column:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
 hidden:
+  field_aos: true
   field_column_order: true
   field_container_height: true
   field_container_width: true

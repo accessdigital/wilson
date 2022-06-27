@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.quote.field_aos
     - field.field.paragraph.quote.field_author
     - field.field.paragraph.quote.field_author_image
     - field.field.paragraph.quote.field_author_title
@@ -27,220 +28,227 @@ third_party_settings:
         - group_quote
         - group_author
         - group_settings
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Tabs
     group_quote:
       children:
         - field_text_column
+      label: Quote
+      region: content
       parent_name: group_tabs
       weight: 22
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Quote
     group_settings:
       children:
         - group_layout
         - group_padding
         - group_background
         - group_clas
+      label: Settings
+      region: content
       parent_name: group_tabs
       weight: 24
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Settings
     group_layout:
       children:
         - field_container_height
         - field_container_width
         - field_container_position
+        - field_aos
+      label: Layout
+      region: content
       parent_name: group_settings
       weight: 22
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Layout
     group_padding:
       children:
         - field_padding_top
         - field_padding_bottom
+      label: Padding
+      region: content
       parent_name: group_settings
       weight: 24
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Padding
     group_background:
       children:
         - field_section_bg_colour
         - field_section_bg
+      label: Background
+      region: content
       parent_name: group_settings
       weight: 25
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: Background
     group_clas:
       children:
         - field_css_classes
         - field_id_anchor
+      label: 'Classes & ID'
+      region: content
       parent_name: group_settings
       weight: 26
       format_type: details
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
-      label: 'Classes & ID'
     group_author:
       children:
         - field_author
         - field_author_title
         - field_author_image
+      label: Author
+      region: content
       parent_name: group_tabs
       weight: 23
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Author
 _core:
-  default_config_hash: Jd8Kt-namo9dn9WTuR9tpSkeTCQySrxV5YrnkNUv_no
+  default_config_hash: 8oVNPWSI7ga1L5xk7VUzmEedhecPwun0_UKmEgNbu7M
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote
 mode: default
 content:
+  field_aos:
+    type: options_select
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_author:
+    type: string_textfield
     weight: 2
+    region: content
     settings:
       size: 60
       placeholder: 'Joe Bloggs'
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_author_image:
     type: media_library_widget
     weight: 4
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_author_title:
+    type: string_textfield
     weight: 3
+    region: content
     settings:
       size: 60
       placeholder: 'Marketing Director'
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_container_height:
+    type: options_select
     weight: 27
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_container_position:
+    type: options_select
     weight: 29
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_container_width:
+    type: options_select
     weight: 28
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_css_classes:
+    type: string_textfield
     weight: 10
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_id_anchor:
+    type: string_textfield
     weight: 11
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_padding_bottom:
+    type: options_select
     weight: 29
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_padding_top:
+    type: options_select
     weight: 28
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_section_bg:
+    type: media_library_widget
     weight: 23
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    type: media_library_widget
-    region: content
   field_section_bg_colour:
+    type: options_select
     weight: 22
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_text_column:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
 hidden:
   created: true
   status: true

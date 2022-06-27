@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.logo_wall.field_aos
     - field.field.paragraph.logo_wall.field_container_height
     - field.field.paragraph.logo_wall.field_container_position
     - field.field.paragraph.logo_wall.field_container_width
@@ -15,22 +16,23 @@ dependencies:
     - field.field.paragraph.logo_wall.field_section_bg_colour
     - paragraphs.paragraphs_type.logo_wall
 _core:
-  default_config_hash: avv_Kc0_YymPlF-uouTo5s-891nPhA_pfxZXIMtu_fs
+  default_config_hash: '-sIDE49AuGVkxxC0Pep2xt-XYQ_u-fG4AQgEoiKCvCM'
 id: paragraph.logo_wall.default
 targetEntityType: paragraph
 bundle: logo_wall
 mode: default
 content:
   field_media:
-    weight: 0
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 0
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true
