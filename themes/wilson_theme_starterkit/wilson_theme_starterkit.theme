@@ -243,6 +243,12 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
         break;
     }
   }
+
+  // Animate on Scroll (AOS) settings.
+  if ($paragraph->hasField('field_aos') && $paragraph->get('field_aos')->getString()) {
+    $variables['settings_container_aos'] = $paragraph->get('field_aos')->getString();
+    $variables['#attached']['library'][] = 'wilson_theme_starterkit/aos';
+  }
 }
 
 /**

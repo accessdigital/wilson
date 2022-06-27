@@ -89,7 +89,7 @@
     {% endif %}
 
     {% block paragraph_container %}
-      <div{{ create_attribute({'class': container_classes}) }}>
+      <div{{ create_attribute({'class': container_classes, 'data-aos': settings_container_aos}) }}>
         {% block paragraph_inner %}
           <div{{ create_attribute({'class': inner_container_classes}) }}>
             {% block content %}
