@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.tabs.field_aos
     - field.field.paragraph.tabs.field_container_height
     - field.field.paragraph.tabs.field_container_position
     - field.field.paragraph.tabs.field_container_width
@@ -15,7 +16,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: wyIKqOWotsAjKlty8AQ7D2GWpxCFmrRJDdAX1YigWho
+  default_config_hash: vfXiugkvg97ZUMcQMu_27wq_270JDujAIniCnlSl-uY
 id: paragraph.tabs.default
 targetEntityType: paragraph
 bundle: tabs
@@ -23,14 +24,15 @@ mode: default
 content:
   field_items:
     type: entity_reference_revisions_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: tab
       link: ''
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

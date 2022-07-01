@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.gallery.field_aos
     - field.field.paragraph.gallery.field_container_position
     - field.field.paragraph.gallery.field_container_width
     - field.field.paragraph.gallery.field_css_classes
@@ -12,7 +13,7 @@ dependencies:
     - field.field.paragraph.gallery.field_section_bg_colour
     - paragraphs.paragraphs_type.gallery
 _core:
-  default_config_hash: CYukXtzSfcUKNbPvuxGed58DZ693463nxwnss_JMOKI
+  default_config_hash: s8lX5K-Tn3tKD_yBBnw-yTt5c0x4h2rD0FDCwAi9SoY
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery
@@ -20,14 +21,15 @@ mode: default
 content:
   field_media:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: gallery
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
+  field_aos: true
   field_container_position: true
   field_container_width: true
   field_css_classes: true

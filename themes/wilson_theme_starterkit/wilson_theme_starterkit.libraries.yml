@@ -22,12 +22,22 @@ adaptive-panels:
     - core/drupal
     - wilson_theme_starterkit/global
 
+aos:
+  css:
+    theme:
+      dist/css/libraries/aos.css: { minified: true }
+  js:
+    dist/js/libraries/aos.js: { minified: true }
+    dist/js/components/aos-init.js: { minified: true }
+  dependencies:
+    - core/drupal
+
 glide:
   css:
     theme:
-      https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css: { type: external, minified: true }
+      dist/css/libraries/glide.core.min.css: { minified: true }
   js:
-    https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.min.js: { type: external, minified: true }
+    dist/js/libraries/glide.min.js: { minified: true }
   dependencies:
     - core/drupal
 

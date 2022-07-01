@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block.field_aos
     - field.field.paragraph.block.field_block
     - field.field.paragraph.block.field_container_height
     - field.field.paragraph.block.field_container_position
@@ -15,19 +16,22 @@ dependencies:
     - paragraphs.paragraphs_type.block
   module:
     - block_field
+_core:
+  default_config_hash: d_-sWjWTPq49fevmcsXzaUWmHpOH0Vu5-U41gd0tvDY
 id: paragraph.block.default
 targetEntityType: paragraph
 bundle: block
 mode: default
 content:
   field_block:
-    weight: 0
+    type: block_field
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: block_field
+    weight: 0
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

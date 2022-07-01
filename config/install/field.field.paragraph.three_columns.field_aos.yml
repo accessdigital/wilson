@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_aos
+    - paragraphs.paragraphs_type.three_columns
+  module:
+    - options
+id: paragraph.three_columns.field_aos
+field_name: field_aos
+entity_type: paragraph
+bundle: three_columns
+label: 'Animate on scroll'
+description: 'Animate this section when it scrolls in to view.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.simple_banner.field_aos
     - field.field.paragraph.simple_banner.field_container_height
     - field.field.paragraph.simple_banner.field_container_position
     - field.field.paragraph.simple_banner.field_container_width
@@ -22,30 +23,30 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: vUSO-v4oBjmv0a0uHjL1_B4O7Kquj8BpaIGyyrH_dcE
+  default_config_hash: 9_1VVMbdtEkT5u6BhqGWm8fv8rUGmCp85zhr_My1xFg
 id: paragraph.simple_banner.default
 targetEntityType: paragraph
 bundle: simple_banner
 mode: default
 content:
   field_headline:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_pre_header:
     type: string
-    weight: 0
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_primary_cta:
-    weight: 3
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -54,10 +55,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 3
     region: content
   field_secondary_cta:
-    weight: 4
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -66,16 +67,17 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 4
     region: content
   field_text_column:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

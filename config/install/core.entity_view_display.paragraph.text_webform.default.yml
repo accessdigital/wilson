@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.text_webform.field_aos
     - field.field.paragraph.text_webform.field_column_order
     - field.field.paragraph.text_webform.field_container_height
     - field.field.paragraph.text_webform.field_css_classes
@@ -23,30 +24,30 @@ dependencies:
     - text
     - webform
 _core:
-  default_config_hash: iFrXQxsUIl4KI384qwDV-JMl_ytvlYMQdbU8R6_R1iQ
+  default_config_hash: r9Q51GL-EpxwWB1wsfhumEb2ow2onpXh0mdAOUDVcRA
 id: paragraph.text_webform.default
 targetEntityType: paragraph
 bundle: text_webform
 mode: default
 content:
   field_headline:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_pre_header:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_primary_cta:
-    weight: 4
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -55,10 +56,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 4
     region: content
   field_secondary_cta:
-    weight: 5
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -67,24 +68,25 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 5
     region: content
   field_text_column:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
   field_webform:
-    weight: 3
+    type: webform_entity_reference_entity_view
     label: hidden
     settings:
       source_entity: true
     third_party_settings: {  }
-    type: webform_entity_reference_entity_view
+    weight: 3
     region: content
 hidden:
+  field_aos: true
   field_column_order: true
   field_container_height: true
   field_css_classes: true

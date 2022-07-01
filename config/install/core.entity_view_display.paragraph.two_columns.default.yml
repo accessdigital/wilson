@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.two_columns.field_aos
     - field.field.paragraph.two_columns.field_column_distribution
     - field.field.paragraph.two_columns.field_container_height
     - field.field.paragraph.two_columns.field_container_position
@@ -19,27 +20,28 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: JhfKvkip9AMOkEnE8FTUjRyB5Mr2GhsFnsVmOtHlpQA
+  default_config_hash: L32Xo-hXIAO2pQlTEHomAJYTqFSXMi3Y0UmyORP3FDA
 id: paragraph.two_columns.default
 targetEntityType: paragraph
 bundle: two_columns
 mode: default
 content:
   field_text_column:
-    weight: 0
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 0
     region: content
   field_text_column_2:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
 hidden:
+  field_aos: true
   field_column_distribution: true
   field_container_height: true
   field_container_position: true

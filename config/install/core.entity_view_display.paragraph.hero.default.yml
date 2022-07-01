@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_aos
     - field.field.paragraph.hero.field_container_height
     - field.field.paragraph.hero.field_container_position
     - field.field.paragraph.hero.field_container_width
@@ -21,30 +22,30 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: 9N6G03544CSjtuv-Vxks72nCPk8xxQcAcd_ZdEl5g6c
+  default_config_hash: Ya13qer1XMOqkqi41-WU9ADvjXrZLJ9LwjJl4XKt6zY
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
   field_headline:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
   field_pre_header:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_primary_cta:
-    weight: 3
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -53,10 +54,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 3
     region: content
   field_secondary_cta:
-    weight: 4
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -65,25 +66,26 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 4
     region: content
   field_section_bg:
     type: entity_reference_entity_view
-    weight: 5
-    region: content
     label: hidden
     settings:
       view_mode: full
       link: false
     third_party_settings: {  }
+    weight: 5
+    region: content
   field_text_column:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: content
 hidden:
+  field_aos: true
   field_container_height: true
   field_container_position: true
   field_container_width: true

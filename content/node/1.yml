@@ -57,6 +57,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_aos:
+            -
+              value: fade-down
           field_container_height:
             -
               value: full
@@ -119,6 +122,9 @@ default:
           revision_translation_affected:
             -
               value: true
+          field_aos:
+            -
+              value: fade-left
           field_container_height:
             -
               value: auto
@@ -169,6 +175,9 @@ default:
           revision_translation_affected:
             -
               value: true
+          field_aos:
+            -
+              value: fade-right
           field_container_height:
             -
               value: auto
@@ -216,6 +225,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_aos:
+            -
+              value: fade-left
           field_container_height:
             -
               value: auto
@@ -263,6 +275,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_aos:
+            -
+              value: fade-right
           field_container_height:
             -
               value: auto
@@ -310,6 +325,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_aos:
+            -
+              value: fade-down
           field_container_height:
             -
               value: auto
@@ -363,6 +381,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_aos:
+            -
+              value: zoom-in
           field_buttons:
             -
               uri: 'internal:/admin/structure/paragraphs_type/accordion/fields'
@@ -482,6 +503,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_aos:
+            -
+              value: fade-in
           field_container_height:
             -
               value: auto
@@ -538,6 +562,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_aos:
+            -
+              value: fade-up
           field_container_height:
             -
               value: auto
