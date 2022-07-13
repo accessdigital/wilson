@@ -1,5 +1,0 @@
-name: Wilson Content
-type: module
-description: 'Wilson overrides to the content editing experience.'
-package: Wilson
-core_version_requirement: ^8.8 || ^9

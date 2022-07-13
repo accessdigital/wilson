@@ -2,7 +2,7 @@ name: Wilson Admin Theme Styles
 type: module
 description: 'Some style overrides for the Claro Admin Theme.'
 package: Wilson
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
 
 libraries:
   - wilson_admin_styles/styles
