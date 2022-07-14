@@ -25,6 +25,7 @@
         "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^4.0",
         "drupal/diff": "^1.0",
+        "drush/drush": "^11.1",
         "drupal/editor_advanced_link": "^1.8",
         "drupal/field_group": "^3.1",
         "drupal/focal_point": "^1.5",
