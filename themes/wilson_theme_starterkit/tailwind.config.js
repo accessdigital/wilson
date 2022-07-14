@@ -23,7 +23,6 @@ module.exports = {
     "h-40",
     "max-w-screen-2xl",
     "p-10",
-    "text-align-center",
     "text-primary",
     "text-secondary",
     "text-tertiary",
