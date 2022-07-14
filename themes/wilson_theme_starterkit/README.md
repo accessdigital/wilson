@@ -11,7 +11,7 @@ See the `tailwind.config.js` file for a list of paths to monitor and for the saf
 
 - [What is Tailwind?](https://tailwindcss.com/)
 - [Configure tailwind.config.js](https://tailwindcss.com/docs/configuration)
-- [Tailwind cheat sheet](https://nerdcave.com/tailwind-cheat-sheet)
+- [Tailwind cheat sheet](https://tailwindcomponents.com/cheatsheet/)
 - [TailwindUI inspiration](https://tailwindui.com/components)
 
 ## Usage of this theme
