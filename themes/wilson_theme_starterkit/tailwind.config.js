@@ -1,17 +1,38 @@
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
-const tailwindChildren = require("tailwindcss-children");
+const tailwindChildren = require("tailwind-children");
 const tailwindVariables = require("tailwind-css-variables");
 
 module.exports = {
-  purge: {
-    content: ["./templates/**/*.html.twig", "./scripts/**/*.js", "./*.theme"],
-    layers: ["components", "utilities"],
-    options: {
-      safelist: [/^p-/, /^m-/, /^w-/, /^h-/, /^bg-/, /^text-/, /^border-/],
+  content: [
+    // Paths where Tailwind should look to build a list of classes.
+    "./templates/**/*.html.twig",
+    "./scripts/**/*.js",
+    "./*.theme",
+  ],
+  safelist: [
+    // Tailwind classes to retain in the compiled output, regardless of
+    // whether they're found in templates or JS. Add classes here which
+    // might be used through the CMS WYSIWYG editor.
+    // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
+    "border-b-2",
+    "bg-tertiary",
+    "bg-fixed",
+    "h-6",
+    "h-24",
+    "h-40",
+    "max-w-screen-2xl",
+    "p-10",
+    "text-align-center",
+    "text-primary",
+    "text-secondary",
+    "text-tertiary",
+    "text-tertiary-contrast",
+    {
+      // Regex pattern to safelist wide ranges of classes.
+      pattern: /^bg-grey-|bg-green-|bg-blend-/,
     },
-  },
-  darkMode: false, // or 'media' or 'class'
+  ],
   theme: {
     colors: {
       transparent: "transparent",
@@ -38,7 +59,7 @@ module.exports = {
       white: "#ffffff",
       green: colors.green,
       red: colors.red,
-      grey: colors.trueGray,
+      grey: colors.neutral,
     },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
@@ -56,21 +77,6 @@ module.exports = {
         "1/2-screen": "50vh",
         "3/4-screen": "75vh",
       },
-    },
-  },
-  variants: {
-    extend: {
-      margin: ["last", "children"],
-      padding: ["last", "children"],
-      width: ["children"],
-      height: ["children"],
-      position: ["children"],
-      inset: ["children"],
-      display: ["children"],
-      borderStyle: ["hover", "focus"],
-      borderRadius: ["children"],
-      scale: ["group-hover"],
-      flexGrow: ["children"],
     },
   },
   plugins: [

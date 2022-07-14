@@ -40,6 +40,7 @@
               perView: 1,
             },
           },
+          classes: {},
         });
 
         // Remove the lazy load attribute from the next image in the gallery.

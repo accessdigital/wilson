@@ -30,8 +30,11 @@ function wilson_theme_starterkit_preprocess_node(&$variables) {
  */
 function wilson_theme_starterkit_preprocess_block(&$variables) {
   if (isset($variables['elements']['#id'])) {
-    $region = Block::load($variables['elements']['#id'])->getRegion();
-    $variables['content']['#attributes']['region'] = $region;
+    $block = Block::load($variables['elements']['#id']);
+    if ($block) {
+      $region = Block::load($variables['elements']['#id'])->getRegion();
+      $variables['content']['#attributes']['region'] = $region;
+    }
   }
 }
 
@@ -161,9 +164,9 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
     $value = $paragraph->get('field_layout')->getString();
     $map = [
       'justified' => 'flex flex-col md:flex-row md:justify-between items-center',
-      'center' => 'flex flex-col text-center',
-      'left' => 'flex flex-col text-left',
-      'right' => 'flex flex-col text-right',
+      'center' => 'flex flex-col text-center descendant-nav:justify-center',
+      'left' => 'flex flex-col text-left descendant-nav:justify-start',
+      'right' => 'flex flex-col text-right descendant-nav:justify-end',
     ];
 
     $variables['settings_layout'] = $map[$value];

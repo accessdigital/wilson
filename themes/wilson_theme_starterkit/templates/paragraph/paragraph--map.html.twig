@@ -47,10 +47,10 @@ embed to touch the sides of the browser.
 {% set content_classes = [
   paragraph.field_container_width.0.value == 'full' ? '-mx-5' : 'rounded-lg shadow-lg overflow-hidden border border-grey-300',
   'relative',
-  'children:absolute',
-  'children:inset-0',
   'h-full',
   'min-h-1/4-screen',
+  'child-iframe:absolute',
+  'child-iframe:inset-0',
 ] %}
 
 {% block paragraph_inner %}

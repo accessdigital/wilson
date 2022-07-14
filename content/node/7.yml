@@ -3711,6 +3711,9 @@ default:
           field_map_address:
             -
               value: 'Trafford House, Chester Road, Manchester, M32 0RS'
+          field_map_zoom:
+            -
+              value: 14
           field_padding_bottom:
             -
               value: none
