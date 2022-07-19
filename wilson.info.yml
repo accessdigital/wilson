@@ -1,7 +1,7 @@
 name: Wilson
 type: profile
-description: 'A Drupal 9 installation profile, created by Access.'
-core_version_requirement: '^8.8 || ^9'
+description: 'The preferred installation profile for content rich sites, created by Access.'
+core_version_requirement: '^9 || ^10'
 
 # Declare your installation profile as a distribution
 # This will make the installer auto-select this installation profile.

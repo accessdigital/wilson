@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.map.field_css_classes
     - field.field.paragraph.map.field_id_anchor
     - field.field.paragraph.map.field_map_address
+    - field.field.paragraph.map.field_map_zoom
     - field.field.paragraph.map.field_padding_bottom
     - field.field.paragraph.map.field_padding_top
     - field.field.paragraph.map.field_section_bg
@@ -17,7 +18,7 @@ dependencies:
   module:
     - simple_gmap
 _core:
-  default_config_hash: iSi8QBrEc7jN5wU5VjXco3zYiO9IkZhzt2f2UdLnKEI
+  default_config_hash: K-CXfcuPXnZMNTmHXBPUJaLWbFEWzyq1lENdD889rLw
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map
@@ -50,6 +51,7 @@ hidden:
   field_container_width: true
   field_css_classes: true
   field_id_anchor: true
+  field_map_zoom: true
   field_padding_bottom: true
   field_padding_top: true
   field_section_bg: true

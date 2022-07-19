@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map_zoom
+    - paragraphs.paragraphs_type.map
+  module:
+    - options
+id: paragraph.map.field_map_zoom
+field_name: field_map_zoom
+entity_type: paragraph
+bundle: map
+label: 'Map zoom level'
+description: 'Set zoom level for this map. Select higher numbers for street level maps, and smaller numbers of regions and countries.'
+required: true
+translatable: false
+default_value:
+  -
+    value: '14'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
