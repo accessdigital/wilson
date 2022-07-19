@@ -129,7 +129,7 @@ default:
               format: full_html
           field_text_column_2:
             -
-              value: "<blockquote>\r\n<p class=\"text-align-center\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit donec lacus purus.\"</p>\r\n</blockquote>\r\n"
+              value: "<blockquote>\r\n<p class=\"text-center\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit donec lacus purus.\"</p>\r\n</blockquote>\r\n"
               format: full_html
           field_vertical_alignment:
             -

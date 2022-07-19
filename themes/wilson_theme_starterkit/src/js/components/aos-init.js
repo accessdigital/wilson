@@ -17,7 +17,7 @@
       if (typeof AOS !== "undefined") {
         // eslint-disable-next-line no-undef
         AOS.init({
-          duration: 600
+          duration: 600,
           // See https://github.com/michalsnik/aos#1-initialize-aos for possible global AOS options.
         });
       }

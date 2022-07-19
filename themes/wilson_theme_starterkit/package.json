@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Packages required for the Wilson Theme Starterkit.",
   "config": {
+    "templatesSrc": "./templates",
     "stylesSrc": "./src/scss",
     "stylesDist": "./dist/css",
     "stylesLib": "./dist/css/libraries",
@@ -27,7 +28,7 @@
     "build:scripts": "if-env NODE_ENV=production && npm run prettier && npm run eslint && npm run babel || npm run eslint && npm run babel",
     "build": "npm run build:styles && npm run build:scripts && npm run copy:styles && npm run copy:scripts",
     "build:dist": "cross-env NODE_ENV=production BABEL_ENV=production npm run build",
-    "watch:styles": "onchange -p 100 $npm_package_config_stylesSrc -- npm run build:styles",
+    "watch:styles": "onchange -p 100 $npm_package_config_templatesSrc $npm_package_config_stylesSrc $npm_package_config_scriptsSrc -- npm run build:styles",
     "watch:scripts": "onchange -p 100 $npm_package_config_scriptsSrc -- npm run build:scripts",
     "dev": "concurrently \"npm:watch:styles\" \"npm:watch:scripts\""
   },
@@ -35,7 +36,7 @@
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.7",
     "babel-preset-minify": "^0.5.1",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
@@ -49,7 +50,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "if-env": "^1.0.4",
     "onchange": "^7.1.0",
-    "postcss": "^8.4.6",
+    "postcss": "^8.4.14",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^6.2.0",
@@ -59,9 +60,9 @@
     "stylelint-config-standard": "^23.0.0",
     "stylelint-config-standard-scss": "^2.0.0",
     "stylelint-scss": "^4.0.0",
+    "tailwind-children": "^0.5.0",
     "tailwind-css-variables": "^3.0.1",
-    "tailwindcss": "^2.2.17",
-    "tailwindcss-children": "^2.1.0"
+    "tailwindcss": "^3.1.6"
   },
   "dependencies": {
     "@glidejs/glide": "^3.5.2",

@@ -1,13 +1,17 @@
 # Wilson Theme Starterkit
 
 A theme for the Wilson installation profile, based on the Stable core theme. This is a starterkit and should be renamed for project use. This
-theme uses the Tailwind 2.0 CSS framework.
+theme uses the Tailwind 3.0 CSS framework.
 
 ## Tailwind help
 
+Tailwind 3.0 uses the new Just In Time engine, meaning the that Tailwind classes are added to the CSS when they are detected as being used in source code (i.e. a Twig template or JS file).
+
+See the `tailwind.config.js` file for a list of paths to monitor and for the safelist of classes to always include (i.e. to support markup provided by the database).
+
 - [What is Tailwind?](https://tailwindcss.com/)
 - [Configure tailwind.config.js](https://tailwindcss.com/docs/configuration)
-- [Tailwind cheat sheet](https://nerdcave.com/tailwind-cheat-sheet)
+- [Tailwind cheat sheet](https://tailwindcomponents.com/cheatsheet/)
 - [TailwindUI inspiration](https://tailwindui.com/components)
 
 ## Usage of this theme
@@ -22,6 +26,21 @@ Run the following steps:
 To ensure that these are run with a managed version of Node, it's best to run these inside the project virtual machine.
 
 The following commands are available:
+
+### Local development - watch for changes
+
+```bash
+npm run dev
+```
+
+This will monitor for changes in the `src/js`, `src/scss` and `templates` folders and continually trigger a rebuild of the `dist` assets.
+
+Alternatively you can watch styles and scripts separately.
+
+```bash
+npm run watch:styles
+npm run watch:scripts
+```
 
 ### Compile theme
 ```bash
@@ -40,7 +59,7 @@ In addition to the default build script, a production version is also available:
 npm run build:dist
 ```
 
-This runs the same `build:styles` and `build:scripts` scripts in `npm run build`, but also sets the `NODE_ENV=production` and `BABEL_ENV=production` variables. These get used to minify and format CSS and JS, as well as [purging Tailwind](#tailwind-purging) of unused classes. Ideally `npm run build:dist` should be run via CI to ensure released code is always optimised for production.
+This runs the same `build:styles` and `build:scripts` scripts in `npm run build`, but also sets the `NODE_ENV=production` and `BABEL_ENV=production` variables. These get used to minify and format CSS and JS. Ideally `npm run build:dist` should be run via CI to ensure released code is always optimised for production.
 
 ### Compile CSS
 ```bash
@@ -49,13 +68,13 @@ npm run build:styles
 
 This command will run the following scripts:
 - `stylelint`
-  - checks code in SCSS files against a set of rules defined in`.stylelintrc` 
+  - checks code in SCSS files against a set of rules defined in`.stylelintrc`
 - `sass`
   - compiles SCSS files from `src/sass` into CSS files in `dist`
   - any SCSS files prefixed with an `_` will get compiled into a main `styles.css`
   - any SCSS files without a prefix (e.g. component files) will get compiled into separate CSS files so that they can be included as Drupal libraries
 - `postcss` - defined in `postcss.config.js`
-  - ensures Tailwind CSS is included in compiled CSS 
+  - ensures Tailwind CSS is included in compiled CSS
   - adds vendor prefixes to compiled CSS
   - minifies and formats CSS (if in production mode)
 
@@ -74,31 +93,6 @@ This command will run the following scripts:
 If this command is run in production mode and has `NODE_ENV=production` set (e.g. as part of `npm run build:dist`), the additional script will also be run:
 - `prettier`
   - formats code in JS files to ensure it conforms to a consistent style
-
-### Watch for changes
-
-#### CSS
-```bash
-npm run watch:styles
-```
-
-#### JS
-```bash
-npm run watch:scripts
-```
-
-#### All
-```bash
-npm run dev
-```
-
-## Tailwind purging
-
-To dramatically reduce the size of the compiled theme CSS, Tailwind Purge is enabled on this theme when built via `npm run build:dist`. Use `npm run build` locally to compile CSS with all Tailwind classes.
-
-Only Tailwind classes that are used in the template files or SASS will be included in the purged CSS. To use Tailwind classes in config (e.g. in Webform fields), you must add the class to the `purge:options:safelist` in `tailwind.config.js`.
-
-You can also tell Tailwind to scan more paths when assessing what to purge (e.g. a directory containing a React app). Add the relative path of the `purge:content` section in `tailwind.config.js`.
 
 ## npm JS and CSS libraries
 

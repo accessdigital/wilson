@@ -32,7 +32,9 @@
           type: "slider",
           perView: 1,
           classes: {
-            activeNav: "bg-current",
+            nav: {
+              active: "bg-current",
+            },
           },
         });
 

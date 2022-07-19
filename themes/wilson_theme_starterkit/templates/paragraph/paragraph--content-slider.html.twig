@@ -43,6 +43,8 @@
 {% set classes = [
   'carousel',
   'carousel--slider',
+  'w-[80vw]',
+  'md:w-auto'
 ] %}
 
 {% block content %}
@@ -50,8 +52,8 @@
 
   <div{{ create_attribute({'class': classes}) }}>
     <div class="glide">
-      <div data-glide-el="track" class="glide__track">
-        <div class="glide__slides">
+      <div data-glide-el="track" class="glide__track !overflow-visible">
+        <div class="glide__slides !overflow-visible child-div:whitespace-normal">
           {% if content.field_pre_header|render or content.field_headline|render or content.field_text_column|render %}
             <div>
               {% if content.field_pre_header|render or content.field_headline|render %}

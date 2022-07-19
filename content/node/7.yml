@@ -213,7 +213,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Full screen width<br />\r\n(Includes a left/right gutter on most components to prevent text touching the edge of the window)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Full screen width<br />\r\n(Includes a left/right gutter on most components to prevent text touching the edge of the window)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -250,7 +250,7 @@ default:
               value: sm
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Extra Wide<br />\r\n(Applicable to XL breakpoint only)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Extra Wide<br />\r\n(Applicable to XL breakpoint only)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -287,7 +287,7 @@ default:
               value: sm
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Normal<br />\r\n(Default)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Normal<br />\r\n(Default)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -324,7 +324,7 @@ default:
               value: sm
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Medium<br />\r\n(Left)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Medium<br />\r\n(Left)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -361,7 +361,7 @@ default:
               value: sm
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Medium<br />\r\n(Center)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Medium<br />\r\n(Center)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -398,7 +398,7 @@ default:
               value: sm
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Medium<br />\r\n(Right)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Medium<br />\r\n(Right)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -435,7 +435,7 @@ default:
               value: sm
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Narrow<br />\r\n(Left)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Narrow<br />\r\n(Left)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -472,7 +472,7 @@ default:
               value: sm
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Narrow<br />\r\n(Center)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Narrow<br />\r\n(Center)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -509,7 +509,7 @@ default:
               value: sm
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Narrow<br />\r\n(Right)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Narrow<br />\r\n(Right)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -589,7 +589,7 @@ default:
               entity: 7f9667b2-a63f-48b9-8885-8581b9790077
           field_text_column:
             -
-              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-align-center\"><span>Narrow<br />\r\n(Right)</span></div>\r\n"
+              value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Narrow<br />\r\n(Right)</span></div>\r\n"
               format: full_html
     -
       entity:
@@ -666,7 +666,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<p class=\"font-bold text-grey-400 uppercase tracking-widest text-align-center\">Auto<br />\r\n(Default)<br />\r\n<br />\r\nWill match the<br />\r\nheight of<br />\r\ncontents + PADDING</p>\r\n"
+              value: "<p class=\"font-bold text-grey-400 uppercase tracking-widest text-center\">Auto<br />\r\n(Default)<br />\r\n<br />\r\nWill match the<br />\r\nheight of<br />\r\ncontents + PADDING</p>\r\n"
               format: full_html
     -
       entity:
@@ -706,7 +706,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<p class=\"font-bold text-grey-400 uppercase tracking-widest text-align-center\">Small<br />\r\n¼ screen height</p>\r\n"
+              value: "<p class=\"font-bold text-grey-400 uppercase tracking-widest text-center\">Small<br />\r\n¼ screen height</p>\r\n"
               format: full_html
     -
       entity:
@@ -746,7 +746,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<p class=\"font-bold text-grey-400 uppercase tracking-widest text-align-center\">Medium<br />\r\n½ screen height</p>\r\n"
+              value: "<p class=\"font-bold text-grey-400 uppercase tracking-widest text-center\">Medium<br />\r\n½ screen height</p>\r\n"
               format: full_html
     -
       entity:
@@ -786,7 +786,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<p class=\"font-bold text-grey-100 uppercase tracking-widest text-align-center\">Large<br />\r\n¾ screen height</p>\r\n"
+              value: "<p class=\"font-bold text-grey-100 uppercase tracking-widest text-center\">Large<br />\r\n¾ screen height</p>\r\n"
               format: full_html
     -
       entity:
@@ -826,7 +826,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<p class=\"font-bold text-grey-100 uppercase tracking-widest text-align-center\">Full<br />\r\n100% screen height</p>\r\n"
+              value: "<p class=\"font-bold text-grey-100 uppercase tracking-widest text-center\">Full<br />\r\n100% screen height</p>\r\n"
               format: full_html
     -
       entity:
@@ -900,7 +900,7 @@ default:
               value: none
           field_text_column:
             -
-              value: "<div class=\"-mx-5 border-b-2 border-dashed\">\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-align-center\">None</div>\r\n</div>\r\n\r\n<div class=\"-mx-5 border-b-2 border-dashed\">\r\n<div class=\"h-6 md:h-10 bg-green-100\">&nbsp;</div>\r\n\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-align-center\">Small<br />\r\nM: 24px / D: 40px</div>\r\n\r\n<div class=\"h-6 md:h-10 bg-green-100\">&nbsp;</div>\r\n</div>\r\n\r\n<div class=\"-mx-5 border-b-2 border-dashed\">\r\n<div class=\"h-12 md:h-16 bg-green-100\">&nbsp;</div>\r\n\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-align-center\">Medium<br />\r\nM: 48px / D: 64px<br />\r\n(Default)</div>\r\n\r\n<div class=\"h-12 md:h-16 bg-green-100\">&nbsp;</div>\r\n</div>\r\n\r\n<div class=\"-mx-5 border-b-2 border-dashed\">\r\n<div class=\"h-24 md:h-36 bg-green-100\">&nbsp;</div>\r\n\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-align-center\">Large<br />\r\nM: 96px / D: 144px</div>\r\n\r\n<div class=\"h-24 md:h-36 bg-green-100\">&nbsp;</div>\r\n</div>\r\n\r\n<div class=\"-mx-5\">\r\n<div class=\"h-36 md:h-48 bg-green-100\">&nbsp;</div>\r\n\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-align-center\">Extra large<br />\r\nM: 144px / D: 192px</div>\r\n\r\n<div class=\"h-36 md:h-48 bg-green-100\">&nbsp;</div>\r\n</div>\r\n"
+              value: "<div class=\"-mx-5 border-b-2 border-dashed\">\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-center\">None</div>\r\n</div>\r\n\r\n<div class=\"-mx-5 border-b-2 border-dashed\">\r\n<div class=\"h-6 md:h-10 bg-green-100\">&nbsp;</div>\r\n\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-center\">Small<br />\r\nM: 24px / D: 40px</div>\r\n\r\n<div class=\"h-6 md:h-10 bg-green-100\">&nbsp;</div>\r\n</div>\r\n\r\n<div class=\"-mx-5 border-b-2 border-dashed\">\r\n<div class=\"h-12 md:h-16 bg-green-100\">&nbsp;</div>\r\n\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-center\">Medium<br />\r\nM: 48px / D: 64px<br />\r\n(Default)</div>\r\n\r\n<div class=\"h-12 md:h-16 bg-green-100\">&nbsp;</div>\r\n</div>\r\n\r\n<div class=\"-mx-5 border-b-2 border-dashed\">\r\n<div class=\"h-24 md:h-36 bg-green-100\">&nbsp;</div>\r\n\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-center\">Large<br />\r\nM: 96px / D: 144px</div>\r\n\r\n<div class=\"h-24 md:h-36 bg-green-100\">&nbsp;</div>\r\n</div>\r\n\r\n<div class=\"-mx-5\">\r\n<div class=\"h-36 md:h-48 bg-green-100\">&nbsp;</div>\r\n\r\n<div class=\"p-10 flex justify-center items-center bg-grey-200 font-bold text-grey-400 uppercase tracking-widest text-center\">Extra large<br />\r\nM: 144px / D: 192px</div>\r\n\r\n<div class=\"h-36 md:h-48 bg-green-100\">&nbsp;</div>\r\n</div>\r\n"
               format: full_html
     -
       entity:
@@ -3711,6 +3711,9 @@ default:
           field_map_address:
             -
               value: 'Trafford House, Chester Road, Manchester, M32 0RS'
+          field_map_zoom:
+            -
+              value: 14
           field_padding_bottom:
             -
               value: none
