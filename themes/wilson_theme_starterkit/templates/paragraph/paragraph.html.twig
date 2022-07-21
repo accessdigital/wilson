@@ -45,8 +45,8 @@
   'section--' ~ paragraph.bundle|clean_class,
   has_bg_image ? 'section-bg bg-center bg-no-repeat bg-cover',
   background_colour_classes,
-  'overflow-hidden',
   has_video or has_remote_video ? 'section-bg-video relative',
+  paragraph.bundle == "content_slider" ? 'overflow-hidden',
 ] %}
 
 {# Container classes #}
