@@ -40,18 +40,16 @@
 #}
 {% extends "paragraph.html.twig" %}
 
+{# Intentially uses flexbox for layout so that we can center justify items. #}
 {% set content_classes = [
   'flex',
   'flex-wrap',
   'justify-center',
-  '-mx-5',
-  '-mb-5',
+  'gap-10',
 ] %}
 
 {% set column_classes = [
   settings_column_width_non_responsive,
-  'px-5',
-  'pb-5',
   'text-center',
   'flex',
   'justify-center',

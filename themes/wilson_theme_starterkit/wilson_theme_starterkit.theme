@@ -124,11 +124,11 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
   if ($paragraph->hasField('field_column_order')) {
     $value = $paragraph->get('field_column_order')->getString();
     $map = [
-      'text_media' => 'flex-col md:flex-row',
-      'media_text' => 'flex-col md:flex-row-reverse',
+      'text_media' => '',
+      'media_text' => 'order-first',
     ];
 
-    $variables['settings_column_order'] = $map[$value];
+    $variables['settings_media_order'] = $map[$value];
   }
 
   // Convert field_padding_top value to a tailwind class.

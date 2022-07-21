@@ -41,29 +41,28 @@
 {% extends "paragraph.html.twig" %}
 
 {% set content_classes = [
-  'flex',
-  'flex-wrap',
-  '-mx-5',
-  '-mb-6',
+  'grid',
+  'md:grid-cols-3',
+  'gap-10',
   settings_vertical_alignment,
 ] %}
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
     {% if content.field_text_column|render %}
-      <div class="px-5 pb-6 w-full md:w-4/12">
+      <div>
         {{ content.field_text_column|field_value }}
       </div>
     {% endif %}
 
     {% if content.field_text_column_2|render %}
-      <div class="px-5 pb-6 w-full md:w-4/12">
+      <div>
         {{ content.field_text_column_2|field_value }}
       </div>
     {% endif %}
 
     {% if content.field_text_column_3|render %}
-      <div class="px-5 pb-6 w-full md:w-4/12">
+      <div>
         {{ content.field_text_column_3|field_value }}
       </div>
     {% endif %}
