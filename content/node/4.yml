@@ -62,6 +62,9 @@ default:
           field_headline:
             -
               value: 'WYSIWYG content styles'
+          field_layout:
+            -
+              value: justified
           field_padding_bottom:
             -
               value: md

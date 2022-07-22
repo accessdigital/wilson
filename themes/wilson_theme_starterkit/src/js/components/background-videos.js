@@ -24,7 +24,7 @@
         video.loop = true;
         video.play();
 
-        video.parentElement.classList.add("opacity-100");
+        video.parentElement.classList.remove("opacity-0");
       });
 
       // Handle Oembed videos.
@@ -44,7 +44,7 @@
           }
         });
 
-        iframe.parentElement.classList.add("opacity-100");
+        iframe.parentElement.classList.remove("opacity-0");
       });
     },
   };

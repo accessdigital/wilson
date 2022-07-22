@@ -65,6 +65,9 @@ default:
           field_headline:
             -
               value: 'Access denied'
+          field_layout:
+            -
+              value: justified
           field_padding_bottom:
             -
               value: xl

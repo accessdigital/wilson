@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.hero.field_css_classes
     - field.field.paragraph.hero.field_headline
     - field.field.paragraph.hero.field_id_anchor
+    - field.field.paragraph.hero.field_layout
     - field.field.paragraph.hero.field_padding_bottom
     - field.field.paragraph.hero.field_padding_top
     - field.field.paragraph.hero.field_pre_header
@@ -89,6 +90,7 @@ third_party_settings:
         required_fields: true
     group_layout:
       children:
+        - field_layout
         - field_container_height
         - field_container_width
         - field_container_position
@@ -150,7 +152,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: 4DlCQ83YJ8w-owQo65dg7FHNBvRG2-H_-YxABky6nlc
+  default_config_hash: 7iavhPkJ-bgMUVoKY3xyxlbMXDve6aoKDlCpdECkXew
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -158,25 +160,25 @@ mode: default
 content:
   field_aos:
     type: options_select
-    weight: 9
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
   field_container_height:
     type: options_select
-    weight: 6
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   field_container_position:
     type: options_select
-    weight: 8
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }
   field_container_width:
     type: options_select
-    weight: 7
+    weight: 31
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -203,6 +205,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_layout:
+    type: options_select
+    weight: 29
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_padding_bottom:
     type: options_select
@@ -242,14 +250,14 @@ content:
     third_party_settings: {  }
   field_section_bg:
     type: media_library_widget
-    weight: 28
+    weight: 31
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_section_bg_colour:
     type: options_select
-    weight: 27
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }

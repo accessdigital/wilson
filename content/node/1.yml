@@ -72,6 +72,9 @@ default:
           field_headline:
             -
               value: 'Profile successfully installed<span class="text-primary">.</span>'
+          field_layout:
+            -
+              value: justified
           field_padding_bottom:
             -
               value: xl
