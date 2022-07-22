@@ -76,6 +76,30 @@ module.exports = {
         "1/2-screen": "50vh",
         "3/4-screen": "75vh",
       },
+      width: {
+        // Utilities for setting widths to match grid columns with gaps.
+        // See styles.scss for the source of these CSS variables.
+        // Two column basis
+        "1/2-cols": "var(--one-of-two-cols)",
+        // Three column basis
+        "1/3-cols": "var(--one-of-three-cols)",
+        "2/3-cols": "var(--two-of-three-cols)",
+        // Four column basis
+        "1/4-cols": "var(--one-of-four-cols)",
+        "2/4-cols": "var(--two-of-four-cols)",
+        "3/4-cols": "var(--three-of-four-cols)",
+      },
+      gridTemplateColumns: {
+        // Utilities for setting up specific grid column templates.
+        // A [two thirds] | [one third] layout
+        "2-pref-l": "var(--two-of-three-cols) var(--one-of-three-cols)",
+        // A [one third] | [two thirds] layout
+        "2-pref-r": "var(--one-of-three-cols) var(--two-of-three-cols)",
+        // A semi-flexible [two thirds] | [one third] layout
+        "2-pref-l-flex": "minmax(var(--one-of-three-cols), var(--two-of-three-cols)) auto",
+        // A semi-flexible [one thirds] | [two third] layout
+        "2-pref-r-flex": "auto minmax(var(--one-of-three-cols), var(--two-of-three-cols))",
+      }
     },
   },
   plugins: [

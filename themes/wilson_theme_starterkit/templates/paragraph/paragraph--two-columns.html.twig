@@ -47,25 +47,26 @@
 ] %}
 
 {% if paragraph.field_column_distribution.0.value == 'preference_left' %}
-  {% set content_classes = content_classes|merge(['md:grid-cols-3']) %}
-  {% set col_1_class = 'md:col-span-2' %}
+  {# Use a grid template [two thirds] | [one third] #}
+  {% set content_classes = content_classes|merge(['md:grid-cols-2-pref-l']) %}
 {% elseif paragraph.field_column_distribution.0.value == 'preference_right' %}
-  {% set content_classes = content_classes|merge(['md:grid-cols-3']) %}
-  {% set col_2_class = 'md:col-span-2' %}
+  {# Use a grid template [one third] | [two thirds] #}
+  {% set content_classes = content_classes|merge(['md:grid-cols-2-pref-r']) %}
 {% else %}
+  {# Use a grid template with two equal sized columns #}
   {% set content_classes = content_classes|merge(['md:grid-cols-2']) %}
 {% endif %}
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
     {% if content.field_text_column|render %}
-      <div{{ create_attribute({'class': col_1_class}) }}>
+      <div>
         {{ content.field_text_column|field_value }}
       </div>
     {% endif %}
 
     {% if content.field_text_column_2|render %}
-      <div{{ create_attribute({'class': col_2_class}) }}>
+      <div>
         {{ content.field_text_column_2|field_value }}
       </div>
     {% endif %}
