@@ -74,7 +74,7 @@ default:
               value: 'Profile successfully installed<span class="text-primary">.</span>'
           field_layout:
             -
-              value: justified
+              value: left
           field_padding_bottom:
             -
               value: xl

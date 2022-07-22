@@ -1019,7 +1019,7 @@ default:
               value: 'Basic H1 hero'
           field_layout:
             -
-              value: justified
+              value: left
           field_padding_bottom:
             -
               value: md
@@ -1061,7 +1061,7 @@ default:
               value: 'Full screen hero'
           field_layout:
             -
-              value: justified
+              value: left
           field_padding_bottom:
             -
               value: xl
@@ -1222,7 +1222,7 @@ default:
               value: normal
           field_layout:
             -
-              value: justified
+              value: left
           field_padding_bottom:
             -
               value: md
@@ -1301,7 +1301,7 @@ default:
               value: bg-fixed
           field_layout:
             -
-              value: justified
+              value: left
           field_padding_bottom:
             -
               value: md

@@ -64,7 +64,7 @@ default:
               value: 'WYSIWYG content styles'
           field_layout:
             -
-              value: justified
+              value: left
           field_padding_bottom:
             -
               value: md

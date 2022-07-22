@@ -67,7 +67,7 @@ default:
               value: 'Access denied'
           field_layout:
             -
-              value: justified
+              value: left
           field_padding_bottom:
             -
               value: xl
