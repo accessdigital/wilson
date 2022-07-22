@@ -7,7 +7,7 @@ module.exports = {
   content: [
     // Paths where Tailwind should look to build a list of classes.
     "./templates/**/*.html.twig",
-    "./scripts/**/*.js",
+    "./src/js/**/*.js",
     "./*.theme",
   ],
   safelist: [
@@ -16,8 +16,11 @@ module.exports = {
     // might be used through the CMS WYSIWYG editor.
     // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
     "border-b-2",
+    "bg-primary",
+    "bg-secondary",
     "bg-tertiary",
     "bg-fixed",
+    "bg-current",
     "h-6",
     "h-24",
     "h-40",
