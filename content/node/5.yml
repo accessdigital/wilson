@@ -71,6 +71,9 @@ default:
           field_headline:
             -
               value: 'Editorial page layout'
+          field_layout:
+            -
+              value: left
           field_padding_bottom:
             -
               value: md

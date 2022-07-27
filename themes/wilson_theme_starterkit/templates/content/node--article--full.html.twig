@@ -84,16 +84,16 @@
         <h1 class="my-0">{{ node.title.0.value|check_markup('full_html') }}</h1>
       {% endif %}
 
-      <ul class="list-none p-0 mt-6 -mx-2 -mb-2 flex flex-row flex-wrap">
+      <ul class="list-none p-0 mt-6 flex flex-row flex-wrap gap-3">
         {% if content.field_categories|render %}
           {% for key, item in content.field_categories if key|first != '#' %}
-            <li class="px-2 pb-2">
+            <li>
               <span class="tag tag--primary">{{ item }}</span>
             </li>
           {% endfor %}
         {% endif %}
 
-        <li class="px-2 pb-2">
+        <li>
           <time class="tag tag--tertiary">{{ node.created.value|format_date('long') }}</time>
         </li>
       </ul>

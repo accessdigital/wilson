@@ -20,3 +20,22 @@
 // Import Tailwind components & utilities.
 @tailwind components;
 @tailwind utilities;
+
+// Custom CSS variables.
+:root {
+  // Set variables to match the width of grid columns after accounting for gaps.
+  // The size of the gap used (gap-10 = 2.5rem).
+  $grid-gap: 2.5rem;
+
+  // Two column basis.
+  --one-of-two-cols: calc((100% - #{$grid-gap}) / 2 * 1);
+
+  // Three column basis.
+  --one-of-three-cols: calc((100% - (2 * #{$grid-gap})) / 3 * 1);
+  --two-of-three-cols: calc((100% - (2 * #{$grid-gap})) / 3 * 2 + (1 * #{$grid-gap}));
+
+  // Four column basis.
+  --one-of-four-cols: calc((100% - (3 * #{$grid-gap})) / 4 * 1);
+  --two-of-four-cols: calc((100% - (3 * #{$grid-gap})) / 4 * 2 + (1 * #{$grid-gap}));
+  --three-of-four-cols: calc((100% - (3 * #{$grid-gap})) / 4 * 3 + (2 * #{$grid-gap}));
+}

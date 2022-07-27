@@ -124,11 +124,11 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
   if ($paragraph->hasField('field_column_order')) {
     $value = $paragraph->get('field_column_order')->getString();
     $map = [
-      'text_media' => 'flex-col md:flex-row',
-      'media_text' => 'flex-col md:flex-row-reverse',
+      'text_media' => '',
+      'media_text' => 'order-first',
     ];
 
-    $variables['settings_column_order'] = $map[$value];
+    $variables['settings_media_order'] = $map[$value];
   }
 
   // Convert field_padding_top value to a tailwind class.
@@ -163,10 +163,14 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
   if ($paragraph->hasField('field_layout')) {
     $value = $paragraph->get('field_layout')->getString();
     $map = [
-      'justified' => 'flex flex-col md:flex-row md:justify-between items-center',
-      'center' => 'flex flex-col text-center descendant-nav:justify-center',
-      'left' => 'flex flex-col text-left descendant-nav:justify-start',
-      'right' => 'flex flex-col text-right descendant-nav:justify-end',
+      // Justified = a semi-flexible [two thirds] | [one third] layout.
+      'justified' => 'md:grid-cols-2-pref-l-flex md:items-center md:descendant-nav:justify-end',
+      // Center = centre aligned [two thirds] stacked
+      'center' => 'md:w-2/3-cols mx-auto text-center descendant-nav:justify-center',
+      // Left = left aligned [two thirds] stacked
+      'left' => 'md:w-2/3-cols text-left',
+      // Right = right aligned [two thirds] stacked
+      'right' => 'md:w-2/3-cols ml-auto text-right descendant-nav:justify-end',
     ];
 
     $variables['settings_layout'] = $map[$value];

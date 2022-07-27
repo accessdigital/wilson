@@ -65,6 +65,9 @@ default:
           field_headline:
             -
               value: 'Page not found'
+          field_layout:
+            -
+              value: left
           field_padding_bottom:
             -
               value: xl

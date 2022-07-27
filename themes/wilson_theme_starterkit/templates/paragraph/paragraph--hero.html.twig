@@ -40,26 +40,36 @@
 #}
 {% extends "paragraph.html.twig" %}
 
+{% set content_classes = [
+  'grid',
+  'gap-10',
+  settings_layout,
+] %}
+
 {% block content %}
-  {% if content.field_pre_header|render %}
-    {{ content.field_pre_header }}
-  {% endif %}
-  {% if content.field_headline|render %}
-    <h1 class="my-0">
-      {{ paragraph.field_headline.0.value|check_markup('full_html') }}
-    </h1>
-  {% endif %}
+  <div{{ create_attribute({'class': content_classes}) }}>
+    <section>
+      {% if content.field_pre_header|render %}
+        {{ content.field_pre_header }}
+      {% endif %}
+      {% if content.field_headline|render %}
+        <h1 class="my-0">
+          {{ paragraph.field_headline.0.value|check_markup('full_html') }}
+        </h1>
+      {% endif %}
 
-  {% if content.field_text_column|render %}
-    <div class="mt-6 text-lg">
-      {{ content.field_text_column }}
-    </div>
-  {% endif %}
+      {% if content.field_text_column|render %}
+        <div class="mt-6 text-lg">
+          {{ content.field_text_column }}
+        </div>
+      {% endif %}
+    </section>
 
-  {% if content.field_primary_cta|render or content.field_secondary_cta|render %}
-    <div class="mt-6 -mb-2 flex flex-wrap gap-4">
-      {{ content.field_primary_cta }}
-      {{ content.field_secondary_cta }}
-    </div>
-  {% endif %}
+    {% if content.field_primary_cta|render or content.field_secondary_cta|render %}
+      <nav class="flex flex-wrap gap-4">
+        {{ content.field_primary_cta }}
+        {{ content.field_secondary_cta }}
+      </nav>
+    {% endif %}
+  </div>
 {% endblock %}

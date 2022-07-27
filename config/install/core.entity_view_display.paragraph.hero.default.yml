@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.hero.field_css_classes
     - field.field.paragraph.hero.field_headline
     - field.field.paragraph.hero.field_id_anchor
+    - field.field.paragraph.hero.field_layout
     - field.field.paragraph.hero.field_padding_bottom
     - field.field.paragraph.hero.field_padding_top
     - field.field.paragraph.hero.field_pre_header
@@ -22,7 +23,7 @@ dependencies:
     - link
     - text
 _core:
-  default_config_hash: Ya13qer1XMOqkqi41-WU9ADvjXrZLJ9LwjJl4XKt6zY
+  default_config_hash: 1cZlXfN3l2FN5hoUeK59FNfOOBWrrODzQjk3WGLKAeA
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -91,6 +92,7 @@ hidden:
   field_container_width: true
   field_css_classes: true
   field_id_anchor: true
+  field_layout: true
   field_padding_bottom: true
   field_padding_top: true
   field_section_bg_colour: true

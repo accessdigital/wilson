@@ -102,9 +102,9 @@
       {% endif %}
     </div>
 
-    <div class="mt-auto -mx-2 -mb-2 pb-5 px-5 flex flex-row justify-between items-center">
-      <span class="btn btn--secondary mx-2 mb-2">{{ 'Read more'|t }}</span>
-      <time class="font-semibold text-sm mx-2 mb-2">{{ node.created.value|date('j M Y') }}</time>
+    <div class="mt-auto pb-5 px-5 flex flex-row flex-wrap justify-between gap-3 items-center">
+      <span class="btn btn--secondary">{{ 'Read more'|t }}</span>
+      <time class="font-semibold text-sm whitespace-nowrap">{{ node.created.value|date('j M Y') }}</time>
     </div>
   </a>
 </div>

@@ -78,6 +78,9 @@ default:
           field_headline:
             -
               value: Components
+          field_layout:
+            -
+              value: justified
           field_padding_bottom:
             -
               value: md
@@ -1014,6 +1017,9 @@ default:
           field_headline:
             -
               value: 'Basic H1 hero'
+          field_layout:
+            -
+              value: left
           field_padding_bottom:
             -
               value: md
@@ -1053,6 +1059,9 @@ default:
           field_headline:
             -
               value: 'Full screen hero'
+          field_layout:
+            -
+              value: left
           field_padding_bottom:
             -
               value: xl
@@ -1115,6 +1124,9 @@ default:
           field_headline:
             -
               value: 'Full screen hero'
+          field_layout:
+            -
+              value: center
           field_padding_bottom:
             -
               value: xl
@@ -1142,7 +1154,7 @@ default:
               entity: 12db7978-4760-486b-a0e4-6455f523858f
           field_text_column:
             -
-              value: "<p>Caption text.</p>\r\n"
+              value: "<p>This hero has a looping background video.</p>\r\n"
               format: full_html
     -
       entity:
@@ -1179,7 +1191,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<p>A hero could also be used to inject a large in to the page.</p>\r\n"
+              value: "<p>A hero could also be used to inject a large image in to the page.</p>\r\n"
               format: full_html
     -
       entity:
@@ -1208,6 +1220,9 @@ default:
           field_container_width:
             -
               value: normal
+          field_layout:
+            -
+              value: left
           field_padding_bottom:
             -
               value: md
@@ -1284,6 +1299,9 @@ default:
           field_css_classes:
             -
               value: bg-fixed
+          field_layout:
+            -
+              value: left
           field_padding_bottom:
             -
               value: md

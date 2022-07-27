@@ -25,11 +25,15 @@
         const panels = accordion.querySelectorAll(".panels__panel");
         const tabs = [];
 
-        // Set up a container that may be used to display tabs.
-        const tabsContainer = document.createElement("ul");
+        // Set up a container that will be used to display tab list.
+        const tabsContainer = document.createElement("div");
         tabsContainer.classList.add("panels__tabs");
         tabsContainer.setAttribute("aria-hidden", "true");
-        tabsContainer.setAttribute("role", "tablist");
+
+        // Set up a list that will be used to display tabs.
+        const tabsList = document.createElement("ul");
+        tabsList.classList.add("panels__tabs-list");
+        tabsList.setAttribute("role", "tablist");
 
         const revealPanel = (index) => {
           headings[index].classList.add("is-active");
@@ -58,7 +62,7 @@
           tabLink.appendChild(tabText);
           tabs.push(tabLink);
           tabItem.appendChild(tabLink);
-          tabsContainer.appendChild(tabItem);
+          tabsList.appendChild(tabItem);
 
           // Handle clicks on the tab item.
           tabLink.addEventListener("click", (event) => {
@@ -89,6 +93,7 @@
         // navigation method at higher breakpoints.
         if (accordion.classList.contains("panels--adaptive")) {
           // Display tabs.
+          tabsContainer.prepend(tabsList);
           accordion.prepend(tabsContainer);
 
           // Update ARIA tags for panels.

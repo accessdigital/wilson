@@ -41,34 +41,32 @@
 {% extends "paragraph.html.twig" %}
 
 {% set content_classes = [
-  'flex',
-  'flex-wrap',
-  '-mx-5',
-  '-mb-6',
+  'grid',
+  'gap-10',
   settings_vertical_alignment,
 ] %}
 
 {% if paragraph.field_column_distribution.0.value == 'preference_left' %}
-  {% set col_1_class = 'md:w-8/12' %}
-  {% set col_2_class = 'md:w-4/12' %}
+  {# Use a grid template [two thirds] | [one third] #}
+  {% set content_classes = content_classes|merge(['md:grid-cols-2-pref-l']) %}
 {% elseif paragraph.field_column_distribution.0.value == 'preference_right' %}
-  {% set col_1_class = 'md:w-4/12' %}
-  {% set col_2_class = 'md:w-8/12' %}
+  {# Use a grid template [one third] | [two thirds] #}
+  {% set content_classes = content_classes|merge(['md:grid-cols-2-pref-r']) %}
 {% else %}
-  {% set col_1_class = 'md:w-6/12' %}
-  {% set col_2_class = 'md:w-6/12' %}
+  {# Use a grid template with two equal sized columns #}
+  {% set content_classes = content_classes|merge(['md:grid-cols-2']) %}
 {% endif %}
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
     {% if content.field_text_column|render %}
-      <div class="px-5 pb-6 w-full {{ col_1_class }}">
+      <div>
         {{ content.field_text_column|field_value }}
       </div>
     {% endif %}
 
     {% if content.field_text_column_2|render %}
-      <div class="px-5 pb-6 w-full {{ col_2_class }}">
+      <div>
         {{ content.field_text_column_2|field_value }}
       </div>
     {% endif %}
