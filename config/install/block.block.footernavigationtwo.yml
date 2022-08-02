@@ -1,24 +1,23 @@
+uuid: 28e63ec9-576a-44ba-82c4-e8f5ddf14e20
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.footer-two
   module:
     - menu_block
   theme:
     - wilson_theme_starterkit
-_core:
-  default_config_hash: NXs7VtgOnCFe9-XPcNKezyctgb40YwSHmpUhZLtpVmM
-id: mainnavigation
+id: footernavigationtwo
 theme: wilson_theme_starterkit
-region: header_navigation
+region: footer_col_three
 weight: 0
 provider: null
-plugin: 'menu_block:main'
+plugin: 'menu_block:footer-two'
 settings:
-  id: 'menu_block:main'
-  label: 'Main navigation'
-  label_display: '0'
+  id: 'menu_block:footer-two'
+  label: 'Footer nav two'
+  label_display: visible
   provider: menu_block
   follow: false
   follow_parent: child
@@ -26,8 +25,7 @@ settings:
   label_type: block
   level: 1
   depth: 0
-  expand_all_items: false
-  parent: 'main:'
-  suggestion: main
-  expand: true
+  expand_all_items: true
+  parent: 'footer-two:'
+  suggestion: footer_two
 visibility: {  }

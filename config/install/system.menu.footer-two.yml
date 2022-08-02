@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: footer-two
+label: 'Footer navigation two'
+description: 'Site information links'
+locked: false

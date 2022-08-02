@@ -30,9 +30,9 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('menu') }}>
+      <ul{{ attributes.setAttribute('class', ['menu', 'list-none', 'mt-0', 'p-0', 'grid', 'gap-3']) }}>
     {% else %}
-      <ul class="submenu">
+      <ul{{ attributes.setAttribute('class', ['submenu', 'list-none', 'mt-3', 'pl-4', 'grid', 'gap-3', 'border-l-2', 'font-light']) }}>
     {% endif %}
     {% for item in items %}
       {% if item.below %}

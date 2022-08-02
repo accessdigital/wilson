@@ -2,23 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.footer-three
   module:
     - menu_block
   theme:
     - wilson_theme_starterkit
-_core:
-  default_config_hash: NXs7VtgOnCFe9-XPcNKezyctgb40YwSHmpUhZLtpVmM
-id: mainnavigation
+id: footernavigationthree
 theme: wilson_theme_starterkit
-region: header_navigation
+region: footer_col_four
 weight: 0
 provider: null
-plugin: 'menu_block:main'
+plugin: 'menu_block:footer-three'
 settings:
-  id: 'menu_block:main'
-  label: 'Main navigation'
-  label_display: '0'
+  id: 'menu_block:footer-three'
+  label: 'Footer nav three'
+  label_display: visible
   provider: menu_block
   follow: false
   follow_parent: child
@@ -26,8 +24,7 @@ settings:
   label_type: block
   level: 1
   depth: 0
-  expand_all_items: false
-  parent: 'main:'
-  suggestion: main
-  expand: true
+  expand_all_items: true
+  parent: 'footer-three:'
+  suggestion: footer_three
 visibility: {  }

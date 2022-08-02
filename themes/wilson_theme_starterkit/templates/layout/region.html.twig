@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a region.
+ * Theme override to display a block region.
  *
  * Available variables:
  * - content: The content for this region, typically blocks.
@@ -13,7 +13,5 @@
  */
 #}
 {% if content %}
-  <div{{ attributes }}>
-    {{ content }}
-  </div>
+  {{ content }}
 {% endif %}
