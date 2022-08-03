@@ -111,7 +111,12 @@
 
     <hr class="my-8 opacity-20" />
 
-    <p class="text-sm md:text-right"><span class="font-medium">&copy; {{ "now"|date('Y') }} {{ site_name }}.</span> All rights reserved.</p>
+    <p class="text-sm md:text-right">
+      {% set year = "now"|date('Y') %}
+      {% trans %}
+        <span class="font-medium">&copy; {{ year }} {{ site_name }}.</span> All rights reserved.
+      {% endtrans %}
+    </p>
   </div>
 </footer>
 
