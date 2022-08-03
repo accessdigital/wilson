@@ -156,3 +156,59 @@
 .horizontal-tab-button.selected {
   background-color: #ffffff !important;
 }
+
+/* Place input fields into columns */
+@media screen and (min-width: 992px) {
+  div.input-columns,
+  details.input-columns .details-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  div.input-columns-two,
+  details.input-columns-two .details-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  div.input-columns-three,
+  details.input-columns-three .details-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  div.input-columns-four,
+  details.input-columns-four .details-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .input-columns .form-text,
+  .input-columns .form-select,
+  .input-columns-two .form-text,
+  .input-columns-two .form-select,
+  .input-columns-three .form-text,
+  .input-columns-three .form-select,
+  .input-columns-four .form-text,
+  .input-columns-four .form-select {
+    width: 100%;
+  }
+
+  .input-columns .media-library-selection .media-library-item--grid,
+  .input-columns-two .media-library-selection .media-library-item--grid,
+  .input-columns-three .media-library-selection .media-library-item--grid {
+    width: 50%;
+  }
+
+  .input-columns-four .media-library-selection .media-library-item--grid {
+    width: 100%;
+  }
+}

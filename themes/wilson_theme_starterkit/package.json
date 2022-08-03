@@ -11,8 +11,9 @@
     "scriptsDist": "./dist/js",
     "scriptsLib": "./dist/js/libraries",
     "copyLibraryFiles": {
+      "//": "CSS and JS files to copy from node_modules to the theme dist folder on build. Separate with spaces.",
       "css": "./node_modules/@glidejs/glide/dist/css/glide.core.min.css ./node_modules/aos/dist/aos.css",
-      "js": "./node_modules/@glidejs/glide/dist/glide.min.js ./node_modules/aos/dist/aos.js"
+      "js": "./node_modules/@glidejs/glide/dist/glide.min.js ./node_modules/aos/dist/aos.js ./node_modules/countup.js/dist/countUp.min.js"
     }
   },
   "scripts": {
@@ -26,7 +27,7 @@
     "copy:scripts": "mkdir -p $npm_package_config_scriptsLib && cp $npm_package_config_copyLibraryFiles_js $npm_package_config_scriptsLib",
     "build:styles": "npm run stylelint && npm run sass && npm run postcss",
     "build:scripts": "if-env NODE_ENV=production && npm run prettier && npm run eslint && npm run babel || npm run eslint && npm run babel",
-    "build": "npm run build:styles && npm run build:scripts && npm run copy:styles && npm run copy:scripts",
+    "build": "npm run copy:styles && npm run copy:scripts && npm run build:styles && npm run build:scripts",
     "build:dist": "cross-env NODE_ENV=production BABEL_ENV=production npm run build",
     "watch:styles": "onchange -p 100 $npm_package_config_templatesSrc $npm_package_config_stylesSrc $npm_package_config_scriptsSrc -- npm run build:styles",
     "watch:scripts": "onchange -p 100 $npm_package_config_scriptsSrc -- npm run build:scripts",
@@ -66,6 +67,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "countup.js": "^2.3.2"
   }
 }

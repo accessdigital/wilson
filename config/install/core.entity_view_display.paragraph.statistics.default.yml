@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistics.field_aos
+    - field.field.paragraph.statistics.field_container_height
+    - field.field.paragraph.statistics.field_container_position
+    - field.field.paragraph.statistics.field_container_width
+    - field.field.paragraph.statistics.field_css_classes
+    - field.field.paragraph.statistics.field_grid_columns
+    - field.field.paragraph.statistics.field_id_anchor
+    - field.field.paragraph.statistics.field_items
+    - field.field.paragraph.statistics.field_padding_bottom
+    - field.field.paragraph.statistics.field_padding_top
+    - field.field.paragraph.statistics.field_section_bg
+    - field.field.paragraph.statistics.field_section_bg_colour
+    - paragraphs.paragraphs_type.statistics
+  module:
+    - entity_reference_revisions
+id: paragraph.statistics.default
+targetEntityType: paragraph
+bundle: statistics
+mode: default
+content:
+  field_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_aos: true
+  field_container_height: true
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_grid_columns: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg: true
+  field_section_bg_colour: true

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stat_animate
+    - paragraphs.paragraphs_type.stat
+id: paragraph.stat.field_stat_animate
+field_name: field_stat_animate
+entity_type: paragraph
+bundle: stat
+label: 'Animate value'
+description: 'Use an animation style where the value counts up from zero when stat scrolls in to view. This will only work for numeric values.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

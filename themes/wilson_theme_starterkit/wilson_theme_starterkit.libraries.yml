@@ -32,6 +32,13 @@ aos:
   dependencies:
     - core/drupal
 
+statistics:
+  js:
+    dist/js/components/statistics.js: { minified: true, attributes: { type: module } }
+  dependencies:
+    - core/drupal
+    - core/once
+
 glide:
   css:
     theme:
