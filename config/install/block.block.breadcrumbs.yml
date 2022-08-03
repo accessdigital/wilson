@@ -2,10 +2,12 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ctools
+    - node
     - system
   theme:
     - wilson_theme_starterkit
+_core:
+  default_config_hash: u-ASWnEQTZu2B6fY4US-hGY33J_AaTmr4dUh4Ky3nSI
 id: breadcrumbs
 theme: wilson_theme_starterkit
 region: breadcrumb
@@ -15,14 +17,14 @@ plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
   label: Breadcrumbs
-  provider: system
   label_display: '0'
+  provider: system
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles:
-      article: article
-      page: page
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page

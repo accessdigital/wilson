@@ -90,29 +90,35 @@
   </div>
 {% endif %}
 
-{% if page.footer_col_one or page.footer_col_two or page.footer_col_three or page.footer_col_four %}
-  <footer class="bg-grey-200">
-    <div class="container mx-auto px-5 py-16 md:flex md:flex-no-wrap">
+<footer class="bg-primary text-primary-contrast py-12">
+  <div class="container mx-auto px-5">
+    {% if page.footer_col_one or page.footer_col_two or page.footer_col_three or page.footer_col_four %}
+      <div class="footer-cols grid gap-6 md:gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+        <div class="footer-cols__one">
+          {{ page.footer_col_one }}
+        </div>
+        <div class="footer-cols__two">
+          {{ page.footer_col_two }}
+        </div>
+        <div class="footer-cols__three">
+          {{ page.footer_col_three }}
+        </div>
+        <div class="footer-cols__four">
+          {{ page.footer_col_four }}
+        </div>
+      </div>
+    {% endif %}
 
-      {% if page.footer_col_one %}
-        {{ page.footer_col_one }}
-      {% endif %}
+    <hr class="my-8 opacity-20" />
 
-      {% if page.footer_col_two %}
-        {{ page.footer_col_two }}
-      {% endif %}
-
-      {% if page.footer_col_three %}
-        {{ page.footer_col_three }}
-      {% endif %}
-
-      {% if page.footer_col_four %}
-        {{ page.footer_col_four }}
-      {% endif %}
-
-    </div>
-  </footer>
-{% endif %}
+    <p class="text-sm md:text-right">
+      {% set year = "now"|date('Y') %}
+      {% trans %}
+        <span class="font-medium">&copy; {{ year }} {{ site_name }}.</span> All rights reserved.
+      {% endtrans %}
+    </p>
+  </div>
+</footer>
 
 {% if page.off_canvas %}
   {{ page.off_canvas }}
