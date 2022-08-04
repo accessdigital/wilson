@@ -42,15 +42,14 @@
 
 {# Intentially uses flexbox for layout so that we can center justify items. #}
 {% set content_classes = [
-  'flex',
-  'flex-wrap',
-  'justify-center',
+  settings_columns,
+  'grid',
   'gap-10',
 ] %}
 
 {% set column_classes = [
-  settings_column_width,
-  'text-center',
+  'border-l-2',
+  'pl-8'
 ] %}
 
 {% block content %}
