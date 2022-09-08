@@ -13,7 +13,7 @@
     "copyLibraryFiles": {
       "//": "CSS and JS files to copy from node_modules to the theme dist folder on build. Separate with spaces.",
       "css": "./node_modules/@glidejs/glide/dist/css/glide.core.min.css ./node_modules/aos/dist/aos.css",
-      "js": "./node_modules/@glidejs/glide/dist/glide.min.js ./node_modules/aos/dist/aos.js ./node_modules/countup.js/dist/countUp.min.js"
+      "js": "./node_modules/@glidejs/glide/dist/glide.min.js ./node_modules/aos/dist/aos.js ./node_modules/countup.js/dist/countUp.umd.js"
     }
   },
   "scripts": {

@@ -9,7 +9,7 @@ field_name: field_stat_prefix
 entity_type: paragraph
 bundle: stat
 label: Prefix
-description: 'Include a symbol immediately before the stat value. Will not be animated.'
+description: 'Include a symbol or word immediately before the stat value. Will not be animated.'
 required: false
 translatable: false
 default_value: {  }

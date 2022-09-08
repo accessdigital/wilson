@@ -12,7 +12,8 @@
   "globals": {
     "Drupal": true,
     "drupalSettings": true,
-    "once": true
+    "once": true,
+    "countUp": true
   },
   "settings": {
     "react": {

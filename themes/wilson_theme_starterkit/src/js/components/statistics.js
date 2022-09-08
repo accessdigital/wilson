@@ -1,6 +1,3 @@
-// Import the countUp.js module.
-import { CountUp } from '../libraries/countUp.min.js';
-
 /**
  * @file
  * Animate numeric statistics.
@@ -16,11 +13,11 @@ import { CountUp } from '../libraries/countUp.min.js';
    * @prop {Drupal~behaviorAttach} attach
    */
   Drupal.behaviors.statistics = {
-    attach: function attach(context) {
+    attach(context) {
       once('statistics', '.countup', context).forEach( (countUpEl) => {
         // Count the number of decimal places in the provided value to be
         // passed as an argument in to CountUp.js.
-        function countDecimals(numberStr) {
+        const countDecimals = (numberStr) => {
           const split = numberStr.split('.');
           if (split[1]) {
             return split[1].length;
@@ -31,13 +28,15 @@ import { CountUp } from '../libraries/countUp.min.js';
         // Determine a numeric value from the .countup element.
         // Thousand separators are removed to allow the number to be parsed to
         // a float.
-        const valueStr = countUpEl.innerHTML;
+        const valueStr = countUpEl.dataset.countupValue;
         const valueFloat = parseFloat(valueStr.replace(/,/g, ''));
 
         // We can only animate numeric values.
         if (!Number.isNaN(valueFloat)) {
           // CountUp.js options - see https://github.com/inorganik/countUp.js#usage
           const options = {
+            prefix: countUpEl.dataset.countupPrefix || "",
+            suffix: countUpEl.dataset.countupSuffix || "",
             enableScrollSpy: true,
             decimalPlaces: countDecimals(valueStr),
             useGrouping: valueStr.includes(','),
@@ -45,7 +44,8 @@ import { CountUp } from '../libraries/countUp.min.js';
           };
 
           // Attach animation to the value.
-          const countUp = new CountUp(countUpEl, valueFloat, options); // eslint-disable-line no-unused-vars
+          const numAnim = new countUp.CountUp(countUpEl, valueFloat, options);
+          numAnim.start();
         }
       });
     },

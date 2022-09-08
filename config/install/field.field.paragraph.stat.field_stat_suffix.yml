@@ -9,7 +9,7 @@ field_name: field_stat_suffix
 entity_type: paragraph
 bundle: stat
 label: Suffix
-description: 'Include a symbol immediately after the stat value. Will not be animated.'
+description: 'Include a symbol or word immediately after the stat value. Will not be animated.'
 required: false
 translatable: false
 default_value: {  }

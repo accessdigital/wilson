@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to display an accordion item paragraph.
+ * Default theme implementation to display an individual Stat in a Statistics paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -38,18 +38,27 @@
  * @ingroup themeable
  */
 #}
-{% block paragraph %}
-  <h3 class="font-bold tracking-wider">
-    {% apply spaceless %}
-      {% if content.field_stat_prefix|render %}
-        <span class="prefix">{{ content.field_stat_prefix|field_value }}</span>
-      {% endif %}
-      <span class="value{% if paragraph.field_stat_animate.value %} countup{% endif %}">{{ content.field_stat_value|field_value }}</span>
-      {% if content.field_stat_suffix|render %}
-        <span class="suffix">{{ content.field_stat_suffix|field_value }}</span>
-      {% endif %}
-    {% endapply %}
-  </h3>
 
-  {{ content.field_text_column|field_value }}
+{% set classes = [
+  'text-2xl',
+  'lg:text-3xl',
+  'xl:text-4xl',
+  'font-bold',
+  'tracking-wider'
+] %}
+
+{% block paragraph %}
+  <figure>
+    <p{{ create_attribute({'class': classes}) }}>
+      {% if paragraph.field_stat_animate.value %}
+        <span class="countup" data-countup-prefix="{{ content.field_stat_prefix|field_value }}" data-countup-value="{{ content.field_stat_value|field_value }}" data-countup-suffix="{{ content.field_stat_suffix|field_value }}"></span>
+        <span class="sr-only">{{ content.field_stat_prefix|field_value }}{{ content.field_stat_value|field_value }}{{ content.field_stat_suffix|field_value }}</span>
+      {% else %}
+        {{ content.field_stat_prefix|field_value }}{{ content.field_stat_value|field_value }}{{ content.field_stat_suffix|field_value }}
+      {% endif %}
+    </p>
+    <figcaption>
+      {{ content.field_text_column|field_value }}
+    </figcaption>
+  </figure>
 {% endblock paragraph %}
