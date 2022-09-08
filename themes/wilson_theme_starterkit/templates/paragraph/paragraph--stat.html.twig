@@ -51,7 +51,9 @@
   <figure>
     <p{{ create_attribute({'class': classes}) }}>
       {% if paragraph.field_stat_animate.value %}
-        <span class="countup" data-countup-prefix="{{ content.field_stat_prefix|field_value }}" data-countup-value="{{ content.field_stat_value|field_value }}" data-countup-suffix="{{ content.field_stat_suffix|field_value }}"></span>
+        <span aria-hidden="true" role="presentation">
+          {{ content.field_stat_prefix|field_value }}<span class="countup">{{ content.field_stat_value|field_value }}</span>{{ content.field_stat_suffix|field_value }}
+        </span>
         <span class="sr-only">{{ content.field_stat_prefix|field_value }}{{ content.field_stat_value|field_value }}{{ content.field_stat_suffix|field_value }}</span>
       {% else %}
         {{ content.field_stat_prefix|field_value }}{{ content.field_stat_value|field_value }}{{ content.field_stat_suffix|field_value }}

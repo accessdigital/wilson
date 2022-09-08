@@ -28,15 +28,13 @@
         // Determine a numeric value from the .countup element.
         // Thousand separators are removed to allow the number to be parsed to
         // a float.
-        const valueStr = countUpEl.dataset.countupValue;
+        const valueStr = countUpEl.innerHTML;
         const valueFloat = parseFloat(valueStr.replace(/,/g, ''));
 
         // We can only animate numeric values.
         if (!Number.isNaN(valueFloat)) {
           // CountUp.js options - see https://github.com/inorganik/countUp.js#usage
           const options = {
-            prefix: countUpEl.dataset.countupPrefix || "",
-            suffix: countUpEl.dataset.countupSuffix || "",
             enableScrollSpy: true,
             decimalPlaces: countDecimals(valueStr),
             useGrouping: valueStr.includes(','),
