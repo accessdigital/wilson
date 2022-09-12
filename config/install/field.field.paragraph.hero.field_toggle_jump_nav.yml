@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_toggle_jump_nav
+    - paragraphs.paragraphs_type.hero
+id: paragraph.hero.field_toggle_jump_nav
+field_name: field_toggle_jump_nav
+entity_type: paragraph
+bundle: hero
+label: 'Display a jump menu of the Anchor points within this page'
+description: 'Add Anchor point sections to the page and they will be displayed automatically within the jump menu. These allow the user to quickly scroll down to key sections.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

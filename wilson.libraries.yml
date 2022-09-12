@@ -1,0 +1,6 @@
+anchor-point-hash:
+  js:
+    js/anchor-point-hash.js: { minified: false }
+  dependencies:
+    - core/drupal
+    - core/once

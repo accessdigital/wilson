@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.anchor_point.field_anchor_point_label
+    - paragraphs.paragraphs_type.anchor_point
+id: paragraph.anchor_point.default
+targetEntityType: paragraph
+bundle: anchor_point
+mode: default
+content:
+  field_anchor_point_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'e.g. Section one'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
