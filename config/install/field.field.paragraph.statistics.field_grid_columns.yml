@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid_columns
+    - paragraphs.paragraphs_type.statistics
+  module:
+    - options
+id: paragraph.statistics.field_grid_columns
+field_name: field_grid_columns
+entity_type: paragraph
+bundle: statistics
+label: 'Grid columns'
+description: 'The number of columns to distribute the statistics across on larger screen devices.'
+required: true
+translatable: true
+default_value:
+  -
+    value: '4'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -2,31 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sections
-    - node.type.landing_page
-    - paragraphs.paragraphs_type.item
+    - field.storage.paragraph.field_items
     - paragraphs.paragraphs_type.stat
+    - paragraphs.paragraphs_type.statistics
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: aQ1FamhvwQEbGFTrx_bFU3NNvd6-dBKSuB_GNVPjg3E
-id: node.landing_page.field_sections
-field_name: field_sections
-entity_type: node
-bundle: landing_page
-label: Sections
+id: paragraph.statistics.field_items
+field_name: field_items
+entity_type: paragraph
+bundle: statistics
+label: Statistics
 description: ''
-required: false
-translatable: false
+required: true
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      item: item
       stat: stat
-    negate: 1
+    negate: 0
     target_bundles_drag_drop:
       accordion:
         weight: 23
@@ -35,23 +31,23 @@ settings:
         weight: 24
         enabled: false
       button_grid:
-        weight: 18
+        weight: 25
         enabled: false
       content_grid:
-        weight: 19
+        weight: 26
         enabled: false
       content_slider:
-        weight: 20
+        weight: 27
         enabled: false
       gallery:
-        weight: 21
+        weight: 28
         enabled: false
       hero:
-        weight: 22
+        weight: 29
         enabled: false
       item:
-        weight: 24
-        enabled: true
+        weight: 30
+        enabled: false
       logo_wall:
         weight: 31
         enabled: false
@@ -59,16 +55,16 @@ settings:
         weight: 32
         enabled: false
       one_column:
-        weight: 23
+        weight: 33
         enabled: false
       panel:
-        weight: 24
+        weight: 34
         enabled: false
       quote:
-        weight: 25
+        weight: 35
         enabled: false
       simple_banner:
-        weight: 26
+        weight: 36
         enabled: false
       stat:
         weight: 37
@@ -77,21 +73,21 @@ settings:
         weight: 38
         enabled: false
       tabs:
-        weight: 27
+        weight: 39
         enabled: false
       text_webform:
-        weight: 30
+        weight: 40
         enabled: false
       three_columns:
-        weight: 31
+        weight: 41
         enabled: false
       two_columns:
-        weight: 5
+        weight: 42
         enabled: false
       views:
         weight: 43
         enabled: false
       webform_embed:
-        weight: 34
+        weight: 44
         enabled: false
 field_type: entity_reference_revisions

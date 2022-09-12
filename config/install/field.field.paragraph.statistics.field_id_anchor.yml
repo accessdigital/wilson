@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_id_anchor
+    - paragraphs.paragraphs_type.statistics
+id: paragraph.statistics.field_id_anchor
+field_name: field_id_anchor
+entity_type: paragraph
+bundle: statistics
+label: ID/anchor
+description: 'Apply a custom ID to this section wrapper. Can be used to deep link to this section on this page, i.e. <code>/page/alias#how-it-works</code>.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
