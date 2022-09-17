@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.prev_next_navigation.field_aos
+    - field.field.paragraph.prev_next_navigation.field_container_height
+    - field.field.paragraph.prev_next_navigation.field_container_position
+    - field.field.paragraph.prev_next_navigation.field_container_width
+    - field.field.paragraph.prev_next_navigation.field_css_classes
+    - field.field.paragraph.prev_next_navigation.field_id_anchor
+    - field.field.paragraph.prev_next_navigation.field_next_page
+    - field.field.paragraph.prev_next_navigation.field_padding_bottom
+    - field.field.paragraph.prev_next_navigation.field_padding_top
+    - field.field.paragraph.prev_next_navigation.field_previous_page
+    - field.field.paragraph.prev_next_navigation.field_section_bg_colour
+    - paragraphs.paragraphs_type.prev_next_navigation
+id: paragraph.prev_next_navigation.default
+targetEntityType: paragraph
+bundle: prev_next_navigation
+mode: default
+content:
+  field_next_page:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: next_card
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_previous_page:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: previous_card
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_aos: true
+  field_container_height: true
+  field_container_position: true
+  field_container_width: true
+  field_css_classes: true
+  field_id_anchor: true
+  field_padding_bottom: true
+  field_padding_top: true
+  field_section_bg_colour: true

@@ -31,6 +31,9 @@ settings:
       accordion:
         weight: 23
         enabled: false
+      anchor_point:
+        weight: 26
+        enabled: false
       block:
         weight: 24
         enabled: false
@@ -63,6 +66,9 @@ settings:
         enabled: false
       panel:
         weight: 24
+        enabled: false
+      prev_next_navigation:
+        weight: 38
         enabled: false
       quote:
         weight: 25
