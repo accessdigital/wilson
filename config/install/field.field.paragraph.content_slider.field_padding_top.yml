@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.content_slider
   module:
     - options
+_core:
+  default_config_hash: mk4lorQeHkfui4T8R-8NM_Y2ni5C25ViFYLRHFw6uhk
 id: paragraph.content_slider.field_padding_top
 field_name: field_padding_top
 entity_type: paragraph
 bundle: content_slider
 label: 'Top padding'
-description: ''
+description: 'The amount of padding to apply to the top of the section, pushing the content down from the previous section.'
 required: true
 translatable: true
 default_value:

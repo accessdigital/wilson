@@ -5,12 +5,14 @@ dependencies:
     - field.storage.paragraph.field_section_bg_colour
     - paragraphs.paragraphs_type.simple_banner
     - taxonomy.vocabulary.background_styles
+_core:
+  default_config_hash: 2QqDlvJa9ZBxxRvUKj1nel7K_-DAWi23v128GQvyVQg
 id: paragraph.simple_banner.field_section_bg_colour
 field_name: field_section_bg_colour
 entity_type: paragraph
 bundle: simple_banner
 label: 'Background style'
-description: ''
+description: 'Used to apply brand colours to a section background or to alter the appearance of background images.'
 required: false
 translatable: true
 default_value: {  }

@@ -5,13 +5,13 @@ dependencies:
     - field.storage.paragraph.field_id_anchor
     - paragraphs.paragraphs_type.three_columns
 _core:
-  default_config_hash: SdksB6SiMs7qyEhTTADTxHc7K5r6YVSNOB5HhWHOkJw
+  default_config_hash: aYGgNppljqKHmRcUgEpPJywDjCHYa8edN5F9SbKNzzk
 id: paragraph.three_columns.field_id_anchor
 field_name: field_id_anchor
 entity_type: paragraph
 bundle: three_columns
 label: ID/anchor
-description: ''
+description: 'Apply a custom ID to this section wrapper. Can be used to deep link to this section on this page, i.e. <code>/page/alias#how-it-works</code>.'
 required: false
 translatable: true
 default_value: {  }

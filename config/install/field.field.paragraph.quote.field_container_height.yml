@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.quote
   module:
     - options
+_core:
+  default_config_hash: LrLKJKRJ7gt1PXqtTzqkF7wNXM4lnzKO8Sj48EPd6_4
 id: paragraph.quote.field_container_height
 field_name: field_container_height
 entity_type: paragraph
 bundle: quote
 label: 'Container min height'
-description: ''
+description: 'The minimum height this section should occupy on the screen. Depending on the content and padding settings, the section may exceed the selected height. Default is <code>Auto</code>.'
 required: true
 translatable: true
 default_value:

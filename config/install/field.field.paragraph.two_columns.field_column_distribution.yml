@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.two_columns
   module:
     - options
+_core:
+  default_config_hash: gHdtPHy7XseC6TkdUXq_IR4g7uEOPlsRM3JjqCItGww
 id: paragraph.two_columns.field_column_distribution
 field_name: field_column_distribution
 entity_type: paragraph
 bundle: two_columns
 label: 'Column distribution'
-description: ''
+description: 'The widths of column 1 and column 2 in relation to the container width, on larger screen devices.'
 required: true
 translatable: false
 default_value:

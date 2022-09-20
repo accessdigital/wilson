@@ -7,13 +7,13 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: FE__NhJwDWZnyH1BZzsquatoMSuT-XrXcmO-fsCYChs
+  default_config_hash: 1iXWpwj0kixU8xiinlF4Yf2cum3mB4j4GpCNG4nu1J0
 id: paragraph.hero.field_container_position
 field_name: field_container_position
 entity_type: paragraph
 bundle: hero
 label: 'Container position'
-description: ''
+description: 'The alignment of the content relative to the page guides, when width is <code>Narrow</code> or <code>Medium</code>.'
 required: true
 translatable: true
 default_value:

@@ -48,6 +48,7 @@ third_party_settings:
       children:
         - group_layout
         - group_padding
+        - group_animation
         - group_background
         - group_classes_id
       label: Settings
@@ -65,14 +66,14 @@ third_party_settings:
       children:
         - field_container_width
         - field_container_position
-        - field_aos
       label: Layout
       region: content
       parent_name: group_settings
       weight: 20
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -87,7 +88,8 @@ third_party_settings:
       weight: 21
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -98,10 +100,11 @@ third_party_settings:
       label: Background
       region: content
       parent_name: group_settings
-      weight: 22
+      weight: 23
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -113,16 +116,32 @@ third_party_settings:
       label: 'Classes & ID'
       region: content
       parent_name: group_settings
-      weight: 23
+      weight: 24
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_animation:
+      children:
+        - field_aos
+      label: Animation
+      region: content
+      parent_name: group_settings
+      weight: 22
+      format_type: details
+      format_settings:
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
         required_fields: true
 _core:
-  default_config_hash: ADzFGk0S5wN5NgehMedbKy1wNyHuTUlh0iFdXbTI0P4
+  default_config_hash: IXtHheTtY4A2vbEfGUmYsB9cWEp9an6QQppMYK1Jvno
 id: paragraph.gallery.default
 targetEntityType: paragraph
 bundle: gallery
@@ -160,7 +179,7 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'e.g. how-it-works'
     third_party_settings: {  }
   field_media:
     type: media_library_widget

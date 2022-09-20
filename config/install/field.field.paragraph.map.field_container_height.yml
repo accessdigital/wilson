@@ -7,13 +7,13 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: dYmaG4lG-ey63FUBtXn-Y47hBOpFhUj2a1jTv6EMIts
+  default_config_hash: Gp98NHVic3XqVtEua7c7SEA8CMAH215gbvwoywYl-MM
 id: paragraph.map.field_container_height
 field_name: field_container_height
 entity_type: paragraph
 bundle: map
 label: 'Map height'
-description: ''
+description: 'The height of the map on the screen. Default is <code>Medium</code>.'
 required: true
 translatable: false
 default_value:

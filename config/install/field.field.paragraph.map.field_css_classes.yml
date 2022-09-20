@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.map
+_core:
+  default_config_hash: 8dI-GoB-Z4oXKzNYPGp4btUYozylC15ff5q5BmS-Tl4
 id: paragraph.map.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: map
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

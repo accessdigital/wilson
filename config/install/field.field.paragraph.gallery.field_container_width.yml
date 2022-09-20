@@ -7,13 +7,13 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: W_HLTEguHapEJPZNc5fpsvcmMXvg0CZIOXutAcIaO8Q
+  default_config_hash: 1Mb6PouuNpbbgU869-3ZqaTQAZjqTXbT2TiJcs6KXDo
 id: paragraph.gallery.field_container_width
 field_name: field_container_width
 entity_type: paragraph
 bundle: gallery
 label: 'Container width'
-description: ''
+description: 'The width of the section content, relative to the page guides, on larger screen devices. <code>Normal</code> is default.'
 required: true
 translatable: true
 default_value:

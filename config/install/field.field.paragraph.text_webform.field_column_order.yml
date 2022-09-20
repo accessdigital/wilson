@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.text_webform
   module:
     - options
+_core:
+  default_config_hash: 6RhIAWmgjAdCXAF4IZ0qwR_ZbPNX6qhBkZPTd_UrVcs
 id: paragraph.text_webform.field_column_order
 field_name: field_column_order
 entity_type: paragraph
 bundle: text_webform
 label: 'Column order'
-description: ''
+description: 'The orientation of the text panel in relation to the webform, on larger screen devices.'
 required: true
 translatable: true
 default_value:

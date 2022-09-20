@@ -7,13 +7,13 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: D4CXS3YWoIiC6zKYbCBRtLy_7sxP8QBh17nSZvDC9Dk
+  default_config_hash: H4cGQaedXjR4dF2xRljzUTkkIklAFiqGFtRPwiTgX1A
 id: paragraph.one_column.field_padding_top
 field_name: field_padding_top
 entity_type: paragraph
 bundle: one_column
 label: 'Top padding'
-description: ''
+description: 'The amount of padding to apply to the top of the section, pushing the content down from the previous section.'
 required: true
 translatable: true
 default_value:

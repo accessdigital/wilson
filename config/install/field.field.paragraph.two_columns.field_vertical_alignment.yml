@@ -7,13 +7,13 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: Q7fB-h90t3u-RZJvnZ7XJwou5kiZvBvWEL8c0SgVcYU
+  default_config_hash: yJoMsWsv1D1DxZT-pMWFBmoljivLD3siFtACCN0L_cs
 id: paragraph.two_columns.field_vertical_alignment
 field_name: field_vertical_alignment
 entity_type: paragraph
 bundle: two_columns
 label: 'Column vertical alignment'
-description: ''
+description: 'The vertical position of the columns in relationship to the longest column, on larger screen devices.'
 required: true
 translatable: true
 default_value:

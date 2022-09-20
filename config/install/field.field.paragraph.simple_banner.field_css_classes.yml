@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.simple_banner
+_core:
+  default_config_hash: Eef7-t0ZK9mlcMYkx2fyMEdMzQ00k-OMZQJYiCeIQkg
 id: paragraph.simple_banner.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: simple_banner
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.views
   module:
     - viewsreference
+_core:
+  default_config_hash: hhG62GuLlMXwk7AyWAHQOFWobLNufVM06xZXD2aZ_tQ
 id: paragraph.views.field_view
 field_name: field_view
 entity_type: paragraph
 bundle: views
 label: View
-description: ''
+description: 'Embed a view from the Drupal Views System onto the page.'
 required: true
 translatable: false
 default_value: {  }
@@ -23,11 +25,12 @@ settings:
     auto_create: 0
   plugin_types:
     default: default
-    block: block
     embed: embed
+    block: block
     page: 0
     feed: 0
   preselect_views:
+    article: 0
     block_content: 0
     content: 0
     content_recent: 0

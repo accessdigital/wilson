@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.logo_wall
+_core:
+  default_config_hash: OTdJE3p8uZKnvHZWAL70u6-W7lBcXFCQBeGdhRhKuuM
 id: paragraph.logo_wall.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: logo_wall
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

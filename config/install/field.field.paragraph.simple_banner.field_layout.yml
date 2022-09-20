@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.simple_banner
   module:
     - options
+_core:
+  default_config_hash: N08R6I48_J-dSyutvCIesEkIgG1vdibqyUa8qGuYLZ8
 id: paragraph.simple_banner.field_layout
 field_name: field_layout
 entity_type: paragraph
 bundle: simple_banner
 label: Layout
-description: ''
+description: 'Defines how the elements of the banner should be laid out. <code>Justified</code> means the headline and text to left, links to the right. <code>Stacked</code> means that the elements are in a vertical column.'
 required: true
 translatable: false
 default_value:

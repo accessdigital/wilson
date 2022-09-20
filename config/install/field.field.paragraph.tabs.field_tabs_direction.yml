@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.tabs
   module:
     - options
+_core:
+  default_config_hash: KzeRy1eAAM-YCwkyhwtJ4zPBe2nAKriFmNsb9W5fY1w
 id: paragraph.tabs.field_tabs_direction
 field_name: field_tabs_direction
 entity_type: paragraph
 bundle: tabs
 label: 'Tabs direction'
-description: ''
+description: 'The orientation of the tab labels. <code>Horizontal</code> means the tabs are left to right above the content. <code>Vertical</code> means the tabs stacked to the left of the content.'
 required: true
 translatable: false
 default_value:

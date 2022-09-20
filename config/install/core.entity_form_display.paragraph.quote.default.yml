@@ -55,6 +55,7 @@ third_party_settings:
       children:
         - group_layout
         - group_padding
+        - group_animation
         - group_background
         - group_clas
       label: Settings
@@ -73,14 +74,14 @@ third_party_settings:
         - field_container_height
         - field_container_width
         - field_container_position
-        - field_aos
       label: Layout
       region: content
       parent_name: group_settings
       weight: 22
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-three
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -92,25 +93,27 @@ third_party_settings:
       label: Padding
       region: content
       parent_name: group_settings
-      weight: 24
+      weight: 23
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
         required_fields: true
     group_background:
       children:
-        - field_section_bg_colour
         - field_section_bg
+        - field_section_bg_colour
       label: Background
       region: content
       parent_name: group_settings
       weight: 25
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -125,15 +128,15 @@ third_party_settings:
       weight: 26
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
         required_fields: true
     group_author:
       children:
-        - field_author
-        - field_author_title
+        - group_author_name
         - field_author_image
       label: Author
       region: content
@@ -141,13 +144,50 @@ third_party_settings:
       weight: 23
       format_type: tab
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         formatter: closed
         description: ''
         required_fields: true
+    group_author_name:
+      children:
+        - field_author
+        - field_author_title
+      label: 'Author name'
+      region: content
+      parent_name: group_author
+      weight: 7
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+    group_animation:
+      children:
+        - field_aos
+      label: Animation
+      region: content
+      parent_name: group_settings
+      weight: 24
+      format_type: details
+      format_settings:
+        classes: input-columns-two
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 _core:
-  default_config_hash: 8oVNPWSI7ga1L5xk7VUzmEedhecPwun0_UKmEgNbu7M
+  default_config_hash: t18vUi6aHzpZj-zJIgQo1hGueJYm-vZdRx3xhDd1mzU
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote
@@ -155,48 +195,48 @@ mode: default
 content:
   field_aos:
     type: options_select
-    weight: 30
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
   field_author:
     type: string_textfield
-    weight: 2
+    weight: 5
     region: content
     settings:
       size: 60
-      placeholder: 'Joe Bloggs'
+      placeholder: 'e.g. Joe Bloggs'
     third_party_settings: {  }
   field_author_image:
     type: media_library_widget
-    weight: 4
+    weight: 8
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_author_title:
     type: string_textfield
-    weight: 3
+    weight: 6
     region: content
     settings:
       size: 60
-      placeholder: 'Marketing Director'
+      placeholder: 'e.g. Marketing Director'
     third_party_settings: {  }
   field_container_height:
     type: options_select
-    weight: 27
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   field_container_position:
     type: options_select
-    weight: 29
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }
   field_container_width:
     type: options_select
-    weight: 28
+    weight: 31
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -214,11 +254,11 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: '.g. how-it-works'
     third_party_settings: {  }
   field_padding_bottom:
     type: options_select
-    weight: 29
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -230,14 +270,14 @@ content:
     third_party_settings: {  }
   field_section_bg:
     type: media_library_widget
-    weight: 23
+    weight: 9
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_section_bg_colour:
     type: options_select
-    weight: 22
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

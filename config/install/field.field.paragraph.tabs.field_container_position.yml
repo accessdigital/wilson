@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.tabs
   module:
     - options
+_core:
+  default_config_hash: ss2fzgmxVGpD3YesOX-P-AzZthMtkE1CLDUAQ26XQJc
 id: paragraph.tabs.field_container_position
 field_name: field_container_position
 entity_type: paragraph
 bundle: tabs
 label: 'Container position'
-description: ''
+description: 'The alignment of the content relative to the page guides, when width is <code>Narrow</code> or <code>Medium</code>.'
 required: true
 translatable: true
 default_value:

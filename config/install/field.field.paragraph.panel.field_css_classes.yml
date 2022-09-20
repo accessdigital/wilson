@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.panel
+_core:
+  default_config_hash: 2hvcvVQWLm9KQMrsbLK3e57GqGp7jPHPesx1q89UQ80
 id: paragraph.panel.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: panel
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

@@ -7,13 +7,13 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: j2kBNHmOK78Gxdd0trG3QHmyhgRcFsr7yLgEL7unpdA
+  default_config_hash: Y65Txevp8fdRZ8vcWlbQ8DyqRHNttXG-ZQGZXy33cwE
 id: paragraph.two_columns.field_container_width
 field_name: field_container_width
 entity_type: paragraph
 bundle: two_columns
 label: 'Container width'
-description: ''
+description: 'The width of the section content, relative to the page guides, on larger screen devices. <code>Normal</code> is default.'
 required: true
 translatable: false
 default_value:

@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_id_anchor
     - paragraphs.paragraphs_type.text_webform
+_core:
+  default_config_hash: 4-BDDIxmv_3DyaY8X_VWX4xS96GOACUKEPipBK6VBoc
 id: paragraph.text_webform.field_id_anchor
 field_name: field_id_anchor
 entity_type: paragraph
 bundle: text_webform
 label: ID/anchor
-description: ''
+description: 'Apply a custom ID to this section wrapper. Can be used to deep link to this section on this page, i.e. <code>/page/alias#how-it-works</code>.'
 required: false
 translatable: true
 default_value: {  }

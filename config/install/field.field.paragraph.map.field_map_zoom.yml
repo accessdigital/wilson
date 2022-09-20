@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.map
   module:
     - options
+_core:
+  default_config_hash: QN_f0ZVOALBYuQeesHbHOAWeRTEKJECi55cCQJ56uKU
 id: paragraph.map.field_map_zoom
 field_name: field_map_zoom
 entity_type: paragraph
 bundle: map
 label: 'Map zoom level'
-description: 'Set zoom level for this map. Select higher numbers for street level maps, and smaller numbers of regions and countries.'
+description: 'Set zoom level for this map. Select higher numbers for a street level map, and smaller numbers to zoom out to region or country level.'
 required: true
 translatable: false
 default_value:

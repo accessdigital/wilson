@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.panel
   module:
     - options
+_core:
+  default_config_hash: adkLksIe1UYOGsLmWZMSpwqLbMLpbTVRsruYYWFOAew
 id: paragraph.panel.field_column_order
 field_name: field_column_order
 entity_type: paragraph
 bundle: panel
 label: 'Column order'
-description: ''
+description: 'The orientation of the text panel in relation to the image, on larger screen devices.'
 required: true
 translatable: true
 default_value:

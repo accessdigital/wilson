@@ -5,13 +5,13 @@ dependencies:
     - field.storage.paragraph.field_id_anchor
     - paragraphs.paragraphs_type.gallery
 _core:
-  default_config_hash: 1xBTPPR8FtLfBtOU6wsWSt16A6IgRXS34dyL0HtSNI0
+  default_config_hash: ewh8D-3DReZZ8WrtsDp-4wcjUbIY4aiXR6sCG3ITgw4
 id: paragraph.gallery.field_id_anchor
 field_name: field_id_anchor
 entity_type: paragraph
 bundle: gallery
 label: ID/anchor
-description: ''
+description: 'Apply a custom ID to this section wrapper. Can be used to deep link to this section on this page, i.e. <code>/page/alias#how-it-works</code>.'
 required: false
 translatable: true
 default_value: {  }

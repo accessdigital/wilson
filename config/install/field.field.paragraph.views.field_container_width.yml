@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.views
   module:
     - options
+_core:
+  default_config_hash: A5se8S0S-qH48MkpBmApe1xFM27_0j5amG6sZTuydfs
 id: paragraph.views.field_container_width
 field_name: field_container_width
 entity_type: paragraph
 bundle: views
 label: 'Container width'
-description: ''
+description: 'The width of the section content, relative to the page guides, on larger screen devices. <code>Normal</code> is default.'
 required: true
 translatable: true
 default_value:
