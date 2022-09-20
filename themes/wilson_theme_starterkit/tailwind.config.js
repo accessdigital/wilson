@@ -45,6 +45,19 @@ module.exports = {
       pattern: /^w-(3\/12|6\/12)/,
       variants: ["md"],
     },
+    // Support for offset backdrops via pseudo elements.
+    {
+      pattern: /^top-|^bottom-|^left-0|^right-0/,
+      variants: ["before", "after"],
+    },
+    {
+      pattern: /absolute/,
+      variants: ["before", "after"],
+    },
+    {
+      pattern: /bg-primary|bg-secondary|bg-tertiary/,
+      variants: ["before", "after"],
+    },
   ],
   theme: {
     colors: {
@@ -113,7 +126,10 @@ module.exports = {
         "2-pref-l-flex": "minmax(var(--one-of-three-cols), var(--two-of-three-cols)) auto",
         // A semi-flexible [one thirds] | [two third] layout
         "2-pref-r-flex": "auto minmax(var(--one-of-three-cols), var(--two-of-three-cols))",
-      }
+      },
+      zIndex: {
+        "1": "1",
+      },
     },
   },
   plugins: [

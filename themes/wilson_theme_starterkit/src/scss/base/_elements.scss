@@ -195,4 +195,14 @@
       }
     }
   }
+
+  // Increase the z-index of paragraph contents when the wrapper has
+  // absolute positioned ::before or ::after pseudo elements injected in.
+  .before\:absolute,
+  .after\:absolute {
+    > .section__container {
+      @apply relative;
+      @apply z-1;
+    }
+  }
 }
