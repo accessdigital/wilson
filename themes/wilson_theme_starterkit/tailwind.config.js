@@ -46,6 +46,8 @@ module.exports = {
       variants: ["md"],
     },
     // Support for offset backdrops via pseudo elements.
+    // Example classes used on a paragraph:
+    // `relative before:bg-primary before:absolute before:top-1/2 before:right-0 before:bottom-0 before:left-0`
     {
       pattern: /^top-|^bottom-|^left-0|^right-0/,
       variants: ["before", "after"],
