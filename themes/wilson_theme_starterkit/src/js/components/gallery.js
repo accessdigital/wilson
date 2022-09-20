@@ -18,7 +18,12 @@
 
       galleryCarousels.forEach((galleryCarousel) => {
         const carousel = galleryCarousel.querySelector(".glide");
-        const carouselImages = carousel.querySelectorAll("img");
+        const carouselImages = galleryCarousel.querySelectorAll(".glide__slide img");
+
+        // Don't mount a gallery if there's slider or images.
+        if (!carousel || !carouselImages) {
+          return;
+        }
 
         // Images with lazy load means that JS can't automatically calculate
         // the maximum height of all images before rendering the carousel.

@@ -46,28 +46,35 @@
 ] %}
 
 {% block content %}
-  {{ attach_library('wilson_theme_starterkit/gallery') }}
-
   <div{{ create_attribute({'class': classes}) }}>
-    <div class="glide">
-      <div data-glide-el="track" class="glide__track">
-        <div class="glide__slides flex items-center">
-          {% for image in content.field_media|field_value %}
-            <div class="glide__slide child-picture:w-auto text-center">
-              {{ image }}
-            </div>
-          {% endfor %}
-        </div>
+    {# Only add gallery controls if there's > 1 image. #}
+    {% if paragraph.field_media.getvalue|length > 1 %}
+      <div class="glide">
+        <div data-glide-el="track" class="glide__track">
+          <div class="glide__slides flex items-center">
+            {% for image in content.field_media|field_value %}
+              <div class="glide__slide child-picture:w-auto text-center">
+                {{ image }}
+              </div>
+            {% endfor %}
+          </div>
 
-        <div class="glide__controls flex justify-center mt-8 pb-2" data-glide-el="controls[nav]">
-          {% for item in content.field_media|field_value %}
-            <button class="h-4 w-4 mx-2 relative border-2 rounded-full transition-all hover:shadow-halo" data-glide-dir="={{ loop.index0 }}" type="button">
-              <span class="visually-hidden">{{ 'Go to slide' }} {{ loop.index }}</span>
-            </button>
-          {% endfor %}
+          {{ attach_library('wilson_theme_starterkit/gallery') }}
+
+          <div class="glide__controls flex justify-center mt-8 pb-2" data-glide-el="controls[nav]">
+            {% for item in content.field_media|field_value %}
+              <button class="h-4 w-4 mx-2 relative border-2 rounded-full transition-all hover:shadow-halo" data-glide-dir="={{ loop.index0 }}" type="button">
+                <span class="visually-hidden">{{ 'Go to slide' }} {{ loop.index }}</span>
+              </button>
+            {% endfor %}
+          </div>
         </div>
       </div>
-    </div>
+    {% else %}
+      <div class="flex items-center justify-center w-full">
+        {{ content.field_media|field_value }}
+      </div>
+    {% endif %}
   </div>
 
 {% endblock %}
