@@ -28,7 +28,6 @@
         // Set up a container that will be used to display tab list.
         const tabsContainer = document.createElement("div");
         tabsContainer.classList.add("panels__tabs");
-        tabsContainer.setAttribute("aria-hidden", "true");
 
         // Set up a list that will be used to display tabs.
         const tabsList = document.createElement("ul");
@@ -38,6 +37,8 @@
         const revealPanel = (index) => {
           headings[index].classList.add("is-active");
           tabs[index].classList.add("is-active");
+          tabs[index].setAttribute("aria-selected", "true");
+          tabs[index].removeAttribute('tabindex');
           panels[index].classList.add("is-active");
           activeIndex = index;
           buttons[index].setAttribute("aria-expanded", "true");
@@ -47,6 +48,8 @@
           if (index !== null) {
             headings[index].classList.remove("is-active");
             tabs[index].classList.remove("is-active");
+            tabs[index].setAttribute("aria-selected", "false");
+            tabs[index].tabIndex = -1;
             panels[index].classList.remove("is-active");
             buttons[index].setAttribute("aria-expanded", "false");
           }
@@ -58,11 +61,53 @@
           const tabText = document.createTextNode(buttons[i].innerText);
           const tabLink = document.createElement("button");
           const tabItem = document.createElement("li");
+          const tabContentID = buttons[i].getAttribute('aria-controls');
           tabLink.setAttribute("role", "tab");
+          tabLink.setAttribute("aria-selected", "false");
+          tabLink.setAttribute("aria-controls", tabContentID);
+          tabLink.tabIndex = -1;
           tabLink.appendChild(tabText);
           tabs.push(tabLink);
           tabItem.appendChild(tabLink);
           tabsList.appendChild(tabItem);
+
+          // Select a tab.
+          const setSelectedTab = (index) => {
+            tabs[index].click();
+            tabs[index].focus();
+          };
+
+          // Handle keypress of the tab item - left / right key navigation.
+          tabLink.addEventListener("keydown", (event) => {
+            const firstTab = 0;
+            const lastTab = tabs.length - 1;
+            switch (event.key) {
+              case 'ArrowRight':
+                // Select first tab in tab list if user tries to move right
+                // beyond the final tab.
+                if (activeIndex === lastTab) {
+                  setSelectedTab(firstTab);
+                  // Otherwise, select next tab.
+                } else {
+                  setSelectedTab(activeIndex + 1);
+                }
+                break;
+
+              case 'ArrowLeft':
+                // Select final tab in tab list if user tries to move left
+                // beyond the first tab.
+                if (activeIndex === firstTab) {
+                  setSelectedTab(lastTab);
+                  // Otherwise, select previous tab.
+                } else {
+                  setSelectedTab(activeIndex - 1);
+                }
+                break;
+
+              default:
+                break;
+            }
+          });
 
           // Handle clicks on the tab item.
           tabLink.addEventListener("click", (event) => {
