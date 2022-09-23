@@ -96,12 +96,12 @@
             switch (event.key) {
               case rightDown:
                 event.preventDefault();
-                // Select first tab in tab list if user tries to move right (or
-                // down, if vertical tabs) beyond the final tab.
                 if (activeIndex === lastTab) {
+                  // Select first tab in tab list if user tries to move right (or
+                  // down, if vertical tabs) beyond the final tab.
                   selectTab(firstTab);
-                  // Otherwise, select next tab.
                 } else {
+                  // Otherwise, select next tab.
                   selectTab(activeIndex + 1);
                 }
 
@@ -109,12 +109,12 @@
 
               case leftUp:
                 event.preventDefault();
-                // Select final tab in tab list if user tries to move left (or
-                // up, if vertical tabs) beyond the first tab.
                 if (activeIndex === firstTab) {
+                  // Select final tab in tab list if user tries to move left (or
+                  // up, if vertical tabs) beyond the first tab.
                   selectTab(lastTab);
-                  // Otherwise, select previous tab.
                 } else {
+                  // Otherwise, select previous tab.
                   selectTab(activeIndex - 1);
                 }
 
