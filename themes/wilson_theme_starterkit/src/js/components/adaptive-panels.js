@@ -38,7 +38,7 @@
           headings[index].classList.add("is-active");
           tabs[index].classList.add("is-active");
           tabs[index].setAttribute("aria-selected", "true");
-          tabs[index].removeAttribute('tabindex');
+          tabs[index].removeAttribute("tabindex");
           panels[index].classList.add("is-active");
           activeIndex = index;
           buttons[index].setAttribute("aria-expanded", "true");
@@ -61,7 +61,12 @@
           const tabText = document.createTextNode(buttons[i].innerText);
           const tabLink = document.createElement("button");
           const tabItem = document.createElement("li");
-          const tabContentID = buttons[i].getAttribute('aria-controls');
+          const tabContentID = buttons[i].getAttribute("aria-controls");
+          let orientation = "horizontal";
+          if (accordion.classList.contains("panels--vertical")) {
+            orientation = "vertical";
+          }
+
           tabLink.setAttribute("role", "tab");
           tabLink.setAttribute("aria-selected", "false");
           tabLink.setAttribute("aria-controls", tabContentID);
@@ -70,9 +75,10 @@
           tabs.push(tabLink);
           tabItem.appendChild(tabLink);
           tabsList.appendChild(tabItem);
+          tabsList.setAttribute("aria-orientation", orientation);
 
           // Select a tab.
-          const setSelectedTab = (index) => {
+          const selectTab = (index) => {
             tabs[index].click();
             tabs[index].focus();
           };
@@ -81,27 +87,36 @@
           tabLink.addEventListener("keydown", (event) => {
             const firstTab = 0;
             const lastTab = tabs.length - 1;
+            const rightDown =
+              orientation === "horizontal" ? "ArrowRight" : "ArrowDown";
+            const leftUp =
+              orientation === "horizontal" ? "ArrowLeft" : "ArrowUp";
+
             switch (event.key) {
-              case 'ArrowRight':
-                // Select first tab in tab list if user tries to move right
-                // beyond the final tab.
+              case rightDown:
+                event.preventDefault();
+                // Select first tab in tab list if user tries to move right (or
+                // down, if vertical tabs) beyond the final tab.
                 if (activeIndex === lastTab) {
-                  setSelectedTab(firstTab);
+                  selectTab(firstTab);
                   // Otherwise, select next tab.
                 } else {
-                  setSelectedTab(activeIndex + 1);
+                  selectTab(activeIndex + 1);
                 }
+
                 break;
 
-              case 'ArrowLeft':
-                // Select final tab in tab list if user tries to move left
-                // beyond the first tab.
+              case leftUp:
+                event.preventDefault();
+                // Select final tab in tab list if user tries to move left (or
+                // up, if vertical tabs) beyond the first tab.
                 if (activeIndex === firstTab) {
-                  setSelectedTab(lastTab);
+                  selectTab(lastTab);
                   // Otherwise, select previous tab.
                 } else {
-                  setSelectedTab(activeIndex - 1);
+                  selectTab(activeIndex - 1);
                 }
+
                 break;
 
               default:
