@@ -83,7 +83,8 @@
             tabs[index].focus();
           };
 
-          // Handle keypress of the tab item - left / right key navigation.
+          // Handle keypress of the tab item - left / right or up / down key
+          // navigation of tabs.
           tabLink.addEventListener("keydown", (event) => {
             const firstTab = 0;
             const lastTab = tabs.length - 1;
