@@ -19,7 +19,7 @@
    */
   Drupal.behaviors.jumpNav = {
     attach(context) {
-      once('jumpNav', '.jump-nav', context).forEach((jumpNavEl) => {
+      once("jumpNav", ".jump-nav", context).forEach((jumpNavEl) => {
         // Watch for the jump-nav becoming sticky.
         this.detectSticky(jumpNavEl);
 
@@ -34,13 +34,13 @@
       if (context === document) {
 
         // Attach a scroll listener to detect if any anchor points are active.
-        document.addEventListener('scroll', () => {
+        document.addEventListener("scroll", () => {
           this.handleScroll();
         });
 
         // Attach a debounced resize listener to reset the position of the anchor
         // points and to re-check if any are now active.
-        window.addEventListener('resize', () => {
+        window.addEventListener("resize", () => {
           clearTimeout(resizeTimer);
           resizeTimer = setTimeout(() => {
             this.initAnchors();
@@ -80,7 +80,7 @@
       document.querySelectorAll('.anchor-point').forEach((anchorEl) => {
         anchors.push({
           top: anchorEl.offsetTop,
-          hash: `#${anchorEl.getAttribute('id')}`,
+          hash: `#${anchorEl.getAttribute("id")}`,
           el: anchorEl,
         });
       });
@@ -88,12 +88,12 @@
       // Check if any anchor points should be made active.
       this.handleScroll();
     },
-    // Handle making jump-nav links active when anchors comes in to view.
+    // Handle making jump-nav links active when anchors come in to view.
     handleScroll() {
       const scrollPos = document.documentElement.scrollTop + 1;
 
       // Remove the `is-active` class from previous active jump-nav links.
-      document.querySelectorAll('.jump-nav a.is-active').forEach((el) => {
+      document.querySelectorAll(".jump-nav a.is-active").forEach((el) => {
         el.classList.remove("is-active");
       });
 
