@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.text_webform
   module:
     - webform
+_core:
+  default_config_hash: OTZrn5C5cYo32ZMZS5hHZjAgurmZ6UFKeEINESTw938
 id: paragraph.text_webform.field_webform
 field_name: field_webform
 entity_type: paragraph
 bundle: text_webform
 label: Webform
-description: ''
+description: 'The webform from the Drupal Webform System to embed onto the page.'
 required: false
 translatable: true
 default_value: {  }

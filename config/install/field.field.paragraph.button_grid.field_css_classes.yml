@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.button_grid
+_core:
+  default_config_hash: dJbH0DEc8vGbEFP2ZRnLPjCemvfmjSo5RvKWcdc8oMo
 id: paragraph.button_grid.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: button_grid
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

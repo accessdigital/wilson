@@ -7,13 +7,13 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: 4OKG7Tvjose5QRru9_iVCkempheIcQBn3h-Y9N8dH5I
+  default_config_hash: uz_f5KfkT7S2vtpn97R6_1AMHkVKMEyLm7gFh6muycY
 id: paragraph.two_columns.field_padding_bottom
 field_name: field_padding_bottom
 entity_type: paragraph
 bundle: two_columns
 label: 'Bottom padding'
-description: ''
+description: 'The amount of padding to apply to the bottom of the section, pushing the next section down from the content.'
 required: true
 translatable: true
 default_value:

@@ -5,12 +5,14 @@ dependencies:
     - field.storage.paragraph.field_section_bg_colour
     - paragraphs.paragraphs_type.text_webform
     - taxonomy.vocabulary.background_styles
+_core:
+  default_config_hash: qnwcZ-03AlhGlI03nMMRJHBaLeFRzqjWN8RT-trOjWE
 id: paragraph.text_webform.field_section_bg_colour
 field_name: field_section_bg_colour
 entity_type: paragraph
 bundle: text_webform
 label: 'Background style'
-description: ''
+description: 'Used to apply brand colours to a section background or to alter the appearance of background images.'
 required: false
 translatable: true
 default_value: {  }

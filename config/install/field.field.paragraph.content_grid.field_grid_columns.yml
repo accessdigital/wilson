@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.content_grid
   module:
     - options
+_core:
+  default_config_hash: 9f87mTF33JKWs-HfNynYshpWmA2a5mIxOJ3uhKR4SCI
 id: paragraph.content_grid.field_grid_columns
 field_name: field_grid_columns
 entity_type: paragraph
 bundle: content_grid
 label: 'Grid columns'
-description: ''
+description: 'The number of columns to distribute the content teasers across on larger screen devices.'
 required: true
 translatable: false
 default_value:

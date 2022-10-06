@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.tabs
   module:
     - options
+_core:
+  default_config_hash: dJP_1-z_5LuCprYmc-TEICh7fdN7PFQh3hwJ4fm86CY
 id: paragraph.tabs.field_padding_bottom
 field_name: field_padding_bottom
 entity_type: paragraph
 bundle: tabs
 label: 'Bottom padding'
-description: ''
+description: 'The amount of padding to apply to the bottom of the section, pushing the next section down from the content.'
 required: true
 translatable: true
 default_value:

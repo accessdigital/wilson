@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.text_webform
+_core:
+  default_config_hash: RYF7UYb36iqwVIMZAJv6HfmXsaiM5Mnbd75kyP3NJXg
 id: paragraph.text_webform.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: text_webform
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

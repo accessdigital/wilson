@@ -5,13 +5,13 @@ dependencies:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.three_columns
 _core:
-  default_config_hash: 7ZIvGHUzVZscvVy-WJLSbFrqR03Jy4FRJTOIG7EGZDU
+  default_config_hash: 1O10TfOEt7j8Q3uQLPM8NuCP-2e1CIjnYjCQC6LnxTc
 id: paragraph.three_columns.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: three_columns
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

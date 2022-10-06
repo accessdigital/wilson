@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.block
   module:
     - block_field
+_core:
+  default_config_hash: 3IRfJs8KOTYgUVuPeY2WOSMrbGFzu0kXk2x3_ohZW4I
 id: paragraph.block.field_block
 field_name: field_block
 entity_type: paragraph
 bundle: block
 label: Block
-description: ''
+description: 'Embed a block from the Drupal Block System onto the page.'
 required: true
 translatable: false
 default_value: {  }
@@ -30,4 +32,5 @@ settings:
       System: System
       User: User
       Webform: Webform
+      COOKiES: '0'
 field_type: block_field

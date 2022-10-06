@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.content_grid
   module:
     - options
+_core:
+  default_config_hash: tpo5bvR_IyqT7Bc9pN-jmIcumKLzTg4wu2wyFRZjYa8
 id: paragraph.content_grid.field_padding_top
 field_name: field_padding_top
 entity_type: paragraph
 bundle: content_grid
 label: 'Top padding'
-description: ''
+description: 'The amount of padding to apply to the top of the section, pushing the content down from the previous section.'
 required: true
 translatable: true
 default_value:

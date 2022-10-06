@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.content_grid
+_core:
+  default_config_hash: x4a4_l9Nvlg3YnRSG-jFD841Zgkakqyf1HRhoPxVK_U
 id: paragraph.content_grid.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: content_grid
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

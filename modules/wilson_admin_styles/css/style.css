@@ -163,6 +163,18 @@
   background-color: #ffffff !important;
 }
 
+/* Improve appearance of <code> tags which are often used for field value examples in field descriptions. */
+.form-item__description code {
+  background: #e5e5e5;
+  display: inline-block;
+  margin: 2px 0;
+  padding: 2px 5px;
+  border-radius: 2px;
+  line-height: 1;
+  text-shadow: 1px 1px 0 #fff;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
 /* Place input fields into columns */
 @media screen and (min-width: 992px) {
   div.input-columns,

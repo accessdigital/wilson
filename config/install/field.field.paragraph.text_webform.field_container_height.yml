@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.text_webform
   module:
     - options
+_core:
+  default_config_hash: 6kg-JPVDb9ZtIgqxHHMEyYGvTA1O7UFugnAKvTvVbvs
 id: paragraph.text_webform.field_container_height
 field_name: field_container_height
 entity_type: paragraph
 bundle: text_webform
 label: 'Container min height'
-description: ''
+description: 'The minimum height this section should occupy on the screen. Depending on the content and padding settings, the section may exceed the selected height. Default is <code>Auto</code>.'
 required: true
 translatable: true
 default_value:

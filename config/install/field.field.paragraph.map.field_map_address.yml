@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_map_address
     - paragraphs.paragraphs_type.map
+_core:
+  default_config_hash: 16Flpev7u05KtIDIvoExKu2tpg6dMx4isuGRptVZF7k
 id: paragraph.map.field_map_address
 field_name: field_map_address
 entity_type: paragraph
 bundle: map
 label: 'Map address'
-description: 'The address of the centre point of the map.'
+description: "The full address, landmark or Google Maps coordinates to use as the centre point of the map.<br />\r\nExamples:-<br />\r\n<code>Access Digital, Trafford House, Chester Road, Manchester, M32 0RS</code><br />\r\n<code>Manchester Town Hall</code><br />\r\n<code>53.47419174994676, -2.247470313879256</code>"
 required: true
 translatable: false
 default_value: {  }

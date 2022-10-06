@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.one_column
   module:
     - options
+_core:
+  default_config_hash: kAnmvnobg0iaPuK0vucHB3M6oDsp4l8OISQYQA51eRo
 id: paragraph.one_column.field_container_height
 field_name: field_container_height
 entity_type: paragraph
 bundle: one_column
 label: 'Container min height'
-description: ''
+description: 'The minimum height this section should occupy on the screen. Depending on the content and padding settings, the section may exceed the selected height. Default is <code>Auto</code>.'
 required: true
 translatable: true
 default_value:

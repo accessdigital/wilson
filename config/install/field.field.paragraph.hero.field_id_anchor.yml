@@ -5,13 +5,13 @@ dependencies:
     - field.storage.paragraph.field_id_anchor
     - paragraphs.paragraphs_type.hero
 _core:
-  default_config_hash: 8T2p2Lv7dMr_zE2E5XGnny5Nuusog5ZhuIGT8pjGu60
+  default_config_hash: ylxtt_XbVkWZ7i5V-ZoW5UbfDXFcYIMqK8ayKKK8usw
 id: paragraph.hero.field_id_anchor
 field_name: field_id_anchor
 entity_type: paragraph
 bundle: hero
 label: ID/anchor
-description: ''
+description: 'Apply a custom ID to this section wrapper. Can be used to deep link to this section on this page, i.e. <code>/page/alias#how-it-works</code>.'
 required: false
 translatable: true
 default_value: {  }

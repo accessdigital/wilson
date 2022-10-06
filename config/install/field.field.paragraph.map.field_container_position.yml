@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.map
   module:
     - options
+_core:
+  default_config_hash: FUh2YNdW3iRR9VH4PwCScu8QGheympx-HvP7Hf5GTVw
 id: paragraph.map.field_container_position
 field_name: field_container_position
 entity_type: paragraph
 bundle: map
 label: 'Container position'
-description: ''
+description: 'The alignment of the content relative to the page guides, when width is <code>Narrow</code> or <code>Medium</code>.'
 required: true
 translatable: true
 default_value:

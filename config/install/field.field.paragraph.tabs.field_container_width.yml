@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.tabs
   module:
     - options
+_core:
+  default_config_hash: BT6CNAUWURXHtB-V2JYaJo92sO185I6SPjeCmzxs-Cc
 id: paragraph.tabs.field_container_width
 field_name: field_container_width
 entity_type: paragraph
 bundle: tabs
 label: 'Container width'
-description: ''
+description: 'The width of the section content, relative to the page guides, on larger screen devices. <code>Normal</code> is default.'
 required: true
 translatable: true
 default_value:

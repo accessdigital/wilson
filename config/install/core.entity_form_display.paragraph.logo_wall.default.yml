@@ -51,6 +51,7 @@ third_party_settings:
       children:
         - group_layout
         - group_padding
+        - group_animation
         - group_background
         - group_classes_id
       label: Settings
@@ -70,14 +71,14 @@ third_party_settings:
         - field_container_height
         - field_container_width
         - field_container_position
-        - field_aos
       label: Layout
       region: content
       parent_name: group_settings
       weight: 7
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -92,22 +93,24 @@ third_party_settings:
       weight: 8
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
         required_fields: true
     group_background:
       children:
-        - field_section_bg_colour
         - field_section_bg
+        - field_section_bg_colour
       label: Background
       region: content
       parent_name: group_settings
-      weight: 9
+      weight: 10
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -119,16 +122,32 @@ third_party_settings:
       label: 'Classes & ID'
       region: content
       parent_name: group_settings
-      weight: 10
+      weight: 11
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_animation:
+      children:
+        - field_aos
+      label: Animation
+      region: content
+      parent_name: group_settings
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
         required_fields: true
 _core:
-  default_config_hash: w3ojsy0v2p4inXiEubDsV9hLNqE33aeb4JT2J7lFHGM
+  default_config_hash: cOXspbdcNWo1VWveO8Rf0Fdge-d_DoDcdbjq7zNz5GI
 id: paragraph.logo_wall.default
 targetEntityType: paragraph
 bundle: logo_wall
@@ -178,7 +197,7 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'e.g. how-it-works'
     third_party_settings: {  }
   field_media:
     type: media_library_widget
@@ -208,7 +227,7 @@ content:
     third_party_settings: {  }
   field_section_bg_colour:
     type: options_select
-    weight: 9
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

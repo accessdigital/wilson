@@ -6,12 +6,14 @@ dependencies:
     - paragraphs.paragraphs_type.block
   module:
     - options
+_core:
+  default_config_hash: RUY0dWBh8BvQ3VmhLQzzD-25EAwZYwqoiznw6HGaBBg
 id: paragraph.block.field_padding_top
 field_name: field_padding_top
 entity_type: paragraph
 bundle: block
 label: 'Top padding'
-description: ''
+description: 'The amount of padding to apply to the top of the section, pushing the content down from the previous section.'
 required: true
 translatable: true
 default_value:

@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.content_slider
+_core:
+  default_config_hash: oocaTUO-NW8s2EyuqFUgp8PhORDrFAtGQg9JdPSB4sA
 id: paragraph.content_slider.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: content_slider
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

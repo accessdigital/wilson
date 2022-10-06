@@ -36,6 +36,7 @@ third_party_settings:
       children:
         - group_layout
         - group_padding
+        - group_animation
         - group_classes_id
       label: Settings
       region: content
@@ -53,14 +54,14 @@ third_party_settings:
         - field_container_height
         - field_container_width
         - field_container_position
-        - field_aos
       label: Layout
       region: content
       parent_name: group_settings
       weight: 20
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-three
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -75,7 +76,8 @@ third_party_settings:
       weight: 21
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -87,10 +89,11 @@ third_party_settings:
       label: 'Classes & ID'
       region: content
       parent_name: group_settings
-      weight: 22
+      weight: 23
       format_type: details
       format_settings:
-        classes: ''
+        classes: input-columns-two
+        show_empty_fields: false
         id: ''
         open: false
         description: ''
@@ -109,8 +112,23 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+    group_animation:
+      children:
+        - field_aos
+      label: Animation
+      region: content
+      parent_name: group_settings
+      weight: 22
+      format_type: details
+      format_settings:
+        classes: input-columns-two
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 _core:
-  default_config_hash: W26zlNSt2VHu_rmKrclPXPzx9Z9Fu0ZFv6-lUCjURgQ
+  default_config_hash: GAVbhRirnH7sN4u9X69mLkkpMz1RZilss8GJJ_SXm1M
 id: paragraph.accordion.default
 targetEntityType: paragraph
 bundle: accordion
@@ -154,7 +172,7 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'e.g. how-it-works'
     third_party_settings: {  }
   field_items:
     type: paragraphs

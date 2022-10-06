@@ -5,13 +5,13 @@ dependencies:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.hero
 _core:
-  default_config_hash: AhiI9GtQCAGSsPGLGsePiwAGsfiVtPUQFR66lcPaFu4
+  default_config_hash: 1LjIArUbSWW8H0S8bTSt_qmB00x5Uj2HofO-JrBo5uE
 id: paragraph.hero.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: hero
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }

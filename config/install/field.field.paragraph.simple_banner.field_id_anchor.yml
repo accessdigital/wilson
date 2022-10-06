@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_id_anchor
     - paragraphs.paragraphs_type.simple_banner
+_core:
+  default_config_hash: FSHMZs_G99SrROGviclj4_a1Dtg8Th3VwSQjJvL0YcM
 id: paragraph.simple_banner.field_id_anchor
 field_name: field_id_anchor
 entity_type: paragraph
 bundle: simple_banner
 label: ID/anchor
-description: ''
+description: 'Apply a custom ID to this section wrapper. Can be used to deep link to this section on this page, i.e. <code>/page/alias#how-it-works</code>.'
 required: false
 translatable: true
 default_value: {  }

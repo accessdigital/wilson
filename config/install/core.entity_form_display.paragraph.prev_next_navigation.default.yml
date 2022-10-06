@@ -79,7 +79,7 @@ third_party_settings:
       weight: 20
       format_type: details
       format_settings:
-        classes: input-columns-two
+        classes: input-columns-three
         show_empty_fields: false
         id: ''
         open: false

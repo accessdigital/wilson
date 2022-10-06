@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.paragraph.field_css_classes
     - paragraphs.paragraphs_type.quote
+_core:
+  default_config_hash: 8YJ1xbvFz8R-csnQX7uFpa6dL-dTdGZjbfiNBAjWcsQ
 id: paragraph.quote.field_css_classes
 field_name: field_css_classes
 entity_type: paragraph
 bundle: quote
 label: 'CSS classes'
-description: ''
+description: 'Add custom CSS classes to this section wrapper. Separate classes with a space.'
 required: false
 translatable: true
 default_value: {  }
