@@ -21,6 +21,9 @@
     @apply drop-shadow-2xl;
     @apply overflow-x-scroll;
 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
     &::-webkit-scrollbar {
       display: none;
     }

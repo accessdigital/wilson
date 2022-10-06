@@ -50,9 +50,15 @@
     }
 
     &.panels--horizontal {
-      .panels__tabs-list {
+      .panels__tabs {
         @apply hidden;
 
+        @screen md {
+          @apply block;
+        }
+      }
+
+      .panels__tabs-list {
         @screen md {
           @apply flex;
           @apply flex-row;
