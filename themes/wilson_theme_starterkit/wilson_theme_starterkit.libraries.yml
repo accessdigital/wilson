@@ -53,6 +53,16 @@ gallery:
     - wilson_theme_starterkit/global
     - wilson_theme_starterkit/glide
 
+jump-nav:
+  css:
+    theme:
+      dist/css/components/jump-nav.css: { minified: true }
+  js:
+    dist/js/components/jump-nav.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/once
+
 slider:
   css:
     theme:

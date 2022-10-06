@@ -73,3 +73,31 @@
     {% endif %}
   </div>
 {% endblock %}
+
+{% block after_paragraph %}
+  {% if paragraph.field_toggle_jump_nav.value and content.jump_nav_anchor_points %}
+    {{ attach_library('wilson_theme_starterkit/jump-nav') }}
+
+    {% set jump_nav_classes = [
+      'jump-nav',
+      '-mb-10',
+      paragraph.field_padding_bottom.0.value == 'md' or
+      paragraph.field_padding_bottom.0.value == 'lg' or
+      paragraph.field_padding_bottom.0.value == 'xl' ? '-mt-10',
+    ] %}
+
+    <div{{ create_attribute({'class': jump_nav_classes}) }}>
+      <nav class="container mx-auto px-5">
+        <ul>
+          {% for key, item in content.jump_nav_anchor_points %}
+            <li class="bg-white">
+              <a href="#{{ item.id }}" class="jump-link px-5 md:px-8 py-4 border-0 font-bold text-sm md:text-lg">
+                <span class="block mb-1 text-xs font-light">{{ 'Jump to'|t }}</span> {{ item.label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  {% endif %}
+{% endblock %}

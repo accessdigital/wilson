@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_anchor_point_label
+    - paragraphs.paragraphs_type.anchor_point
+id: paragraph.anchor_point.field_anchor_point_label
+field_name: field_anchor_point_label
+entity_type: paragraph
+bundle: anchor_point
+label: 'Anchor point label'
+description: 'Provide a label for this Anchor point. The label will only be visible on the page if the Hero ''jump menu'' is used, but you can link to this Anchor point if you include the provided #hash in the URL. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

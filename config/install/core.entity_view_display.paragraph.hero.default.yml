@@ -18,12 +18,13 @@ dependencies:
     - field.field.paragraph.hero.field_section_bg
     - field.field.paragraph.hero.field_section_bg_colour
     - field.field.paragraph.hero.field_text_column
+    - field.field.paragraph.hero.field_toggle_jump_nav
     - paragraphs.paragraphs_type.hero
   module:
     - link
     - text
 _core:
-  default_config_hash: 1cZlXfN3l2FN5hoUeK59FNfOOBWrrODzQjk3WGLKAeA
+  default_config_hash: VWfZjp1-cnl9HEkqKn1gK4tQ1rdfQZzVO1km4QUZJJo
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -96,3 +97,4 @@ hidden:
   field_padding_bottom: true
   field_padding_top: true
   field_section_bg_colour: true
+  field_toggle_jump_nav: true

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.anchor_point.field_anchor_point_label
+    - paragraphs.paragraphs_type.anchor_point
+id: paragraph.anchor_point.default
+targetEntityType: paragraph
+bundle: anchor_point
+mode: default
+content: {  }
+hidden:
+  field_anchor_point_label: true

@@ -4,7 +4,6 @@
  * See https://inorganik.github.io/countUp.js/
  */
 ((Drupal, once) => {
-
   /**
    * Statistics
    *
@@ -14,22 +13,22 @@
    */
   Drupal.behaviors.statistics = {
     attach(context) {
-      once('statistics', '.countup', context).forEach( (countUpEl) => {
+      once("statistics", ".countup", context).forEach((countUpEl) => {
         // Count the number of decimal places in the provided value to be
         // passed as an argument in to CountUp.js.
         const countDecimals = (numberStr) => {
-          const split = numberStr.split('.');
+          const split = numberStr.split(".");
           if (split[1]) {
             return split[1].length;
           }
           return 0;
-        }
+        };
 
         // Determine a numeric value from the .countup element.
         // Thousand separators are removed to allow the number to be parsed to
         // a float.
         const valueStr = countUpEl.innerHTML;
-        const valueFloat = parseFloat(valueStr.replace(/,/g, ''));
+        const valueFloat = parseFloat(valueStr.replace(/,/g, ""));
 
         // We can only animate numeric values.
         if (!Number.isNaN(valueFloat)) {
@@ -37,8 +36,8 @@
           const options = {
             enableScrollSpy: true,
             decimalPlaces: countDecimals(valueStr),
-            useGrouping: valueStr.includes(','),
-            duration: 3
+            useGrouping: valueStr.includes(","),
+            duration: 3,
           };
 
           // Attach animation to the value.

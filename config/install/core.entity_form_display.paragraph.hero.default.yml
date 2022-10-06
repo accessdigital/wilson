@@ -18,6 +18,7 @@ dependencies:
     - field.field.paragraph.hero.field_section_bg
     - field.field.paragraph.hero.field_section_bg_colour
     - field.field.paragraph.hero.field_text_column
+    - field.field.paragraph.hero.field_toggle_jump_nav
     - paragraphs.paragraphs_type.hero
   module:
     - field_group
@@ -58,6 +59,7 @@ third_party_settings:
         required_fields: true
     group_settings:
       children:
+        - field_toggle_jump_nav
         - group_layout
         - group_padding
         - group_background
@@ -98,7 +100,7 @@ third_party_settings:
       label: Layout
       region: content
       parent_name: group_settings
-      weight: 10
+      weight: 32
       format_type: details
       format_settings:
         classes: ''
@@ -113,7 +115,7 @@ third_party_settings:
       label: Padding
       region: content
       parent_name: group_settings
-      weight: 11
+      weight: 33
       format_type: details
       format_settings:
         classes: ''
@@ -128,7 +130,7 @@ third_party_settings:
       label: Background
       region: content
       parent_name: group_settings
-      weight: 12
+      weight: 34
       format_type: details
       format_settings:
         classes: ''
@@ -143,7 +145,7 @@ third_party_settings:
       label: 'Classes & ID'
       region: content
       parent_name: group_settings
-      weight: 13
+      weight: 35
       format_type: details
       format_settings:
         classes: ''
@@ -152,7 +154,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: 7iavhPkJ-bgMUVoKY3xyxlbMXDve6aoKDlCpdECkXew
+  default_config_hash: PHfo12PSbUKq7RaBG60KGbaEYoC92aS2elNwSiv-dtw
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -160,7 +162,7 @@ mode: default
 content:
   field_aos:
     type: options_select
-    weight: 33
+    weight: 34
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -172,13 +174,13 @@ content:
     third_party_settings: {  }
   field_container_position:
     type: options_select
-    weight: 32
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
   field_container_width:
     type: options_select
-    weight: 31
+    weight: 32
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -268,6 +270,13 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_toggle_jump_nav:
+    type: boolean_checkbox
+    weight: 31
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   created: true
