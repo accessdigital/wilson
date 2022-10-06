@@ -28,7 +28,6 @@
         // Set up a container that will be used to display tab list.
         const tabsContainer = document.createElement("div");
         tabsContainer.classList.add("panels__tabs");
-        tabsContainer.setAttribute("aria-hidden", "true");
 
         // Set up a list that will be used to display tabs.
         const tabsList = document.createElement("ul");
@@ -38,6 +37,8 @@
         const revealPanel = (index) => {
           headings[index].classList.add("is-active");
           tabs[index].classList.add("is-active");
+          tabs[index].setAttribute("aria-selected", "true");
+          tabs[index].removeAttribute("tabindex");
           panels[index].classList.add("is-active");
           activeIndex = index;
           buttons[index].setAttribute("aria-expanded", "true");
@@ -47,6 +48,8 @@
           if (index !== null) {
             headings[index].classList.remove("is-active");
             tabs[index].classList.remove("is-active");
+            tabs[index].setAttribute("aria-selected", "false");
+            tabs[index].tabIndex = -1;
             panels[index].classList.remove("is-active");
             buttons[index].setAttribute("aria-expanded", "false");
           }
@@ -58,11 +61,69 @@
           const tabText = document.createTextNode(buttons[i].innerText);
           const tabLink = document.createElement("button");
           const tabItem = document.createElement("li");
+          const tabContentID = buttons[i].getAttribute("aria-controls");
+          let orientation = "horizontal";
+          if (accordion.classList.contains("panels--vertical")) {
+            orientation = "vertical";
+          }
+
           tabLink.setAttribute("role", "tab");
+          tabLink.setAttribute("aria-selected", "false");
+          tabLink.setAttribute("aria-controls", tabContentID);
+          tabLink.tabIndex = -1;
           tabLink.appendChild(tabText);
           tabs.push(tabLink);
           tabItem.appendChild(tabLink);
           tabsList.appendChild(tabItem);
+          tabsList.setAttribute("aria-orientation", orientation);
+
+          // Select a tab.
+          const selectTab = (index) => {
+            tabs[index].click();
+            tabs[index].focus();
+          };
+
+          // Handle keypress of the tab item - left / right or up / down key
+          // navigation of tabs.
+          tabLink.addEventListener("keydown", (event) => {
+            const firstTab = 0;
+            const lastTab = tabs.length - 1;
+            const rightDown =
+              orientation === "horizontal" ? "ArrowRight" : "ArrowDown";
+            const leftUp =
+              orientation === "horizontal" ? "ArrowLeft" : "ArrowUp";
+
+            switch (event.key) {
+              case rightDown:
+                event.preventDefault();
+                if (activeIndex === lastTab) {
+                  // Select first tab in tab list if user tries to move right (or
+                  // down, if vertical tabs) beyond the final tab.
+                  selectTab(firstTab);
+                } else {
+                  // Otherwise, select next tab.
+                  selectTab(activeIndex + 1);
+                }
+
+                break;
+
+              case leftUp:
+                event.preventDefault();
+                if (activeIndex === firstTab) {
+                  // Select final tab in tab list if user tries to move left (or
+                  // up, if vertical tabs) beyond the first tab.
+                  selectTab(lastTab);
+                } else {
+                  // Otherwise, select previous tab.
+                  selectTab(activeIndex - 1);
+                }
+
+                break;
+
+              default:
+                break;
+            }
+          });
 
           // Handle clicks on the tab item.
           tabLink.addEventListener("click", (event) => {

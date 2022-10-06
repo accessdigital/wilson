@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a teaser node.
+ * Theme override to display a node as a "Previous card".
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
@@ -65,7 +65,7 @@
  *
  * @see template_preprocess_node()
 #}
-<a href="{{ url }}" class="group block flex w-full border-b-0 bg-white text-grey-800 drop-shadow-xl text-left rounded-xl overflow-hidden transition-shadow hover:shadow-halo">
+<div class="group block relative flex w-full bg-white drop-shadow-xl text-left rounded-xl overflow-hidden transition-shadow hover:shadow-halo">
   {% if content.field_teaser_image|render or content.field_image|render %}
     <div class="hidden md:block w-24 grow-0 shrink-0 relative">
       <div class="h-full child:!h-full child:object-cover">
@@ -87,9 +87,9 @@
   {% endif %}
 
   <div class="px-4 sm:px-6 py-3 flex items-center grow">
-    <p>
+    <a href="{{ url }}" class="border-b-0 after:absolute after:inset-0">
       <span class="block text-xs text-grey-500 leading-relaxed">{{ 'Previous:'|t }}</span>
       <span class="block text-sm md:text-base leading-snug font-medium">{{ title }}</span>
-    </p>
+    </a>
   </div>
-</a>
+</div>
