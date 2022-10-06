@@ -125,12 +125,14 @@ module.exports = {
         // A [one third] | [two thirds] layout
         "2-pref-r": "var(--one-of-three-cols) var(--two-of-three-cols)",
         // A semi-flexible [two thirds] | [one third] layout
-        "2-pref-l-flex": "minmax(var(--one-of-three-cols), var(--two-of-three-cols)) auto",
+        "2-pref-l-flex":
+          "minmax(var(--one-of-three-cols), var(--two-of-three-cols)) auto",
         // A semi-flexible [one thirds] | [two third] layout
-        "2-pref-r-flex": "auto minmax(var(--one-of-three-cols), var(--two-of-three-cols))",
+        "2-pref-r-flex":
+          "auto minmax(var(--one-of-three-cols), var(--two-of-three-cols))",
       },
       zIndex: {
-        "1": "1",
+        1: "1",
       },
     },
   },
