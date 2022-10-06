@@ -45,6 +45,21 @@ module.exports = {
       pattern: /^w-(3\/12|6\/12)/,
       variants: ["md"],
     },
+    // Support for offset backdrops via pseudo elements.
+    // Example classes used on a paragraph:
+    // `relative before:bg-primary before:absolute before:top-1/2 before:right-0 before:bottom-0 before:left-0`
+    {
+      pattern: /^top-|^bottom-|^left-0|^right-0/,
+      variants: ["before", "after"],
+    },
+    {
+      pattern: /absolute/,
+      variants: ["before", "after"],
+    },
+    {
+      pattern: /bg-primary|bg-secondary|bg-tertiary/,
+      variants: ["before", "after"],
+    },
   ],
   theme: {
     colors: {
@@ -115,6 +130,9 @@ module.exports = {
         // A semi-flexible [one thirds] | [two third] layout
         "2-pref-r-flex":
           "auto minmax(var(--one-of-three-cols), var(--two-of-three-cols))",
+      },
+      zIndex: {
+        1: "1",
       },
     },
   },
