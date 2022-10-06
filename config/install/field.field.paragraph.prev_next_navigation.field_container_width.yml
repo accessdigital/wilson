@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_container_width
+    - paragraphs.paragraphs_type.prev_next_navigation
+  module:
+    - options
+id: paragraph.prev_next_navigation.field_container_width
+field_name: field_container_width
+entity_type: paragraph
+bundle: prev_next_navigation
+label: 'Container width'
+description: 'The width of the section content, relative to the page guides, on larger screen devices. <code>Normal</code> is default.'
+required: true
+translatable: true
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

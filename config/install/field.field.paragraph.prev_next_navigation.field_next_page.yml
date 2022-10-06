@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_next_page
+    - node.type.article
+    - node.type.landing_page
+    - node.type.page
+    - paragraphs.paragraphs_type.prev_next_navigation
+id: paragraph.prev_next_navigation.field_next_page
+field_name: field_next_page
+entity_type: paragraph
+bundle: prev_next_navigation
+label: 'Next page'
+description: 'The "next" page you would like to link to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      page: page
+      landing_page: landing_page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: page
+field_type: entity_reference
