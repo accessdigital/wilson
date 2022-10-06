@@ -21,7 +21,7 @@
         const carouselImages =
           galleryCarousel.querySelectorAll(".glide__slide img");
 
-        // Don't mount a gallery if there's slider or images.
+        // Don't mount a gallery if there's no slider or images.
         if (!carousel || !carouselImages) {
           return;
         }
