@@ -18,7 +18,8 @@
 
       galleryCarousels.forEach((galleryCarousel) => {
         const carousel = galleryCarousel.querySelector(".glide");
-        const carouselImages = galleryCarousel.querySelectorAll(".glide__slide img");
+        const carouselImages =
+          galleryCarousel.querySelectorAll(".glide__slide img");
 
         // Don't mount a gallery if there's slider or images.
         if (!carousel || !carouselImages) {
