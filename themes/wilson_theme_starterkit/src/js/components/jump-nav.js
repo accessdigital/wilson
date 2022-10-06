@@ -3,7 +3,6 @@
  * Jump nav behaviour.
  */
 ((Drupal, once) => {
-
   // Globally store the detected anchor points.
   let anchors = [];
 
@@ -32,7 +31,6 @@
 
       // Attach event listeners only on the initial page load.
       if (context === document) {
-
         // Attach a scroll listener to detect if any anchor points are active.
         document.addEventListener("scroll", () => {
           this.handleScroll();
@@ -45,7 +43,6 @@
           resizeTimer = setTimeout(() => {
             this.initAnchors();
           }, 500);
-
         });
       }
 
@@ -58,9 +55,11 @@
     // Add a `is-sticky` class when a `position: sticky` element becomes sticky.
     // Requires the element to have `top: -1px`.
     detectSticky(stickyEl) {
-      const observer = new IntersectionObserver(([el]) => {
+      const observer = new IntersectionObserver(
+        ([el]) => {
           el.target.classList.toggle("is-sticky", el.intersectionRatio < 1);
-        }, { threshold: [1] }
+        },
+        { threshold: [1] }
       );
       observer.observe(stickyEl);
     },
@@ -70,14 +69,14 @@
         e.preventDefault();
 
         document.querySelector(linkEl.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
+          behavior: "smooth",
         });
       });
     },
     // Find all the anchor points on the page and store their position.
     initAnchors() {
       anchors = [];
-      document.querySelectorAll('.anchor-point').forEach((anchorEl) => {
+      document.querySelectorAll(".anchor-point").forEach((anchorEl) => {
         anchors.push({
           top: anchorEl.offsetTop,
           hash: `#${anchorEl.getAttribute("id")}`,
@@ -97,14 +96,19 @@
         el.classList.remove("is-active");
       });
 
-      for (let i = 0; i < anchors.length; i++){
+      for (let i = 0; i < anchors.length; i++) {
         // Add `is-active` class to the relevant jump-nav links if the scroll
         // position has passed the anchor and not yet reached the next anchor.
         // TODO: Find a way to horizontally scroll to the active jump-nav item.
-        if (scrollPos >= anchors[i].top && (anchors[i+1] === undefined || scrollPos < anchors[i+1].top)) {
-          document.querySelectorAll(`.jump-nav a[href="${anchors[i].hash}"]`).forEach((el) => {
-            el.classList.add("is-active");
-          });
+        if (
+          scrollPos >= anchors[i].top &&
+          (anchors[i + 1] === undefined || scrollPos < anchors[i + 1].top)
+        ) {
+          document
+            .querySelectorAll(`.jump-nav a[href="${anchors[i].hash}"]`)
+            .forEach((el) => {
+              el.classList.add("is-active");
+            });
           break;
         }
       }
