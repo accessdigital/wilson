@@ -19,20 +19,31 @@ module.exports = {
     "bg-primary",
     "bg-secondary",
     "bg-tertiary",
+    "bg-green-100",
     "bg-fixed",
     "bg-current",
-    "h-6",
-    "h-24",
-    "h-40",
     "max-w-screen-2xl",
     "p-10",
     "text-primary",
     "text-secondary",
     "text-tertiary",
     "text-tertiary-contrast",
+    // Regex patterns to safelist wider ranges of classes or to include
+    // responsive classes or other variants.
+    // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
     {
-      // Regex pattern to safelist wide ranges of classes.
-      pattern: /^bg-grey-|bg-green-|bg-blend-/,
+      pattern: /^bg-grey-(100|200|300|400|500)/,
+    },
+    {
+      pattern: /^bg-blend-(normal|multiply|overlay|screen)/,
+    },
+    {
+      pattern: /^h-(6|10|12|24|36|40)/,
+      variants: ["md"],
+    },
+    {
+      pattern: /^w-(3\/12|6\/12)/,
+      variants: ["md"],
     },
   ],
   theme: {
