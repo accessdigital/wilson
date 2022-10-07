@@ -11,7 +11,7 @@ type: 'canonical_entities:node'
 pattern: '[node:menu-link:parent:url:path]/[node:title]'
 selection_criteria:
   74ed41e4-4803-4471-9481-e35a42fe3658:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: 74ed41e4-4803-4471-9481-e35a42fe3658
     context_mapping:
