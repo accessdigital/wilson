@@ -4,7 +4,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: fMqB2FTAglso6GaPtLvwjaku4YRBNjjwgef8YTw1g7A
+  default_config_hash: mPWj3-rR2z12Wt35UEl_PX1LsPHcegDa7-Zm35H963U
 id: articles
 label: Articles
 type: 'canonical_entities:node'
@@ -12,12 +12,20 @@ pattern: 'articles/[node:created:custom:Y]/[node:created:custom:m]/[node:title]'
 selection_criteria:
   2958b472-c627-4fbf-979c-501db88fd7d7:
     id: node_type
-    bundles:
-      article: article
     negate: false
+    uuid: 2958b472-c627-4fbf-979c-501db88fd7d7
     context_mapping:
       node: node
-    uuid: 2958b472-c627-4fbf-979c-501db88fd7d7
+    bundles:
+      article: article
+  c3addc6b-a6b6-4e21-923d-cc94398ebc43:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: c3addc6b-a6b6-4e21-923d-cc94398ebc43
+    context_mapping:
+      node: node
+    bundles:
+      article: article
 selection_logic: and
 weight: -5
 relationships: {  }
