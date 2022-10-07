@@ -28,6 +28,7 @@ install:
   - cookies
   - cookies_gtag
   - crop
+  - ctools
   - datetime
   - datetime_range
   - dblog
