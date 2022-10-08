@@ -39,16 +39,6 @@
       }
     }
 
-    .panels__panel {
-      .js & {
-        &.is-active {
-          @screen md {
-            @apply overflow-hidden;
-          }
-        }
-      }
-    }
-
     &.panels--horizontal {
       .panels__tabs {
         @apply hidden;
@@ -119,7 +109,7 @@
       @screen md {
         @apply grid;
         @apply grid-cols-3;
-        @apply gap-10;
+        @apply gap-x-10;
       }
 
       .panels__tabs {

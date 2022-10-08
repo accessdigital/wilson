@@ -28,7 +28,6 @@ install:
   - cookies
   - cookies_gtag
   - crop
-  - ctools
   - datetime
   - datetime_range
   - dblog
@@ -127,6 +126,7 @@ default_content:
     - 3170306e-328e-462c-a61a-47d079f7c7a1
     - 7d6457bb-106c-488c-9144-c30671e71271
     - 24ac8b07-c5fc-419f-a7f8-fe5ed6ed4db3
+    - 684a1055-f2ee-49a4-997b-4bb81c814d84
   taxonomy_term:
     - 4daf55b6-1d15-4103-9ae7-08b38a055849
     - 988c1be8-e176-4803-992e-bae43a503174

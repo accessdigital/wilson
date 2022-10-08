@@ -22,12 +22,16 @@ module.exports = {
     "bg-green-100",
     "bg-fixed",
     "bg-current",
+    "left-1/2",
+    "-ml-1/2-screen",
+    "max-w-screen-xl",
     "max-w-screen-2xl",
     "p-10",
     "text-primary",
     "text-secondary",
     "text-tertiary",
     "text-tertiary-contrast",
+    "w-screen",
     // Regex patterns to safelist wider ranges of classes or to include
     // responsive classes or other variants.
     // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
@@ -38,7 +42,7 @@ module.exports = {
       pattern: /^bg-blend-(normal|multiply|overlay|screen)/,
     },
     {
-      pattern: /^h-(6|10|12|24|36|40)/,
+      pattern: /^h-(6|10|12|24|36|40|48)/,
       variants: ["md"],
     },
     {
@@ -99,6 +103,9 @@ module.exports = {
       },
       boxShadow: {
         halo: "0 0 0 6px rgba(0, 0, 0, 0.15)",
+      },
+      margin: {
+        "1/2-screen": "50vw",
       },
       minHeight: {
         "1/4-screen": "25vh",

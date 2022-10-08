@@ -10,8 +10,19 @@
  * @see template_preprocess_media()
  */
 #}
-<article{{ attributes.addClass('media-video') }}>
-  {{ title_suffix.contextual_links }}
+{%
+  set classes = [
+    'media-video',
+    'relative',
+    'pb-[56.25%]',
+    'child:absolute',
+    'child:top-0',
+    'child:left-0',
+    'child:h-full',
+    'child:w-full',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
   {% if content %}
     {{ content }}
   {% endif %}

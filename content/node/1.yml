@@ -389,6 +389,10 @@ default:
               value: zoom-in
           field_buttons:
             -
+              uri: 'internal:/admin/structure/paragraphs_type/anchor_point/fields'
+              title: 'Anchor point'
+              options: {  }
+            -
               uri: 'internal:/admin/structure/paragraphs_type/accordion/fields'
               title: Accordion
               options: {  }
@@ -437,6 +441,10 @@ default:
               title: 'One column'
               options: {  }
             -
+              uri: 'internal:/admin/structure/paragraphs_type/prev_next_navigation/fields'
+              title: 'Previous / next navigation'
+              options: {  }
+            -
               uri: 'internal:/admin/structure/paragraphs_type/quote/fields'
               title: Quote
               options: {  }
@@ -455,6 +463,10 @@ default:
             -
               uri: 'internal:/admin/structure/paragraphs_type/two_columns/fields'
               title: 'Two columns'
+              options: {  }
+            -
+              uri: 'internal:/admin/structure/paragraphs_type/statistics/fields'
+              title: Statistics
               options: {  }
             -
               uri: 'internal:/admin/structure/paragraphs_type/webform_embed/fields'
@@ -545,7 +557,7 @@ default:
               options: {  }
           field_text_column:
             -
-              value: "<p>Use background styles to inject pre-defined CSS classes on to any paragraph. Combined with Tailwind,&nbsp;this makes it really easy to add customisations through the CMS. As well as setting the background colour, you can control the text colour or apply other custom design effects.</p>\r\n"
+              value: "<p>Use background styles to inject pre-defined CSS classes on to any paragraph. Combined with Tailwind CSS*, this makes it possible to add customisations through the CMS. As well as setting the background colour, you can control the text colour or apply other custom design effects.</p>\r\n<p><strong>* Note:</strong> Unlike in earlier versions of Tailwind CSS, the entire suite of CSS classes is not available to CSS by default. You will likely have to add most Tailwind CSS features (e.g. specific colours and font controls) to the Safelist within the theme's Tailwind config file before they become available to use in the CMS.</p>\r\n"
               format: full_html
     -
       entity:

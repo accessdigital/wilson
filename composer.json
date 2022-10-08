@@ -22,7 +22,6 @@
         "drupal/color_field": "^2.4",
         "drupal/config_split": "^1.7",
         "drupal/cookies": "^1.0",
-        "drupal/ctools": "^4.0",
         "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^4.0",
         "drupal/diff": "^1.0",
@@ -54,5 +53,8 @@
         "drupal/viewsreference": "^2.0@beta",
         "drupal/webform": "^6.0",
         "drupal/webp": "^1.0@beta"
+    },
+    "replace": {
+        "drupal/ctools": "*"
     }
 }
