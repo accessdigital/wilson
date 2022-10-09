@@ -1,17 +1,9 @@
 _meta:
   version: '1.0'
   entity_type: node
-  uuid: 0c828ad6-7933-4451-8bae-e0166118fb90
+  uuid: a9d62d88-81ad-4158-8cf0-3598ccb09bdd
   bundle: landing_page
   default_langcode: en
-  depends:
-    0f9059f3-8462-4bbe-a774-e3c72f54eb5d: node
-    e70ec879-6196-4b42-a9f2-0c152260881b: node
-    80d83855-dc4d-4c8c-aac2-ac93c9ba2668: media
-    12db7978-4760-486b-a0e4-6455f523858f: taxonomy_term
-    d4d15e9e-4b3a-40c4-9775-ff7361d14622: node
-    a9d62d88-81ad-4158-8cf0-3598ccb09bdd: node
-    e735c5a3-d1ff-4fa6-af01-c473e0211f2a: media
 default:
   revision_uid:
     -
@@ -24,10 +16,10 @@ default:
       target_id: 1
   title:
     -
-      value: 'Home page'
+      value: 'Demo WYSIWYG styles'
   created:
     -
-      value: 1610898328
+      value: 1611503953
   promote:
     -
       value: false
@@ -39,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /home
+      alias: /demo-wysiwyg-content
       langcode: en
       pathauto: 0
   field_sections:
@@ -48,7 +40,7 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: f799ea66-626e-4943-b558-ee0518ef0ef6
+          uuid: 53b12c76-441c-4aa2-ac37-99614482e3d3
           bundle: hero
           default_langcode: en
         default:
@@ -57,13 +49,10 @@ default:
               value: true
           created:
             -
-              value: 1665256747
+              value: 1611528563
           behavior_settings:
             -
               value: {  }
-          field_container_height:
-            -
-              value: lg
           field_container_position:
             -
               value: center
@@ -72,276 +61,10 @@ default:
               value: normal
           field_headline:
             -
-              value: 'Wilson <span class="font-light">Installation Profile</span>'
+              value: 'WYSIWYG content styles'
           field_layout:
             -
-              value: center
-          field_padding_bottom:
-            -
-              value: xl
-          field_padding_top:
-            -
-              value: xl
-          field_pre_header:
-            -
-              value: 'Drupal 9'
-          field_primary_cta:
-            -
-              target_uuid: 0f9059f3-8462-4bbe-a774-e3c72f54eb5d
-              title: 'Component examples'
-              options: {  }
-          field_secondary_cta:
-            -
-              target_uuid: e70ec879-6196-4b42-a9f2-0c152260881b
-              title: 'Editorial page example'
-              options: {  }
-          field_section_bg:
-            -
-              entity: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
-          field_section_bg_colour:
-            -
-              entity: 12db7978-4760-486b-a0e4-6455f523858f
-          field_text_column:
-            -
-              value: "<p>Kickstart your Drupal 9 project with Wilson, including a wide range of Paragraph components and best practices.</p>\r\n"
-              format: full_html
-          field_toggle_jump_nav:
-            -
-              value: false
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: f0dab13c-0ccc-4476-8a06-76b490827d56
-          bundle: simple_banner
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1665257056
-          behavior_settings:
-            -
-              value: {  }
-          field_aos:
-            -
-              value: fade-up
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_headline:
-            -
-              value: 'How Wilson helps'
-          field_layout:
-            -
-              value: center
-          field_padding_bottom:
-            -
-              value: sm
-          field_padding_top:
-            -
-              value: lg
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: 0504507a-117c-43f6-b08d-c6840c5e94b3
-          bundle: three_columns
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1665257255
-          behavior_settings:
-            -
-              value: {  }
-          field_aos:
-            -
-              value: fade-up
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_padding_bottom:
-            -
-              value: md
-          field_padding_top:
-            -
-              value: md
-          field_text_column:
-            -
-              value: "<h5 class=\"text-align-center\">20+ custom paragraphs</h5>\r\n\r\n<p class=\"text-align-center\">Build sophisticated pages with a range of versatile paragraphs.</p>\r\n"
-              format: full_html
-          field_text_column_2:
-            -
-              value: "<h5 class=\"text-align-center\">Per-paragraph layout controls</h5>\r\n\r\n<p class=\"text-align-center\">Standardised layout and spacing across all page paragraphs.&nbsp;</p>\r\n"
-              format: full_html
-          field_text_column_3:
-            -
-              value: "<h5 class=\"text-align-center\">Animate on Scroll</h5>\r\n\r\n<p class=\"text-align-center\">Options to animate page sections as they scroll in to view.</p>\r\n"
-              format: full_html
-          field_vertical_alignment:
-            -
-              value: top
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: cf9e7fde-280c-49bd-a270-f00c52b8d787
-          bundle: three_columns
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1665257255
-          behavior_settings:
-            -
-              value: {  }
-          field_aos:
-            -
-              value: fade-up
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_padding_bottom:
-            -
-              value: md
-          field_padding_top:
-            -
-              value: md
-          field_text_column:
-            -
-              value: "<h5 class=\"text-align-center\">Pre-configured media</h5>\r\n\r\n<p class=\"text-align-center\">Responsive images, focal point, image styles and WebP all pre-installed.</p>\r\n"
-              format: full_html
-          field_text_column_2:
-            -
-              value: "<h5 class=\"text-align-center\">Best-practice modules</h5>\r\n\r\n<p class=\"text-align-center\">Commonly-used modules and helpers pre-installed.</p>\r\n"
-              format: full_html
-          field_text_column_3:
-            -
-              value: "<h5 class=\"text-align-center\">Cookie management&nbsp;</h5>\r\n\r\n<p class=\"text-align-center\">Cookie consent manager powered by cookiesJSR library.</p>\r\n"
-              format: full_html
-          field_vertical_alignment:
-            -
-              value: top
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: b3e9acd1-7ece-4f3a-8862-b03376a9ee8a
-          bundle: three_columns
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1665257255
-          behavior_settings:
-            -
-              value: {  }
-          field_aos:
-            -
-              value: fade-up
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_padding_bottom:
-            -
-              value: lg
-          field_padding_top:
-            -
-              value: md
-          field_text_column:
-            -
-              value: "<h5 class=\"text-align-center\">Starter kit theme</h5>\r\n\r\n<p class=\"text-align-center\">Fully featured starter kit theme built upon Tailwind CSS. Easy to override and extend.</p>\r\n"
-              format: full_html
-          field_text_column_2:
-            -
-              value: "<h5 class=\"text-align-center\">Themed navigation elements</h5>\r\n\r\n<p class=\"text-align-center\">In-built desktop and mobile main navigation and footer menus.</p>\r\n"
-              format: full_html
-          field_text_column_3:
-            -
-              value: "<h5 class=\"text-align-center\">Customisable backgrounds&nbsp;</h5>\r\n\r\n<p class=\"text-align-center\">Define component backgrounds to suit the branding of the site.</p>\r\n"
-              format: full_html
-          field_vertical_alignment:
-            -
-              value: top
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: c8f8b21c-9fc7-41dd-8fd5-84581bbe1e72
-          bundle: simple_banner
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1611617037
-          behavior_settings:
-            -
-              value: {  }
-          field_aos:
-            -
-              value: fade-up
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_css_classes:
-            -
-              value: 'max-w-screen-2xl mx-auto bg-grey-100'
-          field_headline:
-            -
-              value: 'Paragraph types'
-          field_layout:
-            -
-              value: justified
+              value: left
           field_padding_bottom:
             -
               value: md
@@ -350,19 +73,14 @@ default:
               value: md
           field_pre_header:
             -
-              value: Pre-installed
-          field_secondary_cta:
-            -
-              uri: 'internal:/admin/structure/paragraphs_type'
-              title: 'View all'
-              options: {  }
+              value: 'Demo content'
     -
       entity:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 2faeea82-d2d3-4769-a73a-3e83e3dd5d4d
-          bundle: button_grid
+          uuid: 945291cc-a0bd-4d8b-a2b1-f80991dfa19f
+          bundle: two_columns
           default_langcode: en
         default:
           status:
@@ -370,179 +88,77 @@ default:
               value: true
           created:
             -
-              value: 1611616569
+              value: 1611528699
           behavior_settings:
             -
               value: {  }
-          field_aos:
+          field_column_distribution:
             -
-              value: fade-up
-          field_buttons:
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/anchor_point/fields'
-              title: 'Anchor point'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/accordion/fields'
-              title: Accordion
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/simple_banner/fields'
-              title: Banner
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/button_grid/fields'
-              title: 'Button grid'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/content_grid/fields'
-              title: 'Content signpost grid'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/content_slider/fields'
-              title: 'Content signpost slider'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/block/fields'
-              title: 'Drupal block'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/views/fields'
-              title: 'Drupal view'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/gallery/fields'
-              title: Gallery
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/hero/fields'
-              title: Hero
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/logo_wall/fields'
-              title: 'Logo wall'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/map/fields'
-              title: Map
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/one_column/fields'
-              title: 'One column'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/prev_next_navigation/fields'
-              title: 'Previous / next navigation'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/quote/fields'
-              title: Quote
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/tabs/fields'
-              title: Tabs
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/panel/fields'
-              title: 'Text & image split'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/three_columns/fields'
-              title: 'Three columns'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/two_columns/fields'
-              title: 'Two columns'
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/statistics/fields'
-              title: Statistics
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/webform_embed/fields'
-              title: Webform
-              options: {  }
-            -
-              uri: 'internal:/admin/structure/paragraphs_type/text_webform/fields'
-              title: 'Webform & text'
-              options: {  }
-          field_container_height:
-            -
-              value: auto
+              value: equal
           field_container_position:
             -
               value: center
           field_container_width:
             -
               value: normal
-          field_css_classes:
+          field_padding_bottom:
             -
-              value: 'max-w-screen-2xl mx-auto bg-grey-100'
-          field_grid_columns:
+              value: md
+          field_padding_top:
             -
-              value: '3'
+              value: md
+          field_text_column:
+            -
+              value: "<h1>Heading 1</h1>\r\n\r\n<h2>Heading 2</h2>\r\n\r\n<h3>Heading 3</h3>\r\n\r\n<h4>Heading 4</h4>\r\n\r\n<h5>Heading 5</h5>\r\n\r\n<h6>Heading 6</h6>\r\n\r\n<p>Paragraph -&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae nibh eleifend, vulputate velit sed, dignissim urna. Proin non varius felis. Proin nunc metus, blandit eget varius eu, pellentesque sed leo. Fusce eget ornare purus, porttitor volutpat sem. Praesent tristique quis enim id eleifend. Pellentesque semper massa eu eros ultrices, eu mollis lectus sollicitudin. Duis tincidunt vehicula risus in aliquet. Vivamus fermentum quis augue sed molestie.</p>\r\n\r\n<ul>\r\n\t<li>Lorem ipsum dolor sit amet</li>\r\n\t<li>Consectetur adipiscing elit</li>\r\n\t<li>Proin vitae nibh eleifend vulputate velit sed\r\n\t<ul>\r\n\t\t<li>Dignissim urna</li>\r\n\t\t<li>Proin non varius felis</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>Proin nunc metus&nbsp;blandit eget varius eu</li>\r\n</ul>\r\n\r\n<ol>\r\n\t<li>Lorem ipsum dolor sit amet</li>\r\n\t<li>Consectetur adipiscing elit</li>\r\n\t<li>Proin vitae nibh eleifend vulputate velit sed\r\n\t<ol>\r\n\t\t<li>Dignissim urna</li>\r\n\t\t<li>Proin non varius felis</li>\r\n\t</ol>\r\n\t</li>\r\n\t<li>Proin nunc metus&nbsp;blandit eget varius eu</li>\r\n</ol>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<div class=\"p-8 text-center border-2\">\r\n<p><a class=\"btn btn--primary\" href=\"#\">A primary button</a></p>\r\n\r\n<p><a class=\"btn btn--secondary\" href=\"#\">A secondary button</a></p>\r\n\r\n<p><a class=\"btn btn--tertiary\" href=\"#\">A tertiary button</a></p>\r\n\r\n<p>A <a href=\"#\">standard link</a> within text.</p>\r\n</div>\r\n\r\n<div class=\"p-8 text-center bg-secondary text-secondary-contrast\">\r\n<p><a class=\"btn btn--primary\" href=\"#\">A primary button</a></p>\r\n\r\n<p><a class=\"btn btn--secondary\" href=\"#\">A secondary button</a></p>\r\n\r\n<p><a class=\"btn btn--tertiary\" href=\"#\">A tertiary button</a></p>\r\n\r\n<p>A <a href=\"#\">standard link</a> within text.</p>\r\n</div>\r\n\r\n<blockquote>\r\n<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacus purus, mollis at elit a, aliquet cursus nisl.\"</p>\r\n</blockquote>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: top
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 182aee34-a19a-45d5-abc5-737078a345a1
+          bundle: one_column
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1611503962
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
           field_padding_bottom:
             -
               value: md
           field_padding_top:
             -
               value: none
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: 9d4a2a5e-5820-420b-92cc-65e217c3602b
-          bundle: simple_banner
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1665257056
-          behavior_settings:
-            -
-              value: {  }
-          field_aos:
-            -
-              value: fade-left
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_headline:
-            -
-              value: 'Check out these demo pages'
-          field_layout:
-            -
-              value: center
-          field_padding_bottom:
-            -
-              value: sm
-          field_padding_top:
-            -
-              value: lg
-          field_pre_header:
-            -
-              value: 'Next steps'
           field_text_column:
             -
-              value: "<p>Once you're familiar with how things work, you can safely delete all of the demo content and media items.</p>\r\n"
+              value: "<drupal-media data-align=\"left\" data-caption=\"Media image aligned to the left\" data-entity-type=\"media\" data-entity-uuid=\"13647eec-1cdc-4ce3-a089-441d78fba981\" data-view-mode=\"\"></drupal-media>\r\n\r\n<drupal-media data-align=\"right\" data-caption=\"Media image aligned to the right\" data-entity-type=\"media\" data-entity-uuid=\"cc59ed8d-cfea-499d-a753-42c4d7d96fe9\" data-view-mode=\"\"></drupal-media>\r\n"
               format: full_html
     -
       entity:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 880fd2a3-689d-49d1-b709-26507f4fff2f
-          bundle: content_grid
+          uuid: ec9986ca-70ef-4928-a52f-2ec82e6fe3f6
+          bundle: one_column
           default_langcode: en
         default:
           status:
@@ -550,52 +166,23 @@ default:
               value: true
           created:
             -
-              value: 1665260184
+              value: 1611528772
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
-          field_aos:
-            -
-              value: fade-left
-          field_container_height:
-            -
-              value: auto
           field_container_position:
             -
               value: center
           field_container_width:
             -
               value: normal
-          field_content_references:
-            -
-              entity: 0f9059f3-8462-4bbe-a774-e3c72f54eb5d
-            -
-              entity: e70ec879-6196-4b42-a9f2-0c152260881b
-            -
-              entity: d4d15e9e-4b3a-40c4-9775-ff7361d14622
-            -
-              entity: a9d62d88-81ad-4158-8cf0-3598ccb09bdd
-          field_css_classes:
-            -
-              value: text-center
-          field_grid_columns:
-            -
-              value: '4'
           field_padding_bottom:
             -
-              value: lg
+              value: md
           field_padding_top:
             -
-              value: md
-  field_teaser_caption:
-    -
-      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod ultricies nisl, vitae dapibus tellus rhoncus at.'
-  field_teaser_image:
-    -
-      entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
-  field_teaser_title:
-    -
-      value: Home
+              value: none
+          field_text_column:
+            -
+              value: "<drupal-media data-align=\"center\" data-caption=\"Media image aligned to center\" data-entity-type=\"media\" data-entity-uuid=\"113a8489-3444-4e54-8d62-fe9576470f0b\" data-view-mode=\"\"></drupal-media>\r\n"
+              format: full_html
