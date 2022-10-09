@@ -71,16 +71,20 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
   // Inject background colour styles/classes where supplied.
   // TODO: Add cache tags so this updates when the colour term is updated.
   if ($paragraph->hasField('field_section_bg_colour') && !$paragraph->field_section_bg_colour->isEmpty()) {
-    $colourTerm = $paragraph->field_section_bg_colour->entity;
+    $styles = $paragraph->field_section_bg_colour->referencedEntities();
 
-    if ($colourTerm) {
-      if (!$colourTerm->field_colour->isEmpty()) {
-        $css = 'background-color: ' . $colourTerm->get('field_colour')->getString();
+    foreach ($styles as $style) {
+      if (!$style->field_colour->isEmpty()) {
+        $css = 'background-color: ' . $style->get('field_colour')->getString() . ';';
         $variables['background_colour_style'] = $css;
       }
 
-      if (!$colourTerm->field_css_classes->isEmpty()) {
-        $string = $colourTerm->get('field_css_classes')->getString();
+      if (!$style->field_css_classes->isEmpty()) {
+        $string = $style->get('field_css_classes')->getString();
+
+        if (isset($variables['background_colour_classes'])) {
+          $string = $variables['background_colour_classes'] . ' ' . $string;
+        }
         $variables['background_colour_classes'] = $string;
       }
     }

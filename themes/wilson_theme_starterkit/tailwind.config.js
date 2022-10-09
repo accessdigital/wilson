@@ -16,31 +16,14 @@ module.exports = {
     // might be used through the CMS WYSIWYG editor.
     // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
     "border-b-2",
-    "bg-primary",
-    "bg-secondary",
-    "bg-tertiary",
-    "bg-green-100",
-    "bg-fixed",
-    "bg-current",
-    "left-1/2",
     "-ml-1/2-screen",
     "max-w-screen-xl",
     "max-w-screen-2xl",
     "p-10",
-    "text-primary",
-    "text-secondary",
-    "text-tertiary",
-    "text-tertiary-contrast",
     "w-screen",
     // Regex patterns to safelist wider ranges of classes or to include
     // responsive classes or other variants.
     // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
-    {
-      pattern: /^bg-grey-(100|200|300|400|500)/,
-    },
-    {
-      pattern: /^bg-blend-(normal|multiply|overlay|screen)/,
-    },
     {
       pattern: /^h-(6|10|12|24|36|40|48)/,
       variants: ["md"],
@@ -49,20 +32,29 @@ module.exports = {
       pattern: /^w-(3\/12|6\/12)/,
       variants: ["md"],
     },
-    // Support for offset backdrops via pseudo elements.
-    // Example classes used on a paragraph:
+    // Make all background colours available, including for use via ::before pseudo-element.
+    {
+      pattern: /^bg-/,
+      variants: ["before"],
+    },
+    // Make all text colours and associated styles available.
+    {
+      pattern: /^text-/,
+    },
+    // Support for stylised backdrops via pseudo-elements.
+    // Example offset backdrop:
     // `relative before:bg-primary before:absolute before:top-1/2 before:right-0 before:bottom-0 before:left-0`
     {
-      pattern: /^top-|^bottom-|^left-0|^right-0/,
-      variants: ["before", "after"],
+      pattern: /^top-|^bottom-|^left-|^right-|^inset-0/,
+      variants: ["before"],
     },
     {
       pattern: /absolute/,
-      variants: ["before", "after"],
+      variants: ["before"],
     },
     {
-      pattern: /bg-primary|bg-secondary|bg-tertiary/,
-      variants: ["before", "after"],
+      pattern: /backdrop-blur-sm|backdrop-blur$/,
+      variants: ["before"],
     },
   ],
   theme: {

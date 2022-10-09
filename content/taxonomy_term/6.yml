@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: b6c6c74c-542f-40c3-a992-5f529e42cd3e
+  bundle: background_styles
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Blur background image'
+  weight:
+    -
+      value: 5
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  field_css_classes:
+    -
+      value: 'relative before:absolute before:inset-0 before:left-0 before:backdrop-blur-sm'
