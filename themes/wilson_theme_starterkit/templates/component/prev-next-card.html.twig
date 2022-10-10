@@ -1,0 +1,27 @@
+<div class="group block relative flex{% if is_next %} flex-row-reverse{% endif %} w-full bg-white drop-shadow-xl text-left rounded-xl overflow-hidden transition-shadow hover:shadow-halo">
+  {% if image %}
+    <div class="hidden md:block w-24 grow-0 shrink-0 relative">
+      <div class="h-full child:!h-full child:object-cover">
+        {{ image }}
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-[2px] transition-all bg-primary/50">
+        <span class="inline-block text-4xl text-primary-contrast">
+          {% if is_next %}
+            &#8594;
+          {% else %}
+            &#8592;
+          {% endif %}
+        </span>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="px-4 sm:px-6 py-3 flex items-center grow">
+    <a href="{{ link_url }}" class="border-b-0 after:absolute after:inset-0">
+      {% if title_prefix %}
+        <span class="block text-xs text-grey-500 leading-relaxed">{{ title_prefix }}</span>
+      {% endif %}
+      <span class="block text-sm md:text-base leading-snug font-medium">{{ title }}</span>
+    </a>
+  </div>
+</div>

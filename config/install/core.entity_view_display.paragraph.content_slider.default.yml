@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.content_slider.field_aos
+    - field.field.paragraph.content_slider.field_cards
     - field.field.paragraph.content_slider.field_container_height
-    - field.field.paragraph.content_slider.field_content_references
     - field.field.paragraph.content_slider.field_css_classes
     - field.field.paragraph.content_slider.field_headline
     - field.field.paragraph.content_slider.field_id_anchor
@@ -16,22 +16,23 @@ dependencies:
     - field.field.paragraph.content_slider.field_text_column
     - paragraphs.paragraphs_type.content_slider
   module:
+    - entity_reference_revisions
     - text
 _core:
-  default_config_hash: XTcXd5CyEKlEfp1ViKDZ044bU_DQZ8emn9fkRP1N6S8
+  default_config_hash: 3ziBXNFa1yIazsKdIS2qht4PDBGiaIaC2EgZJdqG5HE
 id: paragraph.content_slider.default
 targetEntityType: paragraph
 bundle: content_slider
 mode: default
 content:
-  field_content_references:
-    type: entity_reference_entity_view
+  field_cards:
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
-      view_mode: teaser
-      link: false
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_headline:
     type: string

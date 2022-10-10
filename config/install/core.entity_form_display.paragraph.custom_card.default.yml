@@ -1,0 +1,134 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.custom_card.field_caption
+    - field.field.paragraph.custom_card.field_card_style
+    - field.field.paragraph.custom_card.field_headline
+    - field.field.paragraph.custom_card.field_image
+    - field.field.paragraph.custom_card.field_pre_header
+    - field.field.paragraph.custom_card.field_primary_cta
+    - paragraphs.paragraphs_type.custom_card
+  module:
+    - field_group
+    - link
+    - media_library
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_card
+        - group_image
+        - group_link
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_card:
+      children:
+        - field_pre_header
+        - field_headline
+        - field_caption
+        - field_card_style
+      label: Card
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_image:
+      children:
+        - field_image
+      label: Image
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_link:
+      children:
+        - field_primary_cta
+      label: Link
+      region: content
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: paragraph.custom_card.default
+targetEntityType: paragraph
+bundle: custom_card
+mode: default
+content:
+  field_caption:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_card_style:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 6
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_pre_header:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_primary_cta:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

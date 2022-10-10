@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display an article teaser node.
+ * Theme override to display a feature card node.
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
@@ -70,12 +70,11 @@
  *   in different view modes.
  */
 #}
-{% include '@wilson_theme_starterkit/templates/component/article-teaser-card.html.twig' with {
-  image: content.field_teaser_image|render ? content.field_teaser_image|field_value : content.field_image|field_value,
+{% include '@wilson_theme_starterkit/templates/component/feature-card.html.twig' with {
+  image: content.field_teaser_image|field_value,
   pre_header: '',
   headline: content.field_teaser_title|render ? node.field_teaser_title.0.value|check_markup('full_html') : node.label,
-  caption: content.field_teaser_caption|render ? node.field_teaser_caption.0.value|check_markup('full_html') : content.body|field_value,
-  published_date: node.created.value|date('j M Y'),
+  caption: node.field_teaser_caption.0.value|check_markup('full_html'),
   link_url: url,
-  link_text: 'Read more'|t
+  link_text: 'Find out more'|t
 } %}

@@ -46,6 +46,7 @@ mv "$TARGET_DIR"/wilson_theme_starterkit.theme "$TARGET_DIR"/"$MACHINE_NAME".the
 
 LC_ALL=C find "$TARGET_DIR" -type f -name '*.*' -exec sed -i '' s/Wilson\ Theme\ Starterkit/"$HUMAN_NAME"/g {} +
 LC_ALL=C find "$TARGET_DIR" -type f -name '*.*' -exec sed -i '' s/wilson_theme_starterkit/"$MACHINE_NAME"/g {} +
+LC_ALL=C find "$TARGET_DIR" -type f -name '*.*' -exec sed -i '' s/@wilson_theme_starterkit/@"$MACHINE_NAME"/g {} +
 
 # Execute the following inside the target theme directory.
 cd "$TARGET_DIR"

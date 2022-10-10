@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display an article teaser node.
+ * Theme override to display an article feature card.
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
@@ -70,7 +70,7 @@
  *   in different view modes.
  */
 #}
-{% include '@wilson_theme_starterkit/templates/component/article-teaser-card.html.twig' with {
+{% include '@wilson_theme_starterkit/templates/component/feature-card.html.twig' with {
   image: content.field_teaser_image|render ? content.field_teaser_image|field_value : content.field_image|field_value,
   pre_header: '',
   headline: content.field_teaser_title|render ? node.field_teaser_title.0.value|check_markup('full_html') : node.label,

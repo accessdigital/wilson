@@ -70,34 +70,11 @@
  *   in different view modes.
  */
 #}
-<div{{ attributes.addClass(['block', 'flex', 'w-full']) }}>
-  {{ title_prefix }}
-  {{ title_suffix }}
-
-  <a href="{{ url }}" class="block flex flex-col w-full group border-b-0">
-    {% if content.field_teaser_image|render %}
-      <div class="mb-5 overflow-hidden">
-        <div class="group-hover:scale-110 transition-transform duration-300">
-          {{ content.field_teaser_image|field_value }}
-        </div>
-      </div>
-    {% endif %}
-
-    <div class="pb-8">
-      {% set title = node.label %}
-      {% if content.field_teaser_title|render %}
-        {% set title = node.field_teaser_title.0.value|check_markup('full_html') %}
-      {% endif %}
-
-      <h3 class="font-medium text-2xl mb-3">{{ title }}</h3>
-
-      {% if content.field_teaser_caption|render %}
-        <p>{{ content.field_teaser_caption|field_value }}</p>
-      {% endif %}
-    </div>
-
-    <div class="mt-auto">
-      <span class="btn btn--secondary">{{ 'Find out more'|t }}</span>
-    </div>
-  </a>
-</div>
+{% include '@wilson_theme_starterkit/templates/component/teaser-card.html.twig' with {
+  image: content.field_teaser_image|field_value,
+  pre_header: '',
+  headline: content.field_teaser_title|render ? node.field_teaser_title.0.value|check_markup('full_html') : node.label,
+  caption: node.field_teaser_caption.0.value|check_markup('full_html'),
+  link_url: url,
+  link_text: 'Find out more'|t
+} %}

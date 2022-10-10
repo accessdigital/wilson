@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.custom_card.field_caption
+    - field.field.paragraph.custom_card.field_card_style
+    - field.field.paragraph.custom_card.field_headline
+    - field.field.paragraph.custom_card.field_image
+    - field.field.paragraph.custom_card.field_pre_header
+    - field.field.paragraph.custom_card.field_primary_cta
+    - paragraphs.paragraphs_type.custom_card
+  module:
+    - link
+    - options
+id: paragraph.custom_card.teaser
+targetEntityType: paragraph
+bundle: custom_card
+mode: teaser
+content:
+  field_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_card_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_pre_header:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_primary_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

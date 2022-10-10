@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to display a content grid paragraph.
+ * Default theme implementation to display a content teaser card paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -38,19 +38,7 @@
  * @ingroup themeable
  */
 #}
-{% extends "paragraph.html.twig" %}
-
-{% set content_classes = [
-  'grid',
-  'gap-10',
-  'auto-rows-fr',
-  settings_columns,
-] %}
-
-{% block content %}
-  <div{{ create_attribute({'class': content_classes}) }}>
-    {% for key, item in content.field_cards if key|first != '#' %}
-      {{ item }}
-    {% endfor %}
-  </div>
-{% endblock %}
+{% block paragraph %}
+  {# Render paragraph in the view mode dictated by field_card_style #}
+  {{ drupal_entity('paragraph', paragraph.id(), paragraph.field_card_style.0.value) }}
+{% endblock paragraph %}

@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.feature_card
+    - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_teaser_caption
+    - field.field.node.page.field_teaser_image
+    - field.field.node.page.field_teaser_title
+    - node.type.page
+  module:
+    - user
+_core:
+  default_config_hash: 6HoMj5XwBPGZjS25RJPVIDKpMvIxubBwTivmLc8xhGw
+id: node.page.feature_card
+targetEntityType: node
+bundle: page
+mode: feature_card
+content:
+  field_teaser_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_teaser_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_meta_tags: true
+  langcode: true
+  links: true

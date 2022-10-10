@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.feature_card
+    - field.field.paragraph.content_teaser_card.field_card_style
+    - field.field.paragraph.content_teaser_card.field_content_reference
+    - paragraphs.paragraphs_type.content_teaser_card
+id: paragraph.content_teaser_card.feature_card
+targetEntityType: paragraph
+bundle: content_teaser_card
+mode: feature_card
+content:
+  field_content_reference:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: feature_card
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_card_style: true

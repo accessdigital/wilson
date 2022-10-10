@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_style
+    - paragraphs.paragraphs_type.custom_card
+  module:
+    - options
+id: paragraph.custom_card.field_card_style
+field_name: field_card_style
+entity_type: paragraph
+bundle: custom_card
+label: 'Card style'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: teaser
+default_value_callback: ''
+settings: {  }
+field_type: list_string

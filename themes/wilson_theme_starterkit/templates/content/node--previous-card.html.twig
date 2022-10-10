@@ -65,31 +65,10 @@
  *
  * @see template_preprocess_node()
 #}
-<div class="group block relative flex w-full bg-white drop-shadow-xl text-left rounded-xl overflow-hidden transition-shadow hover:shadow-halo">
-  {% if content.field_teaser_image|render or content.field_image|render %}
-    <div class="hidden md:block w-24 grow-0 shrink-0 relative">
-      <div class="h-full child:!h-full child:object-cover">
-        {% if content.field_teaser_image|render %}
-          {{ content.field_teaser_image|field_value }}
-        {% else %}
-          {{ content.field_image|field_value }}
-        {% endif %}
-      </div>
-      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:backdrop-blur-[2px] transition-all bg-primary/50">
-        <span class="inline-block text-4xl text-primary-contrast">&#8592;</span>
-      </div>
-    </div>
-  {% endif %}
-
-  {% set title = node.label %}
-  {% if content.field_teaser_title|render %}
-    {% set title = node.field_teaser_title.0.value|check_markup('full_html') %}
-  {% endif %}
-
-  <div class="px-4 sm:px-6 py-3 flex items-center grow">
-    <a href="{{ url }}" class="border-b-0 after:absolute after:inset-0">
-      <span class="block text-xs text-grey-500 leading-relaxed">{{ 'Previous:'|t }}</span>
-      <span class="block text-sm md:text-base leading-snug font-medium">{{ title }}</span>
-    </a>
-  </div>
-</div>
+{% include '@wilson_theme_starterkit/templates/component/prev-next-card.html.twig' with {
+  is_next: false,
+  image: content.field_teaser_image|render ? content.field_teaser_image|field_value : content.field_image|field_value,
+  title_prefix: 'Previous:'|t,
+  title: content.field_teaser_title|render ? node.field_teaser_title.0.value|check_markup('full_html') : node.label,
+  link_url: url
+} %}

@@ -2,21 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_sections
-    - node.type.landing_page
+    - field.storage.paragraph.field_cards
+    - paragraphs.paragraphs_type.content_grid
     - paragraphs.paragraphs_type.content_teaser_card
     - paragraphs.paragraphs_type.custom_card
-    - paragraphs.paragraphs_type.item
-    - paragraphs.paragraphs_type.stat
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: TCAXOYLnAB2VvaGMnICt86z4OdEHQRnJiTkfRtsMv5Q
-id: node.landing_page.field_sections
-field_name: field_sections
-entity_type: node
-bundle: landing_page
-label: Sections
+id: paragraph.content_grid.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: content_grid
+label: Cards
 description: ''
 required: false
 translatable: false
@@ -26,29 +22,27 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      item: item
       content_teaser_card: content_teaser_card
       custom_card: custom_card
-      stat: stat
-    negate: 1
+    negate: 0
     target_bundles_drag_drop:
       accordion:
-        weight: 23
-        enabled: false
-      anchor_point:
         weight: 26
         enabled: false
+      anchor_point:
+        weight: 27
+        enabled: false
       block:
-        weight: 24
+        weight: 28
         enabled: false
       button_grid:
-        weight: 18
+        weight: 29
         enabled: false
       content_grid:
-        weight: 19
+        weight: 30
         enabled: false
       content_slider:
-        weight: 20
+        weight: 31
         enabled: false
       content_teaser_card:
         weight: 32
@@ -57,57 +51,57 @@ settings:
         weight: 34
         enabled: true
       gallery:
-        weight: 21
+        weight: 33
         enabled: false
       hero:
-        weight: 22
+        weight: 34
         enabled: false
       item:
-        weight: 24
-        enabled: true
+        weight: 35
+        enabled: false
       logo_wall:
-        weight: 31
+        weight: 36
         enabled: false
       map:
-        weight: 32
+        weight: 37
         enabled: false
       one_column:
-        weight: 23
+        weight: 38
         enabled: false
       panel:
-        weight: 24
+        weight: 39
         enabled: false
       prev_next_navigation:
-        weight: 38
+        weight: 40
         enabled: false
       quote:
-        weight: 25
+        weight: 41
         enabled: false
       simple_banner:
-        weight: 26
+        weight: 42
         enabled: false
       stat:
-        weight: 37
-        enabled: true
-      statistics:
-        weight: 38
-        enabled: false
-      tabs:
-        weight: 27
-        enabled: false
-      text_webform:
-        weight: 30
-        enabled: false
-      three_columns:
-        weight: 31
-        enabled: false
-      two_columns:
-        weight: 5
-        enabled: false
-      views:
         weight: 43
         enabled: false
+      statistics:
+        weight: 44
+        enabled: false
+      tabs:
+        weight: 45
+        enabled: false
+      text_webform:
+        weight: 46
+        enabled: false
+      three_columns:
+        weight: 47
+        enabled: false
+      two_columns:
+        weight: 48
+        enabled: false
+      views:
+        weight: 49
+        enabled: false
       webform_embed:
-        weight: 34
+        weight: 50
         enabled: false
 field_type: entity_reference_revisions
