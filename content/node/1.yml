@@ -5,16 +5,12 @@ _meta:
   bundle: landing_page
   default_langcode: en
   depends:
-    0f9059f3-8462-4bbe-a774-e3c72f54eb5d: node
-    e70ec879-6196-4b42-a9f2-0c152260881b: node
     80d83855-dc4d-4c8c-aac2-ac93c9ba2668: media
     12db7978-4760-486b-a0e4-6455f523858f: taxonomy_term
     b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5: media
     13647eec-1cdc-4ce3-a089-441d78fba981: media
     3170306e-328e-462c-a61a-47d079f7c7a1: media
     042241e5-9e23-4186-ac71-e1c09ec06c84: media
-    d4d15e9e-4b3a-40c4-9775-ff7361d14622: node
-    a9d62d88-81ad-4158-8cf0-3598ccb09bdd: node
     e735c5a3-d1ff-4fa6-af01-c473e0211f2a: media
 default:
   revision_uid:
