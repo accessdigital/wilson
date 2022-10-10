@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+machine: stage
+description: null
+name: Stage
+weight: '2'
+url: ''
+fg_color: '#ffffff'
+bg_color: '#ea9e1a'
