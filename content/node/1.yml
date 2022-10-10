@@ -396,11 +396,11 @@ default:
               options: {  }
             -
               uri: 'internal:/admin/structure/paragraphs_type/content_grid/fields'
-              title: 'Content signpost grid'
+              title: 'Card grid'
               options: {  }
             -
               uri: 'internal:/admin/structure/paragraphs_type/content_slider/fields'
-              title: 'Content signpost slider'
+              title: 'Card slider'
               options: {  }
             -
               uri: 'internal:/admin/structure/paragraphs_type/block/fields'
