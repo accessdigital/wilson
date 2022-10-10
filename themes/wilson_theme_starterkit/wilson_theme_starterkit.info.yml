@@ -12,7 +12,7 @@ libraries:
   - 'wilson_theme_starterkit/global'
 
 ckeditor_stylesheets:
-  - css/styles.css
+  - dist/css/styles.css
 
 regions:
   header_links: Header Links
