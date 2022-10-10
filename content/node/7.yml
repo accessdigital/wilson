@@ -15,8 +15,9 @@ _meta:
     4daf55b6-1d15-4103-9ae7-08b38a055849: taxonomy_term
     113a8489-3444-4e54-8d62-fe9576470f0b: media
     0c828ad6-7933-4451-8bae-e0166118fb90: node
-    600d7945-e9f4-4b5d-a23a-c58fb8f2de31: media
     042241e5-9e23-4186-ac71-e1c09ec06c84: media
+    13647eec-1cdc-4ce3-a089-441d78fba981: media
+    600d7945-e9f4-4b5d-a23a-c58fb8f2de31: media
 default:
   revision_uid:
     -
@@ -1747,6 +1748,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_author:
             -
               value: 'Jo Bloggs'
@@ -1765,6 +1769,9 @@ default:
           field_container_width:
             -
               value: medium
+          field_css_classes:
+            -
+              value: bg-grey-100
           field_padding_bottom:
             -
               value: md
@@ -1795,7 +1802,7 @@ default:
               value: {  }
           field_anchor_point_label:
             -
-              value: Signposts
+              value: Cards
     -
       entity:
         _meta:
@@ -1825,7 +1832,7 @@ default:
               value: normal
           field_headline:
             -
-              value: 'Container signpost grid'
+              value: 'Card grid'
           field_id_anchor:
             -
               value: container-signpost-grid
@@ -1840,7 +1847,7 @@ default:
               value: lg
           field_text_column:
             -
-              value: "<p>Use this to create a grid of signpost links to other pages on the site. Search titles of existing pages and these will be presented automatically as teasers. The image and text of each teaser is managed by the individual page. Available in 1, 2, 3 (default) and 4 column options.</p>\r\n"
+              value: "<p>Use this to create a grid of content teaser cards or custom signpost cards. Available in 1, 2, 3 (default) and 4 column options and to be displayed as basic cards or feature cards.</p>\r\n"
               format: full_html
     -
       entity:
@@ -1860,6 +1867,131 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_cards:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 11099c13-a93b-49d3-b05b-a777d3697cd2
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437005
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: teaser
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: ed90bf74-6310-4d3f-a32d-f37b02e93f52
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437159
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. '
+                  field_card_style:
+                    -
+                      value: teaser
+                  field_headline:
+                    -
+                      value: 'Headline text'
+                  field_image:
+                    -
+                      entity: 3170306e-328e-462c-a61a-47d079f7c7a1
+                  field_pre_header:
+                    -
+                      value: Pre-header
+                  field_primary_cta:
+                    -
+                      target_uuid: 0c828ad6-7933-4451-8bae-e0166118fb90
+                      title: 'Find out more'
+                      options: {  }
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 35122c8d-8160-49f0-af43-b4682d00cc36
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437150
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2b6f7aa2-a803-471d-8f79-6b7e6f2abccb
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437159
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. '
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_headline:
+                    -
+                      value: 'Headline text'
+                  field_image:
+                    -
+                      entity: 3170306e-328e-462c-a61a-47d079f7c7a1
+                  field_pre_header:
+                    -
+                      value: Pre-header
+                  field_primary_cta:
+                    -
+                      target_uuid: 0c828ad6-7933-4451-8bae-e0166118fb90
+                      title: 'Find out more'
+                      options: {  }
           field_container_height:
             -
               value: auto
@@ -1869,16 +2001,9 @@ default:
           field_container_width:
             -
               value: normal
-          field_content_references:
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
           field_grid_columns:
             -
-              value: '3'
+              value: '4'
           field_padding_bottom:
             -
               value: md
@@ -1903,9 +2028,83 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
+          field_cards:
             -
-              value: true
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 226e3475-d04c-43ab-a4e1-ef2da7b3e40e
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437360
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. '
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_headline:
+                    -
+                      value: 'Headline text'
+                  field_image:
+                    -
+                      entity: 042241e5-9e23-4186-ac71-e1c09ec06c84
+                  field_pre_header:
+                    -
+                      value: Pre-header
+                  field_primary_cta:
+                    -
+                      uri: 'internal:/'
+                      title: 'Link text'
+                      options: {  }
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c5b0fe8b-9a4a-42cb-b29b-f8faeb31da23
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437360
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. '
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_headline:
+                    -
+                      value: 'Headline text'
+                  field_image:
+                    -
+                      entity: 13647eec-1cdc-4ce3-a089-441d78fba981
+                  field_pre_header:
+                    -
+                      value: Pre-header
+                  field_primary_cta:
+                    -
+                      uri: 'internal:/'
+                      title: 'Link text'
+                      options: {  }
           field_container_height:
             -
               value: auto
@@ -1915,11 +2114,6 @@ default:
           field_container_width:
             -
               value: normal
-          field_content_references:
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
           field_grid_columns:
             -
               value: '2'
@@ -1958,7 +2152,7 @@ default:
               value: normal
           field_headline:
             -
-              value: 'Container signpost slider'
+              value: 'Card slider'
           field_id_anchor:
             -
               value: container-signpost-slider
@@ -1973,7 +2167,7 @@ default:
               value: lg
           field_text_column:
             -
-              value: "<p>Use this to create a slider&nbsp;of signpost links to other pages on the site. Search titles of existing pages and these will be presented automatically as teasers. The image and text of each teaser is managed by the individual page. Optionally you can include an intro slide containing a headline and text.</p>\r\n"
+              value: "<p>Use this to create a slider of content teaser cards and custom signpost cards.&nbsp;Optionally you can include an intro slide containing a headline and text.</p>\r\n"
               format: full_html
     -
       entity:
@@ -1993,40 +2187,142 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_cards:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: f2b071cb-2e3b-4ad7-aae9-3c81028b300e
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437636
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 797c4c4d-652e-43b8-a566-786268d24b8a
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437647
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d6812955-c607-43dc-80ff-f31485c007de
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437654
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 966c3939-d679-431f-a5dd-93b58774b442
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437659
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 5665f887-dce2-47fa-b33b-5453e25c88a5
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437665
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
           field_container_height:
             -
               value: auto
-          field_content_references:
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-          field_headline:
-            -
-              value: 'Header text'
           field_padding_bottom:
             -
               value: md
           field_padding_top:
             -
               value: md
-          field_pre_header:
-            -
-              value: 'Pre-header text'
-          field_text_column:
-            -
-              value: "<p>Caption text.</p>\r\n"
-              format: full_html
     -
       entity:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 2a8277bb-5602-4076-89d5-17952cf2e0b8
+          uuid: 594d2b95-dd92-4a2d-ae3a-65fda6adebd0
           bundle: content_slider
           default_langcode: en
         default:
@@ -2039,27 +2335,164 @@ default:
           behavior_settings:
             -
               value: {  }
+          field_cards:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 7ab29e8f-ce05-4aa7-98ad-1de851bceabc
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437636
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_card_style:
+                    -
+                      value: teaser
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 27cadcaa-d728-49ed-809f-002ed8d87946
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437647
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_card_style:
+                    -
+                      value: teaser
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2cc41041-1120-460e-8e0f-b7a111dbb23b
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437654
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 7d7d5fdb-57a1-4a5e-8922-121d2c6895c8
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437659
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_card_style:
+                    -
+                      value: teaser
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 06d818a2-ffd7-46e2-9adc-9445b4eee0b3
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437665
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
           field_container_height:
             -
               value: auto
-          field_content_references:
+          field_css_classes:
             -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+              value: bg-grey-100
+          field_headline:
             -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+              value: 'Intro headline'
           field_padding_bottom:
             -
               value: md
           field_padding_top:
             -
               value: md
-          field_section_bg_colour:
+          field_pre_header:
             -
-              entity: 4daf55b6-1d15-4103-9ae7-08b38a055849
+              value: 'Pre-header text'
+          field_text_column:
+            -
+              value: "<p>Option intro slide.&nbsp;Lorem ipsum dolor sit amet.&nbsp;Lorem ipsum dolor sit amet.</p>\r\n"
+              format: full_html
     -
       entity:
         _meta:
@@ -2250,6 +2683,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_headline:
                     -
                       value: 'Lorem ipsum dolor sit amet'
@@ -2275,6 +2711,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_headline:
                     -
                       value: 'Pellentesque a elit eget massa vestibulum'
@@ -2300,6 +2739,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_headline:
                     -
                       value: 'Nullam vehicula risus risus, in rhoncus mi laoreet sed'
@@ -2955,6 +3397,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_stat_animate:
                     -
                       value: true
@@ -2986,6 +3431,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_stat_animate:
                     -
                       value: true
@@ -3017,6 +3465,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_stat_animate:
                     -
                       value: true
