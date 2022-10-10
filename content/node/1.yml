@@ -86,15 +86,13 @@ default:
             -
               value: 'Drupal 9'
           field_primary_cta:
-            -
-              target_uuid: 0f9059f3-8462-4bbe-a774-e3c72f54eb5d
-              title: 'Component examples'
-              options: {  }
+            - uri: 'internal:/demo-components-page'
+              title: 'Demo components page'
+              options: { }
           field_secondary_cta:
-            -
-              target_uuid: e70ec879-6196-4b42-a9f2-0c152260881b
+            - uri: 'internal:/demo-editorial-page'
               title: 'Editorial page example'
-              options: {  }
+              options: { }
           field_section_bg:
             -
               entity: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
