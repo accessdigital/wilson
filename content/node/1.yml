@@ -72,7 +72,7 @@ default:
               value: normal
           field_headline:
             -
-              value: 'Wilson <span class="font-light">Installation Profile</span>'
+              value: '<span class="inline-block" data-aos="fade-right" data-aos-delay="100">Wilson</span> <span class="inline-block font-light" data-aos="fade-left" data-aos-delay="200">Installation Profile</span>'
           field_layout:
             -
               value: center
@@ -84,7 +84,7 @@ default:
               value: xl
           field_pre_header:
             -
-              value: 'Drupal 9'
+              value: '<span class="inline-block" data-aos="fade-in" data-aos-delay="400">Drupal 9</span>'
           field_primary_cta:
             - uri: 'internal:/demo-components-page'
               title: 'Demo components page'
@@ -101,7 +101,7 @@ default:
               entity: 12db7978-4760-486b-a0e4-6455f523858f
           field_text_column:
             -
-              value: "<p>Kickstart your Drupal 9 project with Wilson, including a wide range of Paragraph components and best practices.</p>\r\n"
+              value: "<p data-aos\"fade-in\" data-aos-delay=\"400\">Kickstart your Drupal 9 project with Wilson, including a wide range of Paragraph components and best practices.</p>\r\n"
               format: full_html
           field_toggle_jump_nav:
             -

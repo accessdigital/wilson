@@ -1,3 +1,44 @@
+// Fixes that apply to how elements are rendered inside the WYSIWYG textarea.
+body.cke_editable {
+  // Add padding to the body.
+  @apply p-4 #{!important};
+
+  // Fix the styling and position of the media library edit button.
+  .media-library-item__edit {
+    @apply absolute;
+    @apply top-3;
+    @apply right-3;
+    @apply bottom-auto;
+    @apply left-auto;
+    @apply z-10;
+    @apply inline-block;
+    @apply w-auto;
+    @apply h-auto;
+
+    // Simulate a small Claro button.
+    padding: calc(0.25rem - 1px) calc(0.75rem - 1px);
+    background: #d3d4d9;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 25%);
+    border-radius: 2px;
+    font-size: 0.79rem;
+    font-weight: 700;
+    font-family:
+      BlinkMacSystemFont,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      Oxygen-Sans,
+      Ubuntu,
+      Cantarell,
+      "Helvetica Neue",
+      sans-serif;
+
+    &:hover {
+      background-color: #c1c2c7;
+    }
+  }
+}
+
 main {
   .contextual-links {
     a {
