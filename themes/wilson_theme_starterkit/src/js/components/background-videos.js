@@ -27,24 +27,33 @@
         video.parentElement.classList.remove("opacity-0");
       });
 
-      // Handle Oembed videos.
+      // Handle Oembed videos (YouTube or Vimeo).
+      // Listen for Oembed iframes loading and then override the inner Video iframe src
+      // to trigger autoplaying. Once the inner video has loaded, remove the opacity class
+      // so the playing video fades in.
       const oembedIframes = context.querySelectorAll(
         ".section-bg-video .video-wrapper iframe"
       );
       Array.prototype.forEach.call(oembedIframes, (iframe) => {
-        const iframeDocument =
-          iframe.contentDocument || iframe.contentWindow.document;
-        const videoIframes = iframeDocument.querySelectorAll("iframe");
+        iframe.addEventListener("load", () => {
+          const iframeDocument =
+            iframe.contentDocument || iframe.contentWindow.document;
+          const videoIframe = iframeDocument.querySelector("iframe");
 
-        Array.prototype.forEach.call(videoIframes, (video) => {
-          if (video.src.includes("youtube.com")) {
-            video.src = `${video.src}&autoplay=1&controls=0&mute=1`;
-          } else if (video.src.includes("vimeo.com")) {
-            video.src = `${video.src}&background=1`;
+          if (videoIframe) {
+            if (videoIframe.src.includes("youtube.com")) {
+              videoIframe.src = `${videoIframe.src}&autoplay=1&controls=0&mute=1`;
+            } else if (videoIframe.src.includes("vimeo.com")) {
+              videoIframe.src = `${videoIframe.src}&background=1`;
+            }
+
+            // Video backgrounds are transparent by default.
+            // Only remove the opacity once the hosted video has loaded.
+            videoIframe.addEventListener("load", () => {
+              iframe.parentElement.classList.remove("opacity-0");
+            });
           }
         });
-
-        iframe.parentElement.classList.remove("opacity-0");
       });
     },
   };

@@ -10,9 +10,6 @@
  * @see template_preprocess_media()
  */
 #}
-<article{{ attributes.addClass('media-video') }}>
-  {{ title_suffix.contextual_links }}
-  {% if content %}
-    {{ content }}
-  {% endif %}
-</article>
+{% if content %}
+  {{ content }}
+{% endif %}

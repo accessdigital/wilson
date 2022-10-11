@@ -2,16 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.gallery
     - field.field.media.video.field_media_video_file
     - media.type.video
   module:
     - file
 _core:
   default_config_hash: 1ZPx3_UWNhKgsD5B3LdAvGd4Z8OW6pXjZttXZm7JTvc
-id: media.video.default
+id: media.video.gallery
 targetEntityType: media
 bundle: video
-mode: default
+mode: gallery
 content:
   field_media_video_file:
     type: file_video
