@@ -103,8 +103,7 @@ default:
               entity: 12db7978-4760-486b-a0e4-6455f523858f
           field_text_column:
             -
-              value: '<p data-aos="fade-in" data-aos-delay="400">Kickstart your Drupal 9 project with Wilson, including a wide range of Paragraph components and best practices.</p>
-  \r\n'
+              value: "<p data-aos\"fade-in\" data-aos-delay=\"400\">Kickstart your Drupal 9 project with Wilson, including a wide range of Paragraph components and best practices.</p>\r\n"
               format: full_html
           field_toggle_jump_nav:
             -

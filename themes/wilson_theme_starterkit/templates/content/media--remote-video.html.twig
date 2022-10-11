@@ -10,6 +10,21 @@
  * @see template_preprocess_media()
  */
 #}
-{% if content %}
-  {{ content }}
-{% endif %}
+{%
+  set classes = [
+  'media-video',
+  'relative',
+  'pb-[56.25%]',
+  'w-full',
+  'child:absolute',
+  'child:top-0',
+  'child:left-0',
+  'child:h-full',
+  'child:w-full',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {% if content %}
+    {{ content }}
+  {% endif %}
+</article>

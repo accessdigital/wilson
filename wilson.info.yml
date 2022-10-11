@@ -49,6 +49,7 @@ install:
   - options
   - mail_login
   - media
+  - media_embed_view_mode_restrictions
   - media_library
   - menu_block
   - menu_link_attributes
