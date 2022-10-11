@@ -4,6 +4,6 @@ dependencies:
   module:
     - media
 id: media.video_inline
-label: 'Inline video video loop'
+label: 'Inline video loop'
 targetEntityType: media
 cache: true
