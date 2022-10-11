@@ -40,5 +40,5 @@
 #}
 {% block paragraph %}
   {# Render paragraph in the view mode dictated by field_card_style #}
-  {{ drupal_entity('paragraph', paragraph.id(), paragraph.field_card_style.0.value) }}
+  {{ drupal_entity('paragraph', paragraph.id(), paragraph.field_custom_card_style.0.value ?? 'taser') }}
 {% endblock paragraph %}

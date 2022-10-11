@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.feature_card
     - field.field.paragraph.custom_card.field_caption
-    - field.field.paragraph.custom_card.field_card_style
+    - field.field.paragraph.custom_card.field_custom_card_style
     - field.field.paragraph.custom_card.field_headline
     - field.field.paragraph.custom_card.field_image
     - field.field.paragraph.custom_card.field_pre_header
@@ -12,7 +12,8 @@ dependencies:
     - paragraphs.paragraphs_type.custom_card
   module:
     - link
-    - options
+_core:
+  default_config_hash: 4sRKBvIdLZcEJox2Rat4OoGXpi89ZIa6W-OPyH8i5XE
 id: paragraph.custom_card.feature_card
 targetEntityType: paragraph
 bundle: custom_card
@@ -24,13 +25,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
-    region: content
-  field_card_style:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_headline:
     type: string
@@ -44,7 +38,7 @@ content:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: card
+      view_mode: grid
       link: false
     third_party_settings: {  }
     weight: 0
@@ -69,4 +63,5 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-hidden: {  }
+hidden:
+  field_custom_card_style: true

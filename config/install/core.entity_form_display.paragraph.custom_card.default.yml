@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.custom_card.field_caption
-    - field.field.paragraph.custom_card.field_card_style
+    - field.field.paragraph.custom_card.field_custom_card_style
     - field.field.paragraph.custom_card.field_headline
     - field.field.paragraph.custom_card.field_image
     - field.field.paragraph.custom_card.field_pre_header
@@ -36,7 +36,7 @@ third_party_settings:
         - field_pre_header
         - field_headline
         - field_caption
-        - field_card_style
+        - field_custom_card_style
       label: Card
       region: content
       parent_name: group_tabs
@@ -79,6 +79,8 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+_core:
+  default_config_hash: Ellqv8ovdQUTBh84zvwYGsnlmTGYK1HPrghUS82XNHg
 id: paragraph.custom_card.default
 targetEntityType: paragraph
 bundle: custom_card
@@ -92,9 +94,9 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_card_style:
+  field_custom_card_style:
     type: options_buttons
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -580,7 +580,7 @@ default:
                   revision_translation_affected:
                     -
                       value: true
-                  field_card_style:
+                  field_custom_card_style:
                     -
                       value: feature_card
                   field_headline:
@@ -615,7 +615,7 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_card_style:
+                  field_custom_card_style:
                     -
                       value: feature_card
                   field_headline:
@@ -650,7 +650,7 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_card_style:
+                  field_custom_card_style:
                     -
                       value: feature_card
                   field_headline:
@@ -685,7 +685,7 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  field_card_style:
+                  field_custom_card_style:
                     -
                       value: feature_card
                   field_headline:

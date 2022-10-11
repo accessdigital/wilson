@@ -28,13 +28,13 @@
       {% endif %}
 
       {% if caption %}
-        <p>{{ caption }}</p>
+        <p class="mb-0">{{ caption }}</p>
       {% endif %}
 
       {% if link_url %}
-        <div class="mt-6">
+        <p class="mb-0">
           <a href="{{ link_url }}" class="after:absolute after:inset-0 border-b-0 font-semibold">{{ link_text }} <span class="inline-block group-hover:translate-x-2 transition-transform duration-300">&#8594;</span></a>
-        </div>
+        </p>
       {% endif %}
     </div>
   </div>

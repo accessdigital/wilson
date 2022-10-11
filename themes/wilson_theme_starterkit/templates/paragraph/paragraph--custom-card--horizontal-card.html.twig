@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to display a content teaser card paragraph.
+ * Default theme implementation to display a custom card paragraph in "Feature card" view mode.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -39,6 +39,12 @@
  */
 #}
 {% block paragraph %}
-  {# Render paragraph in the view mode dictated by field_card_style #}
-  {{ drupal_entity('paragraph', paragraph.id(), paragraph.field_card_style.0.value ?? 'teaser') }}
+  {% include '@wilson_theme_starterkit/templates/component/horizontal-card.html.twig' with {
+    image: content.field_image|field_value,
+    pre_header: paragraph.field_pre_header.0.value|check_markup('full_html'),
+    headline: paragraph.field_headline.0.value|check_markup('full_html'),
+    caption: paragraph.field_caption.0.value|check_markup('full_html'),
+    link_url: content.field_primary_cta.0['#url'],
+    link_text: content.field_primary_cta.0['#title']
+  } %}
 {% endblock paragraph %}
