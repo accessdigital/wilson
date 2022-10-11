@@ -1,3 +1,8 @@
+// Add padding when CSS is used inside a WYSIWYG textarea.
+body.cke_editable {
+  @apply p-4 #{!important};
+}
+
 main {
   .contextual-links {
     a {
