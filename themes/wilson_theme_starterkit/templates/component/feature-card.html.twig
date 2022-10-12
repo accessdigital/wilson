@@ -1,0 +1,41 @@
+{% set classes = [
+  'relative',
+  'block',
+  'w-full',
+  link_url ? 'group' : '',
+  'overflow-hidden',
+  'rounded-xl',
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% if image %}
+    <div class="absolute inset-0 group-hover:scale-110 transition-transform duration-300 heir:!w-full heir:!h-full heir-img:object-cover brightness-50">
+      {{ image }}
+    </div>
+  {% endif %}
+
+  <div class="relative z-10 flex flex-col justify-end w-full h-full min-h-64 md:min-h-80 lg:min-h-100">
+    <div class="pt-16 px-10 pb-10 text-white max-w-3xl">
+      {% if pre_header %}
+        <span class="inline-block uppercase font-semibold tracking-wider text-xs">{{ pre_header }}</span>
+      {% endif %}
+
+      {% if headline %}
+        <h3 class="font-medium text-3xl mt-2 -mb-2">{{ headline }}</h3>
+      {% endif %}
+
+      {% if caption %}
+        <p class="mb-0">{{ caption }}</p>
+      {% endif %}
+
+      {% if link_url %}
+        <p class="mb-0">
+          <a href="{{ link_url }}" class="after:absolute after:inset-0 border-b-0 font-semibold">{{ link_text }} <span class="inline-block group-hover:translate-x-2 transition-transform duration-300">&#8594;</span></a>
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</div>

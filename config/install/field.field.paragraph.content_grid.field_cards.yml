@@ -1,0 +1,107 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards
+    - paragraphs.paragraphs_type.content_grid
+    - paragraphs.paragraphs_type.content_teaser_card
+    - paragraphs.paragraphs_type.custom_card
+  module:
+    - entity_reference_revisions
+id: paragraph.content_grid.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: content_grid
+label: Cards
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content_teaser_card: content_teaser_card
+      custom_card: custom_card
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 26
+        enabled: false
+      anchor_point:
+        weight: 27
+        enabled: false
+      block:
+        weight: 28
+        enabled: false
+      button_grid:
+        weight: 29
+        enabled: false
+      content_grid:
+        weight: 30
+        enabled: false
+      content_slider:
+        weight: 31
+        enabled: false
+      content_teaser_card:
+        weight: 32
+        enabled: true
+      custom_card:
+        weight: 34
+        enabled: true
+      gallery:
+        weight: 33
+        enabled: false
+      hero:
+        weight: 34
+        enabled: false
+      item:
+        weight: 35
+        enabled: false
+      logo_wall:
+        weight: 36
+        enabled: false
+      map:
+        weight: 37
+        enabled: false
+      one_column:
+        weight: 38
+        enabled: false
+      panel:
+        weight: 39
+        enabled: false
+      prev_next_navigation:
+        weight: 40
+        enabled: false
+      quote:
+        weight: 41
+        enabled: false
+      simple_banner:
+        weight: 42
+        enabled: false
+      stat:
+        weight: 43
+        enabled: false
+      statistics:
+        weight: 44
+        enabled: false
+      tabs:
+        weight: 45
+        enabled: false
+      text_webform:
+        weight: 46
+        enabled: false
+      three_columns:
+        weight: 47
+        enabled: false
+      two_columns:
+        weight: 48
+        enabled: false
+      views:
+        weight: 49
+        enabled: false
+      webform_embed:
+        weight: 50
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_teaser_card.field_card_style
+    - field.field.paragraph.content_teaser_card.field_content_reference
+    - paragraphs.paragraphs_type.content_teaser_card
+id: paragraph.content_teaser_card.default
+targetEntityType: paragraph
+bundle: content_teaser_card
+mode: default
+content:
+  field_card_style:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_reference:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: 'Search by page title'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

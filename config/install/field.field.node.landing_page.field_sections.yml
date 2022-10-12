@@ -4,12 +4,14 @@ dependencies:
   config:
     - field.storage.node.field_sections
     - node.type.landing_page
+    - paragraphs.paragraphs_type.content_teaser_card
+    - paragraphs.paragraphs_type.custom_card
     - paragraphs.paragraphs_type.item
     - paragraphs.paragraphs_type.stat
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: aQ1FamhvwQEbGFTrx_bFU3NNvd6-dBKSuB_GNVPjg3E
+  default_config_hash: TCAXOYLnAB2VvaGMnICt86z4OdEHQRnJiTkfRtsMv5Q
 id: node.landing_page.field_sections
 field_name: field_sections
 entity_type: node
@@ -25,6 +27,8 @@ settings:
   handler_settings:
     target_bundles:
       item: item
+      content_teaser_card: content_teaser_card
+      custom_card: custom_card
       stat: stat
     negate: 1
     target_bundles_drag_drop:
@@ -46,6 +50,12 @@ settings:
       content_slider:
         weight: 20
         enabled: false
+      content_teaser_card:
+        weight: 32
+        enabled: true
+      custom_card:
+        weight: 34
+        enabled: true
       gallery:
         weight: 21
         enabled: false

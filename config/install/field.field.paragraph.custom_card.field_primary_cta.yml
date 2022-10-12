@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_primary_cta
+    - paragraphs.paragraphs_type.custom_card
+  module:
+    - link
+id: paragraph.custom_card.field_primary_cta
+field_name: field_primary_cta
+entity_type: paragraph
+bundle: custom_card
+label: 'Card link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

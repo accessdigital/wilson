@@ -3,10 +3,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.content_grid.field_aos
+    - field.field.paragraph.content_grid.field_cards
     - field.field.paragraph.content_grid.field_container_height
     - field.field.paragraph.content_grid.field_container_position
     - field.field.paragraph.content_grid.field_container_width
-    - field.field.paragraph.content_grid.field_content_references
     - field.field.paragraph.content_grid.field_css_classes
     - field.field.paragraph.content_grid.field_grid_columns
     - field.field.paragraph.content_grid.field_id_anchor
@@ -18,6 +18,9 @@ dependencies:
   module:
     - field_group
     - media_library
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
 third_party_settings:
   field_group:
     group_tabs:
@@ -36,6 +39,7 @@ third_party_settings:
     group_content:
       children:
         - field_content_references
+        - field_cards
       label: Content
       region: content
       parent_name: group_tabs
@@ -90,7 +94,7 @@ third_party_settings:
       label: Background
       region: content
       parent_name: group_settings
-      weight: 6
+      weight: 7
       format_type: details
       format_settings:
         classes: input-columns-two
@@ -106,7 +110,7 @@ third_party_settings:
       label: 'Classes & ID'
       region: content
       parent_name: group_settings
-      weight: 7
+      weight: 8
       format_type: details
       format_settings:
         classes: input-columns-two
@@ -147,7 +151,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: 0JalM4ybbB1qlayNmdYXsdZYOyZpt4rZwXuwX8I7PdE
+  default_config_hash: LL7Dmn3QVmzFchrUtRpisrsiFz8GVTDEddN9fB0vjIA
 id: paragraph.content_grid.default
 targetEntityType: paragraph
 bundle: content_grid
@@ -159,6 +163,36 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_cards:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Card
+      title_plural: Cards
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        add_in_between_link_count: 3
+        delete_confirmation: true
+        split_text: false
+        show_drag_and_drop: true
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: false
+          dialog_style: tiles
+          easy_access_count: 2
   field_container_height:
     type: options_select
     weight: 8
@@ -176,16 +210,6 @@ content:
     weight: 9
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_content_references:
-    type: entity_reference_autocomplete
-    weight: 1
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: 'Search by page title'
     third_party_settings: {  }
   field_css_classes:
     type: string_textfield

@@ -31,7 +31,7 @@
 
       // Attach event listeners only on the initial page load.
       if (context === document) {
-        // Attach a scroll listener to detect if any anchor points are active.
+        // Attach a scroll event listener to detect if any anchor points are active.
         document.addEventListener("scroll", () => {
           this.handleScroll();
         });
@@ -46,9 +46,15 @@
         });
       }
 
-      // Fonts loading in can cause a page reflow so wait until all fonts are loaded
-      // before getting anchor positions.
-      document.fonts.ready.then(() => {
+      // Fonts and images loading in can cause a page reflow so wait until window load event
+      // is triggered before getting anchor positions.
+      window.addEventListener("load", () => {
+        this.initAnchors();
+      });
+
+      // Recalculate the anchor point positions when other behaviours to trigger a 'redraw' event (e.g. opening and
+      // closing accordion panels).
+      window.addEventListener("redraw", () => {
         this.initAnchors();
       });
     },
@@ -58,6 +64,7 @@
       const observer = new IntersectionObserver(
         ([el]) => {
           el.target.classList.toggle("is-sticky", el.intersectionRatio < 1);
+          this.initAnchors();
         },
         { threshold: [1] }
       );

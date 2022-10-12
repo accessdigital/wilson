@@ -99,10 +99,22 @@ module.exports = {
       margin: {
         "1/2-screen": "50vw",
       },
+      maxHeight: {
+        100: "25rem", // 400px
+        112: "28rem", // 448px
+      },
+      maxWidth: {
+        "2xs": "16rem", // 256px
+      },
       minHeight: {
         "1/4-screen": "25vh",
         "1/2-screen": "50vh",
         "3/4-screen": "75vh",
+        24: "6rem", // 96px
+        48: "12rem", // 192px
+        64: "16rem", // 256px
+        80: "20rem", // 320px
+        100: "25rem", // 400px
       },
       width: {
         // Utilities for setting widths to match grid columns with gaps.

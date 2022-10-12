@@ -70,41 +70,12 @@
  *   in different view modes.
  */
 #}
-<div{{ attributes.addClass(['block', 'flex', 'w-full']) }}>
-  {{ title_prefix }}
-  {{ title_suffix }}
-
-  <a href="{{ url }}" class="block flex flex-col w-full group border-b-0 bg-primary text-primary-contrast rounded-xl overflow-hidden">
-    {% if content.field_teaser_image|render or content.field_image|render %}
-      <div class="overflow-hidden">
-        <div class="group-hover:scale-110 transition-transform duration-300">
-          {% if content.field_teaser_image|render %}
-            {{ content.field_teaser_image|field_value }}
-          {% else %}
-            {{ content.field_image|field_value }}
-          {% endif %}
-        </div>
-      </div>
-    {% endif %}
-
-    <div class="pt-5 px-5 pb-8">
-      {% set title = node.label %}
-      {% if content.field_teaser_title|render %}
-        {% set title = node.field_teaser_title.0.value|check_markup('full_html') %}
-      {% endif %}
-
-      <h3 class="font-medium text-2xl mb-3">{{ title }}</h3>
-
-      {% if content.field_teaser_caption|render %}
-        <p>{{ content.field_teaser_caption|field_value }}</p>
-      {% else %}
-        {{ content.body|field_value }}
-      {% endif %}
-    </div>
-
-    <div class="mt-auto pb-5 px-5 flex flex-row flex-wrap justify-between gap-3 items-center">
-      <span class="btn btn--secondary">{{ 'Read more'|t }}</span>
-      <time class="font-semibold text-sm whitespace-nowrap">{{ node.created.value|date('j M Y') }}</time>
-    </div>
-  </a>
-</div>
+{% include '@wilson_theme_starterkit/templates/component/article-teaser-card.html.twig' with {
+  image: content.field_teaser_image|render ? content.field_teaser_image|field_value : content.field_image|field_value,
+  pre_header: '',
+  headline: content.field_teaser_title|render ? node.field_teaser_title.0.value|check_markup('full_html') : node.label,
+  caption: content.field_teaser_caption|render ? node.field_teaser_caption.0.value|check_markup('full_html') : content.body|field_value,
+  published_date: node.created.value|date('j M Y'),
+  link_url: url,
+  link_text: 'Read more'|t
+} %}

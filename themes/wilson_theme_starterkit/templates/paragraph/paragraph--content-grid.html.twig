@@ -43,12 +43,13 @@
 {% set content_classes = [
   'grid',
   'gap-10',
+  'auto-rows-fr',
   settings_columns,
 ] %}
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
-    {% for key, item in content.field_content_references if key|first != '#' %}
+    {% for key, item in content.field_cards if key|first != '#' %}
       {{ item }}
     {% endfor %}
   </div>
