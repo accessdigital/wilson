@@ -7,7 +7,6 @@
   let anchors = [];
 
   let resizeTimer;
-  let scrollTimer;
 
   /**
    * Attaches the Jump nav behaviour.
@@ -32,13 +31,9 @@
 
       // Attach event listeners only on the initial page load.
       if (context === document) {
-        // Attach a debounced scroll listener to detect if any anchor points are active.
+        // Attach a listener to detect if any anchor points are active.
         document.addEventListener("scroll", () => {
-          clearTimeout(scrollTimer);
-          scrollTimer = setTimeout(() => {
-            this.handleScroll();
-            this.initAnchors();
-          }, 200);
+          this.handleScroll();
         });
 
         // Attach a debounced resize listener to reset the position of the anchor
@@ -54,14 +49,12 @@
       // Fonts and images loading in can cause a page reflow so wait until window load event
       // is triggered before getting anchor positions.
       window.addEventListener("load", () => {
-        console.log('load');
         this.initAnchors();
       });
 
       // Allow other behaviours to trigger a 'redraw' event to trigger a recalculation of
       // anchor positions.
       window.addEventListener("redraw", () => {
-        console.log('redraw');
         this.initAnchors();
       });
     },
@@ -97,8 +90,6 @@
           el: anchorEl,
         });
       });
-
-      console.log(anchors);
 
       // Check if any anchor points should be made active.
       this.handleScroll();
