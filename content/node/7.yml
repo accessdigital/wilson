@@ -457,7 +457,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<p>This can be combined with background styles and Tailwind CSS classes to give a different effect. In this example I we have darkened the image and used the <code class=\"bg-grey-200 px-1 rounded\">bg-fixed</code> CSS class to give a parallax effect.</p>\r\n"
+              value: "<p>This can be combined with background styles and Tailwind CSS classes to give a different effect. In this example I we have darkened the image and used the <code class=\"bg-grey-200 px-1 rounded\">bg-fixed</code> CSS class to give a parallax effect. Note that there is patchy support for fixed backgrounds on mobile.</p>\r\n"
               format: full_html
     -
       entity:
@@ -4119,7 +4119,7 @@ default:
                       value: 'Full screen width'
                   field_text_column:
                     -
-                      value: "<div class=\"relative left-1/2 -ml-1/2-screen w-screen px-5\">\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Full screen width<br />\r\n(Includes a left/right gutter on most components to prevent text touching the edge of the window)</span></div>\r\n</div>\r\n"
+                      value: "<div class=\"relative left-1/2 -ml-1/2-screen w-screen px-5\">\r\n<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Full screen width<br />\r\n(Includes a left/right gutter on most components to prevent text touching the edge of the window)</span></div>\r\n</div>\r\n"
                       format: full_html
             -
               entity:
@@ -4144,7 +4144,7 @@ default:
                       value: 'Extra wide'
                   field_text_column:
                     -
-                      value: "<div class=\"relative left-1/2 -ml-1/2-screen w-screen\">\r\n<div class=\"container-wide px-5\">\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Extra Wide<br />\r\n(Applicable to XL breakpoint only)</span></div>\r\n</div></div>"
+                      value: "<div class=\"relative left-1/2 -ml-1/2-screen w-screen\">\r\n<div class=\"container-wide px-5\">\r\n<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Extra Wide<br />\r\n(Applicable to XL breakpoint only)</span></div>\r\n</div></div>"
                       format: full_html
             -
               entity:
@@ -4169,7 +4169,7 @@ default:
                       value: Normal
                   field_text_column:
                     -
-                      value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Normal<br />\r\n(Default)</span></div>\r\n"
+                      value: "<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Normal<br />\r\n(Default)</span></div>\r\n"
                       format: full_html
             -
               entity:
@@ -4194,7 +4194,7 @@ default:
                       value: Medium
                   field_text_column:
                     -
-                      value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 mb-8\"><span>Medium<br />\r\n(Left)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 mb-8 mx-auto\"><span>Medium<br />\r\n(Center)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 ml-auto\"><span>Medium<br />\r\n(Right)</span></div>\r\n"
+                      value: "<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 mb-8\"><span>Medium<br />\r\n(Left)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 mb-8 mx-auto\"><span>Medium<br />\r\n(Center)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 ml-auto\"><span>Medium<br />\r\n(Right)</span></div>\r\n"
                       format: full_html
             -
               entity:
@@ -4219,7 +4219,7 @@ default:
                       value: Narrow
                   field_text_column:
                     -
-                      value: "<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 mb-8\"><span>Narrow<br />\r\n(Left)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 mb-8 mx-auto\"><span>Narrow<br />\r\n(Centre)</span></div>\r\n\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 ml-auto\"><span>Narrow<br />\r\n(Right)</span></div>\r\n"
+                      value: "<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 mb-8\"><span>Narrow<br />\r\n(Left)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 mb-8 mx-auto\"><span>Narrow<br />\r\n(Centre)</span></div>\r\n\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 ml-auto\"><span>Narrow<br />\r\n(Right)</span></div>\r\n"
                       format: full_html
           field_padding_bottom:
             -

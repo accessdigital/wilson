@@ -42,6 +42,8 @@
           panels[index].classList.add("is-active");
           activeIndex = index;
           buttons[index].setAttribute("aria-expanded", "true");
+          // Dispatch an event to announce a page redraw.
+          window.dispatchEvent(new Event('redraw'));
         };
 
         const hidePanel = (index) => {
@@ -52,6 +54,8 @@
             tabs[index].tabIndex = -1;
             panels[index].classList.remove("is-active");
             buttons[index].setAttribute("aria-expanded", "false");
+            // Dispatch an event to announce a page redraw.
+            window.dispatchEvent(new Event('redraw'));
           }
         };
 

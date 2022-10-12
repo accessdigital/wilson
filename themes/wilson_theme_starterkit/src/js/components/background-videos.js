@@ -49,6 +49,7 @@
 
             // Video backgrounds are transparent by default.
             // Only remove the opacity once the hosted video has loaded.
+            // eslint-disable-next-line max-nested-callbacks
             videoIframe.addEventListener("load", () => {
               iframe.parentElement.classList.remove("opacity-0");
             });

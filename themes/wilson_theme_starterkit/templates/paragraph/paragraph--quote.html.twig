@@ -45,8 +45,8 @@
     <blockquote>
       {{ content.field_text_column|field_value }}
     </blockquote>
-    <figcaption class="flex flex-row items-center justify-center mt-6 -mr-2 -mb-2 -ml-2 text-lg">
-      <div class="mx-2 w-12 child:inline-block child:rounded-full">{{ content.field_author_image|field_value }}</div>
+    <figcaption class="flex flex-col sm:flex-row items-center justify-center mt-6 -mr-2 -mb-2 -ml-2 text-lg">
+      <div class="mx-2 mb-4 sm:mb-0 w-12 child:inline-block child:rounded-full">{{ content.field_author_image|field_value }}</div>
       <div class="mx-2">
         {% if content.field_author|render %}
           <span class="font-bold">{{ content.field_author|field_value }}</span>

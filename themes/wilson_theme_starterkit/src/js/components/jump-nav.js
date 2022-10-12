@@ -7,6 +7,7 @@
   let anchors = [];
 
   let resizeTimer;
+  let scrollTimer;
 
   /**
    * Attaches the Jump nav behaviour.
@@ -31,9 +32,13 @@
 
       // Attach event listeners only on the initial page load.
       if (context === document) {
-        // Attach a scroll listener to detect if any anchor points are active.
+        // Attach a debounced scroll listener to detect if any anchor points are active.
         document.addEventListener("scroll", () => {
-          this.handleScroll();
+          clearTimeout(scrollTimer);
+          scrollTimer = setTimeout(() => {
+            this.handleScroll();
+            this.initAnchors();
+          }, 200);
         });
 
         // Attach a debounced resize listener to reset the position of the anchor
@@ -46,9 +51,17 @@
         });
       }
 
-      // Fonts loading in can cause a page reflow so wait until all fonts are loaded
-      // before getting anchor positions.
-      document.fonts.ready.then(() => {
+      // Fonts and images loading in can cause a page reflow so wait until window load event
+      // is triggered before getting anchor positions.
+      window.addEventListener("load", () => {
+        console.log('load');
+        this.initAnchors();
+      });
+
+      // Allow other behaviours to trigger a 'redraw' event to trigger a recalculation of
+      // anchor positions.
+      window.addEventListener("redraw", () => {
+        console.log('redraw');
         this.initAnchors();
       });
     },
@@ -58,6 +71,7 @@
       const observer = new IntersectionObserver(
         ([el]) => {
           el.target.classList.toggle("is-sticky", el.intersectionRatio < 1);
+          this.initAnchors();
         },
         { threshold: [1] }
       );
@@ -83,6 +97,8 @@
           el: anchorEl,
         });
       });
+
+      console.log(anchors);
 
       // Check if any anchor points should be made active.
       this.handleScroll();

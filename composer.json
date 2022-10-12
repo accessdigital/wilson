@@ -16,6 +16,7 @@
         }
     ],
     "require": {
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_login_path": "^1.1",
         "drupal/admin_toolbar": "^2.4",
         "drupal/block_field": "^1.0@RC",
@@ -57,5 +58,13 @@
     },
     "replace": {
         "drupal/ctools": "*"
+    },
+    "extra": {
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "Apply width and height attributes to allow responsive image tag use loading='lazy'": "https://www.drupal.org/files/issues/2022-10-10/3192234-241-9.5.x_1.patch"
+            }
+        }
     }
 }
