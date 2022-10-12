@@ -1,6 +1,24 @@
-# Helpful hints for printing fields
+# Helpful template hints
 
-## Print just the field value
+## Component template includes
+
+To enforce consistency in template files, you can declare common components as Twig files in the `component` directory and include these in to your theme templates while passing specific variable values.
+
+Example syntax displaying different ways of passing field values to variables of the component:
+
+```
+{% include '@wilson_theme_starterkit/templates/component/my-component.html.twig' with {
+  image: content.field_image|field_value
+  headline: paragraph.field_headline.0.value|check_markup('full_html'),
+  caption: content.field_caption|field_value,
+  link_url: content.field_primary_cta.0['#url'],
+  link_text: content.field_primary_cta.0['#title'],
+} %}
+```
+
+## Printing field values
+
+### Print just the field value
 
 To print the value of a field with no label or wrapping markup, you can use the `|field_value` filter.
 
@@ -8,7 +26,7 @@ To print the value of a field with no label or wrapping markup, you can use the 
 {{ content.field_headline|field_value }}
 ```
 
-## Print a link field
+### Print a link field
 
 To manually construct an anchor tag from a link field:
 
@@ -30,7 +48,7 @@ If you wish to automatically make external URLs open in a new window:
 <a href="{{ content.field_link.0['#url'] }}" class="some-class"{% if content.field_link.0['#url'].isExternal %} target="_blank"{% endif %}>{{ content.field_link.0['#title'] }}</a>
 ```
 
-## Print a field value that may contain HTML
+### Print a field value that may contain HTML
 
 It will sometimes be useful to accept basic HTML in a plain text field (e.g. a headline). To print fields with rendered markup you must access the field data directly and pass it through the `|check_markup` filter.
 
