@@ -52,8 +52,8 @@
         this.initAnchors();
       });
 
-      // Allow other behaviours to trigger a 'redraw' event to trigger a recalculation of
-      // anchor positions.
+      // Recalculate the anchor point positions when other behaviours to trigger a 'redraw' event (e.g. opening and
+      // closing accordion panels).
       window.addEventListener("redraw", () => {
         this.initAnchors();
       });
