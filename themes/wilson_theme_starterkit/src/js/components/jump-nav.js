@@ -31,7 +31,7 @@
 
       // Attach event listeners only on the initial page load.
       if (context === document) {
-        // Attach a listener to detect if any anchor points are active.
+        // Attach a scroll event listener to detect if any anchor points are active.
         document.addEventListener("scroll", () => {
           this.handleScroll();
         });
