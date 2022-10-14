@@ -47,12 +47,20 @@
   'md:w-auto'
 ] %}
 
+{% set content_attributes = {
+  'class': classes,
+  'data-slides-xxl': settings_slides_perview_2xl,
+  'data-slides-xl': settings_slides_perview_xl,
+  'data-slides-lg': settings_slides_perview_lg,
+  'data-slides-md': settings_slides_perview_md,
+  'data-slides-sm': settings_slides_perview_sm,
+} %}
+
 {% block content %}
   {{ attach_library('wilson_theme_starterkit/slider') }}
-
-  <div{{ create_attribute({'class': classes}) }}>
+  <div{{ create_attribute(content_attributes) }}>
     <div class="glide">
-      <div data-glide-el="track" class="glide__track !overflow-visible">
+      <div data-glide-el="track" class="glide__track{% if paragraph.field_content_slider_overflow.value %} !overflow-visible{% endif %}">
         <div class="glide__slides !overflow-visible child-div:whitespace-normal">
           {% if content.field_pre_header|render or content.field_headline|render or content.field_text_column|render %}
             <div>

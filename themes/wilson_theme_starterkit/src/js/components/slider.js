@@ -27,17 +27,25 @@
           image.removeAttribute("loading");
         });
 
+        console.log(sliderCarousel.dataset);
+
         const glide = new window.Glide(carousel, {
           type: "slider",
-          perView: 3,
+          perView: sliderCarousel.dataset.slidesXxl || 3,
           gap: 40,
           bound: true,
           breakpoints: {
+            1280: {
+              perView: sliderCarousel.dataset.slidesXl || 3,
+            },
             1024: {
-              perView: 2,
+              perView: sliderCarousel.dataset.slidesLg || 2,
+            },
+            768: {
+              perView: sliderCarousel.dataset.slidesMd || 2,
             },
             640: {
-              perView: 1,
+              perView: sliderCarousel.dataset.slidesSm || 1,
             },
           },
           classes: {},

@@ -3,11 +3,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.video_inline
+    - core.entity_view_mode.media.video_player
   module:
     - editor
     - media
 _core:
-  default_config_hash: YMLKnB1M7Ks5Y-uFCLfrY6cLby0J_irJXT2aj5tI3ag
+  default_config_hash: Rdz0PTYISNZNAPLDPKTjTBVuMYx_LR0hs7TUsifkPxI
 name: 'Full HTML'
 format: full_html
 weight: 2
@@ -71,7 +72,7 @@ filters:
           default_view_mode: default
           allowed_view_modes: {  }
         video:
-          default_view_mode: default
+          default_view_mode: video_player
           allowed_view_modes:
-            default: default
             video_inline: video_inline
+            video_player: video_player

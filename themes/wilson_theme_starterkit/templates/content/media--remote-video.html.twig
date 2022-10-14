@@ -24,6 +24,7 @@
 ]
 %}
 <article{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
   {% if content %}
     {{ content }}
   {% endif %}

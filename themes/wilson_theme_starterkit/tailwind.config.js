@@ -1,4 +1,3 @@
-const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 const tailwindChildren = require("tailwind-children");
 const tailwindVariables = require("tailwind-css-variables");
@@ -17,6 +16,7 @@ module.exports = {
     // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
     "border-b-2",
     "-ml-1/2-screen",
+    "min-h-24",
     "max-w-screen-xl",
     "max-w-screen-2xl",
     "p-10",
@@ -25,7 +25,7 @@ module.exports = {
     // responsive classes or other variants.
     // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
     {
-      pattern: /^h-(6|10|12|24|36|40|48)/,
+      pattern: /^h-(6|10|12|24|36|48)/,
       variants: ["md"],
     },
     {
@@ -53,7 +53,11 @@ module.exports = {
       variants: ["before"],
     },
     {
-      pattern: /backdrop-blur-sm|backdrop-blur$/,
+      pattern: /backdrop-blur-sm|backdrop-blur$|backdrop-brightness/,
+      variants: ["before"],
+    },
+    {
+      pattern: /z-1/,
       variants: ["before"],
     },
   ],
@@ -90,18 +94,11 @@ module.exports = {
       serif: ["Merriweather", "serif"],
     },
     extend: {
-      spacing: {
-        152: "38rem",
-      },
       boxShadow: {
         halo: "0 0 0 6px rgba(0, 0, 0, 0.15)",
       },
       margin: {
         "1/2-screen": "50vw",
-      },
-      maxHeight: {
-        100: "25rem", // 400px
-        112: "28rem", // 448px
       },
       maxWidth: {
         "2xs": "16rem", // 256px
@@ -147,29 +144,7 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    tailwindChildren,
-    tailwindVariables({}, {}),
-    plugin(({ addUtilities }) => {
-      const blendMode = {
-        ".bg-blend-normal": {
-          backgroundBlendMode: "normal",
-        },
-        ".bg-blend-multiply": {
-          backgroundBlendMode: "multiply",
-        },
-        ".bg-blend-screen": {
-          backgroundBlendMode: "screen",
-        },
-        ".bg-blend-overlay": {
-          backgroundBlendMode: "overlay",
-        },
-      };
-      addUtilities(blendMode, {
-        variants: ["responsive", "hover"],
-      });
-    }),
-  ],
+  plugins: [tailwindChildren, tailwindVariables({}, {})],
   corePlugins: {
     container: false,
   },

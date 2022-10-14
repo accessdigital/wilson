@@ -5,6 +5,7 @@
   link_url ? 'group' : '',
   'overflow-hidden',
   'rounded-xl',
+  'bg-grey-500',
 ] %}
 
 <div{{ attributes.addClass(classes) }}>
@@ -12,7 +13,7 @@
   {{ title_suffix }}
 
   {% if image %}
-    <div class="absolute inset-0 group-hover:scale-110 transition-transform duration-300 heir:!w-full heir:!h-full heir-img:object-cover brightness-50">
+    <div class="absolute inset-0 group-hover:scale-110 transition-transform duration-300 descendant:!w-full descendant:!h-full descendant-img:object-cover brightness-50">
       {{ image }}
     </div>
   {% endif %}

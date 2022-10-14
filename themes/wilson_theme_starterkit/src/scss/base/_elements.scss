@@ -145,7 +145,8 @@
   }
 
   figure {
-    .media-image + figcaption {
+    .media-image + figcaption,
+    .media-video + figcaption {
       @apply italic;
       @apply text-sm;
       @apply mt-2;

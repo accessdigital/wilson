@@ -99,10 +99,10 @@
                     {{ content.field_text_column|field_value }}
 
                     {% if content.field_primary_cta|render or content.field_secondary_cta|render %}
-                      <div class="mt-6 -mb-2 md:flex-shrink-0 flex flex-wrap gap-4">
+                      <nav class="mt-6 -mb-2 md:flex-shrink-0 flex flex-wrap gap-4">
                         {{ content.field_primary_cta }}
                         {{ content.field_secondary_cta }}
-                      </div>
+                      </nav>
                     {% endif %}
                   </div>
                 </div>

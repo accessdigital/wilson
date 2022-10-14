@@ -5,6 +5,10 @@ dependencies:
     - field.field.paragraph.content_slider.field_aos
     - field.field.paragraph.content_slider.field_cards
     - field.field.paragraph.content_slider.field_container_height
+    - field.field.paragraph.content_slider.field_container_position
+    - field.field.paragraph.content_slider.field_container_width
+    - field.field.paragraph.content_slider.field_content_references
+    - field.field.paragraph.content_slider.field_content_slider_overflow
     - field.field.paragraph.content_slider.field_css_classes
     - field.field.paragraph.content_slider.field_headline
     - field.field.paragraph.content_slider.field_id_anchor
@@ -57,8 +61,8 @@ third_party_settings:
         required_fields: true
     group_content:
       children:
-        - field_content_references
         - field_cards
+        - field_content_references
       label: Content
       region: content
       parent_name: group_tabs
@@ -138,7 +142,10 @@ third_party_settings:
         required_fields: true
     group_layout:
       children:
+        - field_container_width
+        - field_container_position
         - field_container_height
+        - field_content_slider_overflow
       label: Layout
       region: content
       parent_name: group_settings
@@ -167,7 +174,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: GEvDNZOs6gBEDwVbnQfX6B4Hfd-Zlk11I7JVz2gPJHY
+  default_config_hash: TYefEsz45bmU5SCEZ1cXbRtvX8UKLs--RT6BTgk2YHc
 id: paragraph.content_slider.default
 targetEntityType: paragraph
 bundle: content_slider
@@ -175,7 +182,7 @@ mode: default
 content:
   field_aos:
     type: options_select
-    weight: 30
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -211,9 +218,28 @@ content:
           easy_access_count: 2
   field_container_height:
     type: options_select
-    weight: 6
+    weight: 36
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_container_position:
+    type: options_select
+    weight: 35
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_container_width:
+    type: options_select
+    weight: 34
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_slider_overflow:
+    type: boolean_checkbox
+    weight: 37
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_css_classes:
     type: string_textfield
@@ -282,4 +308,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_content_references: true
   status: true

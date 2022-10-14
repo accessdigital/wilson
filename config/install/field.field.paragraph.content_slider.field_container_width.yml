@@ -3,22 +3,20 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_container_width
-    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.content_slider
   module:
     - options
-_core:
-  default_config_hash: FKbLLqDXjzQR48hR0hrjHNNEelXjGQLIXyk_EpW6XO4
-id: paragraph.hero.field_container_width
+id: paragraph.content_slider.field_container_width
 field_name: field_container_width
 entity_type: paragraph
-bundle: hero
+bundle: content_slider
 label: 'Container width'
 description: 'The width of the section content, relative to the page guides, on larger screen devices. <code>Normal</code> is default.'
 required: true
 translatable: true
 default_value:
   -
-    value: medium
+    value: normal
 default_value_callback: ''
 settings: {  }
 field_type: list_string

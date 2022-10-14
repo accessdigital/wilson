@@ -50,3 +50,41 @@ main {
 #drupal-live-announce {
   bottom: -1px;
 }
+
+// Style the node preview controls to look like the admin theme.
+.node-preview-container {
+  @apply right-6;
+  @apply bottom-6;
+  @apply w-auto;
+  @apply p-4;
+  @apply bg-[#f5f5f2];
+  @apply shadow-lg;
+  @apply text-[#565656];
+  @apply border;
+  @apply border-[#dddddd];
+
+  font-family: "Source Sans Pro", "Lucida Grande", Verdana, sans-serif;
+
+  .node-preview-backlink {
+    @apply underline;
+
+    &:hover {
+      @apply text-black;
+    }
+  }
+
+  .form-item-view-mode {
+    @apply block;
+    @apply pt-2;
+    @apply pb-0;
+
+    label {
+      @apply text-sm;
+    }
+
+    select {
+      @apply text-xs;
+      @apply leading-none;
+    }
+  }
+}

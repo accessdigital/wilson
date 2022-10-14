@@ -11,12 +11,13 @@ _meta:
     24ac8b07-c5fc-419f-a7f8-fe5ed6ed4db3: media
     3170306e-328e-462c-a61a-47d079f7c7a1: media
     80d83855-dc4d-4c8c-aac2-ac93c9ba2668: media
-    258ee352-b48b-43ab-9d09-1204c663477e: taxonomy_term
     4daf55b6-1d15-4103-9ae7-08b38a055849: taxonomy_term
-    113a8489-3444-4e54-8d62-fe9576470f0b: media
+    258ee352-b48b-43ab-9d09-1204c663477e: taxonomy_term
+    b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5: media
     0c828ad6-7933-4451-8bae-e0166118fb90: node
     042241e5-9e23-4186-ac71-e1c09ec06c84: media
     13647eec-1cdc-4ce3-a089-441d78fba981: media
+    113a8489-3444-4e54-8d62-fe9576470f0b: media
     600d7945-e9f4-4b5d-a23a-c58fb8f2de31: media
 default:
   revision_uid:
@@ -236,10 +237,10 @@ default:
               value: full
           field_container_position:
             -
-              value: center
+              value: left
           field_container_width:
             -
-              value: normal
+              value: medium
           field_headline:
             -
               value: 'Full screen hero'
@@ -273,7 +274,7 @@ default:
               entity: 12db7978-4760-486b-a0e4-6455f523858f
           field_text_column:
             -
-              value: "<p>Caption text.</p>\r\n"
+              value: "<p>Vestibulum facilisis justo sed quam rhoncus, ornare vulputate leo luctus. Mauris non vulputate urna. Ut facilisis urna at est sollicitudin, dictum malesuada libero tempor.&nbsp;</p>\r\n"
               format: full_html
           field_toggle_jump_nav:
             -
@@ -298,16 +299,16 @@ default:
               value: {  }
           field_container_height:
             -
-              value: full
+              value: lg
           field_container_position:
             -
               value: center
           field_container_width:
             -
-              value: normal
+              value: narrow
           field_headline:
             -
-              value: 'Full screen hero'
+              value: 'With looping background video'
           field_layout:
             -
               value: center
@@ -319,17 +320,7 @@ default:
               value: xl
           field_pre_header:
             -
-              value: 'Pre-header text'
-          field_primary_cta:
-            -
-              uri: 'internal:/'
-              title: 'Primary button'
-              options: {  }
-          field_secondary_cta:
-            -
-              uri: 'internal:/'
-              title: 'Secondary button'
-              options: {  }
+              value: 'Hero section'
           field_section_bg:
             -
               entity: 24ac8b07-c5fc-419f-a7f8-fe5ed6ed4db3
@@ -338,7 +329,7 @@ default:
               entity: 12db7978-4760-486b-a0e4-6455f523858f
           field_text_column:
             -
-              value: "<p>This hero has a looping background video.</p>\r\n"
+              value: "<p>Vestibulum facilisis justo sed quam rhoncus, ornare vulputate leo luctus. Mauris non vulputate urna. Ut facilisis urna at est sollicitudin, dictum malesuada libero tempor.&nbsp;</p>\r\n"
               format: full_html
           field_toggle_jump_nav:
             -
@@ -510,27 +501,6 @@ default:
           field_toggle_jump_nav:
             -
               value: false
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: 1c4cc3e8-4f6d-45f5-a487-c843bdeb0c56
-          bundle: anchor_point
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1665157605
-          behavior_settings:
-            -
-              value: {  }
-          field_anchor_point_label:
-            -
-              value: Banners
     -
       entity:
         _meta:
@@ -823,37 +793,26 @@ default:
           field_container_width:
             -
               value: normal
-          field_css_classes:
-            -
-              value: bg-grey-100
-          field_headline:
-            -
-              value: 'Headline text'
           field_layout:
             -
-              value: right
+              value: justified
           field_padding_bottom:
             -
               value: md
           field_padding_top:
             -
               value: md
-          field_pre_header:
-            -
-              value: 'Pre-header text'
-          field_primary_cta:
+          field_secondary_cta:
             -
               uri: 'internal:/'
               title: 'Primary button'
               options: {  }
-          field_secondary_cta:
+          field_section_bg_colour:
             -
-              uri: 'internal:/'
-              title: 'Secondary button'
-              options: {  }
+              entity: 4daf55b6-1d15-4103-9ae7-08b38a055849
           field_text_column:
             -
-              value: "<p>Caption text. This is the 'stacked right' layout option.</p>\r\n"
+              value: "<h3>Lorem ipsum dolor sit amet</h3>\r\n"
               format: full_html
     -
       entity:
@@ -945,10 +904,10 @@ default:
               value: auto
           field_container_position:
             -
-              value: center
+              value: left
           field_container_width:
             -
-              value: normal
+              value: medium
           field_padding_bottom:
             -
               value: md
@@ -982,10 +941,13 @@ default:
               value: auto
           field_container_position:
             -
-              value: left
+              value: center
           field_container_width:
             -
-              value: medium
+              value: normal
+          field_css_classes:
+            -
+              value: bg-grey-100
           field_padding_bottom:
             -
               value: md
@@ -1019,7 +981,7 @@ default:
               value: auto
           field_container_position:
             -
-              value: right
+              value: left
           field_container_width:
             -
               value: narrow
@@ -1037,7 +999,7 @@ default:
               entity: 12db7978-4760-486b-a0e4-6455f523858f
           field_text_column:
             -
-              value: "<h3>Pellentesque a elit eget massa vestibulum</h3>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi eget est dictum aliquam ut et nisl. Proin semper ligula a enim fermentum, vel vehicula ex fringilla. Nam blandit faucibus tortor et fermentum. Sed commodo elit sit amet odio imperdiet tincidunt. Sed porta facilisis tempor. Integer rutrum magna vel sodales molestie. Donec sit amet velit fringilla, finibus turpis ut, feugiat odio. Praesent dictum velit ac tincidunt consequat.</p>\r\n"
+              value: "<h3 class=\"text-align-center\">Pellentesque elit massa</h3>\r\n\r\n<p class=\"text-align-center\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi eget est dictum aliquam ut et nisl. Proin semper ligula a enim fermentum, vel vehicula ex fringilla. Nam blandit faucibus tortor et fermentum. Sed commodo elit sit amet odio imperdiet tincidunt. Sed porta facilisis tempor. Integer rutrum magna vel sodales molestie. Donec sit amet velit fringilla, finibus turpis ut, feugiat odio.</p>\r\n"
               format: full_html
     -
       entity:
@@ -1123,11 +1085,11 @@ default:
               value: md
           field_text_column:
             -
-              value: "<h3>Donec sit amet fringilla</h3>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi eget est dictum aliquam ut et nisl. Proin semper ligula a enim fermentum, vel vehicula ex fringilla. Nam blandit faucibus tortor et fermentum. Sed commodo elit sit amet odio imperdiet tincidunt. Sed porta facilisis tempor. Integer rutrum magna vel sodales molestie. Donec sit amet velit fringilla, finibus turpis ut, feugiat odio. Praesent dictum velit ac tincidunt consequat.</p>\r\n\r\n<p>Pellentesque a elit eget massa vestibulum malesuada. Proin nibh dui, fermentum eu risus at, gravida fringilla ex. Proin in est ut felis feugiat bibendum at cursus tortor. Mauris augue felis, semper at facilisis quis, consectetur tristique metus. Aliquam venenatis, leo ut commodo varius, felis lorem rutrum lectus, dapibus bibendum libero velit id tellus. Suspendisse vulputate efficitur viverra. Suspendisse viverra mattis lacinia. Integer libero augue, feugiat vel ante et, venenatis tincidunt nunc. Nunc tincidunt felis in sem fermentum congue. Nam placerat nisl ac elit sollicitudin, eu congue tellus hendrerit. Morbi efficitur mi sed mauris placerat laoreet.</p>\r\n"
+              value: "<h3>Donec sit amet fringilla</h3>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi eget est dictum aliquam ut et nisl.</p>\r\n\r\n<p>Proin semper ligula a enim fermentum, vel vehicula ex fringilla. Nam blandit faucibus tortor et fermentum. Sed commodo elit sit amet odio imperdiet tincidunt. Sed porta facilisis tempor. Integer rutrum magna vel sodales molestie. Donec sit amet velit fringilla, finibus turpis ut, feugiat odio. Praesent dictum velit ac tincidunt consequat.</p>\r\n\r\n<p>Pellentesque a elit eget massa vestibulum malesuada. Proin nibh dui, fermentum eu risus at, gravida fringilla ex. Proin in est ut felis feugiat bibendum at cursus tortor. Mauris augue felis, semper at facilisis quis, consectetur tristique metus. Aliquam venenatis, leo ut commodo varius, felis lorem rutrum lectus, dapibus bibendum libero velit id tellus.</p>\r\n\r\n<p>Suspendisse vulputate efficitur viverra. Suspendisse viverra mattis lacinia. Integer libero augue, feugiat vel ante et, venenatis tincidunt nunc. Nunc tincidunt felis in sem fermentum congue. Nam placerat nisl ac elit sollicitudin, eu congue tellus hendrerit. Morbi efficitur mi sed mauris placerat laoreet.</p>\r\n"
               format: full_html
           field_text_column_2:
             -
-              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"e735c5a3-d1ff-4fa6-af01-c473e0211f2a\"></drupal-media>\r\n\r\n<h3>Maecenas feugiat magna</h3>\r\n\r\n<p>Etiam id ullamcorper ante, convallis fringilla leo. Vivamus tempor augue odio, ac hendrerit nisl rutrum sit amet. Vestibulum odio magna, malesuada sit amet ipsum quis, luctus faucibus arcu. Morbi ac est nec odio tempus efficitur. Cras eget eros consequat, congue sapien vitae, vehicula leo. Maecenas feugiat vitae magna in iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel dolor augue.</p>\r\n"
+              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"e735c5a3-d1ff-4fa6-af01-c473e0211f2a\"></drupal-media>\r\n\r\n<h3>Maecenas feugiat magna</h3>\r\n\r\n<p>Etiam id ullamcorper ante, convallis fringilla leo. Vivamus tempor augue odio, ac hendrerit nisl rutrum sit amet. Vestibulum odio magna, malesuada sit amet ipsum quis, luctus faucibus arcu. Morbi ac est nec odio tempus efficitur. Cras eget eros consequat, congue sapien vitae, vehicula leo. Maecenas feugiat vitae magna in iaculis.</p>\r\n"
               format: full_html
           field_vertical_alignment:
             -
@@ -1164,7 +1126,7 @@ default:
               value: normal
           field_padding_bottom:
             -
-              value: md
+              value: none
           field_padding_top:
             -
               value: md
@@ -1211,74 +1173,21 @@ default:
               value: normal
           field_padding_bottom:
             -
-              value: md
-          field_padding_top:
-            -
-              value: md
-          field_section_bg:
-            -
-              entity: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
-          field_section_bg_colour:
-            -
-              entity: 12db7978-4760-486b-a0e4-6455f523858f
-          field_text_column:
-            -
-              value: "<h3>This column is aligned to the bottom</h3>\r\n"
-              format: full_html
-          field_text_column_2:
-            -
-              value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi eget est dictum aliquam ut et nisl. Proin semper ligula a enim fermentum, vel vehicula ex fringilla. Nam blandit faucibus tortor et fermentum. Sed commodo elit sit amet odio imperdiet tincidunt. Sed porta facilisis tempor. Integer rutrum magna vel sodales molestie. Donec sit amet velit fringilla, finibus turpis ut, feugiat odio. Praesent dictum velit ac tincidunt consequat.</p>\r\n\r\n<p>Pellentesque a elit eget massa vestibulum malesuada. Proin nibh dui, fermentum eu risus at, gravida fringilla ex. Proin in est ut felis feugiat bibendum at cursus tortor. Mauris augue felis, semper at facilisis quis, consectetur tristique metus. Aliquam venenatis, leo ut commodo varius, felis lorem rutrum lectus, dapibus bibendum libero velit id tellus. Suspendisse vulputate efficitur viverra. Suspendisse viverra mattis lacinia. Integer libero augue, feugiat vel ante et, venenatis tincidunt nunc. Nunc tincidunt felis in sem fermentum congue. Nam placerat nisl ac elit sollicitudin, eu congue tellus hendrerit. Morbi efficitur mi sed mauris placerat laoreet.</p>\r\n"
-              format: full_html
-          field_vertical_alignment:
-            -
-              value: bottom
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: 99812286-528f-4a5b-bafd-7255721d2a9e
-          bundle: two_columns
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1614676159
-          behavior_settings:
-            -
-              value: {  }
-          field_column_distribution:
-            -
-              value: equal
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_padding_bottom:
-            -
-              value: md
+              value: none
           field_padding_top:
             -
               value: md
           field_text_column:
             -
-              value: "<h3>Embed media in columns</h3>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi eget est dictum aliquam ut et nisl. Proin semper ligula a enim fermentum, vel vehicula ex fringilla. Nam blandit faucibus tortor et fermentum. Sed commodo elit sit amet odio imperdiet tincidunt.</p>\r\n"
+              value: "<blockquote>\r\n<p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi <strong>eget est dictum</strong> aliquam ut et nisl.</p>\r\n</blockquote>\r\n"
               format: full_html
           field_text_column_2:
             -
-              value: "<drupal-media data-entity-type=\"media\" data-entity-uuid=\"684a1055-f2ee-49a4-997b-4bb81c814d84\" data-view-mode=\"\"></drupal-media>\r\n"
+              value: "<drupal-media data-align=\"center\" data-caption=\"Inline YouTube video\" data-entity-type=\"media\" data-entity-uuid=\"684a1055-f2ee-49a4-997b-4bb81c814d84\" data-view-mode=\"default\"></drupal-media>\r\n"
               format: full_html
           field_vertical_alignment:
             -
-              value: middle
+              value: top
     -
       entity:
         _meta:
@@ -1360,15 +1269,15 @@ default:
               value: md
           field_text_column:
             -
-              value: "<h3>Morbi efficitur mi sed</h3>\r\n\r\n<p>Pellentesque a elit eget massa vestibulum malesuada. Proin nibh dui, fermentum eu risus at, gravida fringilla ex. Proin in est ut felis feugiat bibendum at cursus tortor. Mauris augue felis, semper at facilisis quis, consectetur tristique metus. Aliquam venenatis, leo ut commodo varius, felis lorem rutrum lectus, dapibus bibendum libero velit id tellus. Suspendisse vulputate efficitur viverra. Suspendisse viverra mattis lacinia. Integer libero augue, feugiat vel ante et, venenatis tincidunt nunc. Nunc tincidunt felis in sem fermentum congue.</p>\r\n\r\n<p>Etiam id ullamcorper ante, convallis fringilla leo. Vivamus tempor augue odio, ac hendrerit nisl rutrum sit amet. Vestibulum odio magna, malesuada sit amet ipsum quis, luctus faucibus arcu. Morbi ac est nec odio tempus efficitur. Cras eget eros consequat, congue sapien vitae, vehicula leo. Maecenas feugiat vitae magna in iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vel dolor augue.</p>\r\n"
+              value: "<p>Pellentesque a elit eget massa vestibulum malesuada. Proin nibh dui, fermentum eu risus at, gravida fringilla ex. Proin in est ut felis feugiat bibendum at cursus tortor. Mauris augue felis, semper at facilisis quis, consectetur tristique metus. Aliquam venenatis, leo ut commodo varius, felis lorem rutrum lectus, dapibus bibendum libero velit id tellus. Suspendisse vulputate efficitur viverra. Suspendisse viverra mattis lacinia. Integer libero augue, feugiat vel ante et, venenatis tincidunt nunc. Nunc tincidunt felis in sem fermentum congue.</p>\r\n\r\n<p>Mauris quis neque nec elit fringilla elementum nec a enim. Duis ultrices placerat tellus, interdum laoreet neque porta id. Morbi at rhoncus neque. Sed id porttitor lectus, sit amet pulvinar odio. Duis sit amet tincidunt dui. Aliquam fringilla interdum ex vitae hendrerit. Fusce est tellus, ultrices in lorem egestas, sagittis cursus orci. Duis viverra, diam at convallis posuere, sapien massa faucibus nisl, vitae iaculis lacus dui nec justo. Morbi tellus turpis, malesuada ac enim sit amet, varius efficitur lorem.</p>\r\n"
               format: full_html
           field_text_column_2:
             -
-              value: "<p>Cras et elit vel felis tempus molestie. Pellentesque aliquam mattis magna a maximus. Pellentesque diam elit, maximus eu massa vitae, bibendum pulvinar lectus. Integer in placerat augue, in suscipit leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec tortor lacinia, malesuada mi eget, gravida elit. Curabitur justo lorem, scelerisque at convallis maximus, pulvinar in enim.</p>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"600d7945-e9f4-4b5d-a23a-c58fb8f2de31\"></drupal-media>\r\n\r\n<p>Integer molestie sed dolor sed eleifend. Aenean at scelerisque augue, at luctus magna. Cras lobortis sem a velit tristique molestie. Mauris quis neque nec elit fringilla elementum nec a enim.&nbsp;Duis ultrices placerat tellus, interdum laoreet neque porta id.</p>\r\n"
+              value: "<p>Cras et elit vel felis tempus molestie. Pellentesque aliquam mattis magna a maximus. Pellentesque diam elit, maximus eu massa vitae, bibendum pulvinar lectus. Integer in placerat augue, in suscipit leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>\r\n\r\n<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"e735c5a3-d1ff-4fa6-af01-c473e0211f2a\" data-view-mode=\"default\"></drupal-media>\r\n\r\n<p>Integer molestie sed dolor sed eleifend. Aenean at scelerisque augue, at luctus magna. Cras lobortis sem a velit tristique molestie. Mauris quis neque nec elit fringilla elementum nec a enim.&nbsp;Duis ultrices placerat tellus, interdum laoreet neque porta id.</p>\r\n"
               format: full_html
           field_text_column_3:
             -
-              value: "<p>Morbi eros purus, mattis eget quam id, pellentesque ultrices nisl. Aliquam pellentesque maximus metus, cursus bibendum nisl semper vitae. Ut accumsan augue lacus, eget sagittis neque lacinia mattis. Sed in odio eget velit suscipit interdum ac nec dolor. Maecenas at facilisis nunc, nec elementum purus. Aliquam semper erat non nibh consectetur, quis accumsan diam porttitor. Quisque ac sollicitudin justo, quis efficitur justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>\r\n\r\n<p>Integer molestie sed dolor sed eleifend. Aenean at scelerisque augue, at luctus magna. Cras lobortis sem a velit tristique molestie. Mauris quis neque nec elit fringilla elementum nec a enim. Duis ultrices placerat tellus, interdum laoreet neque porta id. Morbi at rhoncus neque. Sed id porttitor lectus, sit amet pulvinar odio. Duis sit amet tincidunt dui. Aliquam fringilla interdum ex vitae hendrerit. Fusce est tellus, ultrices in lorem egestas, sagittis cursus orci. Duis viverra, diam at convallis posuere, sapien massa faucibus nisl, vitae iaculis lacus dui nec justo. Morbi tellus turpis, malesuada ac enim sit amet, varius efficitur lorem.</p>\r\n"
+              value: "<p>Morbi eros purus, mattis eget quam id, pellentesque ultrices nisl. Aliquam pellentesque maximus metus, cursus bibendum nisl semper vitae. Ut accumsan augue lacus, eget sagittis neque lacinia mattis. Sed in odio eget velit suscipit interdum ac nec dolor. Maecenas at facilisis nunc, nec elementum purus. Aliquam semper erat non nibh consectetur, quis accumsan diam porttitor. Quisque ac sollicitudin justo, quis efficitur justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>\r\n\r\n<p>Mauris quis neque nec elit fringilla elementum nec a enim. Duis ultrices placerat tellus, interdum laoreet neque porta id. Morbi at rhoncus neque. Sed id porttitor lectus, sit amet pulvinar odio. Duis sit amet tincidunt dui. Aliquam fringilla interdum ex vitae hendrerit. Fusce est tellus, ultrices in lorem egestas, sagittis cursus orci. Duis viverra, diam at convallis posuere, sapien massa faucibus nisl, vitae iaculis lacus dui nec justo. Morbi tellus turpis, malesuada ac enim sit amet, varius efficitur lorem.</p>\r\n"
               format: full_html
           field_vertical_alignment:
             -
@@ -1391,6 +1300,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_container_height:
             -
               value: auto
@@ -1399,7 +1311,7 @@ default:
               value: center
           field_container_width:
             -
-              value: normal
+              value: extra_wide
           field_css_classes:
             -
               value: bg-grey-100
@@ -1411,15 +1323,15 @@ default:
               value: md
           field_text_column:
             -
-              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"600d7945-e9f4-4b5d-a23a-c58fb8f2de31\"></drupal-media>\r\n"
+              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"3170306e-328e-462c-a61a-47d079f7c7a1\"></drupal-media>\r\n"
               format: full_html
           field_text_column_2:
             -
-              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"cc59ed8d-cfea-499d-a753-42c4d7d96fe9\"></drupal-media>\r\n"
+              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"13647eec-1cdc-4ce3-a089-441d78fba981\" data-view-mode=\"default\"></drupal-media>\r\n"
               format: full_html
           field_text_column_3:
             -
-              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"3170306e-328e-462c-a61a-47d079f7c7a1\"></drupal-media>\r\n"
+              value: "<drupal-media data-align=\"center\" data-caption=\"Inline video loop\" data-entity-type=\"media\" data-entity-uuid=\"24ac8b07-c5fc-419f-a7f8-fe5ed6ed4db3\" data-view-mode=\"video_inline\"></drupal-media>\r\n"
               format: full_html
           field_vertical_alignment:
             -
@@ -1559,12 +1471,15 @@ default:
           field_container_width:
             -
               value: full
+          field_css_classes:
+            -
+              value: 'text-center descendant-nav:justify-center bg-grey-200'
           field_headline:
             -
               value: 'Header text'
           field_media_column:
             -
-              entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
+              entity: b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5
           field_padding_bottom:
             -
               value: none
@@ -1584,9 +1499,6 @@ default:
               uri: 'internal:/'
               title: 'Secondary button'
               options: {  }
-          field_section_bg_colour:
-            -
-              entity: 258ee352-b48b-43ab-9d09-1204c663477e
           field_text_column:
             -
               value: "<p>Caption text.</p>\r\n"
@@ -1693,100 +1605,6 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 788dd825-f91a-44ab-983a-b6ad63708005
-          bundle: simple_banner
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1614558488
-          behavior_settings:
-            -
-              value: {  }
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_headline:
-            -
-              value: Quote
-          field_id_anchor:
-            -
-              value: quote
-          field_layout:
-            -
-              value: justified
-          field_padding_bottom:
-            -
-              value: md
-          field_padding_top:
-            -
-              value: lg
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: ae7c6179-1216-439f-8e11-638f762fc239
-          bundle: quote
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1614558516
-          behavior_settings:
-            -
-              value: {  }
-          revision_translation_affected:
-            -
-              value: true
-          field_author:
-            -
-              value: 'Jo Bloggs'
-          field_author_image:
-            -
-              entity: 113a8489-3444-4e54-8d62-fe9576470f0b
-          field_author_title:
-            -
-              value: 'Marketing Director'
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: medium
-          field_css_classes:
-            -
-              value: bg-grey-100
-          field_padding_bottom:
-            -
-              value: md
-          field_padding_top:
-            -
-              value: md
-          field_text_column:
-            -
-              value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi eget est dictum aliquam ut et nisl. Proin semper ligula a enim fermentum, vel vehicula ex fringilla. Nam blandit faucibus tortor et fermentum. Sed commodo elit sit amet odio imperdiet tincidunt. Sed porta facilisis tempor. Integer rutrum magna vel sodales molestie. Donec sit amet velit fringilla, finibus turpis ut, feugiat odio. Praesent dictum velit ac tincidunt consequat.</p>\r\n"
-              format: full_html
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
           uuid: 64fbe63d-6b83-4211-979f-0e8ca6858a9e
           bundle: anchor_point
           default_langcode: en
@@ -1847,7 +1665,7 @@ default:
               value: lg
           field_text_column:
             -
-              value: "<p>Use this to create a grid of content teaser cards or custom signpost cards. Available in 1, 2, 3 (default) and 4 column options and to be displayed as basic cards or feature cards.</p>\r\n"
+              value: "<p>Use this to create a grid of content teaser cards and/or custom signpost cards. Available in 1, 2, 3 (default) and 4 column options. There are different card styles available, including \"basic teaser card\", \"horizontal card\" and \"feature card\" and you can mix and match within a single grid or slider.</p>\r\n"
               format: full_html
     -
       entity:
@@ -1912,7 +1730,7 @@ default:
                       value: {  }
                   field_caption:
                     -
-                      value: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. '
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod ultricies nisl, vitae dapibus tellus rhoncus at.'
                   field_custom_card_style:
                     -
                       value: teaser
@@ -1974,7 +1792,7 @@ default:
                       value: {  }
                   field_caption:
                     -
-                      value: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. '
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod ultricies nisl, vitae dapibus tellus rhoncus at.'
                   field_custom_card_style:
                     -
                       value: feature_card
@@ -2114,6 +1932,546 @@ default:
           field_container_width:
             -
               value: normal
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_grid_columns:
+            -
+              value: '2'
+          field_padding_bottom:
+            -
+              value: sm
+          field_padding_top:
+            -
+              value: md
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 36e7eb0f-b025-47b7-869a-016c2dea85f3
+          bundle: content_grid
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1614556963
+          behavior_settings:
+            -
+              value: {  }
+          field_cards:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 616279b7-2f5e-4f37-bb45-72275591d541
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437360
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. '
+                  field_custom_card_style:
+                    -
+                      value: feature_card
+                  field_headline:
+                    -
+                      value: 'Headline text'
+                  field_image:
+                    -
+                      entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
+                  field_pre_header:
+                    -
+                      value: Pre-header
+                  field_primary_cta:
+                    -
+                      uri: 'internal:/'
+                      title: 'Link text'
+                      options: {  }
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_grid_columns:
+            -
+              value: '1'
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: none
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 8147f2e8-b69b-42da-8669-a34d889333f3
+          bundle: content_grid
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1665651831
+          behavior_settings:
+            -
+              value: {  }
+          field_cards:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 3d2af33e-ec3e-42f5-a7ed-94c5f6b71d82
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'Jane Doe'
+                  field_image:
+                    -
+                      entity: 113a8489-3444-4e54-8d62-fe9576470f0b
+                  field_pre_header:
+                    -
+                      value: CEO
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 8cc5c4be-dec1-477a-aa7e-7cf2646276b9
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'Jane Doe'
+                  field_image:
+                    -
+                      entity: 113a8489-3444-4e54-8d62-fe9576470f0b
+                  field_pre_header:
+                    -
+                      value: CEO
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 00695335-0cad-4136-9471-e5b3c5c7f025
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'We''re hiring'
+                  field_image:
+                    -
+                      entity: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
+                  field_pre_header:
+                    -
+                      value: 'Looking for work?'
+                  field_primary_cta:
+                    -
+                      uri: 'internal:/'
+                      title: Careers
+                      options: {  }
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: extra_wide
+          field_grid_columns:
+            -
+              value: '3'
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 1568a29f-0bc5-4d6d-91ce-cc08eb96338f
+          bundle: content_grid
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1665651831
+          behavior_settings:
+            -
+              value: {  }
+          field_cards:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: c6586fb8-e581-420e-9dbf-6994eb2ad814
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum. <br /><br />Fusce ac sapien bibendum, malesuada purus et, tempus nisi. Morbi lacinia pellentesque nunc, ut aliquam tellus feugiat vel. Duis in diam dignissim, malesuada erat vel, blandit diam. Nunc mollis arcu non mollis feugiat.<br /><br />Vestibulum tortor erat, semper nec libero quis, rutrum rutrum libero. Sed ut finibus risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec in lorem mi. Fusce ultricies placerat rutrum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'Jane Doe'
+                  field_image:
+                    -
+                      entity: 113a8489-3444-4e54-8d62-fe9576470f0b
+                  field_pre_header:
+                    -
+                      value: CEO
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 1e0cfcb6-1ce8-4491-a3d8-650666fe60ec
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'Our full management team'
+                  field_pre_header:
+                    -
+                      value: 'About us'
+                  field_primary_cta:
+                    -
+                      uri: 'internal:/'
+                      title: 'Learn more'
+                      options: {  }
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_grid_columns:
+            -
+              value: '1'
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: b914f31f-3b88-4562-889f-4daab948909d
+          bundle: two_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1665658686
+          behavior_settings:
+            -
+              value: {  }
+          field_column_distribution:
+            -
+              value: preference_right
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_section_bg_colour:
+            -
+              entity: 258ee352-b48b-43ab-9d09-1204c663477e
+          field_text_column:
+            -
+              value: "<h2>Services <span class=\"font-light\">&</span> expertise</h2>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum. Fusce ac sapien bibendum, malesuada purus et, tempus nisi. Morbi lacinia pellentesque nunc, ut aliquam tellus feugiat vel. Duis in diam dignissim, malesuada erat vel, blandit diam. Nunc mollis arcu non mollis feugiat. Vestibulum tortor erat, semper nec libero quis, rutrum rutrum libero.&nbsp;</p>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: top
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 81a27f7f-528e-48c1-92f7-d3d6cb22e345
+          bundle: content_grid
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1665651831
+          behavior_settings:
+            -
+              value: {  }
+          field_cards:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: a93caf76-0453-4011-a1e0-1d0e0c78aef5
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'Consectetur adipiscing elit'
+                  field_primary_cta:
+                    -
+                      uri: 'internal:/'
+                      title: 'Find out more'
+                      options: {  }
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: d2d2bcd3-d2fa-495c-b14f-2273b0a6cdf6
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'Consectetur adipiscing elit'
+                  field_primary_cta:
+                    -
+                      uri: 'internal:/'
+                      title: 'Find out more'
+                      options: {  }
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: e6f95dd8-f3a3-483a-be09-5825622048f4
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'Consectetur adipiscing elit'
+                  field_primary_cta:
+                    -
+                      uri: 'internal:/'
+                      title: 'Find out more'
+                      options: {  }
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b30b371b-35d8-4638-a484-9ae4b3f6c945
+                  bundle: custom_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665651855
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_caption:
+                    -
+                      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
+                  field_custom_card_style:
+                    -
+                      value: horizontal_card
+                  field_headline:
+                    -
+                      value: 'Consectetur adipiscing elit'
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: right
+          field_container_width:
+            -
+              value: medium
           field_grid_columns:
             -
               value: '2'
@@ -2122,7 +2480,10 @@ default:
               value: md
           field_padding_top:
             -
-              value: md
+              value: none
+          field_section_bg_colour:
+            -
+              entity: 258ee352-b48b-43ab-9d09-1204c663477e
     -
       entity:
         _meta:
@@ -2167,7 +2528,7 @@ default:
               value: lg
           field_text_column:
             -
-              value: "<p>Use this to create a slider of content teaser cards and custom signpost cards.&nbsp;Optionally you can include an intro slide containing a headline and text.</p>\r\n"
+              value: "<p>Use this to create a slider of content teaser cards and/or custom signpost cards.&nbsp;Optionally you can include an intro slide containing a headline and text.</p>\r\n"
               format: full_html
     -
       entity:
@@ -2206,9 +2567,12 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
-                      value: feature_card
+                      value: teaser
                   field_content_reference:
                     -
                       entity: 0c828ad6-7933-4451-8bae-e0166118fb90
@@ -2230,9 +2594,12 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
-                      value: feature_card
+                      value: teaser
                   field_content_reference:
                     -
                       entity: 0c828ad6-7933-4451-8bae-e0166118fb90
@@ -2254,9 +2621,12 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
-                      value: feature_card
+                      value: teaser
                   field_content_reference:
                     -
                       entity: 0c828ad6-7933-4451-8bae-e0166118fb90
@@ -2278,9 +2648,12 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
-                      value: feature_card
+                      value: teaser
                   field_content_reference:
                     -
                       entity: 0c828ad6-7933-4451-8bae-e0166118fb90
@@ -2302,15 +2675,24 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
-                      value: feature_card
+                      value: teaser
                   field_content_reference:
                     -
                       entity: 0c828ad6-7933-4451-8bae-e0166118fb90
           field_container_height:
             -
               value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
           field_padding_bottom:
             -
               value: md
@@ -2341,6 +2723,30 @@ default:
                 _meta:
                   version: '1.0'
                   entity_type: paragraph
+                  uuid: 2cc41041-1120-460e-8e0f-b7a111dbb23b
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437654
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
                   uuid: 7ab29e8f-ce05-4aa7-98ad-1de851bceabc
                   bundle: content_teaser_card
                   default_langcode: en
@@ -2359,7 +2765,31 @@ default:
                       value: true
                   field_card_style:
                     -
-                      value: teaser
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 06d818a2-ffd7-46e2-9adc-9445b4eee0b3
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437665
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
                   field_content_reference:
                     -
                       entity: 0c828ad6-7933-4451-8bae-e0166118fb90
@@ -2378,33 +2808,6 @@ default:
                   created:
                     -
                       value: 1665437647
-                  behavior_settings:
-                    -
-                      value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
-                  field_card_style:
-                    -
-                      value: teaser
-                  field_content_reference:
-                    -
-                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity:
-                _meta:
-                  version: '1.0'
-                  entity_type: paragraph
-                  uuid: 2cc41041-1120-460e-8e0f-b7a111dbb23b
-                  bundle: content_teaser_card
-                  default_langcode: en
-                default:
-                  status:
-                    -
-                      value: true
-                  created:
-                    -
-                      value: 1665437654
                   behavior_settings:
                     -
                       value: {  }
@@ -2440,33 +2843,6 @@ default:
                       value: true
                   field_card_style:
                     -
-                      value: teaser
-                  field_content_reference:
-                    -
-                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
-            -
-              entity:
-                _meta:
-                  version: '1.0'
-                  entity_type: paragraph
-                  uuid: 06d818a2-ffd7-46e2-9adc-9445b4eee0b3
-                  bundle: content_teaser_card
-                  default_langcode: en
-                default:
-                  status:
-                    -
-                      value: true
-                  created:
-                    -
-                      value: 1665437665
-                  behavior_settings:
-                    -
-                      value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
-                  field_card_style:
-                    -
                       value: feature_card
                   field_content_reference:
                     -
@@ -2474,9 +2850,15 @@ default:
           field_container_height:
             -
               value: auto
-          field_css_classes:
+          field_container_position:
             -
-              value: bg-grey-100
+              value: center
+          field_container_width:
+            -
+              value: extra_wide
+          field_content_slider_overflow:
+            -
+              value: true
           field_headline:
             -
               value: 'Intro headline'
@@ -2489,9 +2871,310 @@ default:
           field_pre_header:
             -
               value: 'Pre-header text'
+          field_section_bg_colour:
+            -
+              entity: 988c1be8-e176-4803-992e-bae43a503174
           field_text_column:
             -
               value: "<p>Option intro slide.&nbsp;Lorem ipsum dolor sit amet.&nbsp;Lorem ipsum dolor sit amet.</p>\r\n"
+              format: full_html
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 3ae54c38-fe7a-41dc-abf3-6dd268858ea2
+          bundle: two_columns
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1665658686
+          behavior_settings:
+            -
+              value: {  }
+          field_column_distribution:
+            -
+              value: preference_right
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_text_column:
+            -
+              value: "<h2 class=\"font-light\">Key features</h2>\r\n"
+              format: full_html
+          field_text_column_2:
+            -
+              value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum. Fusce ac sapien bibendum, malesuada purus et, tempus nisi.&nbsp;</p>\r\n"
+              format: full_html
+          field_vertical_alignment:
+            -
+              value: top
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 3dea85ec-4e97-46f2-b0b6-c3a17968045f
+          bundle: content_slider
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1614557221
+          behavior_settings:
+            -
+              value: {  }
+          field_cards:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 859a30b6-a3dc-4625-b349-1acb337d2c53
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437636
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 7f5ba423-0235-42c3-8e53-e71610f5eed9
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437647
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 83e82bf0-6544-42e5-88aa-243c9ba43e16
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437654
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 257580d6-4acb-4cce-b0cc-f621d501e81f
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437659
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 69e36cf4-04fa-462d-8984-e7535b6e4217
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437665
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 7d10d5a2-ad2f-4d8d-a197-7252eb0156f5
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437665
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2b7795b2-3154-4b16-87e8-f8c806bd3516
+                  bundle: content_teaser_card
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1665437665
+                  behavior_settings:
+                    -
+                      value: {  }
+                  field_card_style:
+                    -
+                      value: feature_card
+                  field_content_reference:
+                    -
+                      entity: 0c828ad6-7933-4451-8bae-e0166118fb90
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: right
+          field_container_width:
+            -
+              value: medium
+          field_content_slider_overflow:
+            -
+              value: true
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: none
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 23961ce4-b3c9-42ba-8019-591ed00d3fb1
+          bundle: one_column
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1665707529
+          behavior_settings:
+            -
+              value: {  }
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: right
+          field_container_width:
+            -
+              value: medium
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: none
+          field_text_column:
+            -
+              value: "<p>Praesent condimentum massa tortor, sit amet tincidunt mauris sodales tempus. Fusce et neque a est viverra mollis ac ac nisi. Mauris velit magna, finibus at velit a, efficitur mollis nunc. Maecenas eget dictum orci. Quisque pulvinar lectus lacus, ac sagittis nisi scelerisque ac.</p>\r\n"
               format: full_html
     -
       entity:
@@ -3030,7 +3713,7 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: fbeb5134-91c3-412c-a211-22cda6c52565
+          uuid: 106bb46f-1cd0-4700-a628-fd8d3c8ee50b
           bundle: anchor_point
           default_langcode: en
         default:
@@ -3045,7 +3728,98 @@ default:
               value: {  }
           field_anchor_point_label:
             -
-              value: Webforms
+              value: Miscellaneous
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 788dd825-f91a-44ab-983a-b6ad63708005
+          bundle: simple_banner
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1614558488
+          behavior_settings:
+            -
+              value: {  }
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: Quote
+          field_id_anchor:
+            -
+              value: quote
+          field_layout:
+            -
+              value: justified
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: lg
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: ae7c6179-1216-439f-8e11-638f762fc239
+          bundle: quote
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1614558516
+          behavior_settings:
+            -
+              value: {  }
+          field_author:
+            -
+              value: 'Jo Bloggs'
+          field_author_image:
+            -
+              entity: 113a8489-3444-4e54-8d62-fe9576470f0b
+          field_author_title:
+            -
+              value: 'Marketing Director'
+          field_container_height:
+            -
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
+          field_text_column:
+            -
+              value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum leo blandit ligula iaculis fringilla non vel nisi. Sed vitae mi eget est dictum aliquam ut et nisl. Proin semper ligula a enim fermentum, vel vehicula ex fringilla. Nam blandit faucibus tortor et fermentum. Sed commodo elit sit amet odio imperdiet tincidunt. Sed porta facilisis tempor. Integer rutrum magna vel sodales molestie. Donec sit amet velit fringilla, finibus turpis ut, feugiat odio. Praesent dictum velit ac tincidunt consequat.</p>\r\n"
+              format: full_html
     -
       entity:
         _meta:
@@ -3290,8 +4064,8 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 106bb46f-1cd0-4700-a628-fd8d3c8ee50b
-          bundle: anchor_point
+          uuid: 2d661042-88c8-4822-8f58-83fd163b120c
+          bundle: simple_banner
           default_langcode: en
         default:
           status:
@@ -3299,13 +4073,73 @@ default:
               value: true
           created:
             -
-              value: 1665157605
+              value: 1614558084
           behavior_settings:
             -
               value: {  }
-          field_anchor_point_label:
+          field_container_height:
             -
-              value: Miscellaneous
+              value: auto
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_headline:
+            -
+              value: Gallery
+          field_id_anchor:
+            -
+              value: gallery
+          field_layout:
+            -
+              value: justified
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: lg
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 37d39198-1d1b-47d6-aa92-06ce3b934ac5
+          bundle: gallery
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1614558101
+          behavior_settings:
+            -
+              value: {  }
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: normal
+          field_media:
+            -
+              entity: 3170306e-328e-462c-a61a-47d079f7c7a1
+            -
+              entity: 600d7945-e9f4-4b5d-a23a-c58fb8f2de31
+            -
+              entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
+            -
+              entity: 042241e5-9e23-4186-ac71-e1c09ec06c84
+          field_padding_bottom:
+            -
+              value: md
+          field_padding_top:
+            -
+              value: md
     -
       entity:
         _meta:
@@ -3526,87 +4360,6 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 2d661042-88c8-4822-8f58-83fd163b120c
-          bundle: simple_banner
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1614558084
-          behavior_settings:
-            -
-              value: {  }
-          field_container_height:
-            -
-              value: auto
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_headline:
-            -
-              value: Gallery
-          field_id_anchor:
-            -
-              value: gallery
-          field_layout:
-            -
-              value: justified
-          field_padding_bottom:
-            -
-              value: md
-          field_padding_top:
-            -
-              value: lg
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: 37d39198-1d1b-47d6-aa92-06ce3b934ac5
-          bundle: gallery
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1614558101
-          behavior_settings:
-            -
-              value: {  }
-          field_container_position:
-            -
-              value: center
-          field_container_width:
-            -
-              value: normal
-          field_media:
-            -
-              entity: 3170306e-328e-462c-a61a-47d079f7c7a1
-            -
-              entity: 600d7945-e9f4-4b5d-a23a-c58fb8f2de31
-            -
-              entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
-            -
-              entity: 042241e5-9e23-4186-ac71-e1c09ec06c84
-          field_padding_bottom:
-            -
-              value: md
-          field_padding_top:
-            -
-              value: md
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
           uuid: fbe01086-5bbf-423e-9e3e-43d16a4bf008
           bundle: simple_banner
           default_langcode: en
@@ -3664,7 +4417,7 @@ default:
               value: {  }
           field_container_height:
             -
-              value: md
+              value: lg
           field_container_position:
             -
               value: center
@@ -3683,6 +4436,45 @@ default:
           field_padding_top:
             -
               value: none
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: d617d388-7ec3-4a7a-9d84-30254234f068
+          bundle: map
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1614558241
+          behavior_settings:
+            -
+              value: {  }
+          field_container_height:
+            -
+              value: md
+          field_container_position:
+            -
+              value: center
+          field_container_width:
+            -
+              value: medium
+          field_map_address:
+            -
+              value: 'Sideshow Agency, Bournemouth'
+          field_map_zoom:
+            -
+              value: '7'
+          field_padding_bottom:
+            -
+              value: none
+          field_padding_top:
+            -
+              value: md
     -
       entity:
         _meta:
@@ -3798,7 +4590,7 @@ default:
               value: {  }
           field_anchor_point_label:
             -
-              value: 'Component settings'
+              value: Options
     -
       entity:
         _meta:
@@ -3883,8 +4675,8 @@ default:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 34879e8b-fe7d-4b27-8471-d5a8ae10f335
-          bundle: two_columns
+          uuid: 25a30caa-15e4-4844-96ce-83bb6351a303
+          bundle: simple_banner
           default_langcode: en
         default:
           status:
@@ -3892,16 +4684,13 @@ default:
               value: true
           created:
             -
-              value: 1665241833
+              value: 1665241321
           behavior_settings:
             -
               value: {  }
           field_aos:
             -
               value: fade-up
-          field_column_distribution:
-            -
-              value: preference_left
           field_container_height:
             -
               value: auto
@@ -3911,30 +4700,32 @@ default:
           field_container_width:
             -
               value: normal
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_headline:
+            -
+              value: 'Fade up'
+          field_layout:
+            -
+              value: justified
           field_padding_bottom:
             -
-              value: md
+              value: sm
           field_padding_top:
             -
-              value: md
+              value: sm
           field_text_column:
             -
-              value: "<h2>Fade up</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et eros mauris. Donec semper augue ut auctor sagittis. Etiam eleifend, nisi et lobortis fringilla, nibh nisi fermentum risus, non interdum elit nulla sit amet enim. Curabitur malesuada ut metus id fermentum. Quisque pellentesque, sem eu viverra faucibus, nisl libero egestas ipsum, nec tristique quam turpis vel ipsum. Vivamus ac sodales mauris, ut ultrices ipsum. Vivamus consequat, nisl in laoreet suscipit, diam elit dignissim urna, eget pharetra ligula tellus id lacus. Aenean euismod in magna eget imperdiet.</p>\r\n"
+              value: "<p>Quisque commodo ullamcorper urna, vel commodo est elementum nec. Etiam nec dolor ut nunc aliquam molestie. Nullam blandit sem non justo vestibulum facilisis. Fusce lectus dolor, tincidunt vitae ultrices nec, cursus quis justo. Aenean consectetur diam a eleifend porttitor. Nam risus ipsum, pulvinar accumsan quam quis, malesuada convallis neque.</p>\r\n"
               format: full_html
-          field_text_column_2:
-            -
-              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"7d6457bb-106c-488c-9144-c30671e71271\"></drupal-media>\r\n"
-              format: full_html
-          field_vertical_alignment:
-            -
-              value: top
     -
       entity:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 7da630d2-f475-4123-9c7f-20c239ab2212
-          bundle: two_columns
+          uuid: dcc97f99-312d-4481-8b32-7a961ed33545
+          bundle: simple_banner
           default_langcode: en
         default:
           status:
@@ -3942,16 +4733,13 @@ default:
               value: true
           created:
             -
-              value: 1665241833
+              value: 1665241321
           behavior_settings:
             -
               value: {  }
           field_aos:
             -
               value: flip-left
-          field_column_distribution:
-            -
-              value: preference_right
           field_container_height:
             -
               value: auto
@@ -3961,30 +4749,29 @@ default:
           field_container_width:
             -
               value: normal
+          field_headline:
+            -
+              value: 'Flip left'
+          field_layout:
+            -
+              value: justified
           field_padding_bottom:
             -
-              value: md
+              value: sm
           field_padding_top:
             -
-              value: md
+              value: sm
           field_text_column:
             -
-              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"7d6457bb-106c-488c-9144-c30671e71271\"></drupal-media>\r\n"
+              value: "<p>Quisque commodo ullamcorper urna, vel commodo est elementum nec. Etiam nec dolor ut nunc aliquam molestie. Nullam blandit sem non justo vestibulum facilisis. Fusce lectus dolor, tincidunt vitae ultrices nec, cursus quis justo. Aenean consectetur diam a eleifend porttitor. Nam risus ipsum, pulvinar accumsan quam quis, malesuada convallis neque.</p>\r\n"
               format: full_html
-          field_text_column_2:
-            -
-              value: "<h2>Flip left</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et eros mauris. Donec semper augue ut auctor sagittis. Etiam eleifend, nisi et lobortis fringilla, nibh nisi fermentum risus, non interdum elit nulla sit amet enim. Curabitur malesuada ut metus id fermentum. Quisque pellentesque, sem eu viverra faucibus, nisl libero egestas ipsum, nec tristique quam turpis vel ipsum. Vivamus ac sodales mauris, ut ultrices ipsum. Vivamus consequat, nisl in laoreet suscipit, diam elit dignissim urna, eget pharetra ligula tellus id lacus. Aenean euismod in magna eget imperdiet.</p>\r\n"
-              format: full_html
-          field_vertical_alignment:
-            -
-              value: top
     -
       entity:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: 21f47a2f-a4e2-4c2a-a436-25eb7f7e7510
-          bundle: two_columns
+          uuid: ceb2033a-005f-48b3-877f-fca443198fff
+          bundle: simple_banner
           default_langcode: en
         default:
           status:
@@ -3992,16 +4779,13 @@ default:
               value: true
           created:
             -
-              value: 1665241833
+              value: 1665241321
           behavior_settings:
             -
               value: {  }
           field_aos:
             -
               value: zoom-in
-          field_column_distribution:
-            -
-              value: preference_left
           field_container_height:
             -
               value: auto
@@ -4011,26 +4795,25 @@ default:
           field_container_width:
             -
               value: normal
+          field_css_classes:
+            -
+              value: bg-grey-100
+          field_headline:
+            -
+              value: 'Zoom in'
+          field_layout:
+            -
+              value: justified
           field_padding_bottom:
             -
-              value: md
+              value: sm
           field_padding_top:
             -
-              value: md
-          field_section_bg_colour:
-            -
-              entity: 258ee352-b48b-43ab-9d09-1204c663477e
+              value: sm
           field_text_column:
             -
-              value: "<h2>Zoom in</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et eros mauris. Donec semper augue ut auctor sagittis. Etiam eleifend, nisi et lobortis fringilla, nibh nisi fermentum risus, non interdum elit nulla sit amet enim. Curabitur malesuada ut metus id fermentum. Quisque pellentesque, sem eu viverra faucibus, nisl libero egestas ipsum, nec tristique quam turpis vel ipsum. Vivamus ac sodales mauris, ut ultrices ipsum. Vivamus consequat, nisl in laoreet suscipit, diam elit dignissim urna, eget pharetra ligula tellus id lacus. Aenean euismod in magna eget imperdiet.</p>\r\n"
+              value: "<p>Quisque commodo ullamcorper urna, vel commodo est elementum nec. Etiam nec dolor ut nunc aliquam molestie. Nullam blandit sem non justo vestibulum facilisis. Fusce lectus dolor, tincidunt vitae ultrices nec, cursus quis justo. Aenean consectetur diam a eleifend porttitor. Nam risus ipsum, pulvinar accumsan quam quis, malesuada convallis neque.</p>\r\n"
               format: full_html
-          field_text_column_2:
-            -
-              value: "<drupal-media data-align=\"center\" data-entity-type=\"media\" data-entity-uuid=\"7d6457bb-106c-488c-9144-c30671e71271\"></drupal-media>\r\n"
-              format: full_html
-          field_vertical_alignment:
-            -
-              value: top
     -
       entity:
         _meta:
@@ -4144,7 +4927,7 @@ default:
                       value: 'Extra wide'
                   field_text_column:
                     -
-                      value: "<div class=\"relative left-1/2 -ml-1/2-screen w-screen\">\r\n<div class=\"container-wide px-5\">\r\n<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Extra Wide<br />\r\n(Applicable to XL breakpoint only)</span></div>\r\n</div></div>"
+                      value: "<div class=\"relative left-1/2 -ml-1/2-screen w-screen\">\r\n<div class=\"container-wide px-5\">\r\n<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center\"><span>Extra Wide<br />\r\n(Applicable to XL breakpoint only)</span></div>\r\n</div>\r\n</div>\r\n"
                       format: full_html
             -
               entity:
@@ -4194,7 +4977,7 @@ default:
                       value: Medium
                   field_text_column:
                     -
-                      value: "<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 mb-8\"><span>Medium<br />\r\n(Left)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 mb-8 mx-auto\"><span>Medium<br />\r\n(Center)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 ml-auto\"><span>Medium<br />\r\n(Right)</span></div>\r\n"
+                      value: "<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 mb-8\"><span>Medium<br />\r\n(Left)</span></div>\r\n\r\n<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 mb-8 mx-auto\"><span>Medium<br />\r\n(Center)</span></div>\r\n\r\n<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center lg:w-8/12 ml-auto\"><span>Medium<br />\r\n(Right)</span></div>\r\n"
                       format: full_html
             -
               entity:
@@ -4219,7 +5002,7 @@ default:
                       value: Narrow
                   field_text_column:
                     -
-                      value: "<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 mb-8\"><span>Narrow<br />\r\n(Left)</span></div>\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 mb-8 mx-auto\"><span>Narrow<br />\r\n(Centre)</span></div>\r\n\r\n\r\n<div class=\"h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 ml-auto\"><span>Narrow<br />\r\n(Right)</span></div>\r\n"
+                      value: "<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 mb-8\"><span>Narrow<br />\r\n(Left)</span></div>\r\n\r\n<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 mb-8 mx-auto\"><span>Narrow<br />\r\n(Centre)</span></div>\r\n\r\n<div class=\"min-h-24 border-2 border-dashed flex justify-center items-center font-bold uppercase tracking-widest text-center md:w-8/12 lg:w-6/12 ml-auto\"><span>Narrow<br />\r\n(Right)</span></div>\r\n"
                       format: full_html
           field_padding_bottom:
             -

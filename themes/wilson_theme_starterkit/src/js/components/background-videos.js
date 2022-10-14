@@ -42,7 +42,7 @@
 
           if (videoIframe) {
             if (videoIframe.src.includes("youtube.com")) {
-              videoIframe.src = `${videoIframe.src}&autoplay=1&controls=0&mute=1`;
+              videoIframe.src = `${videoIframe.src}&autoplay=1&loop=1&controls=0&mute=1`;
             } else if (videoIframe.src.includes("vimeo.com")) {
               videoIframe.src = `${videoIframe.src}&background=1`;
             }

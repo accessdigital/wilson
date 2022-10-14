@@ -84,9 +84,6 @@
         {{ content.field_section_bg|field_value }}
       </div>
     {% endif %}
-    {% if has_video or has_remote_video %}
-      <div class="absolute w-full h-full bg-black/40">{# Mask the video with a tinted overlay. #}</div>
-    {% endif %}
 
     {% block paragraph_container %}
       <div{{ create_attribute({'class': container_classes, 'data-aos': settings_container_aos}) }}>

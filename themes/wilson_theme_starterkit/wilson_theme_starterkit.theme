@@ -178,11 +178,11 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
       // Justified = a semi-flexible [two thirds] | [one third] layout.
       'justified' => 'md:grid-cols-2-pref-l-flex md:items-center md:descendant-nav:justify-end',
       // Center = centre aligned [two thirds] stacked
-      'center' => 'md:w-2/3-cols mx-auto text-center descendant-nav:justify-center',
+      'center' => 'text-center descendant-nav:justify-center',
       // Left = left aligned [two thirds] stacked
-      'left' => 'md:w-2/3-cols text-left',
+      'left' => 'text-left',
       // Right = right aligned [two thirds] stacked
-      'right' => 'md:w-2/3-cols ml-auto text-right descendant-nav:justify-end',
+      'right' => 'text-right descendant-nav:justify-end',
     ];
 
     $variables['settings_layout'] = $map[$value];
@@ -196,16 +196,16 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
     // laid out on a rigid grid. Responsive and non-responsive variants provide
     // flexibility in the template.
     $responsive = [
-      '1' => 'grid-cols-1',
-      '2' => 'grid-cols-1 sm:grid-cols-2',
-      '3' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
-      '4' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4',
+      '1' => 'grid-cols-1 auto-rows-auto',
+      '2' => 'grid-cols-1 sm:grid-cols-2 auto-rows-fr',
+      '3' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr',
+      '4' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-fr',
     ];
     $nonResponsive = [
       '1' => '',
-      '2' => 'grid-cols-2',
-      '3' => 'grid-cols-3',
-      '4' => 'grid-cols-4',
+      '2' => 'grid-cols-2 auto-rows-fr',
+      '3' => 'grid-cols-3 auto-rows-fr',
+      '4' => 'grid-cols-4 auto-rows-fr',
     ];
 
     $variables['settings_columns'] = $responsive[$value];
@@ -268,22 +268,47 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
       case 'narrow':
         $variables['settings_container_position'] = 'container';
         $variables['settings_inner_position'] = 'md:w-8/12 lg:w-6/12 px-5 ' . $position_map[$position];
+        $variables['settings_slides_perview_2xl'] = 2;
+        $variables['settings_slides_perview_xl'] = 2;
+        $variables['settings_slides_perview_lg'] = 2;
+        $variables['settings_slides_perview_md'] = 2;
+        $variables['settings_slides_perview_sm'] = 1;
         break;
       case 'medium':
         $variables['settings_container_position'] = 'container';
         $variables['settings_inner_position'] = 'lg:w-8/12 px-5 ' . $position_map[$position];
+        $variables['settings_slides_perview_2xl'] = 2;
+        $variables['settings_slides_perview_xl'] = 2;
+        $variables['settings_slides_perview_lg'] = 2;
+        $variables['settings_slides_perview_md'] = 2;
+        $variables['settings_slides_perview_sm'] = 1;
         break;
       case 'normal':
         $variables['settings_container_position'] = 'container';
         $variables['settings_inner_position'] = 'px-5';
+        $variables['settings_slides_perview_2xl'] = 3;
+        $variables['settings_slides_perview_xl'] = 3;
+        $variables['settings_slides_perview_lg'] = 2;
+        $variables['settings_slides_perview_md'] = 2;
+        $variables['settings_slides_perview_sm'] = 1;
         break;
       case 'extra_wide':
         $variables['settings_container_position'] = 'container-wide';
         $variables['settings_inner_position'] = 'px-5';
+        $variables['settings_slides_perview_2xl'] = 4;
+        $variables['settings_slides_perview_xl'] = 3;
+        $variables['settings_slides_perview_lg'] = 2;
+        $variables['settings_slides_perview_md'] = 2;
+        $variables['settings_slides_perview_sm'] = 1;
         break;
       case 'full':
         $variables['settings_container_position'] = '';
         $variables['settings_inner_position'] = 'px-5';
+        $variables['settings_slides_perview_2xl'] = 4;
+        $variables['settings_slides_perview_xl'] = 3;
+        $variables['settings_slides_perview_lg'] = 2;
+        $variables['settings_slides_perview_md'] = 2;
+        $variables['settings_slides_perview_sm'] = 1;
         break;
     }
   }
