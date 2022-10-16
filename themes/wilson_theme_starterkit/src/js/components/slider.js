@@ -27,8 +27,6 @@
           image.removeAttribute("loading");
         });
 
-        console.log(sliderCarousel.dataset);
-
         const glide = new window.Glide(carousel, {
           type: "slider",
           perView: sliderCarousel.dataset.slidesXxl || 3,

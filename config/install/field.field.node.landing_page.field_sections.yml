@@ -11,7 +11,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: TCAXOYLnAB2VvaGMnICt86z4OdEHQRnJiTkfRtsMv5Q
+  default_config_hash: X7atJ_hhb9o36yvpHPrfz7-yXZiIrQxiiRfGX8ajqvA
 id: node.landing_page.field_sections
 field_name: field_sections
 entity_type: node
@@ -33,81 +33,81 @@ settings:
     negate: 1
     target_bundles_drag_drop:
       accordion:
-        weight: 23
+        weight: -52
         enabled: false
       anchor_point:
-        weight: 26
+        weight: -43
         enabled: false
       block:
-        weight: 24
+        weight: -35
         enabled: false
       button_grid:
-        weight: 18
+        weight: -36
         enabled: false
       content_grid:
-        weight: 19
+        weight: -48
         enabled: false
       content_slider:
-        weight: 20
+        weight: -47
         enabled: false
       content_teaser_card:
-        weight: 32
-        enabled: true
-      custom_card:
-        weight: 34
+        weight: -32
         enabled: true
       gallery:
-        weight: 21
+        weight: -46
         enabled: false
       hero:
-        weight: 22
+        weight: -45
         enabled: false
+      custom_card:
+        weight: -31
+        enabled: true
       item:
-        weight: 24
+        weight: -33
         enabled: true
       logo_wall:
-        weight: 31
+        weight: -39
         enabled: false
       map:
-        weight: 32
+        weight: -38
         enabled: false
       one_column:
-        weight: 23
+        weight: -55
         enabled: false
       panel:
-        weight: 24
+        weight: -44
         enabled: false
       prev_next_navigation:
-        weight: 38
+        weight: -37
         enabled: false
       quote:
-        weight: 25
+        weight: -50
         enabled: false
       simple_banner:
-        weight: 26
+        weight: -42
         enabled: false
       stat:
-        weight: 37
+        weight: -30
         enabled: true
       statistics:
-        weight: 38
+        weight: -49
         enabled: false
       tabs:
-        weight: 27
+        weight: -51
         enabled: false
       text_webform:
-        weight: 30
+        weight: -40
         enabled: false
       three_columns:
-        weight: 31
+        weight: -53
         enabled: false
       two_columns:
-        weight: 5
+        weight: -54
         enabled: false
       views:
-        weight: 43
+        weight: -34
         enabled: false
       webform_embed:
-        weight: 34
+        weight: -41
         enabled: false
 field_type: entity_reference_revisions

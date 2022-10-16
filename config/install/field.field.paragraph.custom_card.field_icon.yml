@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.custom_card
+  module:
+    - material_icons
+id: paragraph.custom_card.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: custom_card
+label: Icon
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: material_icons

@@ -41,6 +41,7 @@
 {% block paragraph %}
   {% include '@wilson_theme_starterkit/templates/component/feature-card.html.twig' with {
     image: content.field_image|field_value,
+    icon: content.field_icon|field_value,
     pre_header: paragraph.field_pre_header.0.value|check_markup('full_html'),
     headline: paragraph.field_headline.0.value|check_markup('full_html'),
     caption: paragraph.field_caption.0.value|check_markup('full_html'),

@@ -3,15 +3,17 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.custom_card.field_caption
-    - field.field.paragraph.custom_card.field_custom_card_style
     - field.field.paragraph.custom_card.field_headline
+    - field.field.paragraph.custom_card.field_icon
     - field.field.paragraph.custom_card.field_image
+    - field.field.paragraph.custom_card.field_custom_card_style
     - field.field.paragraph.custom_card.field_pre_header
     - field.field.paragraph.custom_card.field_primary_cta
     - paragraphs.paragraphs_type.custom_card
   module:
     - field_group
     - link
+    - material_icons
     - media_library
 third_party_settings:
   field_group:
@@ -19,6 +21,7 @@ third_party_settings:
       children:
         - group_card
         - group_image
+        - group_icon
         - group_link
       label: Tabs
       region: content
@@ -70,6 +73,21 @@ third_party_settings:
       label: Link
       region: content
       parent_name: group_tabs
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_icon:
+      children:
+        - field_icon
+      label: Icon
+      region: content
+      parent_name: group_tabs
       weight: 22
       format_type: tab
       format_settings:
@@ -80,7 +98,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: Ellqv8ovdQUTBh84zvwYGsnlmTGYK1HPrghUS82XNHg
+  default_config_hash: JlFcHp0eBDqTJAwUqpjXZbO2LwMvTe1eY2Ob7EcrOCA
 id: paragraph.custom_card.default
 targetEntityType: paragraph
 bundle: custom_card
@@ -94,12 +112,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_custom_card_style:
-    type: options_buttons
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_headline:
     type: string_textfield
     weight: 3
@@ -108,12 +120,27 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_icon:
+    type: material_icons
+    weight: 23
+    region: content
+    settings:
+      allow_style: false
+      default_style: outlined
+      allow_classes: false
+    third_party_settings: {  }
   field_image:
     type: media_library_widget
     weight: 6
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_custom_card_style:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_pre_header:
     type: string_textfield

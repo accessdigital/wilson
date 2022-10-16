@@ -8,6 +8,8 @@ dependencies:
     - paragraphs.paragraphs_type.custom_card
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: MDxnpyp4rHlqEkuQR_-WhTYdG4GWDR6MapAR99ri7Jo
 id: paragraph.content_slider.field_cards
 field_name: field_cards
 entity_type: paragraph
@@ -47,15 +49,15 @@ settings:
       content_teaser_card:
         weight: 33
         enabled: true
-      custom_card:
-        weight: 34
-        enabled: true
       gallery:
         weight: 35
         enabled: false
       hero:
         weight: 36
         enabled: false
+      custom_card:
+        weight: 34
+        enabled: true
       item:
         weight: 37
         enabled: false

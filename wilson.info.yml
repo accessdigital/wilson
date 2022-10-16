@@ -48,6 +48,7 @@ install:
   - inline_form_errors
   - options
   - mail_login
+  - material_icons
   - media
   - media_embed_view_mode_restrictions
   - media_library

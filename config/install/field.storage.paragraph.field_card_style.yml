@@ -12,7 +12,10 @@ settings:
   allowed_values:
     -
       value: teaser
-      label: 'Basic teaser card'
+      label: 'Vertical card'
+    -
+      value: horizontal_card
+      label: 'Horizontal card'
     -
       value: feature_card
       label: 'Feature card'

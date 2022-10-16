@@ -6,7 +6,7 @@ dependencies:
   module:
     - ckeditor
 _core:
-  default_config_hash: Hm41bT8_dPBYfdMjqL9rsyHTDfOy2HLSNxEV3eyL14s
+  default_config_hash: NFFTHiv-ZdFzmr6-gR21EvWaCL7bMKHVOcRFTCb_lsY
 format: full_html
 editor: ckeditor
 settings:
@@ -64,13 +64,12 @@ settings:
             - Undo
             - Redo
             - RemoveFormat
+            - material_icons
             - SpecialChar
             - Source
   plugins:
     stylescombo:
       styles: "a.btn.btn--primary|Button primary\r\na.btn.btn--secondary|Button secondary\r\na.btn.btn--tertiary|Button tertiary"
-    language:
-      language_list: un
 image_upload:
   status: true
   scheme: public

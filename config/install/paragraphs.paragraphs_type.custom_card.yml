@@ -6,8 +6,10 @@ dependencies:
 third_party_settings:
   paragraphs_ee:
     paragraphs_categories: {  }
+_core:
+  default_config_hash: 7l5Q3MDHVzGl_FiJwd8zCsftKHNGAOoVdZpW6nC0pmA
 id: custom_card
-label: 'Custom Card'
+label: 'Custom card'
 icon_uuid: null
 icon_default: null
 description: ''

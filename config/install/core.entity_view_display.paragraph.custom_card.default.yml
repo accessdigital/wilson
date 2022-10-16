@@ -3,16 +3,18 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.custom_card.field_caption
-    - field.field.paragraph.custom_card.field_custom_card_style
     - field.field.paragraph.custom_card.field_headline
+    - field.field.paragraph.custom_card.field_icon
     - field.field.paragraph.custom_card.field_image
+    - field.field.paragraph.custom_card.field_custom_card_style
     - field.field.paragraph.custom_card.field_pre_header
     - field.field.paragraph.custom_card.field_primary_cta
     - paragraphs.paragraphs_type.custom_card
   module:
     - link
+    - material_icons
 _core:
-  default_config_hash: Ne8Om5lUP5BRzc66m32ctWJulR9jAaqnhZorB1tKGsU
+  default_config_hash: HX7dGx5jtuzYVqOMqKlYcTppcrWr0t09g_7foSwOkWY
 id: paragraph.custom_card.default
 targetEntityType: paragraph
 bundle: custom_card
@@ -32,6 +34,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_icon:
+    type: material_icons
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_image:
     type: entity_reference_entity_view

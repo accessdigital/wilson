@@ -1300,9 +1300,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_container_height:
             -
               value: auto
@@ -1665,7 +1662,7 @@ default:
               value: lg
           field_text_column:
             -
-              value: "<p>Use this to create a grid of content teaser cards and/or custom signpost cards. Available in 1, 2, 3 (default) and 4 column options. There are different card styles available, including \"basic teaser card\", \"horizontal card\" and \"feature card\" and you can mix and match within a single grid or slider.</p>\r\n"
+              value: "<p>Use this to create a grid of content teaser cards and/or custom signpost cards. Available in 1, 2, 3 (default) and 4 column options. There are different card styles available, including \"vertical card\" (default), \"horizontal card\" and \"feature card\" and you can mix and match within a single grid or slider.</p>\r\n"
               format: full_html
     -
       entity:
@@ -1874,6 +1871,11 @@ default:
                   field_headline:
                     -
                       value: 'Headline text'
+                  field_icon:
+                    -
+                      icon: local_police
+                      family: outlined
+                      classes: ''
                   field_image:
                     -
                       entity: 042241e5-9e23-4186-ac71-e1c09ec06c84
@@ -1912,6 +1914,11 @@ default:
                   field_headline:
                     -
                       value: 'Headline text'
+                  field_icon:
+                    -
+                      icon: health_and_safety
+                      family: outlined
+                      classes: ''
                   field_image:
                     -
                       entity: 13647eec-1cdc-4ce3-a089-441d78fba981
@@ -1990,6 +1997,11 @@ default:
                   field_headline:
                     -
                       value: 'Headline text'
+                  field_icon:
+                    -
+                      icon: verified_user
+                      family: outlined
+                      classes: ''
                   field_image:
                     -
                       entity: e735c5a3-d1ff-4fa6-af01-c473e0211f2a
@@ -2134,9 +2146,14 @@ default:
                   field_headline:
                     -
                       value: 'We''re hiring'
+                  field_icon:
+                    -
+                      icon: people_alt
+                      family: outlined
+                      classes: ''
                   field_image:
                     -
-                      entity: 80d83855-dc4d-4c8c-aac2-ac93c9ba2668
+                      entity: 13647eec-1cdc-4ce3-a089-441d78fba981
                   field_pre_header:
                     -
                       value: 'Looking for work?'
@@ -2339,6 +2356,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_cards:
             -
               entity:
@@ -2358,6 +2378,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_caption:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
@@ -2367,6 +2390,11 @@ default:
                   field_headline:
                     -
                       value: 'Consectetur adipiscing elit'
+                  field_icon:
+                    -
+                      icon: workspace_premium
+                      family: outlined
+                      classes: ''
                   field_primary_cta:
                     -
                       uri: 'internal:/'
@@ -2390,6 +2418,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_caption:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
@@ -2399,6 +2430,11 @@ default:
                   field_headline:
                     -
                       value: 'Consectetur adipiscing elit'
+                  field_icon:
+                    -
+                      icon: workspace_premium
+                      family: outlined
+                      classes: ''
                   field_primary_cta:
                     -
                       uri: 'internal:/'
@@ -2422,6 +2458,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_caption:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
@@ -2431,6 +2470,11 @@ default:
                   field_headline:
                     -
                       value: 'Consectetur adipiscing elit'
+                  field_icon:
+                    -
+                      icon: workspace_premium
+                      family: outlined
+                      classes: ''
                   field_primary_cta:
                     -
                       uri: 'internal:/'
@@ -2454,6 +2498,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_caption:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
@@ -2463,6 +2510,11 @@ default:
                   field_headline:
                     -
                       value: 'Consectetur adipiscing elit'
+                  field_icon:
+                    -
+                      icon: workspace_premium
+                      family: outlined
+                      classes: ''
           field_container_height:
             -
               value: auto
@@ -2693,6 +2745,9 @@ default:
           field_container_width:
             -
               value: normal
+          field_content_slider_overflow:
+            -
+              value: false
           field_padding_bottom:
             -
               value: md
@@ -2736,6 +2791,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card
@@ -2787,6 +2845,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card
@@ -2965,6 +3026,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card
@@ -2989,6 +3053,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card
@@ -3013,6 +3080,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card
@@ -3037,6 +3107,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card
@@ -3061,6 +3134,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card
@@ -3085,6 +3161,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card
@@ -3109,6 +3188,9 @@ default:
                   behavior_settings:
                     -
                       value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
                   field_card_style:
                     -
                       value: feature_card

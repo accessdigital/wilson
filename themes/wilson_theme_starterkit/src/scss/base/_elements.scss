@@ -206,4 +206,10 @@
       @apply z-1;
     }
   }
+
+  // Override the default display of Material Icons.
+  i[class*="material-icons-"] {
+    font-size: inherit;
+    vertical-align: middle;
+  }
 }

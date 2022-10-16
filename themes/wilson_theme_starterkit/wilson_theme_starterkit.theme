@@ -197,15 +197,15 @@ function wilson_theme_starterkit_preprocess_paragraph(&$variables) {
     // flexibility in the template.
     $responsive = [
       '1' => 'grid-cols-1 auto-rows-auto',
-      '2' => 'grid-cols-1 sm:grid-cols-2 auto-rows-fr',
-      '3' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr',
-      '4' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-fr',
+      '2' => 'grid-cols-1 sm:grid-cols-2 auto-rows-auto',
+      '3' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto',
+      '4' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-auto',
     ];
     $nonResponsive = [
       '1' => '',
-      '2' => 'grid-cols-2 auto-rows-fr',
-      '3' => 'grid-cols-3 auto-rows-fr',
-      '4' => 'grid-cols-4 auto-rows-fr',
+      '2' => 'grid-cols-2 auto-rows-auto',
+      '3' => 'grid-cols-3 auto-rows-auto',
+      '4' => 'grid-cols-4 auto-rows-auto',
     ];
 
     $variables['settings_columns'] = $responsive[$value];
