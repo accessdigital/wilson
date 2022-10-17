@@ -25,7 +25,7 @@
         el.after(suffix);
 
         // Set the initial icon preview from the field value.
-        materialIconsWidget.updateIcon(suffix, el.value, styleEl.value);
+        materialIconsWidget.updateIcon(suffix, el.value, miStyleEl.value);
 
         // Respond to changes on the jQuery UI autocomplete element.
         const $el = $(el);
