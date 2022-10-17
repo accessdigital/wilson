@@ -17,6 +17,7 @@
     }
   },
   "scripts": {
+    "lint": "npm run stylelint && npm run eslint",
     "stylelint": "stylelint $npm_package_config_stylesSrc/**/**/*.scss --config .stylelintrc",
     "sass": "sass $npm_package_config_stylesSrc:$npm_package_config_stylesDist",
     "postcss": "postcss -r $npm_package_config_stylesDist/**/**/*.css",
