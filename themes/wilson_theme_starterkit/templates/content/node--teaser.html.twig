@@ -74,7 +74,7 @@
   image: content.field_teaser_image|field_value,
   pre_header: '',
   headline: content.field_teaser_title|render ? node.field_teaser_title.0.value|check_markup('full_html') : node.label,
-  caption: node.field_teaser_caption.0.value|check_markup('full_html'),
+  caption: content.field_teaser_caption ? node.field_teaser_caption.0.value|check_markup('full_html') : '',
   link_url: url,
   link_text: 'Find out more'|t
 } %}

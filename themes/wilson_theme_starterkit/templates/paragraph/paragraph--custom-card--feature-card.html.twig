@@ -42,9 +42,9 @@
   {% include '@wilson_theme_starterkit/templates/component/feature-card.html.twig' with {
     image: content.field_image|field_value,
     icon: content.field_icon|field_value,
-    pre_header: paragraph.field_pre_header.0.value|check_markup('full_html'),
-    headline: paragraph.field_headline.0.value|check_markup('full_html'),
-    caption: paragraph.field_caption.0.value|check_markup('full_html'),
+    pre_header: content.field_pre_header|render ? paragraph.field_pre_header.0.value|check_markup('full_html') : '',
+    headline: content.field_headline|render ? paragraph.field_headline.0.value|check_markup('full_html') : '',
+    caption: content.field_caption|render ? paragraph.field_caption.0.value|check_markup('full_html') : '',
     link_url: content.field_primary_cta.0['#url'],
     link_text: content.field_primary_cta.0['#title']
   } %}

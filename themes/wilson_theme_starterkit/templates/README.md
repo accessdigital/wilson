@@ -9,7 +9,7 @@ Example syntax displaying different ways of passing field values to variables of
 ```
 {% include '@wilson_theme_starterkit/templates/component/my-component.html.twig' with {
   image: content.field_image|field_value
-  headline: paragraph.field_headline.0.value|check_markup('full_html'),
+  headline: content.field_headline|render ? paragraph.field_headline.0.value|check_markup('full_html') : '',
   caption: content.field_caption|field_value,
   link_url: content.field_primary_cta.0['#url'],
   link_text: content.field_primary_cta.0['#title'],
@@ -66,4 +66,12 @@ For paragraphs:
 
 ```
 {{ paragraph.field_headline.0.value|check_markup('full_html') }}
+```
+
+On PHP 8.0+ you will receive a warning if you field value is empty when you run the `|check_markup('full_html')` filter. Guard against this by wrapping the print statement with a check to see if there's anything to render from the `content` array.
+
+```
+{% if content.field_headline|render %}
+  {{ paragraph.field_headline.0.value|check_markup('full_html') }}
+{% endif %}
 ```
