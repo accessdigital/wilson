@@ -69,7 +69,7 @@ default:
               value: center
           field_container_width:
             -
-              value: normal
+              value: medium
           field_headline:
             -
               value: '<span class="inline-block" data-aos="fade-right" data-aos-delay="100">Wilson</span> <span class="inline-block font-light" data-aos="fade-left" data-aos-delay="200">Installation Profile</span>'
