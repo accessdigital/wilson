@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: bg-fixed
+      value: bg-parallax

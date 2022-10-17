@@ -1,0 +1,17 @@
+// background-attachment: fixed is problematic on iOS, so to create
+// parallax style backgrounds with fixed backgrounds, we must apply
+// the background attachment and then take it off again for devices
+// that can't support it. Unfortunately there's no specific @supports
+// for background attachment, so instead we use a test that represents
+// a similar set of devices.
+@layer components {
+  .bg-parallax {
+    background-attachment: fixed;
+  }
+
+  @supports (-webkit-overflow-scrolling: touch) {
+    .bg-parallax {
+      background-attachment: unset;
+    }
+  }
+}

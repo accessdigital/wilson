@@ -11,6 +11,7 @@ _meta:
     24ac8b07-c5fc-419f-a7f8-fe5ed6ed4db3: media
     3170306e-328e-462c-a61a-47d079f7c7a1: media
     80d83855-dc4d-4c8c-aac2-ac93c9ba2668: media
+    863628a8-b816-491b-b6a1-640e2e07f5d1: taxonomy_term
     4daf55b6-1d15-4103-9ae7-08b38a055849: taxonomy_term
     258ee352-b48b-43ab-9d09-1204c663477e: taxonomy_term
     b7ad6331-ed17-4fa4-bbe0-32ebf882bcb5: media
@@ -431,6 +432,9 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           field_container_height:
             -
               value: auto
@@ -448,7 +452,7 @@ default:
               value: md
           field_text_column:
             -
-              value: "<p>This can be combined with background styles and Tailwind CSS classes to give a different effect. In this example I we have darkened the image and used the <code class=\"bg-grey-200 px-1 rounded\">bg-fixed</code> CSS class to give a parallax effect. Note that there is patchy support for fixed backgrounds on mobile.</p>\r\n"
+              value: "<p>Different background styles can be combined. E.g. \"Darken background image\" + \"Parallax background image\" to give the following effect:-</p>\r\n"
               format: full_html
     -
       entity:
@@ -468,6 +472,12 @@ default:
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
+          field_aos:
+            -
+              value: fade-up
           field_container_height:
             -
               value: lg
@@ -477,9 +487,6 @@ default:
           field_container_width:
             -
               value: normal
-          field_css_classes:
-            -
-              value: bg-fixed
           field_headline:
             -
               value: '"Parallax" effect'
@@ -498,6 +505,12 @@ default:
           field_section_bg_colour:
             -
               entity: 12db7978-4760-486b-a0e4-6455f523858f
+            -
+              entity: 863628a8-b816-491b-b6a1-640e2e07f5d1
+          field_text_column:
+            -
+              value: "<p>Not supported on iOS</p>\r\n"
+              format: full_html
           field_toggle_jump_nav:
             -
               value: false
@@ -2356,9 +2369,6 @@ default:
           behavior_settings:
             -
               value: {  }
-          revision_translation_affected:
-            -
-              value: true
           field_cards:
             -
               entity:
@@ -2378,9 +2388,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_caption:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
@@ -2418,9 +2425,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_caption:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
@@ -2458,9 +2462,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_caption:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
@@ -2498,9 +2499,6 @@ default:
                   behavior_settings:
                     -
                       value: {  }
-                  revision_translation_affected:
-                    -
-                      value: true
                   field_caption:
                     -
                       value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non venenatis nisi, sed congue ipsum.'
