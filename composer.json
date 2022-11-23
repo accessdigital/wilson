@@ -27,6 +27,7 @@
         "drupal/diff": "^1.0",
         "drush/drush": "^11.1",
         "drupal/editor_advanced_link": "^1.8",
+        "drupal/environment_indicator": "^4.0",
         "drupal/field_group": "^3.1",
         "drupal/focal_point": "^1.5",
         "drupal/google_tag": "^1.4",

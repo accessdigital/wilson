@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+machine: local
+description: null
+name: Local
+weight: '1'
+url: ''
+fg_color: '#ffffff'
+bg_color: '#3886c2'

@@ -36,6 +36,8 @@ install:
   - dynamic_page_cache
   - editor
   - editor_advanced_link
+  - environment_indicator
+  - environment_indicator_ui
   - field_group
   - field_ui
   - file
