@@ -249,3 +249,8 @@ i.mi-selected-icon {
   color: black;
   margin-right: 1rem;
 }
+
+/* Make sure the "Page Actions" toolbar link has a pencil icon (from the Stable theme), even when Contextual Links module is off. */
+.toolbar-bar .toolbar-icon-edit:before {
+  background-image: url(../../../../../../core/themes/stable/images/core/icons/bebebe/pencil.svg);
+}
