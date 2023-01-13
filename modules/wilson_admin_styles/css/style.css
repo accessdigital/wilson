@@ -48,6 +48,10 @@
   padding-right: 2.4rem;
 }
 
+.paragraphs-subform .claro-details {
+  box-sizing: border-box;
+}
+
 .paragraphs-subform .claro-details__wrapper {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
