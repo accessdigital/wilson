@@ -20,7 +20,7 @@ install:
   - block_content
   - block_field
   - breakpoint
-  - ckeditor
+  - ckeditor5
   - color_field
   - config
   - config_split
@@ -52,7 +52,6 @@ install:
   - mail_login
   - material_icons
   - media
-  - media_embed_view_mode_restrictions
   - media_library
   - menu_block
   - menu_link_attributes
