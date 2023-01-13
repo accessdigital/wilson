@@ -8,7 +8,7 @@ dependencies:
     - editor
     - media
 _core:
-  default_config_hash: Rdz0PTYISNZNAPLDPKTjTBVuMYx_LR0hs7TUsifkPxI
+  default_config_hash: rHJBE7MOjTEwAlRB7WlsO16fm7oxRKkomD1B_v596L8
 name: 'Full HTML'
 format: full_html
 weight: 2
@@ -43,7 +43,7 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <a href hreflang class="btn btn--primary btn btn--secondary btn btn--tertiary">'
+      allowed_html: '<a class="btn btn--primary btn--secondary btn--tertiary">'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:
@@ -53,26 +53,14 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_view_modes: {  }
-      allowed_media_types: {  }
-      bundle_view_modes:
-        audio:
-          default_view_mode: default
-          allowed_view_modes: {  }
-        document:
-          default_view_mode: default
-          allowed_view_modes: {  }
-        image:
-          default_view_mode: default
-          allowed_view_modes: {  }
-        logo:
-          default_view_mode: default
-          allowed_view_modes: {  }
-        remote_video:
-          default_view_mode: default
-          allowed_view_modes: {  }
-        video:
-          default_view_mode: video_player
-          allowed_view_modes:
-            video_inline: video_inline
-            video_player: video_player
+      allowed_view_modes:
+        default: default
+        video_inline: video_inline
+        video_player: video_player
+      allowed_media_types:
+        audio: audio
+        document: document
+        image: image
+        logo: logo
+        remote_video: remote_video
+        video: video
