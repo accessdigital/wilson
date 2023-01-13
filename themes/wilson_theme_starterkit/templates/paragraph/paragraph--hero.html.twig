@@ -74,7 +74,7 @@
 
 {% block after_paragraph %}
   {% if paragraph.field_toggle_jump_nav.value and content.jump_nav_anchor_points %}
-    {{ attach_library('wilson_9_5/jump-nav') }}
+    {{ attach_library('wilson_theme_starterkit/jump-nav') }}
 
     {% set jump_nav_classes = [
       'jump-nav',
