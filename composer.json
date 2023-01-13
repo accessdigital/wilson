@@ -19,7 +19,7 @@
         "drupal/admin_login_path": "^1.1",
         "drupal/admin_toolbar": "^3.2",
         "drupal/block_field": "^1.0@RC",
-        "drupal/color_field": "^2.4",
+        "drupal/color_field": "^3.0",
         "drupal/config_split": "^1.7",
         "drupal/cookies": "^1.0",
         "drupal/default_content": "^2.0@alpha",
