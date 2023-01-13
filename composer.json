@@ -1,7 +1,7 @@
 {
     "name": "accessdigital/wilson",
     "description": "A Drupal 9 installation profile.",
-    "type": "drupal-custom-profile",
+    "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
