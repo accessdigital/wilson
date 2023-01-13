@@ -104,7 +104,7 @@
 }
 
 /* Paragraph Editor Enhancements. */
-.js .paragraphs-add-dialog--categorized button.paragraphs-button--add-more,
+.js .paragraphs-add-dialog--categorized .paragraphs-add-dialog--categorized button.paragraphs-button--add-more,
 .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized button.paragraphs-button--add-more {
   min-width: 215px !important;
   border: none !important;
