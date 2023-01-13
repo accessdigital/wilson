@@ -30,7 +30,7 @@ module.exports = {
     // responsive classes or other variants.
     // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
     {
-      pattern: /^h-(6|10|12|24|36|48)/,
+      pattern: /^h-(6|10|12|16|24|36|48)/,
       variants: ["md"],
     },
     {
