@@ -1,26 +1,22 @@
+// Import Tailwind core.
+@use "base/_tailwind";
+
+// Import custom base CSS.
 @use "base/_font-face";
-
-// Import Tailwind base/resets.
-@use "base/_tailwind-base";
-
-// Import our custom base partials.
-// These are moved to the top of the CSS with the use of @layer base { ... }.
-// See https://tailwindcss.com/docs/adding-base-styles#using-css
 @use "base/_admin";
-@use "base/_cookiesjsr";
 @use "base/_elements";
+@use "base/_prose";
 @use "base/_forms";
-@use "base/_layout";
 
-// Import style partials (modules). These are imported before Tailwind
-// components and utilities to allow this CSS to be overridden with a
-// Tailwind class if needed.
-@use "modules/_buttons";
-@use "modules/_parallax";
+// Custom component CSS.
+@use "components/_containers";
+@use "components/_buttons";
+@use "components/_parallax";
+@use "components/_videos";
+@use "components/_cookiesjsr";
 
-// Import Tailwind components & utilities.
-@tailwind components;
-@tailwind utilities;
+// Custom utility CSS.
+@use "utilities/_utilities";
 
 // Custom CSS variables.
 :root {

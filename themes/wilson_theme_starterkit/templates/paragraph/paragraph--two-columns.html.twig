@@ -60,13 +60,13 @@
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
     {% if content.field_text_column|render %}
-      <div>
+      <div class="prose">
         {{ content.field_text_column|field_value }}
       </div>
     {% endif %}
 
     {% if content.field_text_column_2|render %}
-      <div>
+      <div class="prose">
         {{ content.field_text_column_2|field_value }}
       </div>
     {% endif %}

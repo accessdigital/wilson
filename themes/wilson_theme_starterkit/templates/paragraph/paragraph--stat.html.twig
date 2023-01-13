@@ -44,7 +44,9 @@
   'lg:text-3xl',
   'xl:text-4xl',
   'font-bold',
-  'tracking-wider'
+  'tracking-wider',
+  'mb-4',
+  'last:mb-0',
 ] %}
 
 {% block paragraph %}
@@ -59,7 +61,7 @@
         {{ content.field_stat_prefix|field_value }}{{ content.field_stat_value|field_value }}{{ content.field_stat_suffix|field_value }}
       {% endif %}
     </p>
-    <figcaption>
+    <figcaption class="prose">
       {{ content.field_text_column|field_value }}
     </figcaption>
   </figure>

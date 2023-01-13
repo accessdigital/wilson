@@ -1,0 +1,68 @@
+// Apply a gradient on the right-side of the slider to fade the off-screen
+// carousel items.
+
+/*
+.section--content-slider {
+  .section__inner {
+    @apply relative;
+
+    &::after {
+      @apply absolute;
+      @apply top-0;
+      @apply bg-gradient-to-r;
+      @apply from-transparent;
+      @apply to-white;
+      @apply h-full;
+
+      content: "";
+      width: calc(20vw - 1.25rem);
+      left: calc(1.25rem + 80vw);
+
+      @screen md {
+        @apply left-full;
+
+        width: calc((100vw - 100%) / 2);
+      }
+    }
+  }
+
+  // Hide the gradient when using a custom background image.
+  &.section-bg {
+    .section__inner {
+      &::after {
+        @apply hidden;
+      }
+    }
+  }
+
+  &.bg-primary {
+    .section__inner {
+      &::after {
+        @apply bg-gradient-to-r;
+        @apply from-transparent;
+        @apply to-primary;
+      }
+    }
+  }
+
+  &.bg-secondary {
+    .section__inner {
+      &::after {
+        @apply bg-gradient-to-r;
+        @apply from-transparent;
+        @apply to-secondary;
+      }
+    }
+  }
+
+  &.bg-tertiary {
+    .section__inner {
+      &::after {
+        @apply bg-gradient-to-r;
+        @apply from-transparent;
+        @apply to-tertiary;
+      }
+    }
+  }
+}
+*/

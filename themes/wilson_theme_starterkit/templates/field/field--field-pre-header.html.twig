@@ -37,6 +37,7 @@
  */
 #}
 {% set classes = [
+  'pre-header',
   'inline-block',
   'uppercase',
   'font-semibold',
@@ -48,5 +49,5 @@
 ] %}
 
 {% for item in items %}
-  <span{{ create_attribute({'class': classes}) }}>{{ item.content['#context'].value|check_markup('full_html') }}</span>
+  <h6{{ create_attribute({'class': classes}) }}>{{ item.content['#context'].value|check_markup('full_html') }}</h6>
 {% endfor %}

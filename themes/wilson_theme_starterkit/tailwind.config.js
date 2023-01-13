@@ -21,6 +21,11 @@ module.exports = {
     "max-w-screen-2xl",
     "p-10",
     "w-screen",
+    "align-left",
+    "align-center",
+    "align-right",
+    "media-image",
+    "media-video",
     // Regex patterns to safelist wider ranges of classes or to include
     // responsive classes or other variants.
     // See https://tailwindcss.com/docs/content-configuration#safelisting-classes
@@ -96,6 +101,9 @@ module.exports = {
     extend: {
       boxShadow: {
         halo: "0 0 0 6px rgba(0, 0, 0, 0.15)",
+      },
+      fontWeight: {
+        bolder: "bolder",
       },
       margin: {
         "1/2-screen": "50vw",

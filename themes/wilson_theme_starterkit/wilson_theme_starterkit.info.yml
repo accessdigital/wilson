@@ -14,6 +14,9 @@ libraries:
 ckeditor_stylesheets:
   - dist/css/styles.css
 
+ckeditor5-stylesheets:
+  - dist/css/styles.css
+
 regions:
   header_links: Header Links
   header_navigation: Header Navigation

@@ -4,72 +4,76 @@ dependencies:
   config:
     - filter.format.full_html
   module:
-    - ckeditor
-_core:
-  default_config_hash: NFFTHiv-ZdFzmr6-gR21EvWaCL7bMKHVOcRFTCb_lsY
+    - ckeditor5
 format: full_html
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-            - Strike
-            - Superscript
-            - Subscript
-            - '-'
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-            - JustifyBlock
-        -
-          name: 'Copy paste'
-          items:
-            - Cut
-            - Copy
-            - Paste
-            - PasteFromWord
-        -
-          name: Linking
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-            - '-'
-            - Indent
-            - Outdent
-        -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalMediaLibrary
-            - Table
-            - HorizontalRule
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
-            - Styles
-        -
-          name: Tools
-          items:
-            - Undo
-            - Redo
-            - RemoveFormat
-            - material_icons
-            - SpecialChar
-            - Source
+    items:
+      - heading
+      - '|'
+      - bold
+      - italic
+      - strikethrough
+      - superscript
+      - subscript
+      - alignment
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - indent
+      - outdent
+      - '|'
+      - blockQuote
+      - '-'
+      - drupalMedia
+      - insertTable
+      - horizontalLine
+      - specialCharacters
+      - materialIcons
+      - '|'
+      - style
+      - '|'
+      - undo
+      - redo
+      - removeFormat
+      - '|'
+      - codeBlock
+      - sourceEditing
   plugins:
-    stylescombo:
-      styles: "a.btn.btn--primary|Button primary\r\na.btn.btn--secondary|Button secondary\r\na.btn.btn--tertiary|Button tertiary"
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Button primary'
+          element: '<a class="btn btn--primary">'
+        -
+          label: 'Button secondary'
+          element: '<a class="btn btn--secondary">'
+        -
+          label: 'Button tertiary'
+          element: '<a class="btn btn--tertiary">'
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_alignment:
+      enabled_alignments:
+        - left
+        - center
+        - right
+        - justify
+    media_media:
+      allow_view_mode_override: true
 image_upload:
   status: true
   scheme: public

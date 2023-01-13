@@ -48,13 +48,13 @@
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
-    <section>
+    <section class="prose">
       {% if content.field_pre_header|render %}
         {{ content.field_pre_header }}
       {% endif %}
 
       {% if content.field_headline|render %}
-        <h2 class="my-0">{{ paragraph.field_headline.0.value|check_markup('full_html') }}</h2>
+        <h2>{{ paragraph.field_headline.0.value|check_markup('full_html') }}</h2>
       {% endif %}
 
       {% if content.field_text_column|render %}

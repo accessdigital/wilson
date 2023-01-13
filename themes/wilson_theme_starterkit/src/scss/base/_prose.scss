@@ -1,0 +1,254 @@
+// Style areas of content that come from CMS WYSIWYG fields. Also applies to the CKEditor UI.
+// @TODO consider using Tailwind's .prose plugin as a replacement.
+@layer base {
+  .prose,
+  .ck-content {
+    @apply font-sans;
+
+    // Remove preceding and trailing margin from all top level elements.
+    > :first-child {
+      @apply mt-0;
+    }
+
+    > :last-child {
+      @apply mb-0;
+    }
+
+    // Remove preceding and trailing margin from selected elements when
+    // nested inside another container.
+    div,
+    table {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      table,
+      blockquote,
+      hr {
+        &:first-child {
+          @apply mt-0;
+        }
+
+        &:last-child {
+          @apply mb-0;
+        }
+      }
+    }
+
+    // Customise the top and bottom margin of block level elements.
+    h1 {
+      @apply mt-0;
+      @apply mb-[0.7em];
+      @apply font-bold;
+      @apply text-4xl;
+
+      @screen lg {
+        @apply text-5xl;
+      }
+
+      @screen xl {
+        @apply text-6xl;
+      }
+    }
+
+    h2 {
+      @apply mt-[2em];
+      @apply mb-[0.6em];
+      @apply font-bold;
+      @apply text-3xl;
+
+      @screen lg {
+        @apply text-4xl;
+      }
+
+      @screen xl {
+        @apply text-5xl;
+      }
+    }
+
+    h3 {
+      @apply mt-[0.6em];
+      @apply mb-[0.6em];
+      @apply font-semibold;
+      @apply text-2xl;
+
+      @screen lg {
+        @apply text-3xl;
+      }
+
+      @screen xl {
+        @apply text-4xl;
+      }
+    }
+
+    h4 {
+      @apply mt-[1.5em];
+      @apply mb-[0.5em];
+      @apply font-semibold;
+      @apply text-xl;
+
+      @screen lg {
+        @apply text-2xl;
+      }
+
+      @screen xl {
+        @apply text-3xl;
+      }
+    }
+
+    h5 {
+      @apply mt-[1.5em];
+      @apply mb-[0.5em];
+      @apply font-semibold;
+      @apply text-xl;
+    }
+
+    h6 {
+      @apply mt-[1.5em];
+      @apply mb-[0.5em];
+      @apply font-semibold;
+      @apply text-lg;
+    }
+
+    p {
+      @apply my-[1em];
+    }
+
+    // Customise the appearance of ordered and unordered lists.
+    ol,
+    ul {
+      @apply pl-8;
+
+      li {
+        @apply my-2;
+        @apply pl-2;
+        @apply text-lg;
+        @apply tracking-tight;
+      }
+
+      // Additional top and bottom margin for nested lists.
+      ol,
+      ul {
+        @apply my-3;
+      }
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    // Style anchors (that are not buttons) when they occur in text.
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    table,
+    blockquote {
+      a:not(.btn) {
+        @apply border-b;
+        @apply no-underline;
+
+        &:hover {
+          @apply border-dashed;
+        }
+
+        // Don't make links any bolder than they should be if the user adds a <strong> tag.
+        strong {
+          font-weight: inherit;
+        }
+      }
+    }
+
+    // Customise the appearance of blockquote and pre elements.
+    blockquote {
+      @apply my-[1.6em];
+      @apply text-2xl;
+      @apply leading-relaxed;
+      @apply italic;
+    }
+
+    pre {
+      @apply my-[1.71em];
+      @apply text-base;
+      @apply leading-loose;
+      @apply text-grey-800;
+      @apply bg-grey-100;
+      @apply p-2;
+    }
+
+    // Customise the appearance of picture and figure elements.
+    figure,
+    picture,
+    .media-image {
+      @apply my-6;
+
+      &:first-child {
+        @apply mt-0;
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+
+    figure {
+      figcaption {
+        @apply italic;
+        @apply text-sm;
+        @apply mt-2;
+      }
+    }
+
+    // Customise the appearance of tables.
+    table {
+      @apply my-8;
+      @apply w-full;
+      @apply text-base;
+
+      th,
+      td {
+        @apply border-white;
+        @apply border-2;
+        @apply bg-grey-200;
+        @apply py-1;
+        @apply px-2;
+      }
+    }
+
+    // Customise the appearance of the horizontal rule.
+    hr {
+      @apply border;
+      @apply my-8;
+      @apply clear-both;
+    }
+  }
+}
+
+// Elements styles inside the components layer will have a higher specificity than base.
+@layer components {
+  .prose,
+  .ck-content {
+    // Remove the top margin from any element that follows a heading, to preserve the spacing
+    // intended for headings.
+    h1 + *:not(hr),
+    h2 + *:not(hr),
+    h3 + *:not(hr),
+    h4 + *:not(hr),
+    h5 + *:not(hr),
+    h6 + *:not(hr),
+    hr + *:not(hr) {
+      @apply mt-0;
+    }
+  }
+}

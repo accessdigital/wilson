@@ -35,15 +35,15 @@
     {% endif %}
 
     {% if headline %}
-      <h3 class="font-medium text-xl lg:text-2xl mt-0 -mb-2">{{ headline }}</h3>
+      <h3 class="font-medium text-xl lg:text-2xl mt-0 mb-4 last:mb-0">{{ headline }}</h3>
     {% endif %}
 
     {% if caption %}
-      <p class="text-sm leading-relaxed mb-0">{{ caption }}</p>
+      <p class="text-sm leading-relaxed mb-4 last:mb-0">{{ caption }}</p>
     {% endif %}
 
     {% if link_url %}
-      <p class="mb-0">
+      <p>
         <a href="{{ link_url }}" class="after:absolute after:inset-0 border-b-0 font-semibold">{{ link_text }} <span class="inline-block group-hover:translate-x-2 transition-transform duration-300">&#8594;</span></a>
       </p>
     {% endif %}

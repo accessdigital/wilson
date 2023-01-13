@@ -83,17 +83,13 @@
             {% block content %}
               <div{{ create_attribute({'class': content_classes, 'id': attributes.id}) }}>
                 <div class="px-5 py-10 md:px-10 lg:p-16 xl:px-20 flex justify-center {{ settings_vertical_alignment }}">
-                  <div class="w-full max-w-screen-sm" {{ create_attribute({'data-aos': settings_container_aos}) }}>
-                    {% if content.field_pre_header|render or content.field_headline|render %}
-                      <div class="mb-6">
-                        {% if content.field_pre_header|render %}
-                          {{ content.field_pre_header }}
-                        {% endif %}
+                  <div class="w-full max-w-screen-sm prose" {{ create_attribute({'data-aos': settings_container_aos}) }}>
+                    {% if content.field_pre_header|render %}
+                      {{ content.field_pre_header }}
+                    {% endif %}
 
-                        {% if content.field_headline|render %}
-                          <h2 class="my-0">{{ paragraph.field_headline.0.value|check_markup('full_html') }}</h2>
-                        {% endif %}
-                      </div>
+                    {% if content.field_headline|render %}
+                      <h2 class="my-0">{{ paragraph.field_headline.0.value|check_markup('full_html') }}</h2>
                     {% endif %}
 
                     {{ content.field_text_column|field_value }}

@@ -1,3 +1,3 @@
-These SASS files are compiled to individual CSS files so that they can be attached as and when a specific component is loaded.
+These SASS modules represent the custom branded elements of the theme. These are loaded after the 'base' modules.
 
-The CSS files must be declared in the `wilson_theme_starterkit.libraries.yml` file to be attached.
+Remember to add new modules to the relevant section of `styles.scss`.

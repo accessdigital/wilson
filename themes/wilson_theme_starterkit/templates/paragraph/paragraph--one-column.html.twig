@@ -41,5 +41,7 @@
 {% extends "paragraph.html.twig" %}
 
 {% block content %}
-  {{ content.field_text_column|field_value }}
+  <div class="prose">
+    {{ content.field_text_column|field_value }}
+  </div>
 {% endblock %}

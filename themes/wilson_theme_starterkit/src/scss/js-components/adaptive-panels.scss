@@ -1,0 +1,188 @@
+// Standard accordion styles.
+.panels {
+  &__title {
+    .open,
+    .close {
+      speak: none;
+    }
+
+    .close {
+      @apply hidden;
+    }
+
+    &.is-active {
+      .open {
+        @apply hidden;
+      }
+
+      .close {
+        @apply inline-block;
+      }
+    }
+  }
+
+  &__panel {
+    .js & {
+      @apply hidden;
+    }
+
+    &.is-active {
+      @apply block;
+    }
+  }
+
+  // Adaptive accordion where tabs are used at a higher breakpoint.
+  &.panels--adaptive {
+    .panels__title {
+      @screen md {
+        @apply hidden;
+      }
+    }
+
+    &.panels--horizontal {
+      .panels__tabs {
+        @apply hidden;
+
+        @screen md {
+          @apply block;
+        }
+      }
+
+      .panels__tabs-list {
+        @screen md {
+          @apply flex;
+          @apply flex-row;
+          @apply mb-6;
+          @apply relative;
+          @apply p-0;
+          @apply list-none;
+        }
+
+        &::before {
+          @screen md {
+            @apply absolute;
+            @apply left-0;
+            @apply bottom-0;
+            @apply w-full;
+            @apply block;
+            @apply border-b;
+            @apply opacity-20;
+
+            content: "";
+          }
+        }
+
+        li {
+          @apply mr-10;
+          @apply relative;
+
+          &:last-child {
+            @apply mr-0;
+          }
+
+          button {
+            @apply block;
+            @apply w-full;
+            @apply h-full;
+            @apply px-1;
+            @apply pt-0;
+            @apply pb-3;
+            @apply text-lg;
+            @apply font-semibold;
+            @apply text-center;
+            @apply cursor-pointer;
+            @apply border-transparent;
+            @apply opacity-40;
+
+            border-bottom-width: 3px;
+
+            &.is-active {
+              @apply border-current;
+              @apply opacity-100;
+            }
+          }
+        }
+      }
+    }
+
+    &.panels--vertical {
+      @screen md {
+        @apply grid;
+        @apply grid-cols-3;
+        @apply gap-x-10;
+      }
+
+      .panels__tabs {
+        @apply hidden;
+
+        @screen md {
+          @apply block;
+        }
+      }
+
+      .panels__tabs-list {
+        @screen md {
+          @apply w-full;
+          @apply p-0;
+          @apply m-0;
+          @apply sticky;
+          @apply top-0;
+          @apply self-start;
+          @apply list-none;
+        }
+
+        &::before {
+          @screen md {
+            @apply absolute;
+            @apply left-0;
+            @apply top-0;
+            @apply h-full;
+            @apply block;
+            @apply border-l;
+            @apply opacity-20;
+
+            content: "";
+          }
+        }
+
+        li {
+          @apply text-left;
+          @apply mb-2;
+          @apply relative;
+
+          &:last-child {
+            @apply mb-0;
+          }
+
+          button {
+            @apply block;
+            @apply w-full;
+            @apply h-full;
+            @apply pl-4;
+            @apply py-2;
+            @apply text-lg;
+            @apply font-semibold;
+            @apply text-left;
+            @apply cursor-pointer;
+            @apply border-transparent;
+            @apply opacity-40;
+
+            border-left-width: 3px;
+
+            &.is-active {
+              @apply border-current;
+              @apply opacity-100;
+            }
+          }
+        }
+      }
+
+      .panels__title,
+      .panels__panel {
+        @screen md {
+          @apply col-span-2;
+        }
+      }
+    }
+  }
+}

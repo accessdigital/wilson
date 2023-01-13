@@ -1,0 +1,72 @@
+@layer utilities {
+  // Override alignment classes provided by Drupal.
+  .align-left {
+    @apply text-left;
+    @apply float-left;
+    @apply mr-6;
+
+    max-width: calc(50% - 1.5rem);
+  }
+
+  .align-center {
+    @apply text-center;
+  }
+
+  .align-right {
+    @apply text-right;
+    @apply float-right;
+    @apply ml-6;
+
+    max-width: calc(50% - 1.5rem);
+  }
+
+  .align-left,
+  .align-right,
+  .align-center {
+    img,
+    picture {
+      @apply inline-block;
+      @apply w-auto;
+    }
+  }
+
+  .align-left,
+  .align-center,
+  .align-right,
+  .media-image,
+  .media-video {
+    @apply mt-0;
+    @apply mb-6;
+
+    &:last-child {
+      @apply mb-0;
+    }
+
+    figure & {
+      @apply my-0;
+    }
+  }
+
+  .align-center,
+  .media-image,
+  .media-video {
+    @apply clear-both;
+  }
+
+  // Increase the z-index of paragraph contents when the wrapper has
+  // absolute positioned ::before or ::after pseudo elements injected in.
+  .before\:absolute,
+  .after\:absolute {
+    > .section__container {
+      @apply relative;
+      @apply z-1;
+    }
+  }
+
+  // Override the default display of Material Icons.
+  i[class*="material-icons-"],
+  span[class*="material-icons-"] {
+    font-size: inherit;
+    vertical-align: middle;
+  }
+}

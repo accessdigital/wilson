@@ -48,20 +48,18 @@
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
-    <section>
+    <section class="prose">
       {% if content.field_pre_header|render %}
         {{ content.field_pre_header }}
       {% endif %}
       {% if content.field_headline|render %}
-        <h1 class="my-0">
+        <h1>
           {{ paragraph.field_headline.0.value|check_markup('full_html') }}
         </h1>
       {% endif %}
 
       {% if content.field_text_column|render %}
-        <div class="mt-6 text-lg">
-          {{ content.field_text_column }}
-        </div>
+        {{ content.field_text_column|field_value }}
       {% endif %}
     </section>
 
@@ -76,7 +74,7 @@
 
 {% block after_paragraph %}
   {% if paragraph.field_toggle_jump_nav.value and content.jump_nav_anchor_points %}
-    {{ attach_library('wilson_theme_starterkit/jump-nav') }}
+    {{ attach_library('wilson_9_5/jump-nav') }}
 
     {% set jump_nav_classes = [
       'jump-nav',

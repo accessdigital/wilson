@@ -1,0 +1,45 @@
+@layer components {
+  // Responsive video backgrounds. This assumes the videos are 16x9.
+  .section-bg-video {
+    .video-wrapper--file {
+      @apply absolute;
+      @apply w-full;
+      @apply h-full;
+
+      video {
+        @apply absolute;
+        @apply w-full;
+        @apply h-full;
+        @apply object-cover;
+      }
+    }
+
+    .video-wrapper--remote {
+      @apply absolute;
+      @apply top-2/4;
+      @apply left-2/4;
+      @apply transform;
+      @apply -translate-x-2/4;
+      @apply -translate-y-2/4;
+
+      @media (min-aspect-ratio: 16 / 9) {
+        width: 177%;
+        padding-top: 100%;
+      }
+
+      @media (max-aspect-ratio: 16 / 9) {
+        width: 177.777vh;
+        padding-top: 100vh;
+      }
+
+      iframe {
+        @apply absolute;
+        @apply top-0;
+        @apply left-0;
+        @apply w-full;
+        @apply h-full;
+        @apply pointer-events-none;
+      }
+    }
+  }
+}

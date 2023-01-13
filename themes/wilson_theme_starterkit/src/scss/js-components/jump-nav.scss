@@ -1,0 +1,93 @@
+.jump-nav {
+  @apply sticky;
+  @apply top-[-1px];
+  @apply z-40;
+  @apply transition-colors;
+  @apply transition-shadow;
+  @apply duration-300;
+
+  &.is-sticky {
+    @apply bg-white;
+    @apply overflow-hidden;
+    @apply z-[60];
+    @apply shadow-xl;
+
+    nav {
+      @apply drop-shadow-none;
+    }
+  }
+
+  nav {
+    @apply drop-shadow-2xl;
+    @apply overflow-x-scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    ul {
+      @apply flex;
+      @apply p-0;
+
+      li {
+        @apply list-none;
+        @apply relative;
+
+        &::after {
+          @apply content-[""];
+          @apply absolute;
+          @apply right-0;
+          @apply top-4;
+          @apply bottom-4;
+          @apply w-[1px];
+          @apply bg-primary/50;
+        }
+
+        &:last-child {
+          &::after {
+            @apply hidden;
+          }
+        }
+      }
+    }
+  }
+
+  .jump-link {
+    @apply relative;
+    @apply inline-block;
+    @apply whitespace-nowrap;
+    @apply h-full;
+
+    &::after {
+      @apply content-[""];
+      @apply absolute;
+      @apply bottom-0;
+      @apply left-8;
+      @apply right-8;
+      @apply h-[3px];
+      @apply transition-colors;
+      @apply bg-transparent;
+    }
+
+    &:hover {
+      &::after {
+        @apply bg-primary/50;
+      }
+    }
+
+    &.is-active {
+      &::after {
+        @apply bg-primary;
+      }
+    }
+  }
+}
+
+// Offset the anchor so that the content is less likely to be obscured by a sticky jump-nav.
+.anchor-point {
+  @apply relative;
+  @apply top-[-60px];
+}
