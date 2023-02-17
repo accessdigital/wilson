@@ -1,3 +1,5 @@
+// Styling for the desktop and mobile variants of the main menu.
+// See also main-menu.js.
 .navigation {
   ul {
     @apply p-0;
@@ -100,8 +102,8 @@
     @apply pt-0;
     @apply pb-4;
     @apply overflow-hidden;
+    @apply z-[100];
 
-    z-index: 20;
     transform: translateX(100%);
     transition: 450ms transform cubic-bezier(0.23, 1, 0.32, 1), 450ms box-shadow linear, 450ms visibility linear;
 
@@ -111,6 +113,7 @@
       @apply py-0;
       @apply overflow-visible;
       @apply bg-transparent;
+      @apply z-auto;
 
       transform: none;
       transition: none;
@@ -363,6 +366,7 @@
           @apply box-content;
           @apply overflow-y-auto;
           @apply shadow-xl;
+          @apply top-[60px];
 
           top: 60px;
           max-height: calc(100vh - 60px - 100px);
@@ -370,8 +374,8 @@
           -ms-overflow-style: none;  /* IE 10+ */
 
           &::-webkit-scrollbar {
-            width: 0;
-            background: transparent; /* Chrome/Safari/Webkit */
+            @apply w-0;
+            @apply bg-transparent;
           }
         }
 
@@ -411,6 +415,14 @@
       &.parent-link {
         @screen lg {
           @apply w-full;
+        }
+      }
+
+      &.has-submenu {
+        > a {
+          @screen lg {
+            @apply hidden;
+          }
         }
       }
     }
@@ -454,7 +466,19 @@
 
       &.parent-link {
         @screen lg {
-          @apply hidden;
+          @apply pt-0;
+        }
+
+        > a {
+          @screen lg {
+            @apply text-xl;
+          }
+
+          &::after {
+            @screen lg {
+              @apply hidden;
+            }
+          }
         }
       }
 
@@ -465,5 +489,14 @@
         }
       }
     }
+  }
+}
+
+// Prevent scrolling the page when the mobile menu overlay is open.
+body.mobile-menu-is-active {
+  @apply overflow-hidden;
+
+  @screen lg {
+    @apply overflow-auto;
   }
 }

@@ -90,6 +90,7 @@ main-menu:
     dist/js/components/main-menu.js: { minified: true }
   dependencies:
     - core/drupal
+    - core/once
     - wilson_theme_starterkit/global
 
 background-videos:
