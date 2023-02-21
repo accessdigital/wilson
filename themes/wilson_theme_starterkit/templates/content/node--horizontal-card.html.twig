@@ -70,7 +70,7 @@
  *   in different view modes.
  */
 #}
-{% include '@wilson_theme_starterkit/templates/component/teaser-card.html.twig' with {
+{% include '@wilson_theme_starterkit/templates/component/horizontal-card.html.twig' with {
   image: content.field_teaser_image|field_value,
   pre_header: '',
   headline: content.field_teaser_title|render ? node.field_teaser_title.0.value|check_markup('full_html') : node.label,

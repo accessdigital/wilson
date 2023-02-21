@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.horizontal_card
+    - field.field.paragraph.content_teaser_card.field_card_style
+    - field.field.paragraph.content_teaser_card.field_content_reference
+    - paragraphs.paragraphs_type.content_teaser_card
+_core:
+  default_config_hash: mbVa58vim4dUMew4zLH1n8xHD2wvz3lT-Anf7tBJOkY
+id: paragraph.content_teaser_card.horizontal_card
+targetEntityType: paragraph
+bundle: content_teaser_card
+mode: horizontal_card
+content:
+  field_content_reference:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: horizontal_card
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_card_style: true
