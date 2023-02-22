@@ -1,8 +1,14 @@
 /**
  * @file
- * Main menu.
+ * Functionality of the response main menu, including mobile navigation with nested layers.
+ * See also main-menu.scss, menu--main.html.twig, and block--menu-block--main.html.twig.
  */
 ((Drupal, once) => {
+
+  let nav;
+  let menuOpen;
+  let menuClose;
+
   /**
    * Attaches the main menu behaviour.
    *
@@ -13,88 +19,74 @@
    */
   Drupal.behaviors.mainMenu = {
     attach(context) {
-      const body = document.querySelector("body");
-      const nav = context.querySelector(".navigation nav");
-      const topLevelMenu = context.querySelector(".navigation .menu");
 
-      // Initialise the mobile menu. Populate nav with an additional header containing a menu close button.
-      // @TODO move mobile header in to template so it's easier override without editing this file.
-      once("mobileMenu", "body", context).forEach(() => {
-        const menuHeader = document.createElement("div");
-        const menuClose = document.createElement("button");
-        const menuOpen = document.querySelector(".menu-open");
+      // Initialise main menu. Assumes the menu has the class `main-menu`.
+      once("mainMenu", ".main-menu", context).forEach((navEl) => {
 
-        menuHeader.classList.add("mobile-header");
-        menuClose.classList.add("menu-close", "btn", "btn--secondary");
-        menuClose.innerHTML = Drupal.t("Close");
-        menuHeader.prepend(menuClose);
-        nav.prepend(menuHeader);
+        nav = navEl;
+        menuOpen = document.querySelector(".menu-open");
+        menuClose = nav.querySelector(".menu-close");
 
         // Menu open links - toggle mobile menu open.
         if (menuOpen) {
           menuOpen.addEventListener("click", () => {
-            this.makeActive([body, nav, topLevelMenu]);
-            this.makeInactive(nav.querySelectorAll(".menu-item-active"));
-            menuOpen.setAttribute("aria-expanded", "true");
-
-            // Set keyboard focus on the first link of the opened menu.
-            const firstLink = topLevelMenu.querySelector(
-              ".menu-level-0 > li > a"
-            );
-            firstLink.focus();
+            this.openMenuOverlay();
           });
         }
 
         // Menu close links - toggle mobile menu closed.
-        menuClose.addEventListener("click", () => {
-          this.makeInactive([body, nav, topLevelMenu]);
-          this.makeInactive(nav.querySelectorAll(".menu-item-active"));
-          menuOpen.setAttribute("aria-expanded", "false");
-        });
+        if (menuClose) {
+          menuClose.addEventListener("click", () => {
+            this.closeMenuOverlay();
+          });
+        }
 
         // Close the mobile menu when moving up to lg breakpoint.
         mediaQueryCheck(window.mediaQuery.lg, () => {
-          menuClose.click();
+          this.closeMenuOverlay();
         }, () => {});
 
         // Clear any active menus when clicking outside of the navigation.
         document.addEventListener("mouseup", (e) => {
           if (!nav.contains(e.target)) {
-            this.makeInactive(context.querySelectorAll(".menu-item-active"));
+            this.closeMenuOverlay();
           }
         });
-      });
 
-      // Setup event listeners for the "go back" links shown in mobile menu.
-      once("backLinks", ".back-link a", context).forEach((backLink) => {
-        const parentWrapper = backLink.closest(".submenu-wrapper");
-        const parentMenuLink = parentWrapper.previousElementSibling;
+        // Setup event listener to toggle the submenu associated with clicking a menu link.
+        once("submenuLinks", "li.has-submenu > a, li.has-submenu > span", nav).forEach((link) => {
+          this.setupExpandLink(link);
+        });
 
-        backLink.addEventListener("click", (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          this.makeInactive([parentWrapper, parentMenuLink]);
+        // Setup event listeners for the "go back" links shown in mobile menu.
+        once("backLinks", ".back-link a", nav).forEach((backLink) => {
+          this.setupBackLink(backLink);
         });
       });
+    },
 
-      // Setup event listener to toggle the submenu associated with clicking a menu link.
-      once("submenuLinks", ".navigation li.has-submenu > a, .navigation li.has-submenu > span", context).forEach((link) => {
-        const siblingEl = link.nextElementSibling;
-        const parentEl = link.closest("ul");
+    // Function to open the mobile menu overlay.
+    openMenuOverlay() {
+      const body = document.querySelector("body");
+      const topLevelMenu = nav.querySelector(".menu");
+      this.makeActive([body, nav, topLevelMenu]);
+      this.makeInactive(nav.querySelectorAll(".menu-item-active"));
+      menuOpen.setAttribute("aria-expanded", "true");
 
-        link.addEventListener("click", (event) => {
-          event.preventDefault();
+      // Set keyboard focus on the first link of the opened menu.
+      const firstLink = topLevelMenu.querySelector(
+        ".menu-level-0 > li > a"
+      );
+      firstLink.focus();
+    },
 
-          if (!link.classList.contains("menu-item-active")) {
-            // Remove active state from previously selected links.
-            this.makeInactive(parentEl.querySelectorAll(".menu-item-active"));
-
-            this.makeActive([link, siblingEl]);
-          } else {
-            this.makeInactive([link, siblingEl]);
-          }
-        });
-      });
+    // Function to close the mobile menu overlay.
+    closeMenuOverlay() {
+      const body = document.querySelector("body");
+      const topLevelMenu = nav.querySelector(".menu");
+      this.makeInactive([body, nav, topLevelMenu]);
+      this.makeInactive(nav.querySelectorAll(".menu-item-active"));
+      menuOpen.setAttribute("aria-expanded", "false");
     },
 
     // Function to add the active state to an element.
@@ -134,5 +126,37 @@
         }
       });
     },
+
+    // Function to setup a link to expand a submenu.
+    setupExpandLink(link) {
+      const siblingEl = link.nextElementSibling;
+      const parentEl = link.closest("ul");
+
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        if (!link.classList.contains("menu-item-active")) {
+          // Remove active state from previously selected links.
+          this.makeInactive(parentEl.querySelectorAll(".menu-item-active"));
+
+          this.makeActive([link, siblingEl]);
+        } else {
+          this.makeInactive([link, siblingEl]);
+        }
+      });
+    },
+
+    // Function to go setup a back link.
+    setupBackLink(backLink) {
+      const parentWrapper = backLink.closest(".submenu-wrapper");
+      const parentMenuLink = parentWrapper.previousElementSibling;
+
+      backLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        this.makeInactive([parentWrapper, parentMenuLink]);
+      });
+    }
+
   };
 })(Drupal, once);

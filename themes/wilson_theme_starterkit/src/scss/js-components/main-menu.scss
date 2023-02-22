@@ -1,6 +1,79 @@
 // Styling for the desktop and mobile variants of the main menu.
-// See also main-menu.js.
-.navigation {
+// See also main-menu.js, menu--main.html.twig, and block--menu-block--main.html.twig.
+
+.main-menu {
+  @apply fixed;
+  @apply h-screen;
+  @apply inset-x-0;
+  @apply top-0;
+  @apply bg-secondary;
+  @apply pt-0;
+  @apply pb-4;
+  @apply overflow-hidden;
+  @apply z-[100];
+
+  transform: translateX(100%);
+  transition: 450ms transform cubic-bezier(0.23, 1, 0.32, 1), 450ms box-shadow linear, 450ms visibility linear;
+
+  @screen lg {
+    @apply h-auto;
+    @apply relative;
+    @apply py-0;
+    @apply overflow-visible;
+    @apply bg-transparent;
+    @apply z-auto;
+
+    transform: none;
+    transition: none;
+  }
+
+  &.menu-item-active {
+    @apply visible;
+
+    transform: translateX(0);
+
+    .menu,
+    .menu-close {
+      @apply visible;
+    }
+  }
+
+  &__wrapper {
+    @apply overflow-y-auto;
+    @apply fixed;
+    @apply w-full;
+    @apply inset-0;
+    @apply pb-8;
+
+    @screen lg {
+      @apply overflow-y-visible;
+      @apply relative;
+      @apply h-auto;
+      @apply pb-0;
+      @apply flex;
+    }
+  }
+
+  &__mobile-header {
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
+    @apply py-3;
+    @apply px-5;
+    @apply border-b;
+    @apply border-secondary-light;
+
+    @screen lg {
+      @apply hidden;
+    }
+  }
+
+  .menu-close {
+    @apply invisible;
+    @apply text-sm;
+    @apply ml-auto;
+  }
+
   ul {
     @apply p-0;
     @apply list-none;
@@ -16,12 +89,6 @@
         @apply border-b-0;
       }
     }
-  }
-
-  .menu-close {
-    @apply invisible;
-    @apply text-sm;
-    @apply ml-auto;
   }
 
   .back-link {
@@ -90,78 +157,6 @@
       @screen lg {
         @apply p-0;
       }
-    }
-  }
-
-  nav {
-    @apply fixed;
-    @apply h-screen;
-    @apply inset-x-0;
-    @apply top-0;
-    @apply bg-secondary;
-    @apply pt-0;
-    @apply pb-4;
-    @apply overflow-hidden;
-    @apply z-[100];
-
-    transform: translateX(100%);
-    transition: 450ms transform cubic-bezier(0.23, 1, 0.32, 1), 450ms box-shadow linear, 450ms visibility linear;
-
-    @screen lg {
-      @apply h-auto;
-      @apply relative;
-      @apply py-0;
-      @apply overflow-visible;
-      @apply bg-transparent;
-      @apply z-auto;
-
-      transform: none;
-      transition: none;
-    }
-
-    &.menu-item-active {
-      @apply visible;
-
-      transform: translateX(0);
-
-      .menu,
-      .menu-close {
-        @apply visible;
-      }
-    }
-  }
-
-  .navigation-wrapper {
-    @apply overflow-y-auto;
-    @apply fixed;
-    @apply w-full;
-    @apply left-0;
-    @apply right-0;
-    @apply bottom-0;
-    @apply pb-8;
-
-    height: calc(100vh - 69px);
-
-    @screen lg {
-      @apply overflow-y-visible;
-      @apply relative;
-      @apply h-auto;
-      @apply pb-0;
-      @apply flex;
-    }
-  }
-
-  .mobile-header {
-    @apply flex;
-    @apply justify-between;
-    @apply items-center;
-    @apply py-3;
-    @apply px-5;
-    @apply border-b;
-    @apply border-secondary-light;
-
-    @screen lg {
-      @apply hidden;
     }
   }
 
@@ -316,6 +311,7 @@
     &.menu-item-active {
       @apply visible;
       @apply left-0;
+      @apply z-1;
     }
   }
 
@@ -419,7 +415,8 @@
       }
 
       &.has-submenu {
-        > a {
+        > a,
+        > span {
           @screen lg {
             @apply hidden;
           }
@@ -469,7 +466,8 @@
           @apply pt-0;
         }
 
-        > a {
+        > a,
+        > span {
           @screen lg {
             @apply text-xl;
           }
