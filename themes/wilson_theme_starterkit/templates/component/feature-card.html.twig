@@ -27,6 +27,10 @@
         </div>
       {% endif %}
 
+      {% if published_date %}
+        <time class="font-light text-xs whitespace-nowrap mt-0 mb-2">{{ published_date }}</time>
+      {% endif %}
+
       {% if pre_header %}
         <p class="uppercase font-semibold tracking-wider text-xs mt-0 mb-2">{{ pre_header }}</p>
       {% endif %}
@@ -36,7 +40,7 @@
       {% endif %}
 
       {% if caption %}
-        <p class="mb-4 last:mb-0">{{ caption }}</p>
+        <p class="mb-4 last:mb-0">{{ caption|render|striptags }}</p>
       {% endif %}
 
       {% if link_url %}

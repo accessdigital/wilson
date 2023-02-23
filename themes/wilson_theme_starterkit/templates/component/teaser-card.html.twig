@@ -35,13 +35,19 @@
     {% endif %}
 
     {% if caption %}
-      <p>{{ caption }}</p>
+      <p>{{ caption|render|striptags }}</p>
     {% endif %}
   </div>
 
-  {% if link_url %}
-    <div class="mt-auto pb-5">
-      <a href="{{ link_url }}" class="btn btn--secondary after:absolute after:inset-0 text-sm">{{ link_text }}</a>
+  {% if link_url or published_date %}
+    <div class="mt-auto pb-5 flex flex-row flex-wrap justify-between gap-3 items-center">
+      {% if link_url %}
+        <a href="{{ link_url }}" class="btn btn--secondary after:absolute after:inset-0 text-sm">{{ link_text }}</a>
+      {% endif %}
+
+      {% if published_date %}
+        <time class="font-light text-xs whitespace-nowrap">{{ published_date }}</time>
+      {% endif %}
     </div>
   {% endif %}
 </div>
