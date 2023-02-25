@@ -5,12 +5,15 @@
   @apply fixed;
   @apply h-screen;
   @apply inset-x-0;
-  @apply top-0;
   @apply bg-secondary;
   @apply pt-0;
   @apply pb-4;
   @apply overflow-hidden;
   @apply z-[100];
+
+  // Offset the menu by the height of the mobile header.
+  // Adjust this as necessary to accommodate site branding.
+  @apply top-[65px];
 
   transform: translateX(100%);
   transition: 450ms transform cubic-bezier(0.23, 1, 0.32, 1), 450ms box-shadow linear, 450ms visibility linear;
@@ -22,12 +25,13 @@
     @apply overflow-visible;
     @apply bg-transparent;
     @apply z-auto;
+    @apply top-auto;
 
     transform: none;
     transition: none;
   }
 
-  &.menu-item-active {
+  &.is-active {
     @apply visible;
 
     transform: translateX(0);
@@ -54,10 +58,8 @@
     }
   }
 
+  /*
   &__mobile-header {
-    @apply flex;
-    @apply justify-between;
-    @apply items-center;
     @apply py-3;
     @apply px-5;
     @apply border-b;
@@ -73,6 +75,7 @@
     @apply text-sm;
     @apply ml-auto;
   }
+  */
 
   ul {
     @apply p-0;
@@ -308,7 +311,7 @@
       }
     }
 
-    &.menu-item-active {
+    &.is-active {
       @apply visible;
       @apply left-0;
       @apply z-1;
@@ -337,16 +340,13 @@
           }
         }
 
-        &.menu-item-active {
+        &.is-active {
           &::after {
             @screen lg {
               @apply rotate-180;
             }
           }
-        }
 
-        &.menu-item-active,
-        &.is-active {
           @screen lg {
             @apply text-primary;
           }
@@ -490,8 +490,62 @@
   }
 }
 
+// Animated hamburger icon.
+// Transforms in to a X icon when '.is-active' class is applied.
+.animated-hamburger {
+  @apply w-8;
+  @apply h-6;
+  @apply relative;
+  @apply cursor-pointer;
+  @apply rotate-0;
+
+  span {
+    @apply block;
+    @apply absolute;
+    @apply left-0;
+    @apply h-1;
+    @apply w-full;
+    @apply bg-current;
+    @apply rounded-[1px];
+    @apply opacity-100;
+    @apply rotate-0;
+    @apply ease-in-out;
+    @apply duration-300;
+
+    &:nth-child(1) {
+      @apply top-0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      @apply top-2.5;
+    }
+
+    &:nth-child(4) {
+      @apply top-5;
+    }
+  }
+
+  &.is-active {
+    span:nth-child(1),
+    span:nth-child(4) {
+      @apply top-2.5;
+      @apply left-1/2;
+      @apply w-0;
+    }
+
+    span:nth-child(2) {
+      @apply rotate-45;
+    }
+
+    span:nth-child(3) {
+      @apply -rotate-45;
+    }
+  }
+}
+
 // Prevent scrolling the page when the mobile menu overlay is open.
-body.mobile-menu-is-active {
+body.with-menu-overlay {
   @apply overflow-hidden;
 
   @screen lg {
