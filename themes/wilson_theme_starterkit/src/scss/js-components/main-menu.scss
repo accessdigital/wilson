@@ -1,4 +1,82 @@
-.navigation {
+// Styling for the desktop and mobile variants of the main menu.
+// See also main-menu.js, menu--main.html.twig, and block--menu-block--main.html.twig.
+
+.main-menu {
+  @apply fixed;
+  @apply h-screen;
+  @apply inset-x-0;
+  @apply bg-secondary;
+  @apply pt-0;
+  @apply pb-4;
+  @apply overflow-hidden;
+  @apply z-[100];
+
+  // Offset the menu by the height of the mobile header.
+  // Adjust this as necessary to accommodate site branding.
+  @apply top-[65px];
+
+  transform: translateX(100%);
+  transition: 450ms transform cubic-bezier(0.23, 1, 0.32, 1), 450ms box-shadow linear, 450ms visibility linear;
+
+  @screen lg {
+    @apply h-auto;
+    @apply relative;
+    @apply py-0;
+    @apply overflow-visible;
+    @apply bg-transparent;
+    @apply z-auto;
+    @apply top-auto;
+
+    transform: none;
+    transition: none;
+  }
+
+  &.is-active {
+    @apply visible;
+
+    transform: translateX(0);
+
+    .menu,
+    .menu-close {
+      @apply visible;
+    }
+  }
+
+  &__wrapper {
+    @apply overflow-y-auto;
+    @apply fixed;
+    @apply w-full;
+    @apply inset-0;
+    @apply pb-8;
+
+    @screen lg {
+      @apply overflow-y-visible;
+      @apply relative;
+      @apply h-auto;
+      @apply pb-0;
+      @apply flex;
+    }
+  }
+
+  /*
+  &__mobile-header {
+    @apply py-3;
+    @apply px-5;
+    @apply border-b;
+    @apply border-secondary-light;
+
+    @screen lg {
+      @apply hidden;
+    }
+  }
+
+  .menu-close {
+    @apply invisible;
+    @apply text-sm;
+    @apply ml-auto;
+  }
+  */
+
   ul {
     @apply p-0;
     @apply list-none;
@@ -14,12 +92,6 @@
         @apply border-b-0;
       }
     }
-  }
-
-  .menu-close {
-    @apply invisible;
-    @apply text-sm;
-    @apply ml-auto;
   }
 
   .back-link {
@@ -88,77 +160,6 @@
       @screen lg {
         @apply p-0;
       }
-    }
-  }
-
-  nav {
-    @apply fixed;
-    @apply h-screen;
-    @apply inset-x-0;
-    @apply top-0;
-    @apply bg-secondary;
-    @apply pt-0;
-    @apply pb-4;
-    @apply overflow-hidden;
-
-    z-index: 20;
-    transform: translateX(100%);
-    transition: 450ms transform cubic-bezier(0.23, 1, 0.32, 1), 450ms box-shadow linear, 450ms visibility linear;
-
-    @screen lg {
-      @apply h-auto;
-      @apply relative;
-      @apply py-0;
-      @apply overflow-visible;
-      @apply bg-transparent;
-
-      transform: none;
-      transition: none;
-    }
-
-    &.menu-item-active {
-      @apply visible;
-
-      transform: translateX(0);
-
-      .menu,
-      .menu-close {
-        @apply visible;
-      }
-    }
-  }
-
-  .navigation-wrapper {
-    @apply overflow-y-auto;
-    @apply fixed;
-    @apply w-full;
-    @apply left-0;
-    @apply right-0;
-    @apply bottom-0;
-    @apply pb-8;
-
-    height: calc(100vh - 69px);
-
-    @screen lg {
-      @apply overflow-y-visible;
-      @apply relative;
-      @apply h-auto;
-      @apply pb-0;
-      @apply flex;
-    }
-  }
-
-  .mobile-header {
-    @apply flex;
-    @apply justify-between;
-    @apply items-center;
-    @apply py-3;
-    @apply px-5;
-    @apply border-b;
-    @apply border-secondary-light;
-
-    @screen lg {
-      @apply hidden;
     }
   }
 
@@ -260,6 +261,7 @@
     @apply fixed;
     @apply w-full;
     @apply invisible;
+    @apply top-0;
     @apply right-0;
     @apply bottom-0;
     @apply bg-secondary;
@@ -310,9 +312,10 @@
       }
     }
 
-    &.menu-item-active {
+    &.is-active {
       @apply visible;
       @apply left-0;
+      @apply z-1;
     }
   }
 
@@ -338,16 +341,13 @@
           }
         }
 
-        &.menu-item-active {
+        &.is-active {
           &::after {
             @screen lg {
               @apply rotate-180;
             }
           }
-        }
 
-        &.menu-item-active,
-        &.is-active {
           @screen lg {
             @apply text-primary;
           }
@@ -363,6 +363,7 @@
           @apply box-content;
           @apply overflow-y-auto;
           @apply shadow-xl;
+          @apply top-[60px];
 
           top: 60px;
           max-height: calc(100vh - 60px - 100px);
@@ -370,8 +371,8 @@
           -ms-overflow-style: none;  /* IE 10+ */
 
           &::-webkit-scrollbar {
-            width: 0;
-            background: transparent; /* Chrome/Safari/Webkit */
+            @apply w-0;
+            @apply bg-transparent;
           }
         }
 
@@ -411,6 +412,15 @@
       &.parent-link {
         @screen lg {
           @apply w-full;
+        }
+      }
+
+      &.has-submenu {
+        > a,
+        > span {
+          @screen lg {
+            @apply hidden;
+          }
         }
       }
     }
@@ -454,7 +464,20 @@
 
       &.parent-link {
         @screen lg {
-          @apply hidden;
+          @apply pt-0;
+        }
+
+        > a,
+        > span {
+          @screen lg {
+            @apply text-xl;
+          }
+
+          &::after {
+            @screen lg {
+              @apply hidden;
+            }
+          }
         }
       }
 
@@ -465,5 +488,68 @@
         }
       }
     }
+  }
+}
+
+// Animated hamburger icon.
+// Transforms in to a X icon when '.is-active' class is applied.
+.animated-hamburger {
+  @apply w-8;
+  @apply h-6;
+  @apply relative;
+  @apply cursor-pointer;
+  @apply rotate-0;
+
+  span {
+    @apply block;
+    @apply absolute;
+    @apply left-0;
+    @apply h-1;
+    @apply w-full;
+    @apply bg-current;
+    @apply rounded-[1px];
+    @apply opacity-100;
+    @apply rotate-0;
+    @apply ease-in-out;
+    @apply duration-300;
+
+    &:nth-child(1) {
+      @apply top-0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      @apply top-2.5;
+    }
+
+    &:nth-child(4) {
+      @apply top-5;
+    }
+  }
+
+  &.is-active {
+    span:nth-child(1),
+    span:nth-child(4) {
+      @apply top-2.5;
+      @apply left-1/2;
+      @apply w-0;
+    }
+
+    span:nth-child(2) {
+      @apply rotate-45;
+    }
+
+    span:nth-child(3) {
+      @apply -rotate-45;
+    }
+  }
+}
+
+// Prevent scrolling the page when the mobile menu overlay is open.
+body.with-menu-overlay {
+  @apply overflow-hidden;
+
+  @screen lg {
+    @apply overflow-auto;
   }
 }
