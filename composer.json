@@ -55,8 +55,5 @@
         "drupal/viewsreference": "^2.0@beta",
         "drupal/webform": "^6.0",
         "drupal/webp": "^1.0@beta"
-    },
-    "replace": {
-        "drupal/ctools": "*"
     }
 }
