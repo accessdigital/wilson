@@ -11,6 +11,9 @@ global:
 admin:
   js:
     dist/js/utilities/tasks-in-toolbar.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/once
 
 adaptive-panels:
   css:

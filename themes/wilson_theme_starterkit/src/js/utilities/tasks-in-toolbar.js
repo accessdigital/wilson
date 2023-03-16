@@ -1,35 +1,35 @@
 /**
  * @file
- * Tasks in toolbar.
- *
- * Moves the local task tabs from the page to the admin toolbar.
+ * Create a toolbar menu from the local task tabs (i.e. view/edit/revisions) in the current page.
  */
+((Drupal, once) => {
 
-((Drupal) => {
   /**
-   * Attaches the local tasks behaviour.
+   * Attaches the Tasks in Toolbar behaviour.
    *
    * @type {Drupal~behavior}
    *
    * @prop {Drupal~behaviorAttach} attach
-   *   Moves local task tabs to a 'Page actions' link in admin toolbar.
+   *   Attach the behaviour.
    */
   Drupal.behaviors.tasksInToolbar = {
     attach(context) {
-      const editTabs = document.querySelectorAll(".local-tasks-block > ul");
 
-      editTabs.forEach((editTab) => {
-        const taskItems = editTab.querySelectorAll("li");
+      // Determine if the current context contains the local task tabs, and if there is a toolbar to work with.
+      const localTasksEl = once("localTasks", ".local-tasks-block > ul", context).shift();
+      const toolbarEl = document.querySelector("#toolbar-bar");
+
+      if (toolbarEl && localTasksEl) {
+        const taskItems = localTasksEl.querySelectorAll("li");
         taskItems.forEach((taskItem) => {
           taskItem.classList.add("menu-item");
         });
 
+        // Programmatically create a toolbar menu to insert the local tasks in to.
         const toolbarToolsInnerDiv = document.createElement("div");
         toolbarToolsInnerDiv.classList.add("toolbar-menu-tasks");
-
         const toolbarToolsNav = document.createElement("nav");
         toolbarToolsNav.classList.add("toolbar-lining", "clearfix");
-
         const toolbarToolsDiv = document.createElement("div");
         toolbarToolsDiv.classList.add(
           "toolbar-tray",
@@ -40,16 +40,14 @@
           "data-toolbar-tray",
           "toolbar-item-tasks-tray"
         );
-
-        editTab.classList.add("toolbar-menu", "claro-toolbar-menu");
-        toolbarToolsInnerDiv.appendChild(editTab);
+        localTasksEl.classList.add("toolbar-menu");
+        toolbarToolsInnerDiv.appendChild(localTasksEl);
         toolbarToolsNav.appendChild(toolbarToolsInnerDiv);
         toolbarToolsDiv.appendChild(toolbarToolsNav);
 
-        const toolbar = context.querySelector("#toolbar-bar");
+        // Programmatically create a toolbar tab to attach the menu to.
         const toolbarTab = document.createElement("div");
         toolbarTab.classList.add("toolbar-tab");
-
         const toolbarLink = document.createElement("a");
         toolbarLink.classList.add(
           "toolbar-icon",
@@ -64,11 +62,12 @@
         );
         toolbarLink.setAttribute("role", "button");
         toolbarLink.innerHTML = Drupal.t("Page Actions");
-
         toolbarTab.appendChild(toolbarLink);
         toolbarTab.appendChild(toolbarToolsDiv);
-        toolbar.prepend(toolbarTab);
-      });
+
+        // Insert the generated tab and menu in to the admin toolbar.
+        toolbarEl.prepend(toolbarTab);
+      }
     },
   };
-})(Drupal);
+})(Drupal, once);
