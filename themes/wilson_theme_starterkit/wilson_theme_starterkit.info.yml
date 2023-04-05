@@ -1,8 +1,8 @@
 name: Wilson Theme Starterkit
 type: theme
 description: A theme for the Wilson installation profile. This is a starterkit and should be renamed for project use. See the attached Readme.
-core_version_requirement: ^8.9.1 || ^9
-base theme: stable
+core_version_requirement: ^9 || ^10
+base theme: stable9
 hidden: false
 dependencies:
   - drupal:twig_tweak

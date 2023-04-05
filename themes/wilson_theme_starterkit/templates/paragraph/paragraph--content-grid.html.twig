@@ -48,8 +48,10 @@
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
-    {% for key, item in content.field_cards if key|first != '#' %}
-      {{ item }}
+    {% for key, item in content.field_cards %}
+      {% if key|first != '#' %}
+        {{ item }}
+      {% endif %}
     {% endfor %}
   </div>
 {% endblock %}

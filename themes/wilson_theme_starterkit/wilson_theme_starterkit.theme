@@ -341,6 +341,9 @@ function wilson_theme_starterkit_preprocess_breadcrumb(&$variables) {
  * document head.
  */
 function _wilson_theme_starterkit_background_styles($imageUri, $elementId, $styleNamePrefix) {
+  // Load file url generator service.
+  $url_generator = \Drupal::service('file_url_generator');
+
   // Load the Wilson breakpoints to obtain the media query selectors.
   $breakpoints = \Drupal::service('breakpoint.manager')->getBreakpointsByGroup('wilson');
 
@@ -350,7 +353,7 @@ function _wilson_theme_starterkit_background_styles($imageUri, $elementId, $styl
   // Generate the initial fallback background styles.
   $fallbackStyleName = $styleNamePrefix . 'fallback';
   if (ImageStyle::load($fallbackStyleName)) {
-    $imageUrl = Markup::create(file_url_transform_relative(ImageStyle::load($fallbackStyleName)->buildUrl($imageUri)));
+    $imageUrl = Markup::create($url_generator->generateString(ImageStyle::load($imageStyleName)->buildUrl($imageUri)));
     $css .= "$selector { background-image: url('$imageUrl'); } ";
   }
 
@@ -360,7 +363,7 @@ function _wilson_theme_starterkit_background_styles($imageUri, $elementId, $styl
     $imageStyleName = $styleNamePrefix . $breakpointId;
 
     if (ImageStyle::load($imageStyleName)) {
-      $imageUrl = Markup::create(file_url_transform_relative(ImageStyle::load($imageStyleName)->buildUrl($imageUri)));
+      $imageUrl = Markup::create($url_generator->generateString(ImageStyle::load($imageStyleName)->buildUrl($imageUri)));
       $css .= "@media " . $breakpoint->getMediaQuery() . " { $selector { background-image: url('$imageUrl'); }} ";
     }
   }
