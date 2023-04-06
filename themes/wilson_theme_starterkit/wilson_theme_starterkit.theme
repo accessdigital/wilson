@@ -342,10 +342,10 @@ function wilson_theme_starterkit_preprocess_breadcrumb(&$variables) {
  */
 function _wilson_theme_starterkit_background_styles($imageUri, $elementId, $styleNamePrefix) {
   // Load file url generator service.
-  $url_generator = \Drupal::service('file_url_generator');
+  $url_generator = Drupal::service('file_url_generator');
 
   // Load the Wilson breakpoints to obtain the media query selectors.
-  $breakpoints = \Drupal::service('breakpoint.manager')->getBreakpointsByGroup('wilson');
+  $breakpoints = Drupal::service('breakpoint.manager')->getBreakpointsByGroup('wilson');
 
   $css = false;
   $selector = '#' . $elementId;
