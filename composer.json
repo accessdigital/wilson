@@ -33,7 +33,6 @@
         "drupal/google_tag": "^1.6",
         "drupal/image_effects": "^3.4",
         "drupal/imagemagick": "^3.4",
-        "drupal/lightning_scheduler": "^1.2",
         "drupal/mail_login": "^2.6",
         "drupal/material_icons": "^2.0",
         "drupal/menu_block": "^1.6",
