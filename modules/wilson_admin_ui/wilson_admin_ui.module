@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Provides primary Drupal hook implementations.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function wilson_admin_ui_page_attachments(array &$page) {
+  $currentUser = \Drupal::currentUser();
+
+  // Attach overrides to the Claro admin theme.
+  // Only attach this if the user has permission to see the admin theme.
+  if ($currentUser->hasPermission('view the administration theme') && _wilson_admin_ui_is_claro()) {
+    $page['#attached']['library'][] = 'wilson_admin_ui/claro-overrides';
+  }
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function wilson_admin_ui_preprocess_block(&$variables) {
+  // "Tasks in Toolbar" feature - use JS to shift the page's local tasks to
+  // the admin toolbar.
+  if ($variables['base_plugin_id'] === 'local_tasks_block') {
+    // Add a class to the local tasks block that JS can use.
+    $variables['attributes']['class'][] = 'local-tasks-in-toolbar';
+    // Attach the JS behaviour.
+    $variables['#attached']['library'][] = 'wilson_admin_ui/tasks-in-toolbar';
+  }
+}
+
+/**
+ * Implements hook_field_widget_single_element_form_alter().
+ */
+function wilson_admin_ui_field_widget_single_element_form_alter(&$element, FormStateInterface $form_state, $context) {
+  // User interface improvements to the contrib Material Icons field.
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getType() === 'material_icons') {
+    // Add a JavaScript behaviour which displays a preview of the selected icon.
+    $element['icon']['#attributes']['size'] = '30';
+    $element['icon']['#attributes']['class'][] = 'material-icons-widget';
+    $element['#attached']['library'][] = 'wilson_admin_ui/material-icons-widget';
+  }
+}
+
+/**
+ * Implements hook_field_widget_single_element_WIDGET_TYPE_form_alter().
+ */
+function wilson_admin_ui_field_widget_single_element_paragraphs_form_alter(&$element, FormStateInterface &$form_state, $context) {
+  // User interface improvements to the `field_anchor_point_label` field of
+  // the Wilson-provided `anchor_point` Paragraph. Displays a preview of the
+  // anchor point hash ID when the user provides a label.
+  if ($element['#paragraph_type'] === 'anchor_point'){
+    $element['subform']['field_anchor_point_label']['widget'][0]['value']['#attributes']['size'] = '30';
+    $element['subform']['field_anchor_point_label']['widget'][0]['value']['#attributes']['class'][] = 'anchor-point-hash';
+    $element['#attached']['library'][] = 'wilson_admin_ui/anchor-point-hash';
+  }
+}
+
+/**
+ * Helper function to determine if the current admin theme is Claro.
+ */
+function _wilson_admin_ui_is_claro() {
+  $adminTheme = \Drupal::config('system.theme')->get('admin');
+  return $adminTheme === 'claro';
+}

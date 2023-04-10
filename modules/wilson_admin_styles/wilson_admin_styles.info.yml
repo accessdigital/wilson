@@ -3,6 +3,8 @@ type: module
 description: 'Some style overrides for the Claro Admin Theme.'
 package: Wilson
 core_version_requirement: ^9 || ^10
+lifecycle: obsolete
+lifecycle_link: https://accessdigital.atlassian.net/wiki/spaces/AD/pages/2220916744/Wilson+installation+guide
 
 libraries:
   - wilson_admin_styles/styles

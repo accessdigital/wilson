@@ -1,0 +1,4 @@
+/* Decorate the "Page Actions" toolbar link with a pencil icon. */
+.toolbar-bar .toolbar-icon-edit:before {
+  background-image: url(../images/pencil.svg);
+}

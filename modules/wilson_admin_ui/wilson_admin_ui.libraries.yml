@@ -1,0 +1,31 @@
+anchor-point-hash:
+  js:
+    js/anchor-point-hash.js: { minified: false }
+  dependencies:
+    - core/drupal
+    - core/once
+
+claro-overrides:
+  css:
+    component:
+      css/claro-overrides.css: {}
+
+material-icons-widget:
+  js:
+    js/material-icons-widget.js: { minified: false }
+  css:
+    component:
+      css/material-icons-widget.css: { }
+  dependencies:
+    - core/drupal
+    - core/once
+
+tasks-in-toolbar:
+  js:
+    js/tasks-in-toolbar.js: { minified: false }
+  css:
+    component:
+      css/tasks-in-toolbar.css: { }
+  dependencies:
+    - core/drupal
+    - core/once

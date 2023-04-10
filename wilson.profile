@@ -7,10 +7,11 @@
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
-use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_ENTITY_TYPE_view_alter().
+ *
+ * @TODO Move this glue code out of the profile. Maybe to the theme?
  */
 function wilson_paragraph_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
   // Override the map zoom display settings with the value of field_map_zoom.
@@ -44,20 +45,6 @@ function wilson_paragraph_view_alter(array &$build, EntityInterface $entity, Ent
 }
 
 /**
- * Implements hook_field_widget_paragraphs_form_alter().
- */
-function wilson_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
-  if ($element['#paragraph_type'] == 'anchor_point'){
-    // Prepare the label field to display the hash alongside.
-    $element['subform']['field_anchor_point_label']['widget'][0]['value']['#attributes']['size'] = '30';
-    $element['subform']['field_anchor_point_label']['widget'][0]['value']['#attributes']['class'][] = 'anchor-point-hash';
-
-    // Attach the JavaScript hash generator.
-    $element['#attached']['library'][] = 'wilson/anchor-point-hash';
-  }
-}
-
-/**
  * Create a URL-safe ID from the anchor label text.
  *
  * @param $anchorLabel
@@ -65,18 +52,4 @@ function wilson_field_widget_paragraphs_form_alter(&$element, &$form_state, $con
  */
 function _wilson_anchor_point_id($anchorLabel) {
   return preg_replace('/[^a-z0-9-]/i', '-', strtolower($anchorLabel));
-}
-
-/**
- * Implements hook_field_widget_form_alter().
- */
-function wilson_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
-  // User interface improvements to the contrib Material Icons field.
-  $field_definition = $context['items']->getFieldDefinition();
-  if ($field_definition->getType() == 'material_icons') {
-    // Add a JavaScript behaviour which displays a preview of the selected icon.
-    $element['icon']['#attributes']['size'] = '30';
-    $element['icon']['#attributes']['class'][] = 'material-icons-widget';
-    $element['#attached']['library'][] = 'wilson/material-icons-widget';
-  }
 }

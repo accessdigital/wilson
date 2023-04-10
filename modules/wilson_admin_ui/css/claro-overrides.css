@@ -228,27 +228,3 @@
     width: 100%;
   }
 }
-
-/* Improve appearance of Material Icons in the admin area. */
-i.mi-selected-icon {
-  font-size: 1.5em;
-  line-height: 48px;
-  width: 48px;
-  text-align: center;
-  box-shadow: 0 0 0 1px #ddd inset;
-  vertical-align: top;
-  color: black;
-  overflow: hidden;
-}
-
-.mi-result i {
-  font-size: 1.5em;
-  vertical-align: middle;
-  color: black;
-  margin-right: 1rem;
-}
-
-/* Decorate the "Page Actions" toolbar link with a pencil icon. */
-.toolbar-bar .toolbar-icon-edit:before {
-  background-image: url(../icons/pencil.svg);
-}

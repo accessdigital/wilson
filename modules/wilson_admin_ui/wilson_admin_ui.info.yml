@@ -1,0 +1,5 @@
+name: Wilson Admin UI
+type: module
+description: 'Provides improvements to core and contrib admin screens to provide a more tailored admin experience for sites deploying the Wilson profile.'
+package: Wilson
+core_version_requirement: ^9 || ^10
