@@ -73,7 +73,6 @@ install:
   - redirect
   - responsive_image
   - rh_taxonomy
-  - rdf
   - search
   - seckit
   - shield
