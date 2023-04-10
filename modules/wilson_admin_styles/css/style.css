@@ -104,24 +104,21 @@
 }
 
 /* Paragraph Editor Enhancements. */
-.js .paragraphs-add-dialog--categorized .paragraphs-add-dialog--categorized button.paragraphs-button--add-more,
-.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized button.paragraphs-button--add-more {
+.js .paragraphs-add-dialog--categorized .paragraphs-add-dialog--categorized button.paragraphs-button--add-more {
   min-width: 215px !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0 !important;
 }
 
-.js .paragraphs-add-dialog--categorized .paragraphs-button--icon,
-.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-button--icon {
+.js .paragraphs-add-dialog--categorized .paragraphs-button--icon {
   height: 129px !important;
   margin: 0 0 10px 0 !important;
   padding: 0 !important;
   width: 213px !important;
 }
 
-.js .paragraphs-add-dialog--categorized .paragraphs-label,
-.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-label {
+.js .paragraphs-add-dialog--categorized .paragraphs-label {
   font-weight: 500 !important;
   font-size: 0.9rem !important;
   margin-bottom: 10px !important;
@@ -129,26 +126,22 @@
   padding: 0 !important;
 }
 
-.js .paragraphs-add-dialog--categorized .category-title,
-.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .category-title {
+.js .paragraphs-add-dialog--categorized .category-title {
   font-size: 1.25rem !important;
   font-weight: 500 !important;
   margin-bottom: 10px;
 }
 
-.js .paragraphs-add-dialog--categorized .search-description input,
-.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description input {
+.js .paragraphs-add-dialog--categorized .search-description input {
   vertical-align: middle;
 }
 
-.js .paragraphs-add-dialog--categorized .paragraphs-button--icon,
-.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-button--icon {
+.js .paragraphs-add-dialog--categorized .paragraphs-button--icon {
   border: 1px solid #ccc;
   height: 119px !important;
 }
 
-.js .paragraphs-add-dialog--categorized .paragraphs-description,
-.ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-description {
+.js .paragraphs-add-dialog--categorized .paragraphs-description {
   padding: 0 0 8px 0 !important;
   max-height: none !important;
 }
