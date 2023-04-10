@@ -44,9 +44,9 @@ function wilson_paragraph_view_alter(array &$build, EntityInterface $entity, Ent
 }
 
 /**
- * Implements hook_field_widget_paragraphs_form_alter().
+ * Implements hook_field_widget_single_element_WIDGET_TYPE_form_alter().
  */
-function wilson_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+function wilson_field_widget_single_element_paragraphs_form_alter(&$element, &$form_state, $context) {
   if ($element['#paragraph_type'] == 'anchor_point'){
     // Prepare the label field to display the hash alongside.
     $element['subform']['field_anchor_point_label']['widget'][0]['value']['#attributes']['size'] = '30';
@@ -68,9 +68,9 @@ function _wilson_anchor_point_id($anchorLabel) {
 }
 
 /**
- * Implements hook_field_widget_form_alter().
+ * Implements hook_field_widget_single_element_form_alter().
  */
-function wilson_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+function wilson_field_widget_single_element_form_alter(&$element, FormStateInterface $form_state, $context) {
   // User interface improvements to the contrib Material Icons field.
   $field_definition = $context['items']->getFieldDefinition();
   if ($field_definition->getType() == 'material_icons') {
