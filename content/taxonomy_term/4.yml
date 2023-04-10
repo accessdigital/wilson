@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: 'relative text-white before:backdrop-brightness-50 before:absolute before:inset-0 before:z-1'
+      value: 'relative text-white before:backdrop-brightness-50 before:absolute before:inset-0 before:z-1 before:translate-3d'

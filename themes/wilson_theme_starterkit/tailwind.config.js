@@ -65,6 +65,10 @@ module.exports = {
       pattern: /z-1/,
       variants: ["before"],
     },
+    {
+      pattern: /translate-3d/,
+      variants: ["before"],
+    },
   ],
   theme: {
     colors: {
