@@ -6,7 +6,6 @@
  */
 
 use Drupal\block\Entity\Block;
-use Drupal\image\Entity\ImageStyle;
 use Drupal\Core\Render\Markup;
 use Drupal\Component\Utility\Html;
 
@@ -337,12 +336,29 @@ function wilson_theme_starterkit_preprocess_breadcrumb(&$variables) {
 }
 
 /**
- * Helper function to add styles for a responsive background image to the
- * document head.
+ * Generate CSS styles for a responsive background image.
+ *
+ * @param $imageUri
+ *   URI of the Drupal managed image to create the background from.
+ * @param $elementId
+ *   The ID attribute of the page element the background is attached to.
+ * @param $styleNamePrefix
+ *   The image style name prefix to create responsive derivatives from.
+ *   E.g. `section_bg_`. Images styles should be suffixed with the size codes
+ *   as defined in `wilson.breakpoints.yml`, e.g. `sm`, `md`, `lg` etc.
+ *   An image style with the suffix of `fallback` should also exist which will
+ *   apply to the smallest devices.
+ *
+ * @return false|string
+ *   The generated CSS background styles, or false if image styles don't exist.
  */
 function _wilson_theme_starterkit_background_styles($imageUri, $elementId, $styleNamePrefix) {
   // Load file url generator service.
   $url_generator = Drupal::service('file_url_generator');
+
+  // Load image style entity type manager.
+  $entity_type_manager = Drupal::entityTypeManager();
+  $image_style_storage = $entity_type_manager->getStorage('image_style');
 
   // Load the Wilson breakpoints to obtain the media query selectors.
   $breakpoints = Drupal::service('breakpoint.manager')->getBreakpointsByGroup('wilson');
@@ -351,20 +367,20 @@ function _wilson_theme_starterkit_background_styles($imageUri, $elementId, $styl
   $selector = '#' . $elementId;
 
   // Generate the initial fallback background styles.
-  $fallbackStyleName = $styleNamePrefix . 'fallback';
-  if (ImageStyle::load($fallbackStyleName)) {
-    $imageUrl = Markup::create($url_generator->generateString(ImageStyle::load($imageStyleName)->buildUrl($imageUri)));
+  $fallbackImageStyle = $image_style_storage->load($styleNamePrefix . 'fallback');
+  if ($fallbackImageStyle) {
+    $imageUrl = Markup::create($url_generator->generateString($fallbackImageStyle->buildUrl($imageUri)));
     $css .= "$selector { background-image: url('$imageUrl'); } ";
   }
 
   // Generate a background style for each breakpoint (where found).
   foreach ($breakpoints as $key => $breakpoint) {
     $breakpointId = str_replace( 'wilson.', '', $key);
-    $imageStyleName = $styleNamePrefix . $breakpointId;
+    $imageStyle = $image_style_storage->load($styleNamePrefix . $breakpointId);
 
-    if (ImageStyle::load($imageStyleName)) {
-      $imageUrl = Markup::create($url_generator->generateString(ImageStyle::load($imageStyleName)->buildUrl($imageUri)));
-      $css .= "@media " . $breakpoint->getMediaQuery() . " { $selector { background-image: url('$imageUrl'); }} ";
+    if ($imageStyle) {
+      $imageUrl = Markup::create($url_generator->generateString($imageStyle->buildUrl($imageUri)));
+      $css .= "@media {$breakpoint->getMediaQuery()} { $selector { background-image: url('$imageUrl'); }} ";
     }
   }
 
