@@ -27,4 +27,4 @@ default:
       pathauto: 1
   field_css_classes:
     -
-      value: 'relative before:absolute before:inset-0 before:z-1 before:backdrop-blur-sm'
+      value: 'relative before:absolute before:inset-0 before:z-1 before:backdrop-blur-sm before:translate-3d'

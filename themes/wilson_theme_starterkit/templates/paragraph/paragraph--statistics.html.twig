@@ -58,7 +58,7 @@
   {{ attach_library('wilson_theme_starterkit/statistics') }}
 
   <div{{ create_attribute({'class': content_classes}) }}>
-    {% for key, item in content.field_items if key|first != '#' %}
+    {% for key, item in content.field_items|children %}
       <div{{ create_attribute({'class': column_classes}) }}>
         {{ item }}
       </div>

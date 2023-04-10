@@ -86,7 +86,7 @@
 
       <ul class="list-none p-0 mt-6 flex flex-row flex-wrap gap-3">
         {% if content.field_categories|render %}
-          {% for key, item in content.field_categories if key|first != '#' %}
+          {% for key, item in content.field_categories|children %}
             <li>
               <span class="tag tag--primary">{{ item }}</span>
             </li>

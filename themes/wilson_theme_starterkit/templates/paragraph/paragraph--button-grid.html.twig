@@ -52,7 +52,7 @@
 {% block content %}
   <nav>
     <ul{{ create_attribute({'class': content_classes}) }}>
-      {% for key, item in content.field_buttons if key|first != '#' %}
+      {% for key, item in content.field_buttons|children %}
         <li>
           {% set link_classes = [
             'btn',

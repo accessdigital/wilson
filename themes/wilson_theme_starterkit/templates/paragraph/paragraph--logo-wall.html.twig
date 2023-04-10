@@ -57,7 +57,7 @@
 
 {% block content %}
   <div{{ create_attribute({'class': content_classes}) }}>
-    {% for key, item in content.field_media if key|first != '#' %}
+    {% for key, item in content.field_media|children %}
       <div{{ create_attribute({'class': column_classes}) }}>
         {{ item }}
       </div>
