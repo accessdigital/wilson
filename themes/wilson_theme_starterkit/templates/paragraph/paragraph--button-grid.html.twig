@@ -52,18 +52,16 @@
 {% block content %}
   <nav>
     <ul{{ create_attribute({'class': content_classes}) }}>
-      {% for key, item in content.field_buttons %}
-        {% if key|first != '#' %}
-          <li>
-            {% set link_classes = [
-              'btn',
-              'btn--primary',
-              'w-full',
-              item['#url'].isExternal ? 'is-external',
-            ] %}
-            <a href="{{ item['#url'] }}" {{ create_attribute({'class': link_classes}) }}{% if item['#url'].isExternal %} target="_blank"{% endif %}>{{ item['#title'] }}</a>
-          </li>
-        {% endif %}
+      {% for key, item in content.field_buttons|children %}
+        <li>
+          {% set link_classes = [
+            'btn',
+            'btn--primary',
+            'w-full',
+            item['#url'].isExternal ? 'is-external',
+          ] %}
+          <a href="{{ item['#url'] }}" {{ create_attribute({'class': link_classes}) }}{% if item['#url'].isExternal %} target="_blank"{% endif %}>{{ item['#title'] }}</a>
+        </li>
       {% endfor %}
     </ul>
   </nav>
